@@ -6,7 +6,7 @@
   <link href="http://ganming1.github.io/atom.xml" rel="self"/>
   
   <link href="http://ganming1.github.io/"/>
-  <updated>2020-12-08T08:00:01.193Z</updated>
+  <updated>2020-12-08T12:48:10.203Z</updated>
   <id>http://ganming1.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>尝试</title>
+    <link href="http://ganming1.github.io/2020/12/08/%E5%B0%9D%E8%AF%95/"/>
+    <id>http://ganming1.github.io/2020/12/08/%E5%B0%9D%E8%AF%95/</id>
+    <published>2020-12-08T12:46:01.000Z</published>
+    <updated>2020-12-08T12:48:10.203Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;甘明&quot;&gt;&lt;a href=&quot;#甘明&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Markdown" scheme="http://ganming1.github.io/categories/Markdown/"/>
+    
+    
+    <category term="typora" scheme="http://ganming1.github.io/tags/typora/"/>
+    
+    <category term="markdown" scheme="http://ganming1.github.io/tags/markdown/"/>
+    
+  </entry>
   
   <entry>
     <title>个人博客搭建</title>
