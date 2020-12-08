@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>ItDaChuang</title>
+  
+  <subtitle>It Da Chuang</subtitle>
+  <link href="http://ganming1.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://ganming1.github.io/"/>
+  <updated>2020-12-08T08:00:01.193Z</updated>
+  <id>http://ganming1.github.io/</id>
+  
+  <author>
+    <name>ItDaChuang</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>个人博客搭建</title>
+    <link href="http://ganming1.github.io/2020/12/08/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <id>http://ganming1.github.io/2020/12/08/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</id>
+    <published>2020-12-07T18:41:08.000Z</published>
+    <updated>2020-12-08T08:00:01.193Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;一、个人博客搭建的几种方法&quot;&gt;&lt;a href=&quot;#一、个人博客搭建的几种方法&quot; class=&quot;headerlink&quot; title=&quot;一、个人博客搭建的几种方法&quot;&gt;&lt;/a&gt;&lt;font</summary>
+        
+      
+    
+    
+    
+    <category term="工具技巧" scheme="http://ganming1.github.io/categories/%E5%B7%A5%E5%85%B7%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="hexo" scheme="http://ganming1.github.io/tags/hexo/"/>
+    
+    <category term="Blog" scheme="http://ganming1.github.io/tags/Blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://ganming1.github.io/2020/12/07/hello-world/"/>
+    <id>http://ganming1.github.io/2020/12/07/hello-world/</id>
+    <published>2020-12-07T06:34:05.797Z</published>
+    <updated>2020-12-07T06:34:05.797Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
