@@ -1,8 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2020/12/07/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>个人博客搭建</title>
-    <url>/2020/12/08/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
+    <url>/2020/12/08/ge-ren-bo-ke-da-jian/</url>
     <content><![CDATA[<h2 id="一、个人博客搭建的几种方法"><a href="#一、个人博客搭建的几种方法" class="headerlink" title="一、个人博客搭建的几种方法"></a><font color="born">一、个人博客搭建的几种方法</font></h2><h3 id="1-动态博客的搭建"><a href="#1-动态博客的搭建" class="headerlink" title="1 动态博客的搭建"></a><strong>1 动态博客的搭建</strong></h3><ol>
 <li>自己动手写前端后端搭建动态博客。（比较困难）</li>
 <li>通过wordpress动态博客框架系统。（<a href="http://wordpress.org/">wordpress网址</a>）</li>
@@ -16,65 +34,66 @@
 <h2 id="二、个人博客搭建教程—–hexo"><a href="#二、个人博客搭建教程—–hexo" class="headerlink" title="二、个人博客搭建教程—–hexo"></a><font color="born">二、个人博客搭建教程—–hexo</font></h2><p>​    由于 hexo 框架比较火，网上的教程也比较全，接下来就以 hexo 的搭建步骤来演示。系统环境是MacOs，Windown系统大同小异。</p>
 <h3 id="1-安装Node-js-（直接去官网下载安装即可node-js）"><a href="#1-安装Node-js-（直接去官网下载安装即可node-js）" class="headerlink" title="1 安装Node.js    （直接去官网下载安装即可node.js）"></a>1 安装Node.js    （直接去官网下载安装即可<a href="https://nodejs.org/zh-cn/">node.js</a>）</h3><p>​    安装的时候会安装<font color="red">Node.js</font>本身和<font color="red">npm</font>包管理器。都是后序需要用到的工具。</p>
 <p>​    在终端中输入node -v 和 npm -v 查看node.js 和 npm 的版本，如果安装成功则会显示下图类似结果。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">node -v
+<span class="token function">npm</span> -v<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glf8sspqk1j30v40awad8.jpg" alt="nodejs" width=50% /></center>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glf8sspqk1j30v40awad8.jpg" alt="nodejs" width="50%"></center>
 
 <center>图1：检查nodejs 和 npm 是否安装成功</center>
 
 <h3 id="2-安装-hexo-博客框架"><a href="#2-安装-hexo-博客框架" class="headerlink" title="2 安装 hexo 博客框架"></a>2 安装 hexo 博客框架</h3><ul>
 <li>利用npm包管理器来安装hexo框架，由于国内镜像源的速度很慢，一般会先利用npm输入下行命令安装一个 cnpm 指向淘宝的镜像源。在输入cnpm检查是否安装成功，出现下图使用方法和帮助文档则表示安装成功。</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g cnpm --registry<span class="token operator">=</span>https://registry.npm.taobao.org<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glf98irwa1j316c0u0jys.jpg" alt="cnpm"  width=50% /></center>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glf98irwa1j316c0u0jys.jpg" alt="cnpm" width="50%"></center>
 
 <center>图2：检查 cnpm 是否安装成功</center>
 
 <ul>
 <li>利用 cnpm 全局安装 hexo 博客框架。输入下列命令安装。</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cnpm <span class="token function">install</span> -g hexo-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <ul>
 <li>用 hexo -v 命令检验 hexo 是否安装成功，出现下面相关信息则表示安装成功，可以看得出hexo 框架是基于 nodejs 的。</li>
 </ul>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glf9swpmi7j31900nwqce.jpg" alt="hexo" width=70% /></center>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glf9swpmi7j31900nwqce.jpg" alt="hexo" width="70%"></center>
 
 <center>图3：检查 hexo 是否安装成功</center>
 
 <h3 id="3-开始使用-hexo-搭建博客"><a href="#3-开始使用-hexo-搭建博客" class="headerlink" title="3 开始使用 hexo 搭建博客"></a>3 开始使用 hexo 搭建博客</h3><ul>
 <li>新建一个文件夹，用于存放博客的相关文件，出了问题直接删掉这个文件夹即可，重来。我是在我的用户【文稿】文件夹下建了一个【Blog】文件夹。</li>
 </ul>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glf9zte6juj31bm0pc45n.jpg" alt="Blog" width=70% /></center>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glf9zte6juj31bm0pc45n.jpg" alt="Blog" width="70%"></center>
 
 <center>图4：新建一个博客的专属文件夹</center>
 
 <ul>
 <li>在终端中到新建的【Blog】文件夹目录下，把该文件夹初始化为博客文件夹，用下列命令。</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo hexo init</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> hexo init<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>​    初始化这个需要些时间……..</p>
 <p>​    初始化成功截图如下：</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfbbxgdl9j31900jwk25.jpg" alt="init" width=70%/></center>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfbbxgdl9j31900jwk25.jpg" alt="init" width="70%/"></center>
 
 <center>图5：初始化博客文件夹成功</center>
 
 <p>​    初试化成功后会在博客目录【Blog】下生成一系列文件，如下图。</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfbodfzjjj31jk0iw4b2.jpg" alt="文件" width=70%/></center>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfbodfzjjj31jk0iw4b2.jpg" alt="文件" width="70%/"></center>
 
 <center>图6：初始化博客生成的文件</center>
 
 <ul>
 <li>启动博客，初始化好博客之后非常好启动博客，用 hexo s 命令来启动 s 表示 start。</li>
 </ul>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfc7uin02j31jk0iw4ad.jpg" width=70% /></center>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfc7uin02j31jk0iw4ad.jpg" width="70%"></center>
 
 <center>图7：启动 hexo </center>
 
 <p>​    第一次启动可能会出错，提示在package.json文件中添加上述代码，需要修改package.json文件的权限才能添加代码。添加代码如下图8所示，添加后会出现图7后半部分的启动成功内容，显示在本机的4000端口运行。</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfc8cpfj6j30v40u0jzu.jpg" alt="2" width=70% /></center>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfc8cpfj6j30v40u0jzu.jpg" alt="2" width="70%"></center>
 
 <center>图8：添加解决启动 hexo 出错代码</center>
 
@@ -84,7 +103,7 @@
 </ul>
 <p>​      自动生成的博文在【Blog】-&gt;【source】-&gt;【_posts】文件夹下，以后我们写自己的博文也是放在这个文件夹，下面我们来自己创建第一篇博文。</p>
 <p>可以在【_posts】问价夹下直接新建markdown文件，也可用下面命令在终端中新建。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">&quot;博文的题目&quot;</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new <span class="token string">"博文的题目"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>​    【注意】：在上述新建博客的过程中也可能会出错，因为权限问题，需要修改【_posts】的权限才能新建成功。</p>
 <ul>
@@ -92,17 +111,17 @@
 <p>要在【Blog】目录下操作。生成前先清理下文件：</p>
 </li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo clean<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>​    再生成文件用下面命令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfdq9tva3j30x00u04qp.jpg" alt="成功" width=70% /></center>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfdq9tva3j30x00u04qp.jpg" alt="成功" width="70%"></center>
 
 <center>图9：生成博客文件成功</center>
 
 <p>​    再重新用hexo s 命令启动hexo 在<a href="http://localhost:4000就可以看到我们自己写的第一篇博客啦！">http://localhost:4000就可以看到我们自己写的第一篇博客啦！</a></p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfdvcau4fj31dd0u0hdt.jpg" alt="页面" width=70% /></center>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfdvcau4fj31dd0u0hdt.jpg" alt="页面" width="70%"></center>
 
 <center>图10:博客生成成功</center>
 
@@ -110,7 +129,7 @@
 <h3 id="5-把博客部署到github上公开使用"><a href="#5-把博客部署到github上公开使用" class="headerlink" title="5 把博客部署到github上公开使用"></a>5 把博客部署到github上公开使用</h3><ul>
 <li>先要在github上创建一个跟自己用户名相同的后缀为.github.io的仓库，注意这里必须要与用户名相同。</li>
 </ul>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfe566ct6j31a40iyjun.jpg" alt="github" width=70% /></center>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfe566ct6j31a40iyjun.jpg" alt="github" width="70%"></center>
 
 <center>图11:创建特定的github仓库</center>
 
@@ -118,13 +137,13 @@
 <li>接着需要在【Blog】目录下的终端里裝一个 Git 的部署插件。用下面命令安装</li>
 </ul>
 <p>cnpm install –save hexo-deployer-git</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfjw4ob5sj315a0u0h84.jpg" alt="git插件" width=70%/></center>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfjw4ob5sj315a0u0h84.jpg" alt="git插件" width="70%/"></center>
 
 <center>图12:git部署插件安装成功</center>
 
 <ul>
 <li><p>配置【Blog】文件夹下的 _config.yml 文件</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfek6mdn0j31240mutcq.jpg" alt="配置" width=70%/></center>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfek6mdn0j31240mutcq.jpg" alt="配置" width="70%/"></center>
 
 <center>图13:修改配置文件</center>
 
@@ -133,10 +152,10 @@
 <li><p>将 hexo 部署到远端 GitHub 上</p>
 </li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>​    中间会要求输入自己的GitHub账号密码，上述都没有问题就可以部署成功。此时，GitHub刚刚新建的仓库中会多出 hexo 博客的相文件。</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glffzitzvkj328q0u0jx2.jpg" alt="github" width=70% /></center>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glffzitzvkj328q0u0jx2.jpg" alt="github" width="70%"></center>
 
 <center>图14:部署成功远端文件</center>
 
@@ -145,19 +164,19 @@
 <li>要更改主题，首先要下载主题</li>
 </ul>
 <p>可以在【Blog】目录的终端下用 git 下载</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;litten&#x2F;hexo-theme-yilia.git themes&#x2F;yilia</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>​        <a href="https://github.com/litten/hexo-theme-yilia.git">https://github.com/litten/hexo-theme-yilia.git</a> 是你想下载的主题远端地址。</p>
 <p>​        themes/yilia 是你下载主题后保存的地址。</p>
 <p>​    下载好主题后会在【Blog】-&gt;【themes】文件里多出我们下载的主题。</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfgo6c0tkj31f40o8wh2.jpg" alt="主题" width=70% /></center>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfgo6c0tkj31f40o8wh2.jpg" alt="主题" width="70%"></center>
 
 <center>图15:下载的新主题</center>
 
 <ul>
 <li>下载好主题后，可以在_config.yml 文件中修改主题。</li>
 </ul>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfgvtlosfj31e20sgafp.jpg" alt="yilia" width=70% /></center>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfgvtlosfj31e20sgafp.jpg" alt="yilia" width="70%"></center>
 
 <center>图16:在配置文件中更改新主题</center>
 
@@ -173,7 +192,7 @@
   </entry>
   <entry>
     <title>尝试</title>
-    <url>/2020/12/08/%E5%B0%9D%E8%AF%95/</url>
+    <url>/2020/12/08/chang-shi/</url>
     <content><![CDATA[<h1 id="甘明"><a href="#甘明" class="headerlink" title="甘明"></a>甘明</h1><p>甘明甘明甘明</p>
 <p>甘明</p>
 <p>甘明</p>
@@ -187,23 +206,5 @@
         <tag>typora</tag>
         <tag>markdown</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/12/07/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
 </search>
