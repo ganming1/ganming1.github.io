@@ -1,22 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/12/07/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+    <title>HTML从入门到精通</title>
+    <url>/2020/12/09/html-cong-ru-men-dao-jing-tong/</url>
+    <content><![CDATA[<h2 id="一、HTML-简介"><a href="#一、HTML-简介" class="headerlink" title="一、HTML 简介"></a><font color="born">一、HTML 简介</font></h2><h3 id="1-1-网页"><a href="#1-1-网页" class="headerlink" title="1.1 网页"></a>1.1 网页</h3><ul>
+<li><p><strong>什么是网页？</strong></p>
+<p>要知道什么是网页，先要理解网站的概念。<font color="red">网站</font>是指在因特网上根据一定的规则，使用 HTML 等制作的用于展示特定内容相关的网页集合。<font color="red">网页</font>就是网站中的一页，通常是 <font color="red">HTML 格式的文件</font>，它要通过浏览器来阅读。</p>
+<p><font color="red">网页是构成网站的基本元素</font>，它通常由图片、链接、文字、声音、视频等<font color="red">元素</font>组成。通常我们看到的网页，常见以 <font color="red">.htm</font> 或 <font color="red">.html</font> 后缀结尾的文件，因此将其俗称为 <font color="red">HTML 文件</font>。</p>
+</li>
+<li><p><strong>什么是 HTML</strong></p>
+<p> <font color="red">HTML</font> 指的是超文本标记语言（ <font color="red"><strong>H</strong>yper <strong>T</strong>est <strong>M</strong>arkup <strong>L</strong>anguage</font>），它是用来描述网页的一种语言。是具有一套标记标签的标记语言。</p>
+<p>所谓的超文本，有两层含义：</p>
+<ul>
+<li>它可以加入图片、声音、动画、多媒体等内容（超越了文本限制）。</li>
+<li>它还可以从一个文件跳转到另一个文件，与世界各地主机的文件链接（超级链接文本）。</li>
+</ul>
+</li>
+<li><p><strong>网页的形成</strong></p>
+<p>网页是由网页元素组成的，这些元素是利用 html 标签描述出来，然后通过浏览器解析来显示给用户的。</p>
+<p>前端人员开发代码 ——–&gt; 浏览器解析、渲染代码 ————–&gt; 生成最后的 Web 页面</p>
+</li>
+</ul>
+<h3 id="1-2-常用的浏览器"><a href="#1-2-常用的浏览器" class="headerlink" title="1.2 常用的浏览器"></a>1.2 常用的浏览器</h3><ul>
+<li><p><strong>常用的浏览器</strong></p>
+<p>浏览器是网页显示、运行的平台。常用的浏览器有 IE 、火狐（Firefox）、谷歌（Chrome）、Safari、和 Opera 等。</p>
+<p>查看浏览器市场份额：<a href="http://tongji.baidu.com/data/browser">http://tongji.baidu.com/data/browser</a> 谷歌浏览器占最大市场份额，强烈推荐使用。</p>
+</li>
+<li><p><strong>浏览器内核</strong></p>
+<p>浏览器内核（渲染引擎）：负责读取网页内容，整理讯息，计算网页显示方式并显示页面。</p>
+<table>
+<thead>
+<tr>
+<th align="center">浏览器</th>
+<th align="center">内核</th>
+<th align="center">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">IE</td>
+<td align="center">Trident</td>
+<td align="center">IE、猎豹安全、360极速浏览器、百度浏览器</td>
+</tr>
+<tr>
+<td align="center">Firefox</td>
+<td align="center">Gecko</td>
+<td align="center">火狐浏览器内核</td>
+</tr>
+<tr>
+<td align="center">Safari</td>
+<td align="center">Webkit</td>
+<td align="center">苹果浏览器内核</td>
+</tr>
+<tr>
+<td align="center">Chrome/Opera</td>
+<td align="center">Blink</td>
+<td align="center">谷歌、Opera 浏览器内核。其实是 WebKit 的分支。</td>
+</tr>
+</tbody></table>
+<p>目前国内一般浏览器都会采用 Webkit/Blink 内核，如360、UC、QQ、搜狗等浏览器。</p>
+</li>
+</ul>
+<h3 id="1-3-Web-标准"><a href="#1-3-Web-标准" class="headerlink" title="1.3 Web 标准"></a>1.3 Web 标准</h3><p>​    Web 标准是由 W3C组织和其他标准化组织制定的一系列标准的集合。W3C（万维网联盟）是国际最著名的标准化组织。</p>
+<ul>
+<li><p><strong>为什么需要 web 标准</strong></p>
+<p>浏览器不同，它们显示页面或者陪伴就有些许差异。有了 web 标准就可以消除所有浏览器的显示差异。</p>
+</li>
+<li><p><strong>web 标准的构成</strong></p>
+<p>web 标准主要包括 <font color="red">结构（Structure）</font>、 <font color="red">表现（Presentation）</font>、 <font color="red">行为（Behavior）</font>三个方面。</p>
+<ul>
+<li>结构：结构用于对<strong>网页元素</strong>进行整理和分类，主要用 HTML。</li>
+<li>表现：表现用于设置网页元素的板式、颜色、大小等<strong>外观样式</strong>，主要用 CSS。</li>
+<li>行为：行为是指网页模型的定义及<strong>交互</strong>的编写，主要用 Javascript。</li>
+</ul>
+<p>web 标准提出的最佳体验方案：<font color="red">结构、样式、行为相分离</font>。即应该把<font color="red">结构写到 HTML 文件中，表现写到 CSS 中，行为写到 JavaScript 文件中</font>。</p>
+</li>
+</ul>
+<h2 id="二、HTML-标签"><a href="#二、HTML-标签" class="headerlink" title="二、HTML 标签"></a><font color="born">二、HTML 标签</font></h2><h3 id="1-1-HTML-语法规范"><a href="#1-1-HTML-语法规范" class="headerlink" title="1.1 HTML 语法规范"></a>1.1 HTML 语法规范</h3><ul>
+<li><p><strong>基本语法概述</strong></p>
+<p>HTML 标签是<font color="red">由尖括号包围的关键词</font>，例如 <font color="red">&lt; html &gt;</font>。</p>
+<p>HTML标签通常是成对出现的，例如&lt; html &gt; 和 &lt; /html &gt; ，它们称为<font color="red">双标签</font>。第一个是开始标签，第二个是结束标签。</p>
+<p>也有特殊的标签是单个的标签，例如 &lt; br / &gt; ，它们称为<font color="red">单标签</font>。</p>
+</li>
+<li><p><strong>标签关系</strong></p>
+<p>双标签关系可以分为包含关系和并列关系两类。</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">/* 包含关系 */
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+/* 并列关系 */
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tead</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ul>
+<h3 id="1-2-HTML-基本结构标签"><a href="#1-2-HTML-基本结构标签" class="headerlink" title="1.2 HTML 基本结构标签"></a>1.2 HTML 基本结构标签</h3><ul>
+<li><p><strong>第一个 HTML 网页</strong></p>
+<p>每一个网页都会有一个基本的结构标签（也称之为骨架标签），页面内容也是在这些基本标签上书写的。HTML 页面也称为 HTML 文档。</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>我的第一个页面<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    从来没有真正的绝境, 只有心灵的迷途|
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glh0faw7tij30xs0kugnd.jpg" alt="我的第一个网页" width="70%/"></center>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
+<table>
+<thead>
+<tr>
+<th align="center">标签名</th>
+<th align="center">定义</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&lt; html &gt;&lt; /html &gt;</td>
+<td align="center">HTML标签</td>
+<td align="center">页面中最大的标签，我们称为根标签</td>
+</tr>
+<tr>
+<td align="center">&lt; head &gt;&lt; /head &gt;</td>
+<td align="center">文档的头部</td>
+<td align="center">网页的相关信息写在这里，必须要有title标签</td>
+</tr>
+<tr>
+<td align="center">&lt; title &gt;&lt; /title &gt;</td>
+<td align="center">文档的标题</td>
+<td align="center">网页的标题</td>
+</tr>
+<tr>
+<td align="center">&lt; body &gt;&lt; /body &gt;</td>
+<td align="center">文档的主体</td>
+<td align="center">元素内容，页面内容都放这里</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h3 id="1-3-开发工具"><a href="#1-3-开发工具" class="headerlink" title="1.3 开发工具"></a>1.3 开发工具</h3><h3 id="1-4-HTML-常用标签"><a href="#1-4-HTML-常用标签" class="headerlink" title="1.4 HTML 常用标签"></a>1.4 HTML 常用标签</h3><h3 id="1-5-HTML-中的注释和特殊字符"><a href="#1-5-HTML-中的注释和特殊字符" class="headerlink" title="1.5 HTML 中的注释和特殊字符"></a>1.5 HTML 中的注释和特殊字符</h3><h2 id="三、"><a href="#三、" class="headerlink" title="三、"></a><font color="born">三、</font></h2>]]></content>
+      <categories>
+        <category>前端开发</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>Markdowm</tag>
+        <tag>前端</tag>
+      </tags>
   </entry>
   <entry>
     <title>个人博客搭建</title>
@@ -189,6 +319,24 @@
         <tag>hexo</tag>
         <tag>Blog</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/12/07/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>尝试</title>
