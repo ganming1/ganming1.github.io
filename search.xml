@@ -369,7 +369,7 @@
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glh0faw7tij30xs0kugnd.jpg" alt="我的第一个网页" width="70%/"></center>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glh0faw7tij30xs0kugnd.jpg" alt="我的第一个网页" width="100%/"></center>
 
 <table border="1" cellspacing="0" align="center" style="text-align: center;width: 68%">
         <tbody><tr><!--表头-->
@@ -539,7 +539,7 @@
 <li><p><font color="red">src</font> 是 &lt;img&gt; 标签的<font color="red">必须属性</font>，它用于<font color="red">指定图像文件的路径和文件名</font>。</p>
 </li>
 <li><p>图像标签的属性：</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glj5uulhwsj31g40f076e.jpg" alt="图像标签属性表" width="80%/"></center>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glj5uulhwsj31g40f076e.jpg" alt="图像标签属性表" width="90%/"></center>
 </li>
 <li><p>图像标签属性注意点：</p>
 <ul>
