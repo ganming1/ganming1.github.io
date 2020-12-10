@@ -6,7 +6,7 @@
   <link href="http://ganming1.github.io/atom.xml" rel="self"/>
   
   <link href="http://ganming1.github.io/"/>
-  <updated>2020-12-10T05:23:06.598Z</updated>
+  <updated>2020-12-10T15:13:59.662Z</updated>
   <id>http://ganming1.github.io/</id>
   
   <author>
@@ -17,18 +17,18 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>HTML从入门到精通</title>
-    <link href="http://ganming1.github.io/2020/12/09/html-cong-ru-men-dao-jing-tong/"/>
-    <id>http://ganming1.github.io/2020/12/09/html-cong-ru-men-dao-jing-tong/</id>
-    <published>2020-12-08T16:33:47.000Z</published>
-    <updated>2020-12-10T05:23:06.598Z</updated>
+    <title>HTML 标签（上）</title>
+    <link href="http://ganming1.github.io/2020/12/10/html-biao-qian-shang/"/>
+    <id>http://ganming1.github.io/2020/12/10/html-biao-qian-shang/</id>
+    <published>2020-12-10T13:06:03.000Z</published>
+    <updated>2020-12-10T15:13:59.662Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;一、HTML-简介&quot;&gt;&lt;a href=&quot;#一、HTML-简介&quot; class=&quot;headerlink&quot; title=&quot;一、HTML 简介&quot;&gt;&lt;/a&gt;&lt;font color=&quot;born&quot;&gt;一、HTML 简介&lt;/font&gt;&lt;/h2&gt;&lt;h3 id=&quot;1-1-网页&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;h1 id=&quot;HTML-标签（上）&quot;&gt;&lt;a href=&quot;#HTML-标签（上）&quot; class=&quot;headerlink&quot; title=&quot;HTML 标签（上）&quot;&gt;&lt;/a&gt;&lt;center&gt;HTML 标签（上）&lt;/center&gt;&lt;/h1&gt;&lt;h2 id=&quot;一、HTML-简介&quot;&gt;&lt;a</summary>
         
       
     
@@ -37,11 +37,36 @@
     <category term="前端开发" scheme="http://ganming1.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
     
-    <category term="HTML" scheme="http://ganming1.github.io/tags/HTML/"/>
+    <category term="markdown" scheme="http://ganming1.github.io/tags/markdown/"/>
     
-    <category term="Markdowm" scheme="http://ganming1.github.io/tags/Markdowm/"/>
+    <category term="html" scheme="http://ganming1.github.io/tags/html/"/>
     
-    <category term="前端" scheme="http://ganming1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+  </entry>
+  
+  <entry>
+    <title>VSCode写HTML文档</title>
+    <link href="http://ganming1.github.io/2020/12/10/vscode-xie-html-wen-dang/"/>
+    <id>http://ganming1.github.io/2020/12/10/vscode-xie-html-wen-dang/</id>
+    <published>2020-12-10T05:44:19.000Z</published>
+    <updated>2020-12-10T06:57:50.943Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;VSCode-写-HTML-文档&quot;&gt;&lt;a href=&quot;#VSCode-写-HTML-文档&quot; class=&quot;headerlink&quot; title=&quot;VSCode 写 HTML 文档&quot;&gt;&lt;/a&gt;&lt;center&gt;VSCode 写 HTML</summary>
+        
+      
+    
+    
+    
+    <category term="工具技巧" scheme="http://ganming1.github.io/categories/%E5%B7%A5%E5%85%B7%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="VSCode" scheme="http://ganming1.github.io/tags/VSCode/"/>
+    
+    <category term="Html" scheme="http://ganming1.github.io/tags/Html/"/>
     
   </entry>
   
