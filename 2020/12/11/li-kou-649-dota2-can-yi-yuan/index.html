@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="啥也没有">
+    <meta name="keywords" content="力扣 算法题解 Dota2 参议院">
     <meta name="description" content="努力做个it技术分享者">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>尝试 | ItDaChuang</title>
+    <title>力扣649-Dota2参议院 | ItDaChuang</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://tva1.sinaimg.cn/large/0081Kckwly1glfjezair5j30m80k2abc.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">尝试</h1>
+                    <h1 class="description center-align post-title">力扣649-Dota2参议院</h1>
                 </div>
             </div>
         </div>
@@ -434,12 +434,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/typora/">
-                                <span class="chip bg-color">typora</span>
+                            <a href="/tags/%E4%B8%AD%E7%AD%89/">
+                                <span class="chip bg-color">中等</span>
                             </a>
                         
-                            <a href="/tags/markdown/">
-                                <span class="chip bg-color">markdown</span>
+                            <a href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">
+                                <span class="chip bg-color">算法题</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%95%B0%E7%BB%84/">
+                                <span class="chip bg-color">数组</span>
                             </a>
                         
                     </div>
@@ -450,8 +454,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Markdown/" class="post-category">
-                                Markdown
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                算法
                             </a>
                         
                     </div>
@@ -463,28 +467,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-12-08
+                    2020-12-11
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-12-10
+                    2020-12-11
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    18
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
 
@@ -507,11 +511,101 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="甘明"><a href="#甘明" class="headerlink" title="甘明"></a>甘明</h1><p>甘明甘明甘明</p>
-<p>甘明</p>
-<p>甘明</p>
-<p>甘明</p>
-<p>甘明甘明</p>
+                <h1 id="649-Dota2-参议院"><a href="#649-Dota2-参议院" class="headerlink" title="649. Dota2 参议院"></a><center>649. Dota2 参议院</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>​        Dota2 的世界里有两个阵营：Radiant (天辉)和 Dire(夜魇)。Dota2 参议院由来自两派的参议员组成。现在参议院希望对一个 Dota2 游戏里的改变作出决定。他们以一个基于轮为过程的投票进行。在每一轮中，每一位参议员都可以行使两项权利中的一项：</p>
+<ol>
+<li><p>禁止一名参议员的权利：参议员可以让另一位参议员在这一轮和随后的几轮中丧失<strong>所有的权利</strong>。</p>
+</li>
+<li><p>宣布胜利：如果参议员发现有权利投票的参议员都是<strong>同一个阵营的</strong>，他可以宣布胜利并决定在游戏中的有关变化。</p>
+</li>
+</ol>
+<p>​       给定一个字符串代表每个参议员的阵营。字母 “R” 和 “D” 分别代表了 Radiant（天辉）和 Dire（夜魇）。然后，如果有 n 个参议员，给定字符串的大小将是 n。以轮为基础的过程从给定顺序的第一个参议员开始到最后一个参议员结束。这一过程将持续到投票结束。所有失去权利的参议员将在过程中被跳过。假设每一位参议员都足够聪明，会为自己的政党做出最好的策略，你需要预测哪一方最终会宣布胜利并在 Dota2 游戏中决定改变。输出应该是 Radiant 或 Dire。</p>
+<p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/dota2-senate">https://leetcode-cn.com/problems/dota2-senate</a></p>
+<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
+<li><p><strong>示例1：</strong></p>
+<p><strong>输入：</strong>“RD”<br><strong>输出：</strong>“Radiant”<br><strong>解释：</strong>第一个参议员来自 Radiant 阵营并且他可以使用第一项权利让第二个参议员失去权力，因此第二个参议员将被跳过因为他没有任何权利。然后在第二轮的时候，第一个参议员可以宣布胜利，因为他是唯一一个有投票权的人。</p>
+</li>
+<li><p><strong>示例2：</strong></p>
+<p><strong>输入：</strong>“RDD”<br><strong>输出：</strong>“Dire”<br><strong>解释：</strong><br>第一轮中,第一个来自 Radiant 阵营的参议员可以使用第一项权利禁止第二个参议员的权利，第二个来自 Dire 阵营的参议员会被跳过因为他的权利被禁止，第三个来自 Dire 阵营的参议员可以使用他的第一项权利禁止第一个参议员的权利，因此在第二轮只剩下第三个参议员拥有投票的权利,于是他可以宣布胜利。</p>
+</li>
+<li><p><strong>提示：</strong></p>
+<p>给定字符串的长度在 <code>[1, 10,000]</code> 之间.</p>
+</li>
+</ul>
+<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="born">二、解题思路</font></h2><h3 id="2-1-题目意思理解"><a href="#2-1-题目意思理解" class="headerlink" title="2.1 题目意思理解"></a>2.1 题目意思理解</h3><p>​    如果读明白了题目的意思，应该可以理解当前参议员要么是被前面的另一队参议员禁止了，否则就应该去禁止后面最靠近它的另一队参议员。</p>
+<p>​    可以理解为带攻击属性的一种游戏。先定义下我们的游戏。</p>
+<ul>
+<li><p>游戏有两个队，D队和R队，目标是杀光其他队的所有人，即可获得胜利✌️。战士是一个一个到达战场的。</p>
+</li>
+<li><p>Dnumber 和 Rnumber 分别表示两个队的总人数，可以通过一次遍历输入数据获得。</p>
+</li>
+<li><p>Dattack 和 Rattack 分别表示两个队当前的攻击力属性，为几就表示可以杀死对方几个人。</p>
+</li>
+<li><p>Ddie 和 Rdie 分别表示两个队当前死了多少英雄战士，当死亡人数等于总人数时，对方获胜。</p>
+<p>第一次遍历输入数据</p>
+</li>
+<li><p>需要统计每个对的总人数并进行一轮厮杀。被杀死的战士将其原大写字母改为小写字母记入史册，永垂不朽。</p>
+<p>后几轮遍历就是完全厮杀</p>
+</li>
+<li><p>直到出现哪个对死亡人数达到总队伍人数，对方队获胜。</p>
+</li>
+</ul>
+<h2 id="三、代码实现"><a href="#三、代码实现" class="headerlink" title="三、代码实现"></a><font color="born">三、代码实现</font></h2><h3 id="3-1-详细代码（Java）"><a href="#3-1-详细代码（Java）" class="headerlink" title="3.1 详细代码（Java）"></a>3.1 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">predictPartyVictory</span><span class="token punctuation">(</span><span class="token class-name">String</span> senate<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> <span class="token class-name">Rnumber</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token class-name">Dnumber</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>					<span class="token comment">// 记录每个队的总人数</span>
+        <span class="token keyword">int</span> <span class="token class-name">Rattack</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token class-name">Dattack</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>					<span class="token comment">// 记录每个队的攻击值</span>
+        <span class="token keyword">int</span> <span class="token class-name">Rdie</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token class-name">Ddie</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>								<span class="token comment">// 记录每个对的死亡战士</span>
+        <span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> chars <span class="token operator">=</span> senate<span class="token punctuation">.</span><span class="token function">toCharArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">// 将字符串转换成字符数组方便遍历处理</span>
+      <span class="token comment">// 第一轮统计总人数并厮杀一轮</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> chars<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'D'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>		<span class="token comment">// 来的是D队战士</span>
+                <span class="token class-name">Dnumber</span><span class="token operator">++</span><span class="token punctuation">;</span>						<span class="token comment">// D队人数加1</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Rattack</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>		<span class="token comment">// 如果R队攻击值大于0</span>
+                  	chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'d'</span><span class="token punctuation">;</span>  	<span class="token comment">// 则刚刚上来的D队战士成炮灰</span>
+                  	<span class="token class-name">Rattack</span><span class="token operator">--</span><span class="token punctuation">;</span>				<span class="token comment">// 同时消耗R队一个攻击值</span>
+                    <span class="token class-name">Ddie</span><span class="token operator">++</span><span class="token punctuation">;</span>						<span class="token comment">// D队死亡人数加1</span>
+                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token class-name">Dattack</span><span class="token operator">++</span><span class="token punctuation">;</span>			<span class="token comment">// 如果R队攻击值为0，则D队攻击值积累加1</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>									<span class="token comment">// 来的是R队战士</span>
+                <span class="token class-name">Rnumber</span><span class="token operator">++</span><span class="token punctuation">;</span>						<span class="token comment">// R队人数加1</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Dattack</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>		<span class="token comment">// 如果D队攻击值大于0</span>
+                    chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'r'</span><span class="token punctuation">;</span>		<span class="token comment">// 则刚刚上来的R队战士成炮灰</span>
+                  	<span class="token class-name">Dattack</span><span class="token operator">--</span><span class="token punctuation">;</span>				<span class="token comment">// 同时消耗D队一个攻击值</span>
+                    <span class="token class-name">Rdie</span><span class="token operator">++</span><span class="token punctuation">;</span>						<span class="token comment">// R队死亡人数加1</span>
+                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token class-name">Rattack</span><span class="token operator">++</span><span class="token punctuation">;</span>			<span class="token comment">// 如果D队攻击值为0，则R队攻击值积累加1</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token comment">// 后几轮厮杀</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> chars<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          	<span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> chars<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>		<span class="token comment">// 这个 if 判断达到轮战的目的</span>
+                i <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+                <span class="token keyword">continue</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+          	<span class="token comment">// 战士战死，直接跳过，先判断这个可以提高性能</span>
+          	<span class="token keyword">if</span> <span class="token punctuation">(</span>chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span><span class="token string">'d'</span><span class="token operator">||</span>chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span><span class="token string">'r'</span><span class="token punctuation">)</span>	<span class="token keyword">continue</span><span class="token punctuation">;</span>		
+            <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token class-name">Rdie</span><span class="token operator">==</span><span class="token class-name">Rnumber</span><span class="token punctuation">)</span>   <span class="token keyword">return</span> <span class="token string">"Dire"</span><span class="token punctuation">;</span>			<span class="token comment">// R队被歼灭，D队获胜</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token class-name">Ddie</span><span class="token operator">==</span><span class="token class-name">Dnumber</span><span class="token punctuation">)</span>   <span class="token keyword">return</span> <span class="token string">"Radiant"</span><span class="token punctuation">;</span>		<span class="token comment">// D队被歼灭，R队获胜</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'D'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>	<span class="token comment">// 来的是D队战士，不加总人数其他同上处理</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Rattack</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token class-name">Rattack</span><span class="token operator">--</span><span class="token punctuation">;</span>
+                    chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'d'</span><span class="token punctuation">;</span>
+                    <span class="token class-name">Ddie</span><span class="token operator">++</span><span class="token punctuation">;</span>
+                    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Ddie</span> <span class="token operator">==</span> <span class="token class-name">Dnumber</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token string">"Radiant"</span><span class="token punctuation">;</span>	<span class="token comment">// 判断是否结束</span>
+                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token class-name">Dattack</span><span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>								<span class="token comment">// 来的是R队战士，不加总人数其他同上处理</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Dattack</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token class-name">Dattack</span><span class="token operator">--</span><span class="token punctuation">;</span>
+                    chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'r'</span><span class="token punctuation">;</span>
+                    <span class="token class-name">Rdie</span><span class="token operator">++</span><span class="token punctuation">;</span>
+                    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Rdie</span> <span class="token operator">==</span> <span class="token class-name">Rnumber</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token string">"Dire"</span><span class="token punctuation">;</span>	<span class="token comment">// 判断是否结束</span>
+                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token class-name">Rattack</span><span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token string">""</span><span class="token punctuation">;</span>	<span class="token comment">// 因为上面的return语句都在if语句后，所以加上这个不会被执行的return语句</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="3-2-算法执行结果"><a href="#3-2-算法执行结果" class="headerlink" title="3.2 算法执行结果"></a>3.2 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glk8jfyf4bj30s40ee75b.jpg" alt="表格标签示例" width="80%/"></center>
+
+<h2 id="四、总结分析"><a href="#四、总结分析" class="headerlink" title="四、总结分析"></a><font color="born">四、总结分析</font></h2><p>​    个人感觉这个题目是题目意思有点让人费解，读懂题目意思后思路还是挺简单的。</p>
 
                 
             </div>
@@ -528,7 +622,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">ganming</a>
+                    <a href="/about" rel="external nofollow noreferrer">ItDaChuang</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -538,7 +632,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://ganming1.github.io/2020/12/08/chang-shi/">http://ganming1.github.io/2020/12/08/chang-shi/</a>
+                    <a href="http://ganming1.github.io/2020/12/11/li-kou-649-dota2-can-yi-yuan/">http://ganming1.github.io/2020/12/11/li-kou-649-dota2-can-yi-yuan/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -551,7 +645,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">ganming</a>
+                    <a href="/about" target="_blank">ItDaChuang</a>
                     !
                 </span>
             </div>
@@ -576,12 +670,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/typora/">
-                                    <span class="chip bg-color">typora</span>
+                                <a href="/tags/%E4%B8%AD%E7%AD%89/">
+                                    <span class="chip bg-color">中等</span>
                                 </a>
                             
-                                <a href="/tags/markdown/">
-                                    <span class="chip bg-color">markdown</span>
+                                <a href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">
+                                    <span class="chip bg-color">算法题</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%95%B0%E7%BB%84/">
+                                    <span class="chip bg-color">数组</span>
                                 </a>
                             
                         </div>
@@ -797,50 +895,56 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/12/10/vscode-xie-html-wen-dang/">
+                <a href="/2020/12/11/li-kou-649-dota2-can-yi-yuan/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="VSCode写HTML文档">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="力扣649-Dota2参议院">
                         
-                        <span class="card-title">VSCode写HTML文档</span>
+                        <span class="card-title">力扣649-Dota2参议院</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            使用 VSCode 作为网页开发工具的入门使用
+                            力扣第649题Dota2参议院Java版详细题解
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-10
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-11
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%B7%A5%E5%85%B7%E6%8A%80%E5%B7%A7/" class="post-category">
-                                    工具技巧
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/VSCode/">
-                        <span class="chip bg-color">VSCode</span>
+                    <a href="/tags/%E4%B8%AD%E7%AD%89/">
+                        <span class="chip bg-color">中等</span>
                     </a>
                     
-                    <a href="/tags/Html/">
-                        <span class="chip bg-color">Html</span>
+                    <a href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">
+                        <span class="chip bg-color">算法题</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B0%E7%BB%84/">
+                        <span class="chip bg-color">数组</span>
                     </a>
                     
                 </div>
@@ -854,31 +958,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/12/08/ge-ren-bo-ke-da-jian/">
+                <a href="/2020/12/10/html-biao-qian-shang/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="个人博客搭建">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="HTML 标签（上）">
                         
-                        <span class="card-title">个人博客搭建</span>
+                        <span class="card-title">HTML 标签（上）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            详细总结 HTML 相关知识。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-10
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%B7%A5%E5%85%B7%E6%8A%80%E5%B7%A7/" class="post-category">
-                                    工具技巧
+                            <a href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" class="post-category">
+                                    前端开发
                                 </a>
                             
                             
@@ -888,12 +992,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/html/">
+                        <span class="chip bg-color">html</span>
                     </a>
                     
-                    <a href="/tags/Blog/">
-                        <span class="chip bg-color">Blog</span>
+                    <a href="/tags/markdown/">
+                        <span class="chip bg-color">markdown</span>
                     </a>
                     
                 </div>
@@ -1040,7 +1144,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">6k</span>&nbsp;字
+                class="white-color">7.4k</span>&nbsp;字
             
             
             

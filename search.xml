@@ -1,72 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>VSCode写HTML文档</title>
-    <url>/2020/12/10/vscode-xie-html-wen-dang/</url>
-    <content><![CDATA[<h1 id="VSCode-写-HTML-文档"><a href="#VSCode-写-HTML-文档" class="headerlink" title="VSCode 写 HTML 文档"></a><center>VSCode 写 HTML 文档</center></h1><h2 id="一、VSCode-的使用"><a href="#一、VSCode-的使用" class="headerlink" title="一、VSCode 的使用"></a><font color="born">一、VSCode 的使用</font></h2><h3 id="1-1-软件的下载和基本的-html-文件创建"><a href="#1-1-软件的下载和基本的-html-文件创建" class="headerlink" title="1.1 软件的下载和基本的 html 文件创建"></a>1.1 软件的下载和基本的 html 文件创建</h3><ul>
-<li><p>VSCode 下载可以去<a href="https://code.visualstudio.com/">VSCode官网</a>下载</p>
-</li>
-<li><p>新建文件，该文件名和和文件格式为<font color="red">.html</font>即可</p>
-</li>
-<li><p>在新建的 html 文件中输入 ! 接着回车或按 Tab 键即可生成网页骨架。</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!-- 输入 ! 回车可快速生成下面骨架 --&gt;</span>
-<span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1.0<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
-    
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>修改网页的&lt; title &gt; 和 &lt; body &gt; 标签为自己想修改的内容然后右键选择Open In Default Browser 在默认浏览器中打开，可能你的右键没有这个选项，需要安装插件。</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gliqfg55fxj317a0s8djx.jpg" alt="默认浏览器中打开网页" width="70%/"></center>
-</li>
-<li><p>觉得页面代码字体不合适可以通过 command + 加号键、和 command + 减号键调整字体大小。</p>
-</li>
-</ul>
-<h3 id="1-2-VSCode-插件使用"><a href="#1-2-VSCode-插件使用" class="headerlink" title="1.2 VSCode 插件使用"></a>1.2 VSCode 插件使用</h3><ul>
-<li><p>插件安装方法，在最左边的是插件功能选择，之后再搜索框搜索插件名安装，重启 VSCode 即可生效。</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gliqprm66nj319e0tsdnt.jpg" alt="VSCode插件安装" width="70%/"></center>
-</li>
-<li><p>推荐安装的插件</p>
-<ul>
-<li><font color="red">Chinese(Simplified)Language Pack for VS Code</font>：中文（简体）语言包</li>
-<li><font color="red">Open in Browser</font>：右键选择在浏览器中打开 html 文件，上面演示的功能</li>
-<li><font color="red">JS-CSS-HTML Formatter</font>：每次保存，都会自动格式化js、css 和 html 代码</li>
-<li><font color="red">Auto Rename Tag</font>：自动重命名配对的 HTML/XML 标签</li>
-<li><font color="red">CSS Peek</font>：追踪至样式</li>
-</ul>
-<p>更多好用的插件希望大家相互推荐~</p>
-</li>
-</ul>
-<h3 id="1-3-VSCode-工具生成的骨架标签新增的代码"><a href="#1-3-VSCode-工具生成的骨架标签新增的代码" class="headerlink" title="1.3 VSCode 工具生成的骨架标签新增的代码"></a>1.3 VSCode 工具生成的骨架标签新增的代码</h3><ul>
-<li><p><font color="red">文档类型声明标签 &lt; !DOCTYPE &gt;</font>：告诉浏览器使用那种 HTML 版本来显示网页</p>
-<p>&lt; !DOCTYPE html &gt; 表示当前页面采用的是 HTML5 版本来显示网页。&lt; !DOCTYPE html &gt; 不是一个 HTML 标签，它只是一个文档类型声明标签。</p>
-</li>
-<li><p><font color="red">lang 语言种类</font>：用来定义当前文档显示的语言</p>
-<p><font color="red">en</font> 定义语言为英语，<font color="red">zh-CN</font>  定义语言为中文。无论哪种都可以在网页里写中英文，都能正常显示，这个属性只用于<font color="red">浏览器翻译功能的判断</font>而已。</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glircl05pzj314w0kuacx.jpg" alt="lang 属性的影响" width="67%/"></center>
-</li>
-<li><p><font color="red">字符集</font>：是多个字符的集合，以便计算机能够识别和存储各种文字</p>
-<p>在&lt; head&gt; 标签内，可以通过 &lt; meta&gt; 标签的 charset 属性来规定 HTML 文档使用的字符编码集。</p>
-<p>charset 常用值有：GB2312、BIG5、GBK 和 UTF-8，其中 <font color="red">UTF-8</font> 也被称为<font color="red">万国码</font>，基本包含了全世界所有国家需要用到的字符。</p>
-<p>【注意】:<font color="red">上面语法是必须要写的代码，否则可能引起乱码的情况。一般情况下，统一使用“UTF-8”编码，尽量统一写成标准的 “UTF-8”，不要写成 “utf8” 或 “UTF8”。</font></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>工具技巧</category>
-      </categories>
-      <tags>
-        <tag>VSCode</tag>
-        <tag>Html</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/2020/12/07/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -83,6 +17,114 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>力扣649-Dota2参议院</title>
+    <url>/2020/12/11/li-kou-649-dota2-can-yi-yuan/</url>
+    <content><![CDATA[<h1 id="649-Dota2-参议院"><a href="#649-Dota2-参议院" class="headerlink" title="649. Dota2 参议院"></a><center>649. Dota2 参议院</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>​        Dota2 的世界里有两个阵营：Radiant (天辉)和 Dire(夜魇)。Dota2 参议院由来自两派的参议员组成。现在参议院希望对一个 Dota2 游戏里的改变作出决定。他们以一个基于轮为过程的投票进行。在每一轮中，每一位参议员都可以行使两项权利中的一项：</p>
+<ol>
+<li><p>禁止一名参议员的权利：参议员可以让另一位参议员在这一轮和随后的几轮中丧失<strong>所有的权利</strong>。</p>
+</li>
+<li><p>宣布胜利：如果参议员发现有权利投票的参议员都是<strong>同一个阵营的</strong>，他可以宣布胜利并决定在游戏中的有关变化。</p>
+</li>
+</ol>
+<p>​       给定一个字符串代表每个参议员的阵营。字母 “R” 和 “D” 分别代表了 Radiant（天辉）和 Dire（夜魇）。然后，如果有 n 个参议员，给定字符串的大小将是 n。以轮为基础的过程从给定顺序的第一个参议员开始到最后一个参议员结束。这一过程将持续到投票结束。所有失去权利的参议员将在过程中被跳过。假设每一位参议员都足够聪明，会为自己的政党做出最好的策略，你需要预测哪一方最终会宣布胜利并在 Dota2 游戏中决定改变。输出应该是 Radiant 或 Dire。</p>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/dota2-senate">https://leetcode-cn.com/problems/dota2-senate</a></p>
+<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
+<li><p><strong>示例1：</strong></p>
+<p><strong>输入：</strong>“RD”<br><strong>输出：</strong>“Radiant”<br><strong>解释：</strong>第一个参议员来自 Radiant 阵营并且他可以使用第一项权利让第二个参议员失去权力，因此第二个参议员将被跳过因为他没有任何权利。然后在第二轮的时候，第一个参议员可以宣布胜利，因为他是唯一一个有投票权的人。</p>
+</li>
+<li><p><strong>示例2：</strong></p>
+<p><strong>输入：</strong>“RDD”<br><strong>输出：</strong>“Dire”<br><strong>解释：</strong><br>第一轮中,第一个来自 Radiant 阵营的参议员可以使用第一项权利禁止第二个参议员的权利，第二个来自 Dire 阵营的参议员会被跳过因为他的权利被禁止，第三个来自 Dire 阵营的参议员可以使用他的第一项权利禁止第一个参议员的权利，因此在第二轮只剩下第三个参议员拥有投票的权利,于是他可以宣布胜利。</p>
+</li>
+<li><p><strong>提示：</strong></p>
+<p>给定字符串的长度在 <code>[1, 10,000]</code> 之间.</p>
+</li>
+</ul>
+<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="born">二、解题思路</font></h2><h3 id="2-1-题目意思理解"><a href="#2-1-题目意思理解" class="headerlink" title="2.1 题目意思理解"></a>2.1 题目意思理解</h3><p>​    如果读明白了题目的意思，应该可以理解当前参议员要么是被前面的另一队参议员禁止了，否则就应该去禁止后面最靠近它的另一队参议员。</p>
+<p>​    可以理解为带攻击属性的一种游戏。先定义下我们的游戏。</p>
+<ul>
+<li><p>游戏有两个队，D队和R队，目标是杀光其他队的所有人，即可获得胜利✌️。战士是一个一个到达战场的。</p>
+</li>
+<li><p>Dnumber 和 Rnumber 分别表示两个队的总人数，可以通过一次遍历输入数据获得。</p>
+</li>
+<li><p>Dattack 和 Rattack 分别表示两个队当前的攻击力属性，为几就表示可以杀死对方几个人。</p>
+</li>
+<li><p>Ddie 和 Rdie 分别表示两个队当前死了多少英雄战士，当死亡人数等于总人数时，对方获胜。</p>
+<p>第一次遍历输入数据</p>
+</li>
+<li><p>需要统计每个对的总人数并进行一轮厮杀。被杀死的战士将其原大写字母改为小写字母记入史册，永垂不朽。</p>
+<p>后几轮遍历就是完全厮杀</p>
+</li>
+<li><p>直到出现哪个对死亡人数达到总队伍人数，对方队获胜。</p>
+</li>
+</ul>
+<h2 id="三、代码实现"><a href="#三、代码实现" class="headerlink" title="三、代码实现"></a><font color="born">三、代码实现</font></h2><h3 id="3-1-详细代码（Java）"><a href="#3-1-详细代码（Java）" class="headerlink" title="3.1 详细代码（Java）"></a>3.1 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">predictPartyVictory</span><span class="token punctuation">(</span><span class="token class-name">String</span> senate<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> <span class="token class-name">Rnumber</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token class-name">Dnumber</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>					<span class="token comment">// 记录每个队的总人数</span>
+        <span class="token keyword">int</span> <span class="token class-name">Rattack</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token class-name">Dattack</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>					<span class="token comment">// 记录每个队的攻击值</span>
+        <span class="token keyword">int</span> <span class="token class-name">Rdie</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token class-name">Ddie</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>								<span class="token comment">// 记录每个对的死亡战士</span>
+        <span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> chars <span class="token operator">=</span> senate<span class="token punctuation">.</span><span class="token function">toCharArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">// 将字符串转换成字符数组方便遍历处理</span>
+      <span class="token comment">// 第一轮统计总人数并厮杀一轮</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> chars<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'D'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>		<span class="token comment">// 来的是D队战士</span>
+                <span class="token class-name">Dnumber</span><span class="token operator">++</span><span class="token punctuation">;</span>						<span class="token comment">// D队人数加1</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Rattack</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>		<span class="token comment">// 如果R队攻击值大于0</span>
+                  	chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'d'</span><span class="token punctuation">;</span>  	<span class="token comment">// 则刚刚上来的D队战士成炮灰</span>
+                  	<span class="token class-name">Rattack</span><span class="token operator">--</span><span class="token punctuation">;</span>				<span class="token comment">// 同时消耗R队一个攻击值</span>
+                    <span class="token class-name">Ddie</span><span class="token operator">++</span><span class="token punctuation">;</span>						<span class="token comment">// D队死亡人数加1</span>
+                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token class-name">Dattack</span><span class="token operator">++</span><span class="token punctuation">;</span>			<span class="token comment">// 如果R队攻击值为0，则D队攻击值积累加1</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>									<span class="token comment">// 来的是R队战士</span>
+                <span class="token class-name">Rnumber</span><span class="token operator">++</span><span class="token punctuation">;</span>						<span class="token comment">// R队人数加1</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Dattack</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>		<span class="token comment">// 如果D队攻击值大于0</span>
+                    chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'r'</span><span class="token punctuation">;</span>		<span class="token comment">// 则刚刚上来的R队战士成炮灰</span>
+                  	<span class="token class-name">Dattack</span><span class="token operator">--</span><span class="token punctuation">;</span>				<span class="token comment">// 同时消耗D队一个攻击值</span>
+                    <span class="token class-name">Rdie</span><span class="token operator">++</span><span class="token punctuation">;</span>						<span class="token comment">// R队死亡人数加1</span>
+                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token class-name">Rattack</span><span class="token operator">++</span><span class="token punctuation">;</span>			<span class="token comment">// 如果D队攻击值为0，则R队攻击值积累加1</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token comment">// 后几轮厮杀</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> chars<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          	<span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> chars<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>		<span class="token comment">// 这个 if 判断达到轮战的目的</span>
+                i <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+                <span class="token keyword">continue</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+          	<span class="token comment">// 战士战死，直接跳过，先判断这个可以提高性能</span>
+          	<span class="token keyword">if</span> <span class="token punctuation">(</span>chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span><span class="token string">'d'</span><span class="token operator">||</span>chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span><span class="token string">'r'</span><span class="token punctuation">)</span>	<span class="token keyword">continue</span><span class="token punctuation">;</span>		
+            <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token class-name">Rdie</span><span class="token operator">==</span><span class="token class-name">Rnumber</span><span class="token punctuation">)</span>   <span class="token keyword">return</span> <span class="token string">"Dire"</span><span class="token punctuation">;</span>			<span class="token comment">// R队被歼灭，D队获胜</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token class-name">Ddie</span><span class="token operator">==</span><span class="token class-name">Dnumber</span><span class="token punctuation">)</span>   <span class="token keyword">return</span> <span class="token string">"Radiant"</span><span class="token punctuation">;</span>		<span class="token comment">// D队被歼灭，R队获胜</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'D'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>	<span class="token comment">// 来的是D队战士，不加总人数其他同上处理</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Rattack</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token class-name">Rattack</span><span class="token operator">--</span><span class="token punctuation">;</span>
+                    chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'d'</span><span class="token punctuation">;</span>
+                    <span class="token class-name">Ddie</span><span class="token operator">++</span><span class="token punctuation">;</span>
+                    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Ddie</span> <span class="token operator">==</span> <span class="token class-name">Dnumber</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token string">"Radiant"</span><span class="token punctuation">;</span>	<span class="token comment">// 判断是否结束</span>
+                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token class-name">Dattack</span><span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>								<span class="token comment">// 来的是R队战士，不加总人数其他同上处理</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Dattack</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token class-name">Dattack</span><span class="token operator">--</span><span class="token punctuation">;</span>
+                    chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'r'</span><span class="token punctuation">;</span>
+                    <span class="token class-name">Rdie</span><span class="token operator">++</span><span class="token punctuation">;</span>
+                    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Rdie</span> <span class="token operator">==</span> <span class="token class-name">Rnumber</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token string">"Dire"</span><span class="token punctuation">;</span>	<span class="token comment">// 判断是否结束</span>
+                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token class-name">Rattack</span><span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token string">""</span><span class="token punctuation">;</span>	<span class="token comment">// 因为上面的return语句都在if语句后，所以加上这个不会被执行的return语句</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="3-2-算法执行结果"><a href="#3-2-算法执行结果" class="headerlink" title="3.2 算法执行结果"></a>3.2 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glk8jfyf4bj30s40ee75b.jpg" alt="表格标签示例" width="80%/"></center>
+
+<h2 id="四、总结分析"><a href="#四、总结分析" class="headerlink" title="四、总结分析"></a><font color="born">四、总结分析</font></h2><p>​    个人感觉这个题目是题目意思有点让人费解，读懂题目意思后思路还是挺简单的。</p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>中等</tag>
+        <tag>算法题</tag>
+        <tag>数组</tag>
+      </tags>
   </entry>
   <entry>
     <title>个人博客搭建</title>
@@ -257,20 +299,69 @@
       </tags>
   </entry>
   <entry>
-    <title>尝试</title>
-    <url>/2020/12/08/chang-shi/</url>
-    <content><![CDATA[<h1 id="甘明"><a href="#甘明" class="headerlink" title="甘明"></a>甘明</h1><p>甘明甘明甘明</p>
-<p>甘明</p>
-<p>甘明</p>
-<p>甘明</p>
-<p>甘明甘明</p>
+    <title>VSCode写HTML文档</title>
+    <url>/2020/12/10/vscode-xie-html-wen-dang/</url>
+    <content><![CDATA[<h1 id="VSCode-写-HTML-文档"><a href="#VSCode-写-HTML-文档" class="headerlink" title="VSCode 写 HTML 文档"></a><center>VSCode 写 HTML 文档</center></h1><h2 id="一、VSCode-的使用"><a href="#一、VSCode-的使用" class="headerlink" title="一、VSCode 的使用"></a><font color="born">一、VSCode 的使用</font></h2><h3 id="1-1-软件的下载和基本的-html-文件创建"><a href="#1-1-软件的下载和基本的-html-文件创建" class="headerlink" title="1.1 软件的下载和基本的 html 文件创建"></a>1.1 软件的下载和基本的 html 文件创建</h3><ul>
+<li><p>VSCode 下载可以去<a href="https://code.visualstudio.com/">VSCode官网</a>下载</p>
+</li>
+<li><p>新建文件，该文件名和和文件格式为<font color="red">.html</font>即可</p>
+</li>
+<li><p>在新建的 html 文件中输入 ! 接着回车或按 Tab 键即可生成网页骨架。</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!-- 输入 ! 回车可快速生成下面骨架 --&gt;</span>
+<span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1.0<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>修改网页的&lt; title &gt; 和 &lt; body &gt; 标签为自己想修改的内容然后右键选择Open In Default Browser 在默认浏览器中打开，可能你的右键没有这个选项，需要安装插件。</p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gliqfg55fxj317a0s8djx.jpg" alt="默认浏览器中打开网页" width="70%/"></center>
+</li>
+<li><p>觉得页面代码字体不合适可以通过 command + 加号键、和 command + 减号键调整字体大小。</p>
+</li>
+</ul>
+<h3 id="1-2-VSCode-插件使用"><a href="#1-2-VSCode-插件使用" class="headerlink" title="1.2 VSCode 插件使用"></a>1.2 VSCode 插件使用</h3><ul>
+<li><p>插件安装方法，在最左边的是插件功能选择，之后再搜索框搜索插件名安装，重启 VSCode 即可生效。</p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gliqprm66nj319e0tsdnt.jpg" alt="VSCode插件安装" width="70%/"></center>
+</li>
+<li><p>推荐安装的插件</p>
+<ul>
+<li><font color="red">Chinese(Simplified)Language Pack for VS Code</font>：中文（简体）语言包</li>
+<li><font color="red">Open in Browser</font>：右键选择在浏览器中打开 html 文件，上面演示的功能</li>
+<li><font color="red">JS-CSS-HTML Formatter</font>：每次保存，都会自动格式化js、css 和 html 代码</li>
+<li><font color="red">Auto Rename Tag</font>：自动重命名配对的 HTML/XML 标签</li>
+<li><font color="red">CSS Peek</font>：追踪至样式</li>
+</ul>
+<p>更多好用的插件希望大家相互推荐~</p>
+</li>
+</ul>
+<h3 id="1-3-VSCode-工具生成的骨架标签新增的代码"><a href="#1-3-VSCode-工具生成的骨架标签新增的代码" class="headerlink" title="1.3 VSCode 工具生成的骨架标签新增的代码"></a>1.3 VSCode 工具生成的骨架标签新增的代码</h3><ul>
+<li><p><font color="red">文档类型声明标签 &lt; !DOCTYPE &gt;</font>：告诉浏览器使用那种 HTML 版本来显示网页</p>
+<p>&lt; !DOCTYPE html &gt; 表示当前页面采用的是 HTML5 版本来显示网页。&lt; !DOCTYPE html &gt; 不是一个 HTML 标签，它只是一个文档类型声明标签。</p>
+</li>
+<li><p><font color="red">lang 语言种类</font>：用来定义当前文档显示的语言</p>
+<p><font color="red">en</font> 定义语言为英语，<font color="red">zh-CN</font>  定义语言为中文。无论哪种都可以在网页里写中英文，都能正常显示，这个属性只用于<font color="red">浏览器翻译功能的判断</font>而已。</p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glircl05pzj314w0kuacx.jpg" alt="lang 属性的影响" width="67%/"></center>
+</li>
+<li><p><font color="red">字符集</font>：是多个字符的集合，以便计算机能够识别和存储各种文字</p>
+<p>在&lt; head&gt; 标签内，可以通过 &lt; meta&gt; 标签的 charset 属性来规定 HTML 文档使用的字符编码集。</p>
+<p>charset 常用值有：GB2312、BIG5、GBK 和 UTF-8，其中 <font color="red">UTF-8</font> 也被称为<font color="red">万国码</font>，基本包含了全世界所有国家需要用到的字符。</p>
+<p>【注意】:<font color="red">上面语法是必须要写的代码，否则可能引起乱码的情况。一般情况下，统一使用“UTF-8”编码，尽量统一写成标准的 “UTF-8”，不要写成 “utf8” 或 “UTF8”。</font></p>
+</li>
+</ul>
 ]]></content>
       <categories>
-        <category>Markdown</category>
+        <category>工具技巧</category>
       </categories>
       <tags>
-        <tag>typora</tag>
-        <tag>markdown</tag>
+        <tag>VSCode</tag>
+        <tag>Html</tag>
       </tags>
   </entry>
   <entry>
@@ -594,8 +685,8 @@
         <category>前端开发</category>
       </categories>
       <tags>
-        <tag>markdown</tag>
         <tag>html</tag>
+        <tag>markdown</tag>
       </tags>
   </entry>
 </search>
