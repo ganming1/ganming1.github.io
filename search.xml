@@ -1,6 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>VSCode写HTML文档</title>
+    <url>/2020/12/10/vscode-xie-html-wen-dang/</url>
+    <content><![CDATA[<h1 id="VSCode-写-HTML-文档"><a href="#VSCode-写-HTML-文档" class="headerlink" title="VSCode 写 HTML 文档"></a><center>VSCode 写 HTML 文档</center></h1><h2 id="一、VSCode-的使用"><a href="#一、VSCode-的使用" class="headerlink" title="一、VSCode 的使用"></a><font color="born">一、VSCode 的使用</font></h2><h3 id="1-1-软件的下载和基本的-html-文件创建"><a href="#1-1-软件的下载和基本的-html-文件创建" class="headerlink" title="1.1 软件的下载和基本的 html 文件创建"></a>1.1 软件的下载和基本的 html 文件创建</h3><ul>
+<li><p>VSCode 下载可以去<a href="https://code.visualstudio.com/">VSCode官网</a>下载</p>
+</li>
+<li><p>新建文件，该文件名和和文件格式为<font color="red">.html</font>即可</p>
+</li>
+<li><p>在新建的 html 文件中输入 ! 接着回车或按 Tab 键即可生成网页骨架。</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!-- 输入 ! 回车可快速生成下面骨架 --&gt;</span>
+<span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1.0<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>修改网页的&lt; title &gt; 和 &lt; body &gt; 标签为自己想修改的内容然后右键选择Open In Default Browser 在默认浏览器中打开，可能你的右键没有这个选项，需要安装插件。</p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gliqfg55fxj317a0s8djx.jpg" alt="默认浏览器中打开网页" width="70%/"></center>
+</li>
+<li><p>觉得页面代码字体不合适可以通过 command + 加号键、和 command + 减号键调整字体大小。</p>
+</li>
+</ul>
+<h3 id="1-2-VSCode-插件使用"><a href="#1-2-VSCode-插件使用" class="headerlink" title="1.2 VSCode 插件使用"></a>1.2 VSCode 插件使用</h3><ul>
+<li><p>插件安装方法，在最左边的是插件功能选择，之后再搜索框搜索插件名安装，重启 VSCode 即可生效。</p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gliqprm66nj319e0tsdnt.jpg" alt="VSCode插件安装" width="70%/"></center>
+</li>
+<li><p>推荐安装的插件</p>
+<ul>
+<li><font color="red">Chinese(Simplified)Language Pack for VS Code</font>：中文（简体）语言包</li>
+<li><font color="red">Open in Browser</font>：右键选择在浏览器中打开 html 文件，上面演示的功能</li>
+<li><font color="red">JS-CSS-HTML Formatter</font>：每次保存，都会自动格式化js、css 和 html 代码</li>
+<li><font color="red">Auto Rename Tag</font>：自动重命名配对的 HTML/XML 标签</li>
+<li><font color="red">CSS Peek</font>：追踪至样式</li>
+</ul>
+<p>更多好用的插件希望大家相互推荐~</p>
+</li>
+</ul>
+<h3 id="1-3-VSCode-工具生成的骨架标签新增的代码"><a href="#1-3-VSCode-工具生成的骨架标签新增的代码" class="headerlink" title="1.3 VSCode 工具生成的骨架标签新增的代码"></a>1.3 VSCode 工具生成的骨架标签新增的代码</h3><ul>
+<li><p><font color="red">文档类型声明标签 &lt; !DOCTYPE &gt;</font>：告诉浏览器使用那种 HTML 版本来显示网页</p>
+<p>&lt; !DOCTYPE html &gt; 表示当前页面采用的是 HTML5 版本来显示网页。&lt; !DOCTYPE html &gt; 不是一个 HTML 标签，它只是一个文档类型声明标签。</p>
+</li>
+<li><p><font color="red">lang 语言种类</font>：用来定义当前文档显示的语言</p>
+<p><font color="red">en</font> 定义语言为英语，<font color="red">zh-CN</font>  定义语言为中文。无论哪种都可以在网页里写中英文，都能正常显示，这个属性只用于<font color="red">浏览器翻译功能的判断</font>而已。</p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glircl05pzj314w0kuacx.jpg" alt="lang 属性的影响" width="67%/"></center>
+</li>
+<li><p><font color="red">字符集</font>：是多个字符的集合，以便计算机能够识别和存储各种文字</p>
+<p>在&lt; head&gt; 标签内，可以通过 &lt; meta&gt; 标签的 charset 属性来规定 HTML 文档使用的字符编码集。</p>
+<p>charset 常用值有：GB2312、BIG5、GBK 和 UTF-8，其中 <font color="red">UTF-8</font> 也被称为<font color="red">万国码</font>，基本包含了全世界所有国家需要用到的字符。</p>
+<p>【注意】:<font color="red">上面语法是必须要写的代码，否则可能引起乱码的情况。一般情况下，统一使用“UTF-8”编码，尽量统一写成标准的 “UTF-8”，不要写成 “utf8” 或 “UTF8”。</font></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>工具技巧</category>
+      </categories>
+      <tags>
+        <tag>VSCode</tag>
+        <tag>Html</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/12/07/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>个人博客搭建</title>
     <url>/2020/12/08/ge-ren-bo-ke-da-jian/</url>
     <content><![CDATA[<h2 id="一、个人博客搭建的几种方法"><a href="#一、个人博客搭建的几种方法" class="headerlink" title="一、个人博客搭建的几种方法"></a><font color="born">一、个人博客搭建的几种方法</font></h2><h3 id="1-动态博客的搭建"><a href="#1-动态博客的搭建" class="headerlink" title="1 动态博客的搭建"></a><strong>1 动态博客的搭建</strong></h3><ol>
@@ -279,90 +363,6 @@
         <tag>算法题</tag>
         <tag>数组</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>VSCode写HTML文档</title>
-    <url>/2020/12/10/vscode-xie-html-wen-dang/</url>
-    <content><![CDATA[<h1 id="VSCode-写-HTML-文档"><a href="#VSCode-写-HTML-文档" class="headerlink" title="VSCode 写 HTML 文档"></a><center>VSCode 写 HTML 文档</center></h1><h2 id="一、VSCode-的使用"><a href="#一、VSCode-的使用" class="headerlink" title="一、VSCode 的使用"></a><font color="born">一、VSCode 的使用</font></h2><h3 id="1-1-软件的下载和基本的-html-文件创建"><a href="#1-1-软件的下载和基本的-html-文件创建" class="headerlink" title="1.1 软件的下载和基本的 html 文件创建"></a>1.1 软件的下载和基本的 html 文件创建</h3><ul>
-<li><p>VSCode 下载可以去<a href="https://code.visualstudio.com/">VSCode官网</a>下载</p>
-</li>
-<li><p>新建文件，该文件名和和文件格式为<font color="red">.html</font>即可</p>
-</li>
-<li><p>在新建的 html 文件中输入 ! 接着回车或按 Tab 键即可生成网页骨架。</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!-- 输入 ! 回车可快速生成下面骨架 --&gt;</span>
-<span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1.0<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
-    
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>修改网页的&lt; title &gt; 和 &lt; body &gt; 标签为自己想修改的内容然后右键选择Open In Default Browser 在默认浏览器中打开，可能你的右键没有这个选项，需要安装插件。</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gliqfg55fxj317a0s8djx.jpg" alt="默认浏览器中打开网页" width="70%/"></center>
-</li>
-<li><p>觉得页面代码字体不合适可以通过 command + 加号键、和 command + 减号键调整字体大小。</p>
-</li>
-</ul>
-<h3 id="1-2-VSCode-插件使用"><a href="#1-2-VSCode-插件使用" class="headerlink" title="1.2 VSCode 插件使用"></a>1.2 VSCode 插件使用</h3><ul>
-<li><p>插件安装方法，在最左边的是插件功能选择，之后再搜索框搜索插件名安装，重启 VSCode 即可生效。</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gliqprm66nj319e0tsdnt.jpg" alt="VSCode插件安装" width="70%/"></center>
-</li>
-<li><p>推荐安装的插件</p>
-<ul>
-<li><font color="red">Chinese(Simplified)Language Pack for VS Code</font>：中文（简体）语言包</li>
-<li><font color="red">Open in Browser</font>：右键选择在浏览器中打开 html 文件，上面演示的功能</li>
-<li><font color="red">JS-CSS-HTML Formatter</font>：每次保存，都会自动格式化js、css 和 html 代码</li>
-<li><font color="red">Auto Rename Tag</font>：自动重命名配对的 HTML/XML 标签</li>
-<li><font color="red">CSS Peek</font>：追踪至样式</li>
-</ul>
-<p>更多好用的插件希望大家相互推荐~</p>
-</li>
-</ul>
-<h3 id="1-3-VSCode-工具生成的骨架标签新增的代码"><a href="#1-3-VSCode-工具生成的骨架标签新增的代码" class="headerlink" title="1.3 VSCode 工具生成的骨架标签新增的代码"></a>1.3 VSCode 工具生成的骨架标签新增的代码</h3><ul>
-<li><p><font color="red">文档类型声明标签 &lt; !DOCTYPE &gt;</font>：告诉浏览器使用那种 HTML 版本来显示网页</p>
-<p>&lt; !DOCTYPE html &gt; 表示当前页面采用的是 HTML5 版本来显示网页。&lt; !DOCTYPE html &gt; 不是一个 HTML 标签，它只是一个文档类型声明标签。</p>
-</li>
-<li><p><font color="red">lang 语言种类</font>：用来定义当前文档显示的语言</p>
-<p><font color="red">en</font> 定义语言为英语，<font color="red">zh-CN</font>  定义语言为中文。无论哪种都可以在网页里写中英文，都能正常显示，这个属性只用于<font color="red">浏览器翻译功能的判断</font>而已。</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glircl05pzj314w0kuacx.jpg" alt="lang 属性的影响" width="67%/"></center>
-</li>
-<li><p><font color="red">字符集</font>：是多个字符的集合，以便计算机能够识别和存储各种文字</p>
-<p>在&lt; head&gt; 标签内，可以通过 &lt; meta&gt; 标签的 charset 属性来规定 HTML 文档使用的字符编码集。</p>
-<p>charset 常用值有：GB2312、BIG5、GBK 和 UTF-8，其中 <font color="red">UTF-8</font> 也被称为<font color="red">万国码</font>，基本包含了全世界所有国家需要用到的字符。</p>
-<p>【注意】:<font color="red">上面语法是必须要写的代码，否则可能引起乱码的情况。一般情况下，统一使用“UTF-8”编码，尽量统一写成标准的 “UTF-8”，不要写成 “utf8” 或 “UTF8”。</font></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>工具技巧</category>
-      </categories>
-      <tags>
-        <tag>VSCode</tag>
-        <tag>Html</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/12/07/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>HTML 标签（上）</title>
