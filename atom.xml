@@ -6,7 +6,7 @@
   <link href="http://ganming1.github.io/atom.xml" rel="self"/>
   
   <link href="http://ganming1.github.io/"/>
-  <updated>2020-12-11T13:56:50.198Z</updated>
+  <updated>2020-12-15T03:51:40.536Z</updated>
   <id>http://ganming1.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>力扣738-单调递增的数字</title>
+    <link href="http://ganming1.github.io/2020/12/15/li-kou-738-dan-diao-di-zeng-de-shu-zi/"/>
+    <id>http://ganming1.github.io/2020/12/15/li-kou-738-dan-diao-di-zeng-de-shu-zi/</id>
+    <published>2020-12-15T01:58:19.000Z</published>
+    <updated>2020-12-15T03:51:40.536Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;力扣738-单调递增的数字&quot;&gt;&lt;a href=&quot;#力扣738-单调递增的数字&quot; class=&quot;headerlink&quot; title=&quot;力扣738-单调递增的数字&quot;&gt;&lt;/a&gt;&lt;center&gt;力扣738-单调递增的数字&lt;/center&gt;&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="中等" scheme="http://ganming1.github.io/tags/%E4%B8%AD%E7%AD%89/"/>
+    
+    <category term="算法题" scheme="http://ganming1.github.io/tags/%E7%AE%97%E6%B3%95%E9%A2%98/"/>
+    
+    <category term="数组" scheme="http://ganming1.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+    <category term="贪心" scheme="http://ganming1.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
+    
+  </entry>
   
   <entry>
     <title>力扣649-Dota2参议院</title>
