@@ -257,6 +257,71 @@
       </tags>
   </entry>
   <entry>
+    <title>力扣290-单词规律</title>
+    <url>/2020/12/16/li-kou-290-dan-ci-gui-lu/</url>
+    <content><![CDATA[<h1 id="力扣290-单词规律"><a href="#力扣290-单词规律" class="headerlink" title="力扣290-单词规律"></a><center>力扣290-单词规律</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>​        给定一种规律 pattern 和一个字符串 str ，判断 str 是否遵循相同的规律。这里的遵循指完全匹配，例如， pattern 里的每个字母和字符串 str 中的每个非空单词之间存在着双向连接的对应规律。</p>
+<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
+<li><p><strong>示例1：</strong></p>
+<p><strong>输入：</strong> pattern = “abba”, str = “dog cat cat dog”<br><strong>输出：</strong> true</p>
+</li>
+<li><p><strong>示例2：</strong></p>
+<p><strong>输入：</strong> pattern = “abba”, str = “dog cat cat fish”<br><strong>输出：</strong> false</p>
+</li>
+<li><p><strong>示例3：</strong></p>
+<p><strong>输入：</strong> pattern = “aaaa”, str = “dog cat cat dog”</p>
+<p><strong>输出：</strong> false</p>
+</li>
+<li><p><strong>示例4：</strong></p>
+<p><strong>输入：</strong> pattern = “abba”, str = “dog dog dog dog”</p>
+<p><strong>输出：</strong> false</p>
+</li>
+<li><p><strong>说明：</strong> 你可以假设  pattern 只包含小写字母，str 包含了由单个空格分隔的小写字母。</p>
+</li>
+</ul>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/word-pattern">https://leetcode-cn.com/problems/word-pattern</a></p>
+<h2 id="二、解题思路一"><a href="#二、解题思路一" class="headerlink" title="二、解题思路一"></a><font color="born">二、解题思路一</font></h2><h3 id="2-1-题目意思理解"><a href="#2-1-题目意思理解" class="headerlink" title="2.1 题目意思理解"></a>2.1 题目意思理解</h3><p>​    这个题目是个很简单的题目，很容易想到思路。</p>
+<ul>
+<li>首先用 split 函数将字符串 str 按空格切割成字符串数组 arraystr []。</li>
+<li>比较 pattern 与 arraystr 的长度，如果不相同直接返回 false ，否则进入下面的比较过程。</li>
+<li>建立一个 HashMap，键用来存储 pattern 中的字母，值用来存储 arraystr 数组中对应位置的单词，当然在存储的过程中会进行检验的，当键值对都没存在过时则加入 HashMap ，当有一个（键或值）存在时，取出该键值对与当前准备插入的比较，若完全相同则符合，直接下一个，若有一个（键或值）不相同时，则直接返回 false 。</li>
+<li>如果程序跑到了最后还没返回 false 则返回 true 。</li>
+</ul>
+<h3 id="2-2-详细代码（Java）"><a href="#2-2-详细代码（Java）" class="headerlink" title="2.2 详细代码（Java）"></a>2.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">wordPattern</span><span class="token punctuation">(</span><span class="token class-name">String</span> pattern<span class="token punctuation">,</span> <span class="token class-name">String</span> s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arraystr <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                     <span class="token comment">// 分割字符串</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>arraystr<span class="token punctuation">.</span>length <span class="token operator">!=</span> pattern<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>   <span class="token comment">// 长度不同，直接返回false</span>
+        <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Character</span><span class="token punctuation">,</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>pattern<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>map<span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span>pattern<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>               <span class="token comment">// 当前键在map中没存在过</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>map<span class="token punctuation">.</span><span class="token function">containsValue</span><span class="token punctuation">(</span>arraystr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>                <span class="token comment">// 当前值在map中也没存在过</span>
+                    map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>pattern<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span>arraystr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token comment">// 都没存在则加入map</span>
+                <span class="token keyword">else</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>                                  <span class="token comment">// 健不存在但值存在，返回false</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token punctuation">{</span>                                                  <span class="token comment">// 键存在</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>pattern<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>arraystr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// 值也存在，并且就是对应的键值对，什么也不做跳过</span>
+                <span class="token keyword">else</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>                                  <span class="token comment">// 所存的键值对与当前不一样，返回false</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>                                                <span class="token comment">// 遍历结束，没有中途返回false的说明符合规律</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>代码第13行进行字符串内容的比较的时候一定要用<font color="red">.equals</font>函数来比较，不能用<font color="red">==</font>或<font color="red">!=</font>，否则都会出错。</li>
+</ul>
+<h3 id="2-3-算法执行结果"><a href="#2-3-算法执行结果" class="headerlink" title="2.3 算法执行结果"></a>2.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glpj9qxoc0j30pa0cw3zq.jpg" alt="算法执行结果" width="80%/"></center>
+
+<h2 id="三、总结分析"><a href="#三、总结分析" class="headerlink" title="三、总结分析"></a><font color="born">三、总结分析</font></h2><p>​    题目很简单，单纯的哈希表的练习。</p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>简单</tag>
+        <tag>哈希表</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>力扣649-Dota2参议院</title>
     <url>/2020/12/11/li-kou-649-dota2-can-yi-yuan/</url>
     <content><![CDATA[<h1 id="649-Dota2-参议院"><a href="#649-Dota2-参议院" class="headerlink" title="649. Dota2 参议院"></a><center>649. Dota2 参议院</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>​        Dota2 的世界里有两个阵营：Radiant (天辉)和 Dire(夜魇)。Dota2 参议院由来自两派的参议员组成。现在参议院希望对一个 Dota2 游戏里的改变作出决定。他们以一个基于轮为过程的投票进行。在每一轮中，每一位参议员都可以行使两项权利中的一项：</p>

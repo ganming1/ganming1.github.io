@@ -6,7 +6,7 @@
   <link href="http://ganming1.github.io/atom.xml" rel="self"/>
   
   <link href="http://ganming1.github.io/"/>
-  <updated>2020-12-15T03:51:40.536Z</updated>
+  <updated>2020-12-16T03:30:49.759Z</updated>
   <id>http://ganming1.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>力扣290-单词规律</title>
+    <link href="http://ganming1.github.io/2020/12/16/li-kou-290-dan-ci-gui-lu/"/>
+    <id>http://ganming1.github.io/2020/12/16/li-kou-290-dan-ci-gui-lu/</id>
+    <published>2020-12-16T02:17:07.000Z</published>
+    <updated>2020-12-16T03:30:49.759Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;力扣290-单词规律&quot;&gt;&lt;a href=&quot;#力扣290-单词规律&quot; class=&quot;headerlink&quot; title=&quot;力扣290-单词规律&quot;&gt;&lt;/a&gt;&lt;center&gt;力扣290-单词规律&lt;/center&gt;&lt;/h1&gt;&lt;h2 id=&quot;一、原题题目&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
+    
+    <category term="哈希表" scheme="http://ganming1.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>力扣738-单调递增的数字</title>
