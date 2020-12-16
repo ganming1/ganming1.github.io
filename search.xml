@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>VSCode写HTML文档</title>
-    <url>/2020/12/10/vscode-xie-html-wen-dang/</url>
+    <url>/2020/12/16/vscode-xie-html-wen-dang/</url>
     <content><![CDATA[<h1 id="VSCode-写-HTML-文档"><a href="#VSCode-写-HTML-文档" class="headerlink" title="VSCode 写 HTML 文档"></a><center>VSCode 写 HTML 文档</center></h1><h2 id="一、VSCode-的使用"><a href="#一、VSCode-的使用" class="headerlink" title="一、VSCode 的使用"></a><font color="born">一、VSCode 的使用</font></h2><h3 id="1-1-软件的下载和基本的-html-文件创建"><a href="#1-1-软件的下载和基本的-html-文件创建" class="headerlink" title="1.1 软件的下载和基本的 html 文件创建"></a>1.1 软件的下载和基本的 html 文件创建</h3><ul>
 <li><p>VSCode 下载可以去<a href="https://code.visualstudio.com/">VSCode官网</a>下载</p>
 </li>
@@ -318,6 +318,7 @@
       </categories>
       <tags>
         <tag>简单</tag>
+        <tag>算法题</tag>
         <tag>哈希表</tag>
       </tags>
   </entry>
@@ -424,8 +425,8 @@
         <category>算法</category>
       </categories>
       <tags>
-        <tag>中等</tag>
         <tag>算法题</tag>
+        <tag>中等</tag>
         <tag>数组</tag>
       </tags>
   </entry>
@@ -479,8 +480,8 @@
         <category>算法</category>
       </categories>
       <tags>
-        <tag>中等</tag>
         <tag>算法题</tag>
+        <tag>中等</tag>
         <tag>数组</tag>
         <tag>贪心</tag>
       </tags>
