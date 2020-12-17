@@ -1,150 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>个人博客搭建</title>
-    <url>/2020/12/08/ge-ren-bo-ke-da-jian/</url>
-    <content><![CDATA[<h1 id="基于-hexo-的个人博客搭建"><a href="#基于-hexo-的个人博客搭建" class="headerlink" title="基于 hexo 的个人博客搭建"></a><center>基于 hexo 的个人博客搭建</center></h1><h2 id="一、个人博客搭建的几种方法"><a href="#一、个人博客搭建的几种方法" class="headerlink" title="一、个人博客搭建的几种方法"></a><font color="born">一、个人博客搭建的几种方法</font></h2><h3 id="1-1-动态博客的搭建"><a href="#1-1-动态博客的搭建" class="headerlink" title="1.1 动态博客的搭建"></a>1.1 动态博客的搭建</h3><ol>
-<li>自己动手写前端后端搭建动态博客。（比较困难）</li>
-<li>通过wordpress动态博客框架系统。（<a href="http://wordpress.org/">wordpress网址</a>）</li>
-</ol>
-<h3 id="1-2-静态博客的框架"><a href="#1-2-静态博客的框架" class="headerlink" title="1.2 静态博客的框架"></a>1.2 静态博客的框架</h3><ol>
-<li>hexo框架：快速、简介且高效的博客框架。<font color="red">比较火</font>（<a href="http://hexo.io/zh-cn">hexo</a>）</li>
-<li>jekyllrb框架：将纯文本转换为静态网站和博客。（<a href="http://jekyllrb.com/zh-cn">jekyllrb</a>）</li>
-<li>gohugo框架：基于go语言的静态博客框架。（<a href="https://www.gohugo.org/">gohugo</a>）</li>
-<li>vuepress框架：Vue供电的静态站点生成器。（<a href="https://vuepress.vuejs.org/">veepress</a>）</li>
-</ol>
-<h2 id="二、个人博客搭建教程—–hexo"><a href="#二、个人博客搭建教程—–hexo" class="headerlink" title="二、个人博客搭建教程—–hexo"></a><font color="born">二、个人博客搭建教程—–hexo</font></h2><p>​    由于 hexo 框架比较火，网上的教程也比较全，接下来就以 hexo 的搭建步骤来演示。系统环境是MacOs，Windown系统大同小异。</p>
-<h3 id="2-1-安装Node-js-（直接去官网下载安装即可node-js）"><a href="#2-1-安装Node-js-（直接去官网下载安装即可node-js）" class="headerlink" title="2.1 安装Node.js    （直接去官网下载安装即可node.js）"></a>2.1 安装Node.js    （直接去官网下载安装即可<a href="https://nodejs.org/zh-cn/">node.js</a>）</h3><p>​    安装的时候会安装<font color="red">Node.js</font>本身和<font color="red">npm</font>包管理器。都是后序需要用到的工具。</p>
-<p>​    在终端中输入node -v 和 npm -v 查看node.js 和 npm 的版本，如果安装成功则会显示下图类似结果。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">node -v
-<span class="token function">npm</span> -v<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glf8sspqk1j30v40awad8.jpg" alt="检查nodejs 和 npm 是否安装成功" width="80%"></center>
-
-<h3 id="2-2-安装-hexo-博客框架"><a href="#2-2-安装-hexo-博客框架" class="headerlink" title="2.2 安装 hexo 博客框架"></a>2.2 安装 hexo 博客框架</h3><ul>
-<li><p>利用npm包管理器来安装hexo框架，由于国内镜像源的速度很慢，一般会先利用npm输入下行命令安装一个 cnpm 指向淘宝的镜像源。在输入cnpm检查是否安装成功，出现下图使用方法和帮助文档则表示安装成功。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g cnpm --registry<span class="token operator">=</span>https://registry.npm.taobao.org<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-</li>
-</ul>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glf98irwa1j316c0u0jys.jpg" alt="检查 cnpm 是否安装成功" width="80%"></center>
-
-<ul>
-<li><p>利用 cnpm 全局安装 hexo 博客框架。输入下列命令安装。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cnpm <span class="token function">install</span> -g hexo-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li><p>用 hexo -v 命令检验 hexo 是否安装成功，出现下面相关信息则表示安装成功，可以看得出hexo 框架是基于 nodejs 的。</p>
-</li>
-</ul>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glf9swpmi7j31900nwqce.jpg" alt="检查 hexo 是否安装成功" width="80%"></center>
-
-<h3 id="2-3-开始使用-hexo-搭建博客"><a href="#2-3-开始使用-hexo-搭建博客" class="headerlink" title="2.3 开始使用 hexo 搭建博客"></a>2.3 开始使用 hexo 搭建博客</h3><ul>
-<li>新建一个文件夹，用于存放博客的相关文件，出了问题直接删掉这个文件夹即可，重来。我是在我的用户【文稿】文件夹下建了一个【Blog】文件夹。</li>
-</ul>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glf9zte6juj31bm0pc45n.jpg" alt="新建一个博客的专属文件夹" width="70%"></center>
-
-<ul>
-<li><p>在终端中到新建的【Blog】文件夹目录下，把该文件夹初始化为博客文件夹，用下列命令。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> hexo init<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-</li>
-</ul>
-<p>​    初始化这个需要些时间……..</p>
-<p>​    初始化成功截图如下：</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfbbxgdl9j31900jwk25.jpg" alt="初始化博客文件夹成功" width="80%/"></center>
-
-<p>​    初试化成功后会在博客目录【Blog】下生成一系列文件，如下图。</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfbodfzjjj31jk0iw4b2.jpg" alt="初始化博客生成的文件" width="80%/"></center>
-
-<ul>
-<li>启动博客，初始化好博客之后就非常好启动博客，用 hexo s 命令来启动hexo 服务 s 表示 server。</li>
-</ul>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfc7uin02j31jk0iw4ad.jpg" alt="启动 hexo" width="80%"></center>
-
-<p>​    第一次启动可能会出错，大部分都是权限的问题，只要修改所有文件和文件夹的权限即可。当启动之后就可以去浏览器输入 <a href="http://localhost:4000/">http://localhost:4000</a> 访问到我们的博客。是默认主题的。默认给你生成了一篇博文hello-world。</p>
-<h3 id="2-4-第一篇自己的博客"><a href="#2-4-第一篇自己的博客" class="headerlink" title="2.4 第一篇自己的博客"></a>2.4 第一篇自己的博客</h3><ul>
-<li>新建markdown文件</li>
-</ul>
-<p>​      自动生成的博文在【Blog】-&gt;【source】-&gt;【_posts】文件夹下，以后我们写自己的博文也是放在这个文件夹，下面我们来自己创建第一篇博文。</p>
-<p>可以在【_posts】问价夹下直接新建markdown文件，也可用下面命令在终端中新建。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new <span class="token string">"博文的题目"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ul>
-<li><p>【注意】：</p>
-<ol>
-<li>在上述新建博客的过程中也可能会出错，也是因为权限问题，需要修改【_posts】的权限才能新建成功。</li>
-<li>新建的markdown文件有一个模板，放在【Blog】-&gt;【scaffolds】的 post.md ，其他两个文件一个是草稿，一个也不太清楚…。</li>
-</ol>
-</li>
-<li><p>生成博客相关文件</p>
-<p>要在【Blog】目录下操作。生成前先清理下文件：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo clean<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>再根据md文件生成相应的网页文件用下面命令</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-</li>
-</ul>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfdq9tva3j30x00u04qp.jpg" alt="生成博客文件成功" width="80%"></center>
-
-<p>​    再重新用hexo s 命令启动hexo 在<a href="http://localhost:4000就可以看到我们自己写的第一篇博客啦！">http://localhost:4000就可以看到我们自己写的第一篇博客啦！</a></p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfdvcau4fj31dd0u0hdt.jpg" alt="博客生成成功" width="80%"></center>
-
-<p>​    到此，hexo博客的搭建就完成了。但是它只能在本地打开，接下来我们需要把它部署到远端去，这里推荐的部署方式是把它部署到github上去。</p>
-<h3 id="2-5-把博客部署到github上公开使用"><a href="#2-5-把博客部署到github上公开使用" class="headerlink" title="2.5 把博客部署到github上公开使用"></a>2.5 把博客部署到github上公开使用</h3><ul>
-<li>先要在github上创建一个跟自己用户名相同的后缀为.github.io的仓库，注意这里必须要与用户名相同。</li>
-</ul>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfe566ct6j31a40iyjun.jpg" alt="创建特定的github仓库" width="80%"></center>
-
-<ul>
-<li><p>接着需要在【Blog】目录下的终端里裝一个 Git 的部署插件。用下面命令安装</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cnpm <span class="token function">install</span> --save hexo-deployer-git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfjw4ob5sj315a0u0h84.jpg" alt="git部署插件安装成功" width="80%/"></center>
-</li>
-<li><p>配置【Blog】文件夹下的 _config.yml 文件</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfek6mdn0j31240mutcq.jpg" alt="修改配置文件" width="80%/"></center>
-
-<p>​    在# Deployment部分添加图示里面的代码，类型type为git,地址repo为刚刚新建的GitHub仓库的地址，如图14。branch为master。</p>
-</li>
-<li><p>将 hexo 部署到远端 GitHub 上</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-</li>
-</ul>
-<p>​    中间会要求输入自己的GitHub账号密码，上述都没有问题就可以部署成功。此时，GitHub刚刚新建的仓库中会多出 hexo 博客的相文件。</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glffzitzvkj328q0u0jx2.jpg" alt="部署成功远端文件" width="80%"></center>
-
-<p>​    到这里，你就可以用 <a href="https://ganming1.github.io/">https://ganming1.github.io</a> 来访问自己的个人网站博客啦。</p>
-<h3 id="2-6-更换博客主题"><a href="#2-6-更换博客主题" class="headerlink" title="2.6 更换博客主题"></a>2.6 更换博客主题</h3><ul>
-<li><p>要更改主题，首先要下载主题</p>
-<p>可以在【Blog】目录的终端下用 git 下载</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/litten/hexo-theme-yilia.git themes/yilia<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-</li>
-</ul>
-<p>​        <a href="https://github.com/litten/hexo-theme-yilia.git">https://github.com/litten/hexo-theme-yilia.git</a> 是你想下载的主题远端地址。</p>
-<p>​        themes/yilia 是你下载主题后保存的地址。</p>
-<ul>
-<li>下载好主题后会在【Blog】-&gt;【themes】文件里多出我们下载的主题。</li>
-</ul>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfgo6c0tkj31f40o8wh2.jpg" alt="下载的新主题" width="80%"></center>
-
-<ul>
-<li>下载好主题后，可以在【Blog】目录下的 _config.yml 文件中修改使用的主题。</li>
-</ul>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfgvtlosfj31e20sgafp.jpg" alt="在配置文件中更改使用新主题" width="80%"></center>
-
-<p>​    接下来 hexo clean 、hexo g、hexo s、hexo d 清除，生成，开启，推送一系列之前的动作就可以把新主题推送到远端的GitHub个人网站上去。</p>
-<p>​    本人尝试过很多主题，个人推荐 matery 主题，大概样子可以参考我的个人网页：<a href="http://ganming1.github.io/">http://ganming1.github.io</a> 更多主题个性化设置欢迎留言讨论。</p>
-]]></content>
-      <categories>
-        <category>工具技巧</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>Blog</tag>
-      </tags>
+    <title>CSS层叠演示表一</title>
+    <url>/2020/12/16/css-ceng-die-yan-shi-biao-yi/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>HTML 标签（下）</title>
@@ -404,6 +263,24 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2020/12/07/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>VSCode写HTML文档</title>
     <url>/2020/12/16/vscode-xie-html-wen-dang/</url>
     <content><![CDATA[<h1 id="VSCode-写-HTML-文档"><a href="#VSCode-写-HTML-文档" class="headerlink" title="VSCode 写 HTML 文档"></a><center>VSCode 写 HTML 文档</center></h1><h2 id="一、VSCode-的使用"><a href="#一、VSCode-的使用" class="headerlink" title="一、VSCode 的使用"></a><font color="born">一、VSCode 的使用</font></h2><h3 id="1-1-软件的下载和基本的-html-文件创建"><a href="#1-1-软件的下载和基本的-html-文件创建" class="headerlink" title="1.1 软件的下载和基本的 html 文件创建"></a>1.1 软件的下载和基本的 html 文件创建</h3><ul>
@@ -467,6 +344,152 @@
       <tags>
         <tag>VSCode</tag>
         <tag>Html</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>个人博客搭建</title>
+    <url>/2020/12/08/ge-ren-bo-ke-da-jian/</url>
+    <content><![CDATA[<h1 id="基于-hexo-的个人博客搭建"><a href="#基于-hexo-的个人博客搭建" class="headerlink" title="基于 hexo 的个人博客搭建"></a><center>基于 hexo 的个人博客搭建</center></h1><h2 id="一、个人博客搭建的几种方法"><a href="#一、个人博客搭建的几种方法" class="headerlink" title="一、个人博客搭建的几种方法"></a><font color="born">一、个人博客搭建的几种方法</font></h2><h3 id="1-1-动态博客的搭建"><a href="#1-1-动态博客的搭建" class="headerlink" title="1.1 动态博客的搭建"></a>1.1 动态博客的搭建</h3><ol>
+<li>自己动手写前端后端搭建动态博客。（比较困难）</li>
+<li>通过wordpress动态博客框架系统。（<a href="http://wordpress.org/">wordpress网址</a>）</li>
+</ol>
+<h3 id="1-2-静态博客的框架"><a href="#1-2-静态博客的框架" class="headerlink" title="1.2 静态博客的框架"></a>1.2 静态博客的框架</h3><ol>
+<li>hexo框架：快速、简介且高效的博客框架。<font color="red">比较火</font>（<a href="http://hexo.io/zh-cn">hexo</a>）</li>
+<li>jekyllrb框架：将纯文本转换为静态网站和博客。（<a href="http://jekyllrb.com/zh-cn">jekyllrb</a>）</li>
+<li>gohugo框架：基于go语言的静态博客框架。（<a href="https://www.gohugo.org/">gohugo</a>）</li>
+<li>vuepress框架：Vue供电的静态站点生成器。（<a href="https://vuepress.vuejs.org/">veepress</a>）</li>
+</ol>
+<h2 id="二、个人博客搭建教程—–hexo"><a href="#二、个人博客搭建教程—–hexo" class="headerlink" title="二、个人博客搭建教程—–hexo"></a><font color="born">二、个人博客搭建教程—–hexo</font></h2><p>​    由于 hexo 框架比较火，网上的教程也比较全，接下来就以 hexo 的搭建步骤来演示。系统环境是MacOs，Windown系统大同小异。</p>
+<h3 id="2-1-安装Node-js-（直接去官网下载安装即可node-js）"><a href="#2-1-安装Node-js-（直接去官网下载安装即可node-js）" class="headerlink" title="2.1 安装Node.js    （直接去官网下载安装即可node.js）"></a>2.1 安装Node.js    （直接去官网下载安装即可<a href="https://nodejs.org/zh-cn/">node.js</a>）</h3><p>​    安装的时候会安装<font color="red">Node.js</font>本身和<font color="red">npm</font>包管理器。都是后序需要用到的工具。</p>
+<p>​    在终端中输入node -v 和 npm -v 查看node.js 和 npm 的版本，如果安装成功则会显示下图类似结果。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">node -v
+<span class="token function">npm</span> -v<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glf8sspqk1j30v40awad8.jpg" alt="检查nodejs 和 npm 是否安装成功" width="80%"></center>
+
+<h3 id="2-2-安装-hexo-博客框架"><a href="#2-2-安装-hexo-博客框架" class="headerlink" title="2.2 安装 hexo 博客框架"></a>2.2 安装 hexo 博客框架</h3><ul>
+<li><p>利用npm包管理器来安装hexo框架，由于国内镜像源的速度很慢，一般会先利用npm输入下行命令安装一个 cnpm 指向淘宝的镜像源。在输入cnpm检查是否安装成功，出现下图使用方法和帮助文档则表示安装成功。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> -g cnpm --registry<span class="token operator">=</span>https://registry.npm.taobao.org<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+</li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glf98irwa1j316c0u0jys.jpg" alt="检查 cnpm 是否安装成功" width="80%"></center>
+
+<ul>
+<li><p>利用 cnpm 全局安装 hexo 博客框架。输入下列命令安装。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cnpm <span class="token function">install</span> -g hexo-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>用 hexo -v 命令检验 hexo 是否安装成功，出现下面相关信息则表示安装成功，可以看得出hexo 框架是基于 nodejs 的。</p>
+</li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glf9swpmi7j31900nwqce.jpg" alt="检查 hexo 是否安装成功" width="80%"></center>
+
+<h3 id="2-3-开始使用-hexo-搭建博客"><a href="#2-3-开始使用-hexo-搭建博客" class="headerlink" title="2.3 开始使用 hexo 搭建博客"></a>2.3 开始使用 hexo 搭建博客</h3><ul>
+<li>新建一个文件夹，用于存放博客的相关文件，出了问题直接删掉这个文件夹即可，重来。我是在我的用户【文稿】文件夹下建了一个【Blog】文件夹。</li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glf9zte6juj31bm0pc45n.jpg" alt="新建一个博客的专属文件夹" width="70%"></center>
+
+<ul>
+<li><p>在终端中到新建的【Blog】文件夹目录下，把该文件夹初始化为博客文件夹，用下列命令。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> hexo init<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+</li>
+</ul>
+<p>​    初始化这个需要些时间……..</p>
+<p>​    初始化成功截图如下：</p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfbbxgdl9j31900jwk25.jpg" alt="初始化博客文件夹成功" width="80%/"></center>
+
+<p>​    初试化成功后会在博客目录【Blog】下生成一系列文件，如下图。</p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfbodfzjjj31jk0iw4b2.jpg" alt="初始化博客生成的文件" width="80%/"></center>
+
+<ul>
+<li>启动博客，初始化好博客之后就非常好启动博客，用 hexo s 命令来启动hexo 服务 s 表示 server。</li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfc7uin02j31jk0iw4ad.jpg" alt="启动 hexo" width="80%"></center>
+
+<p>​    第一次启动可能会出错，大部分都是权限的问题，只要修改所有文件和文件夹的权限即可。当启动之后就可以去浏览器输入 <a href="http://localhost:4000/">http://localhost:4000</a> 访问到我们的博客。是默认主题的。默认给你生成了一篇博文hello-world。</p>
+<h3 id="2-4-第一篇自己的博客"><a href="#2-4-第一篇自己的博客" class="headerlink" title="2.4 第一篇自己的博客"></a>2.4 第一篇自己的博客</h3><ul>
+<li>新建markdown文件</li>
+</ul>
+<p>​      自动生成的博文在【Blog】-&gt;【source】-&gt;【_posts】文件夹下，以后我们写自己的博文也是放在这个文件夹，下面我们来自己创建第一篇博文。</p>
+<p>可以在【_posts】问价夹下直接新建markdown文件，也可用下面命令在终端中新建。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new <span class="token string">"博文的题目"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li><p>【注意】：</p>
+<ol>
+<li>在上述新建博客的过程中也可能会出错，也是因为权限问题，需要修改【_posts】的权限才能新建成功。</li>
+<li>新建的markdown文件有一个模板，放在【Blog】-&gt;【scaffolds】的 post.md ，其他两个文件一个是草稿，一个也不太清楚…。</li>
+</ol>
+</li>
+<li><p>生成博客相关文件</p>
+<p>要在【Blog】目录下操作。生成前先清理下文件：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo clean<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>再根据md文件生成相应的网页文件用下面命令</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+</li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfdq9tva3j30x00u04qp.jpg" alt="生成博客文件成功" width="80%"></center>
+
+<p>​    再重新用hexo s 命令启动hexo 在<a href="http://localhost:4000就可以看到我们自己写的第一篇博客啦！">http://localhost:4000就可以看到我们自己写的第一篇博客啦！</a></p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfdvcau4fj31dd0u0hdt.jpg" alt="博客生成成功" width="80%"></center>
+
+<p>​    到此，hexo博客的搭建就完成了。但是它只能在本地打开，接下来我们需要把它部署到远端去，这里推荐的部署方式是把它部署到github上去。</p>
+<h3 id="2-5-把博客部署到github上公开使用"><a href="#2-5-把博客部署到github上公开使用" class="headerlink" title="2.5 把博客部署到github上公开使用"></a>2.5 把博客部署到github上公开使用</h3><ul>
+<li>先要在github上创建一个跟自己用户名相同的后缀为.github.io的仓库，注意这里必须要与用户名相同。</li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfe566ct6j31a40iyjun.jpg" alt="创建特定的github仓库" width="80%"></center>
+
+<ul>
+<li><p>接着需要在【Blog】目录下的终端里裝一个 Git 的部署插件。用下面命令安装</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cnpm <span class="token function">install</span> --save hexo-deployer-git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfjw4ob5sj315a0u0h84.jpg" alt="git部署插件安装成功" width="80%/"></center>
+</li>
+<li><p>配置【Blog】文件夹下的 _config.yml 文件</p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfek6mdn0j31240mutcq.jpg" alt="修改配置文件" width="80%/"></center>
+
+<p>​    在# Deployment部分添加图示里面的代码，类型type为git,地址repo为刚刚新建的GitHub仓库的地址，如图14。branch为master。</p>
+</li>
+<li><p>将 hexo 部署到远端 GitHub 上</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+</li>
+</ul>
+<p>​    中间会要求输入自己的GitHub账号密码，上述都没有问题就可以部署成功。此时，GitHub刚刚新建的仓库中会多出 hexo 博客的相文件。</p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glffzitzvkj328q0u0jx2.jpg" alt="部署成功远端文件" width="80%"></center>
+
+<p>​    到这里，你就可以用 <a href="https://ganming1.github.io/">https://ganming1.github.io</a> 来访问自己的个人网站博客啦。</p>
+<h3 id="2-6-更换博客主题"><a href="#2-6-更换博客主题" class="headerlink" title="2.6 更换博客主题"></a>2.6 更换博客主题</h3><ul>
+<li><p>要更改主题，首先要下载主题</p>
+<p>可以在【Blog】目录的终端下用 git 下载</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/litten/hexo-theme-yilia.git themes/yilia<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+</li>
+</ul>
+<p>​        <a href="https://github.com/litten/hexo-theme-yilia.git">https://github.com/litten/hexo-theme-yilia.git</a> 是你想下载的主题远端地址。</p>
+<p>​        themes/yilia 是你下载主题后保存的地址。</p>
+<ul>
+<li>下载好主题后会在【Blog】-&gt;【themes】文件里多出我们下载的主题。</li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfgo6c0tkj31f40o8wh2.jpg" alt="下载的新主题" width="80%"></center>
+
+<ul>
+<li>下载好主题后，可以在【Blog】目录下的 _config.yml 文件中修改使用的主题。</li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glfgvtlosfj31e20sgafp.jpg" alt="在配置文件中更改使用新主题" width="80%"></center>
+
+<p>​    接下来 hexo clean 、hexo g、hexo s、hexo d 清除，生成，开启，推送一系列之前的动作就可以把新主题推送到远端的GitHub个人网站上去。</p>
+<p>​    本人尝试过很多主题，个人推荐 matery 主题，大概样子可以参考我的个人网页：<a href="http://ganming1.github.io/">http://ganming1.github.io</a> 更多主题个性化设置欢迎留言讨论。</p>
+]]></content>
+      <categories>
+        <category>工具技巧</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>Blog</tag>
       </tags>
   </entry>
   <entry>
@@ -534,24 +557,6 @@
         <tag>算法题</tag>
         <tag>哈希表</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/12/07/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>力扣649-Dota2参议院</title>
@@ -659,6 +664,83 @@
         <tag>算法题</tag>
         <tag>中等</tag>
         <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>力扣714-买卖股票的最佳时机含手续费</title>
+    <url>/2020/12/17/li-kou-714-mai-mai-gu-piao-de-zui-jia-shi-ji-han-shou-xu-fei/</url>
+    <content><![CDATA[<h1 id="力扣714-买卖股票的最佳时机含手续费"><a href="#力扣714-买卖股票的最佳时机含手续费" class="headerlink" title="力扣714-买卖股票的最佳时机含手续费"></a><center>力扣714-买卖股票的最佳时机含手续费</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>​    给定一个整数数组 prices，其中第 i 个元素代表了第 i 天的股票价格 ；非负整数 fee 代表了交易股票的手续费用。你可以无限次地完成交易，但是你每笔交易都需要付手续费。如果你已经购买了一个股票，在卖出它之前你就不能再继续购买股票了。返回获得利润的最大值。</p>
+<p>​    注意：这里的一笔交易指买入持有并卖出股票的整个过程，每笔交易你只需要为支付一次手续费。</p>
+<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
+<li><p><strong>示例一</strong></p>
+<p>  <strong>输入：</strong> prices = [1, 3, 2, 8, 4, 9], fee = 2</p>
+<p>  <strong>输出：</strong> 8</p>
+<p>  <strong>解释：</strong> 能够达到的最大利润:</p>
+<p>  在此处买入 prices[0] = 1<br>  在此处卖出 prices[3] = 8<br>  在此处买入 prices[4] = 4<br>  在此处卖出 prices[5] = 9<br>  总利润: ((8 - 1) - 2) + ((9 - 4) - 2) = 8.</p>
+</li>
+<li><p><strong>注意：</strong></p>
+<ul>
+<li>  <code>0 &lt; prices.length &lt;= 50000</code>.</li>
+<li>  <code>0 &lt; prices[i] &lt; 50000</code>.</li>
+<li>  <code>0 &lt;= fee &lt; 50000</code>.</li>
+</ul>
+</li>
+</ul>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee">https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee</a></p>
+<h2 id="二、解题思路（动态规划）"><a href="#二、解题思路（动态规划）" class="headerlink" title="二、解题思路（动态规划）"></a><font color="born">二、解题思路（动态规划）</font></h2><h3 id="2-1-题目理解"><a href="#2-1-题目理解" class="headerlink" title="2.1 题目理解"></a>2.1 题目理解</h3><ul>
+<li>  <strong>题前感慨（时间紧不用看，跳至【言归正传】部分）</strong></li>
+</ul>
+<p>​    给定每日股票价格的数组，每天可以选择是否买入/卖出，持有时不能再次买入，每笔交易有固定的手续费，求可获得的最大利润。给定每日股票价格的数组，每天可以选择是否买入/卖出，持有时不能再次买入，每笔交易有固定的手续费，求可获得的最大利润。</p>
+<p>​    这是一道入门的动态规划题目……当说出这句话的时候表示说话者已经对动态规划有所掌握了，所以能很快的分析出它是一道动态规划题，并且很容易就能想到什么状态变量，转移方程的所以它是一道简单的动态规划题目。但对于很多算法新手来说，难的是识别它是个动态规划题。</p>
+<p>​    本文主要解决该算法题，下面会结合本题简单说到动态规划，动态规划的详细讲解自己也会全面的整理一份资料供自己总结复习，同时也分享出来给需要的网友参考~。</p>
+<ul>
+<li>  <strong>言归正传</strong></li>
+</ul>
+<p>​    <strong>【1.识别动态规划】</strong>动态规划所处理的问题是一个多阶段决策问题，一般由初始状态开始，通过对中间阶段决策的选择，达到结束状态，此问题当中我们的初试状态就是第0天开始，结束状态就是第n天结束。中间的买入/卖出就是中间决策的选择。</p>
+<p>​    <strong>【2.确定状态定义状态变量】</strong>知道是动态规划题后就老老实实的确定状态和定义状态变量，如何正确合理的确定状态也至关重要，例如这里可以以每天交易结束后手里是否有股票为状态，两种状态：有股票，没有股票。我们的目的是求最后的最大利润的，所以定义状态变量可以这样定义：dp[i][0] 表示第 i 天交易结束后手里没有股票的最大利润。dp[i][1] 表示第 i 天交易结束后手里有股票的最大利润。</p>
+<p>​    <strong>【3.推导状态转移方程】</strong>先考虑 dp[i][0] 的转移方程，第 i 天结束，手里没有股票，那么一定是今天没有买入。可能的状态有前一天可能是也没有股票状态 dp[i-1][0]，或前一天结束时手里有股票 dp[i-1][1]被我今天卖了。因此转移方程为：<br>$$<br>dp[i][0] = max{dp[i-1][0],dp[i-1][1]+prices[i]-fee}<br>$$<br>​    在考虑 dp[i][1] 的转移方程，第 i 天结束后，手里有股票，那么一定是今天没有卖出。可能的状态有前一天本来就是有股票状态 dp[i-1][1]，或者前一天结束时没有股票dp[i-1][0]，但我今天买入了。因此转移方程为：<br>$$<br>dp[i][1] = max{dp[i-1][1],dp[i-1][0]-prices[i]}<br>$$<br>​    <strong>【4.确定边界】</strong>其实就是确定初始状态，第0天交易结束时有 dp[0][0] = 0，dp[0][1] = -prices[0]。</p>
+<h3 id="2-2-详细代码（Java）"><a href="#2-2-详细代码（Java）" class="headerlink" title="2.2 详细代码（Java）"></a>2.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">maxProfit</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> prices<span class="token punctuation">,</span> <span class="token keyword">int</span> fee<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>prices<span class="token punctuation">.</span>length <span class="token operator">&lt;=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> dp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>prices<span class="token punctuation">.</span>length<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>     <span class="token comment">// 状态变量，存储每天有或没有股票的最大收益</span>
+        dp<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>           <span class="token comment">// 初始值，第0天没股票即没有买入，收益为0</span>
+        dp<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token operator">-</span>prices<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// 初始值，第0天有股票即买入了，收益为-prices[0]</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>prices<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>        <span class="token comment">// 循环更新每天的状态</span>
+            dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> fee<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">-</span> prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>prices<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>prices<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 返回最后一天两种状态的最大值</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="2-3-算法执行结果"><a href="#2-3-算法执行结果" class="headerlink" title="2.3 算法执行结果"></a>2.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glqwb0qsl4j30s40eijst.jpg" alt="算法执行结果" width="80%/"></center>
+
+<p>​    算法性能不是很好，其他很多题友可能想出了更好的方法。这里重点总结该题对动态规划的运用，空间复杂度上可以稍微提升一下，因为在上述算法中定义了一个二维数组去求每一天的状态，是没有必要的，因为最后的输出只需要最后一天的。我们可以定义两个变量来存储就好了。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">maxProfit</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> prices<span class="token punctuation">,</span> <span class="token keyword">int</span> fee<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>prices<span class="token punctuation">.</span>length <span class="token operator">&lt;=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> nothave <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>            <span class="token comment">// 初始值，第0天没股票即没有买入，收益为0</span>
+        <span class="token keyword">int</span> have <span class="token operator">=</span> <span class="token operator">-</span>prices<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>      <span class="token comment">// 初始值，第0天有股票即买入了，收益为-prices[0]</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>prices<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token comment">// 循环更新状态值</span>
+            <span class="token keyword">int</span> n <span class="token operator">=</span> nothave<span class="token punctuation">,</span>y <span class="token operator">=</span> have<span class="token punctuation">;</span>           <span class="token comment">// 下面的更新中都要用到之前的值，所以要临时存储一下</span>
+            nothave <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span>y <span class="token operator">+</span> prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> fee<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            have <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>y<span class="token punctuation">,</span>n <span class="token operator">-</span> prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>nothave<span class="token punctuation">,</span>have<span class="token punctuation">)</span><span class="token punctuation">;</span>          <span class="token comment">// 返回两种状态的最大值</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glqwvrsntgj30ry0eeq4c.jpg" alt="改进算法执行结果" width="80%/"></center>
+
+<p>​    出乎意的是性能得到了很大的提升…….</p>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>算法题</tag>
+        <tag>中等</tag>
+        <tag>动态规划</tag>
       </tags>
   </entry>
   <entry>
