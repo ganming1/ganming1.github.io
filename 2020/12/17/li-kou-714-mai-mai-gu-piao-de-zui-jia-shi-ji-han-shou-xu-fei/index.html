@@ -532,15 +532,15 @@
 <h2 id="二、解题思路（动态规划）"><a href="#二、解题思路（动态规划）" class="headerlink" title="二、解题思路（动态规划）"></a><font color="born">二、解题思路（动态规划）</font></h2><h3 id="2-1-题目理解"><a href="#2-1-题目理解" class="headerlink" title="2.1 题目理解"></a>2.1 题目理解</h3><ul>
 <li>  <strong>题前感慨（时间紧不用看，跳至【言归正传】部分）</strong></li>
 </ul>
-<p>​    给定每日股票价格的数组，每天可以选择是否买入/卖出，持有时不能再次买入，每笔交易有固定的手续费，求可获得的最大利润。给定每日股票价格的数组，每天可以选择是否买入/卖出，持有时不能再次买入，每笔交易有固定的手续费，求可获得的最大利润。</p>
-<p>​    这是一道入门的动态规划题目……当说出这句话的时候表示说话者已经对动态规划有所掌握了，所以能很快的分析出它是一道动态规划题，并且很容易就能想到什么状态变量，转移方程的所以它是一道简单的动态规划题目。但对于很多算法新手来说，难的是识别它是个动态规划题。</p>
-<p>​    本文主要解决该算法题，下面会结合本题简单说到动态规划，动态规划的详细讲解自己也会全面的整理一份资料供自己总结复习，同时也分享出来给需要的网友参考~。</p>
+<p> 给定每日股票价格的数组，每天可以选择是否买入/卖出，持有时不能再次买入，每笔交易有固定的手续费，求可获得的最大利润。给定每日股票价格的数组，每天可以选择是否买入/卖出，持有时不能再次买入，每笔交易有固定的手续费，求可获得的最大利润。</p>
+<p> 这是一道入门的动态规划题目……当说出这句话的时候表示说话者已经对动态规划有所掌握了，所以能很快的分析出它是一道动态规划题，并且很容易就能想到什么状态变量，转移方程的所以它是一道简单的动态规划题目。但对于很多算法新手来说，难的是识别它是个动态规划题。</p>
+<p> 本文主要解决该算法题，下面会结合本题简单说到动态规划，动态规划的详细讲解自己也会全面的整理一份资料供自己总结复习，同时也分享出来给需要的网友参考~。</p>
 <ul>
 <li>  <strong>言归正传</strong></li>
 </ul>
-<p>​    <strong>【1.识别动态规划】</strong>动态规划所处理的问题是一个多阶段决策问题，一般由初始状态开始，通过对中间阶段决策的选择，达到结束状态，此问题当中我们的初试状态就是第0天开始，结束状态就是第n天结束。中间的买入/卖出就是中间决策的选择。</p>
-<p>​    <strong>【2.确定状态定义状态变量】</strong>知道是动态规划题后就老老实实的确定状态和定义状态变量，如何正确合理的确定状态也至关重要，例如这里可以以每天交易结束后手里是否有股票为状态，两种状态：有股票，没有股票。我们的目的是求最后的最大利润的，所以定义状态变量可以这样定义：dp[i][0] 表示第 i 天交易结束后手里没有股票的最大利润。dp[i][1] 表示第 i 天交易结束后手里有股票的最大利润。</p>
-<p>​    <strong>【3.推导状态转移方程】</strong>先考虑 dp[i][0] 的转移方程，第 i 天结束，手里没有股票，那么一定是今天没有买入。可能的状态有前一天可能是也没有股票状态 dp[i-1][0]，或前一天结束时手里有股票 dp[i-1][1]被我今天卖了。因此转移方程为：<br>$$<br>dp[i][0] = max{dp[i-1][0],dp[i-1][1]+prices[i]-fee}<br>$$<br>​    在考虑 dp[i][1] 的转移方程，第 i 天结束后，手里有股票，那么一定是今天没有卖出。可能的状态有前一天本来就是有股票状态 dp[i-1][1]，或者前一天结束时没有股票dp[i-1][0]，但我今天买入了。因此转移方程为：<br>$$<br>dp[i][1] = max{dp[i-1][1],dp[i-1][0]-prices[i]}<br>$$<br>​    <strong>【4.确定边界】</strong>其实就是确定初始状态，第0天交易结束时有 dp[0][0] = 0，dp[0][1] = -prices[0]。</p>
+<p> <strong>【1.识别动态规划】</strong>动态规划所处理的问题是一个多阶段决策问题，一般由初始状态开始，通过对中间阶段决策的选择，达到结束状态，此问题当中我们的初试状态就是第0天开始，结束状态就是第n天结束。中间的买入/卖出就是中间决策的选择。</p>
+<p> <strong>【2.确定状态定义状态变量】</strong>知道是动态规划题后就老老实实的确定状态和定义状态变量，如何正确合理的确定状态也至关重要，例如这里可以以每天交易结束后手里是否有股票为状态，两种状态：有股票，没有股票。我们的目的是求最后的最大利润的，所以定义状态变量可以这样定义：dp[i][0] 表示第 i 天交易结束后手里没有股票的最大利润。dp[i][1] 表示第 i 天交易结束后手里有股票的最大利润。</p>
+<p> <strong>【3.推导状态转移方程】</strong>先考虑 dp[i][0] 的转移方程，第 i 天结束，手里没有股票，那么一定是今天没有买入。可能的状态有前一天可能是也没有股票状态 dp[i-1][0]，或前一天结束时手里有股票 dp[i-1][1]被我今天卖了。因此转移方程为：<br>$$<br>dp[i][0] = max{dp[i-1][0],dp[i-1][1]+prices[i]-fee}<br>$$<br> 在考虑 dp[i][1] 的转移方程，第 i 天结束后，手里有股票，那么一定是今天没有卖出。可能的状态有前一天本来就是有股票状态 dp[i-1][1]，或者前一天结束时没有股票dp[i-1][0]，但我今天买入了。因此转移方程为：<br>$$<br>dp[i][1] = max{dp[i-1][1],dp[i-1][0]-prices[i]}<br>$$<br> <strong>【4.确定边界】</strong>其实就是确定初始状态，第0天交易结束时有 dp[0][0] = 0，dp[0][1] = -prices[0]。</p>
 <h3 id="2-2-详细代码（Java）"><a href="#2-2-详细代码（Java）" class="headerlink" title="2.2 详细代码（Java）"></a>2.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">maxProfit</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> prices<span class="token punctuation">,</span> <span class="token keyword">int</span> fee<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">if</span> <span class="token punctuation">(</span>prices<span class="token punctuation">.</span>length <span class="token operator">&lt;=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
@@ -557,7 +557,7 @@
 
 <h3 id="2-3-算法执行结果"><a href="#2-3-算法执行结果" class="headerlink" title="2.3 算法执行结果"></a>2.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glqwb0qsl4j30s40eijst.jpg" alt="算法执行结果" width="80%/"></center>
 
-<p>​    算法性能不是很好，其他很多题友可能想出了更好的方法。这里重点总结该题对动态规划的运用，空间复杂度上可以稍微提升一下，因为在上述算法中定义了一个二维数组去求每一天的状态，是没有必要的，因为最后的输出只需要最后一天的。我们可以定义两个变量来存储就好了。</p>
+<p> 算法性能不是很好，其他很多题友可能想出了更好的方法。这里重点总结该题对动态规划的运用，空间复杂度上可以稍微提升一下，因为在上述算法中定义了一个二维数组去求每一天的状态，是没有必要的，因为最后的输出只需要最后一天的。我们可以定义两个变量来存储就好了。</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">maxProfit</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> prices<span class="token punctuation">,</span> <span class="token keyword">int</span> fee<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">if</span> <span class="token punctuation">(</span>prices<span class="token punctuation">.</span>length <span class="token operator">&lt;=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
@@ -574,8 +574,8 @@
 
 <center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glqwvrsntgj30ry0eeq4c.jpg" alt="改进算法执行结果" width="80%/"></center>
 
-<p>​    出乎意的是性能得到了很大的提升…….</p>
-<h3 id=""><a href="#" class="headerlink" title=""></a></h3>
+<p> 出乎意的是性能得到了很大的提升…….</p>
+
                 
             </div>
             <hr/>
