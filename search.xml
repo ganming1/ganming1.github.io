@@ -666,6 +666,92 @@
       </tags>
   </entry>
   <entry>
+    <title>力扣48-旋转图像</title>
+    <url>/2020/12/19/li-kou-48-xuan-zhuan-tu-xiang/</url>
+    <content><![CDATA[<h1 id="力扣48-旋转图像"><a href="#力扣48-旋转图像" class="headerlink" title="力扣48-旋转图像"></a><center>力扣48-旋转图像</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  给定一个 <em>n</em> × <em>n</em> 的二维矩阵表示一个图像。将图像顺时针旋转 90 度。</p>
+<p>说明：</p>
+<p>  你必须在<strong>原地</strong>旋转图像，这意味着你需要直接修改输入的二维矩阵。<strong>请不要</strong>使用另一个矩阵来旋转图像。</p>
+<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
+<li><p><strong>示例1：</strong></p>
+  <pre class="line-numbers language-none"><code class="language-none">给定 matrix = 
+[
+  [1,2,3],
+  [4,5,6],
+  [7,8,9]
+],
+原地旋转输入矩阵，使其变为:
+[
+  [7,4,1],
+  [8,5,2],
+  [9,6,3]
+]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p><strong>示例2：</strong></p>
+  <pre class="line-numbers language-none"><code class="language-none">给定 matrix =
+[
+  [ 5, 1, 9,11],
+  [ 2, 4, 8,10],
+  [13, 3, 6, 7],
+  [15,14,12,16]
+],
+原地旋转输入矩阵，使其变为:
+[
+  [15,13, 2, 5],
+  [14, 3, 4, 1],
+  [12, 6, 8, 9],
+  [16, 7,10,11]
+]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+</li>
+</ul>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/rotate-image">https://leetcode-cn.com/problems/rotate-image</a></p>
+<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="born">二、解题思路</font></h2><h3 id="2-1-题目意思理解"><a href="#2-1-题目意思理解" class="headerlink" title="2.1 题目意思理解"></a>2.1 题目意思理解</h3><p>  这个题因为以前见过知道怎么做所以很快就回忆起了正常的思路是对矩阵进行两次翻转就能达到顺时针旋转90°的目的：①水平翻转，②沿次对角线翻转。下面以一个简单的数组演示主次对角线的区别，其实谁先谁后也会有所影响的。自己可以动手画画探究探究。</p>
+<p>[1,4,7]            [7,<font color="red">4</font>,1]                [<font color="red">7</font>,8,9]        先<font color="red">水平</font>翻转，<br>[2,5,8]    —-&gt; [8,<font color="red">5</font>,2]    —-&gt;     [4,<font color="red">5</font>,6]        再<font color="red">主对角线</font>翻转<br>[3,6,9]            [9,<font color="red">6</font>,3]                [1,2,<font color="red">3</font>]        <font color="red">逆时针</font>旋转90°</p>
+<hr>
+<p>[1,4,7]            [7,<font color="red">4</font>,1]                [3,2,<font color="red">1</font>]        先<font color="red">水平</font>翻转，<br>[2,5,8]    —-&gt; [8,<font color="red">5</font>,2]    —-&gt;     [6,<font color="red">5</font>,4]        再<font color="red">次对角线</font>翻转<br>[3,6,9]            [9,<font color="red">6</font>,3]                [<font color="red">9</font>,8,7]        <font color="red">顺时针</font>旋转90°</p>
+<h3 id="2-2-详细代码（Java）"><a href="#2-2-详细代码（Java）" class="headerlink" title="2.2 详细代码（Java）"></a>2.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">rotate</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> matrix<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> r <span class="token operator">=</span> matrix<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> k <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>k<span class="token operator">&lt;</span>r<span class="token punctuation">;</span>k<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>        <span class="token comment">// 实现水平翻转</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>j <span class="token operator">=</span> r<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>j<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">,</span>j<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">int</span> temp <span class="token operator">=</span> matrix<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        matrix<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> matrix<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        matrix<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>r<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>      <span class="token comment">// 实现沿次对角线的翻转</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>j<span class="token operator">&lt;</span>r<span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span>i<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">int</span> temp <span class="token operator">=</span> matrix<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        matrix<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> matrix<span class="token punctuation">[</span>r<span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span>r<span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        matrix<span class="token punctuation">[</span>r<span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span>r<span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>代码<font color="red">第14行</font>要找好翻转每个位置对应的坐标变换是怎么变的。当（row1,col1）、（row2,col2）这两个位置关于次对角线对称的时候，我发现是<font color="red">row1 + col2 = 行数-1</font>；<font color="red">col1 + row2 = 行数-1</font>；可以简单理解为<font color="red">新的行标</font>font和<font color="red">旧的列标</font> “互余”，<font color="red">新的列标</font>与<font color="red">旧的行标</font> “互余”</li>
+</ul>
+<h3 id="2-3-算法执行结果"><a href="#2-3-算法执行结果" class="headerlink" title="2.3 算法执行结果"></a>2.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gltm0e1416j30ry0ee3zw.jpg" alt="算法执行结果" width="80%/"></center>
+
+<h2 id="三、总结分析"><a href="#三、总结分析" class="headerlink" title="三、总结分析"></a><font color="born">三、总结分析</font></h2><p>  这道题像是一道技巧题，有些题目如果有特定的技巧，特定的规律，往往都会比正常解放快很多。</p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>算法题</tag>
+        <tag>中等</tag>
+        <tag>数组</tag>
+        <tag>技巧题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>力扣316-去除重复字母</title>
+    <url>/2020/12/20/li-kou-316-qu-chu-chong-fu-zi-mu/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>力扣649-Dota2参议院</title>
     <url>/2020/12/11/li-kou-649-dota2-can-yi-yuan/</url>
     <content><![CDATA[<h1 id="649-Dota2-参议院"><a href="#649-Dota2-参议院" class="headerlink" title="649. Dota2 参议院"></a><center>649. Dota2 参议院</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>​        Dota2 的世界里有两个阵营：Radiant (天辉)和 Dire(夜魇)。Dota2 参议院由来自两派的参议员组成。现在参议院希望对一个 Dota2 游戏里的改变作出决定。他们以一个基于轮为过程的投票进行。在每一轮中，每一位参议员都可以行使两项权利中的一项：</p>
