@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="力扣 算法 动态规划">
+    <meta name="keywords" content="力扣 算法 动态规划 数组">
     <meta name="description" content="努力做个it技术分享者">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>力扣714-买卖股票的最佳时机含手续费 | ItDaChuang</title>
+    <title>力扣746-使用最小花费爬楼梯 | ItDaChuang</title>
     <link rel="icon" type="image/png" href="/medias/G.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">力扣714-买卖股票的最佳时机含手续费</h1>
+                    <h1 class="description center-align post-title">力扣746-使用最小花费爬楼梯</h1>
                 </div>
             </div>
         </div>
@@ -434,12 +434,16 @@
                     
                     <div class="article-tag">
                         
+                            <a href="/tags/%E7%AE%80%E5%8D%95/">
+                                <span class="chip bg-color">简单</span>
+                            </a>
+                        
                             <a href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">
                                 <span class="chip bg-color">算法题</span>
                             </a>
                         
-                            <a href="/tags/%E4%B8%AD%E7%AD%89/">
-                                <span class="chip bg-color">中等</span>
+                            <a href="/tags/%E6%95%B0%E7%BB%84/">
+                                <span class="chip bg-color">数组</span>
                             </a>
                         
                             <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
@@ -467,28 +471,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-12-17
+                    2020-12-21
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-12-17
+                    2020-12-21
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.6k
+                    914
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    3 分
                 </div>
                 
 
@@ -511,70 +515,55 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="力扣714-买卖股票的最佳时机含手续费"><a href="#力扣714-买卖股票的最佳时机含手续费" class="headerlink" title="力扣714-买卖股票的最佳时机含手续费"></a><center>力扣714-买卖股票的最佳时机含手续费</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>​    给定一个整数数组 prices，其中第 i 个元素代表了第 i 天的股票价格 ；非负整数 fee 代表了交易股票的手续费用。你可以无限次地完成交易，但是你每笔交易都需要付手续费。如果你已经购买了一个股票，在卖出它之前你就不能再继续购买股票了。返回获得利润的最大值。</p>
-<p>​    注意：这里的一笔交易指买入持有并卖出股票的整个过程，每笔交易你只需要为支付一次手续费。</p>
+                <h1 id="力扣746-使用最小花费爬楼梯"><a href="#力扣746-使用最小花费爬楼梯" class="headerlink" title="力扣746-使用最小花费爬楼梯"></a><center>力扣746-使用最小花费爬楼梯</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  数组的每个索引作为一个阶梯，第 i个阶梯对应着一个非负数的体力花费值cost[i]（索引从0开始）。每当你爬上一个阶梯你都要花费对应的体力花费值，然后你可以选择继续爬一个阶梯或者爬两个阶梯。您需要找到达到楼层顶部的最低花费。在开始时，你可以选择从索引为 0 或 1 的元素作为初始阶梯。</p>
 <h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
-<li><p><strong>示例一</strong></p>
-<p>  <strong>输入：</strong> prices = [1, 3, 2, 8, 4, 9], fee = 2</p>
-<p>  <strong>输出：</strong> 8</p>
-<p>  <strong>解释：</strong> 能够达到的最大利润:</p>
-<p>  在此处买入 prices[0] = 1<br>  在此处卖出 prices[3] = 8<br>  在此处买入 prices[4] = 4<br>  在此处卖出 prices[5] = 9<br>  总利润: ((8 - 1) - 2) + ((9 - 4) - 2) = 8.</p>
+<li><p><strong>示例1：</strong></p>
+<p>  <strong>输入：</strong> cost = [10, 15, 20]</p>
+<p>  <strong>输出：</strong> 15</p>
+<p>  <strong>解释：</strong> 最低花费是从cost[1]开始，然后走两步即可到阶梯顶，一共花费15。</p>
 </li>
-<li><p><strong>注意：</strong></p>
-<ul>
-<li>  <code>0 &lt; prices.length &lt;= 50000</code>.</li>
-<li>  <code>0 &lt; prices[i] &lt; 50000</code>.</li>
-<li>  <code>0 &lt;= fee &lt; 50000</code>.</li>
-</ul>
+<li><p><strong>示例2：</strong></p>
+<p>  <strong>输入：</strong> cost = [1, 100, 1, 1, 1, 100, 1, 1, 100, 1]</p>
+<p>  <strong>输出：</strong> 6</p>
+<p>  <strong>解释：</strong> 最低花费方式是从cost[0]开始，逐个经过那些1，跳过cost[3]，一共花费6。</p>
 </li>
 </ul>
-<p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee">https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee</a></p>
-<h2 id="二、解题思路（动态规划）"><a href="#二、解题思路（动态规划）" class="headerlink" title="二、解题思路（动态规划）"></a><font color="born">二、解题思路（动态规划）</font></h2><h3 id="2-1-题目理解"><a href="#2-1-题目理解" class="headerlink" title="2.1 题目理解"></a>2.1 题目理解</h3><ul>
-<li>  <strong>题前感慨（时间紧不用看，跳至【言归正传】部分）</strong></li>
-</ul>
-<p> 给定每日股票价格的数组，每天可以选择是否买入/卖出，持有时不能再次买入，每笔交易有固定的手续费，求可获得的最大利润。给定每日股票价格的数组，每天可以选择是否买入/卖出，持有时不能再次买入，每笔交易有固定的手续费，求可获得的最大利润。</p>
-<p> 这是一道入门的动态规划题目……当说出这句话的时候表示说话者已经对动态规划有所掌握了，所以能很快的分析出它是一道动态规划题，并且很容易就能想到什么状态变量，转移方程的所以它是一道简单的动态规划题目。但对于很多算法新手来说，难的是识别它是个动态规划题。</p>
-<p> 本文主要解决该算法题，下面会结合本题简单说到动态规划，动态规划的详细讲解自己也会全面的整理一份资料供自己总结复习，同时也分享出来给需要的网友参考~。</p>
+<p><strong>注意：</strong></p>
+<ol>
+<li> <code>cost</code> 的长度将会在 <code>[2, 1000]</code>。</li>
+<li> 每一个 <code>cost[i]</code> 将会是一个Integer类型，范围为 <code>[0, 999]</code>。</li>
+</ol>
+<p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/min-cost-climbing-stairs">https://leetcode-cn.com/problems/min-cost-climbing-stairs</a></p>
+<h2 id="二、解题思路（动态规划）"><a href="#二、解题思路（动态规划）" class="headerlink" title="二、解题思路（动态规划）"></a><font color="born">二、解题思路（动态规划）</font></h2><h3 id="2-1-题目意思理解"><a href="#2-1-题目意思理解" class="headerlink" title="2.1 题目意思理解"></a>2.1 题目意思理解</h3><p>  吐槽一下原题的题目表达太不清晰~。参考网友谈论彻底明白到底是表达的什么<strong>意思：</strong>其实就是让我们要<font color="red">通过整个数组</font>，cost[i] 表示通过该位置的<font color="red">过路费</font>，交了过路费，你可以<font color="red">走一步</font>，也可以<font color="red">走两步</font>，目的是要<font color="red">彻底走完数组</font>，<font color="red">花费最少</font>。可以从 <font color="red">cost[0]</font> 或 <font color="red">cost[1]</font> 开始起步。</p>
+<p>  明白题目意思后比较容易理解该题目也是一个动态规划的题目，几天前也碰到过一个动态规划的题目：<a href="https://ganming1.github.io/2020/12/17/li-kou-714-mai-mai-gu-piao-de-zui-jia-shi-ji-han-shou-xu-fei/">力扣714-买卖股票的最佳时机含手续费</a>，里面有简单介绍动态规划的内容。</p>
 <ul>
-<li>  <strong>言归正传</strong></li>
+<li><p>  <font color="red">定义状态变量</font> cost[i] 为到达并跨过第 i 级台阶总的最小费用，直接利用原数组保存结果。</p>
+</li>
+<li><p><font color="red">找状态转移方程</font>：</p>
+<p>  1.要到达第 i 级台阶可以有第 i-1 级台阶走一步到达，再交上这一级台阶的过路费跨过。总费用为 cost[i-1] + cost[i]。</p>
+<p>  2.要到达第 i 级台阶也可以由第 i-2 级台阶走两步到达，在交上这一级台阶的过路费跨过。总费用为 cost[i-2] + cost[i]。</p>
+<p>  应该去下面两种情况中的较小值<br></p><center>cost[i] = Math.min(cost[i-1] + cost[i], cost[i-2] + cost[i])</center><p></p>
+</li>
+<li><p>  <font color="red">初始状态</font>即只需要知道到达并跨过第 0 级台阶和到达并跨过第 1 级台阶总的最小费用即可，而到达第 0 和第 1 级台阶没有前面费用需要，所以只需要跨过费用即可，所以初始状态 cost[0] = cost[0]，cost[1] = cost[1]。  </p>
+</li>
 </ul>
-<p> <strong>【1.识别动态规划】</strong>动态规划所处理的问题是一个多阶段决策问题，一般由初始状态开始，通过对中间阶段决策的选择，达到结束状态，此问题当中我们的初试状态就是第0天开始，结束状态就是第n天结束。中间的买入/卖出就是中间决策的选择。</p>
-<p> <strong>【2.确定状态定义状态变量】</strong>知道是动态规划题后就老老实实的确定状态和定义状态变量，如何正确合理的确定状态也至关重要，例如这里可以以每天交易结束后手里是否有股票为状态，两种状态：有股票，没有股票。我们的目的是求最后的最大利润的，所以定义状态变量可以这样定义：dp[i][0] 表示第 i 天交易结束后手里没有股票的最大利润。dp[i][1] 表示第 i 天交易结束后手里有股票的最大利润。</p>
-<p> <strong>【3.推导状态转移方程】</strong>先考虑 dp[i][0] 的转移方程，第 i 天结束，手里没有股票，那么一定是今天没有买入。可能的状态有前一天可能是也没有股票状态 dp[i-1][0]，或前一天结束时手里有股票 dp[i-1][1]被我今天卖了。因此转移方程为：<br>$$<br>dp[i][0] = max{dp[i-1][0],dp[i-1][1]+prices[i]-fee}<br>$$<br> 在考虑 dp[i][1] 的转移方程，第 i 天结束后，手里有股票，那么一定是今天没有卖出。可能的状态有前一天本来就是有股票状态 dp[i-1][1]，或者前一天结束时没有股票dp[i-1][0]，但我今天买入了。因此转移方程为：<br>$$<br>dp[i][1] = max{dp[i-1][1],dp[i-1][0]-prices[i]}<br>$$<br> <strong>【4.确定边界】</strong>其实就是确定初始状态，第0天交易结束时有 dp[0][0] = 0，dp[0][1] = -prices[0]。</p>
 <h3 id="2-2-详细代码（Java）"><a href="#2-2-详细代码（Java）" class="headerlink" title="2.2 详细代码（Java）"></a>2.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">maxProfit</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> prices<span class="token punctuation">,</span> <span class="token keyword">int</span> fee<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>prices<span class="token punctuation">.</span>length <span class="token operator">&lt;=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> dp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>prices<span class="token punctuation">.</span>length<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>     <span class="token comment">// 状态变量，存储每天有或没有股票的最大收益</span>
-        dp<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>           <span class="token comment">// 初始值，第0天没股票即没有买入，收益为0</span>
-        dp<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token operator">-</span>prices<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// 初始值，第0天有股票即买入了，收益为-prices[0]</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>prices<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>        <span class="token comment">// 循环更新每天的状态</span>
-            dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> fee<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">-</span> prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">minCostClimbingStairs</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> cost<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>cost <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span>   <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>           <span class="token comment">// 输入异常判断</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>cost<span class="token punctuation">.</span>length <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span>   <span class="token keyword">return</span> cost<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 只有一级台阶</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>cost<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>      <span class="token comment">// 动态规划更新总最小费用</span>
+            <span class="token keyword">int</span> cost1 <span class="token operator">=</span> cost<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">+</span>cost<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>      <span class="token comment">// 上一级台阶通过跨一步到达的</span>
+            <span class="token keyword">int</span> cost2 <span class="token operator">=</span> cost<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">+</span>cost<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>      <span class="token comment">// 上两级台阶通过跨两步到达的</span>
+            cost<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span><span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">min</span><span class="token punctuation">(</span>cost1<span class="token punctuation">,</span>cost2<span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// 选最小的作为跨过这个台阶的总最小费用</span>
         <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>prices<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>prices<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 返回最后一天两种状态的最大值</span>
+        <span class="token comment">// 跨过最后一个台阶走一步或倒数第二个台阶走两步都是完成全过程</span>
+        <span class="token keyword">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">min</span><span class="token punctuation">(</span>cost<span class="token punctuation">[</span>cost<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>cost<span class="token punctuation">[</span>cost<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="2-3-算法执行结果"><a href="#2-3-算法执行结果" class="headerlink" title="2.3 算法执行结果"></a>2.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glqwb0qsl4j30s40eijst.jpg" alt="算法执行结果" width="80%/"></center>
+<h3 id="2-3-算法执行结果"><a href="#2-3-算法执行结果" class="headerlink" title="2.3 算法执行结果"></a>2.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glvax410v3j30s00eg3zx.jpg" alt="算法执行结果" width="80%/"></center>
 
-<p> 算法性能不是很好，其他很多题友可能想出了更好的方法。这里重点总结该题对动态规划的运用，空间复杂度上可以稍微提升一下，因为在上述算法中定义了一个二维数组去求每一天的状态，是没有必要的，因为最后的输出只需要最后一天的。我们可以定义两个变量来存储就好了。</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">maxProfit</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> prices<span class="token punctuation">,</span> <span class="token keyword">int</span> fee<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>prices<span class="token punctuation">.</span>length <span class="token operator">&lt;=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">int</span> nothave <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>            <span class="token comment">// 初始值，第0天没股票即没有买入，收益为0</span>
-        <span class="token keyword">int</span> have <span class="token operator">=</span> <span class="token operator">-</span>prices<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>      <span class="token comment">// 初始值，第0天有股票即买入了，收益为-prices[0]</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>prices<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token comment">// 循环更新状态值</span>
-            <span class="token keyword">int</span> n <span class="token operator">=</span> nothave<span class="token punctuation">,</span>y <span class="token operator">=</span> have<span class="token punctuation">;</span>           <span class="token comment">// 下面的更新中都要用到之前的值，所以要临时存储一下</span>
-            nothave <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span>y <span class="token operator">+</span> prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> fee<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            have <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>y<span class="token punctuation">,</span>n <span class="token operator">-</span> prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>nothave<span class="token punctuation">,</span>have<span class="token punctuation">)</span><span class="token punctuation">;</span>          <span class="token comment">// 返回两种状态的最大值</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glqwvrsntgj30ry0eeq4c.jpg" alt="改进算法执行结果" width="80%/"></center>
-
-<p> 出乎意的是性能得到了很大的提升…….</p>
+<h2 id="三、总结分析"><a href="#三、总结分析" class="headerlink" title="三、总结分析"></a><font color="born">三、总结分析</font></h2><p>  又一道动态规划题，赶紧整理起来。</p>
 
                 
             </div>
@@ -601,7 +590,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://ganming1.github.io/2020/12/17/li-kou-714-mai-mai-gu-piao-de-zui-jia-shi-ji-han-shou-xu-fei/">http://ganming1.github.io/2020/12/17/li-kou-714-mai-mai-gu-piao-de-zui-jia-shi-ji-han-shou-xu-fei/</a>
+                    <a href="http://ganming1.github.io/2020/12/21/li-kou-746-shi-yong-zui-xiao-hua-fei-pa-lou-ti/">http://ganming1.github.io/2020/12/21/li-kou-746-shi-yong-zui-xiao-hua-fei-pa-lou-ti/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -639,12 +628,16 @@
                     
                         <div class="article-tag">
                             
+                                <a href="/tags/%E7%AE%80%E5%8D%95/">
+                                    <span class="chip bg-color">简单</span>
+                                </a>
+                            
                                 <a href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">
                                     <span class="chip bg-color">算法题</span>
                                 </a>
                             
-                                <a href="/tags/%E4%B8%AD%E7%AD%89/">
-                                    <span class="chip bg-color">中等</span>
+                                <a href="/tags/%E6%95%B0%E7%BB%84/">
+                                    <span class="chip bg-color">数组</span>
                                 </a>
                             
                                 <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
@@ -864,29 +857,92 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/12/18/li-kou-389-zhao-bu-tong/">
+                <a href="/2020/12/21/li-kou-746-shi-yong-zui-xiao-hua-fei-pa-lou-ti/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="力扣389-找不同">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="力扣746-使用最小花费爬楼梯">
                         
-                        <span class="card-title">力扣389-找不同</span>
+                        <span class="card-title">力扣746-使用最小花费爬楼梯</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            力扣389-找不同（Java版详细题解，位运算100%）
+                            力扣746-使用最小花费爬楼梯(Java版详细题解)
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-18
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%AE%80%E5%8D%95/">
+                        <span class="chip bg-color">简单</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">
+                        <span class="chip bg-color">算法题</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B0%E7%BB%84/">
+                        <span class="chip bg-color">数组</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                        <span class="chip bg-color">动态规划</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/12/20/li-kou-316-qu-chu-chong-fu-zi-mu/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="力扣316-去除重复字母">
+                        
+                        <span class="card-title">力扣316-去除重复字母</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            力扣316-去除重复字母（Java版题解）
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -902,59 +958,22 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%AE%80%E5%8D%95/">
-                        <span class="chip bg-color">简单</span>
-                    </a>
-                    
                     <a href="/tags/%E7%AE%97%E6%B3%95%E9%A2%98/">
                         <span class="chip bg-color">算法题</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%B8%AD%E7%AD%89/">
+                        <span class="chip bg-color">中等</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%A0%88/">
+                        <span class="chip bg-color">栈</span>
                     </a>
                     
                     <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
                         <span class="chip bg-color">字符串</span>
                     </a>
                     
-                    <a href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">
-                        <span class="chip bg-color">位运算</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/12/16/css-ceng-die-yan-shi-biao-yi/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="CSS层叠演示表一">
-                        
-                        <span class="card-title">CSS层叠演示表一</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-16
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            ItDaChuang
-                            
-                        </span>
-                    </div>
                 </div>
                 
             </div>
@@ -1081,13 +1100,6 @@
 
 </main>
 
-
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
 
 
 
