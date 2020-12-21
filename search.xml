@@ -1,6 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>VSCode写HTML文档</title>
+    <url>/2020/12/16/vscode-xie-html-wen-dang/</url>
+    <content><![CDATA[<h1 id="VSCode-写-HTML-文档"><a href="#VSCode-写-HTML-文档" class="headerlink" title="VSCode 写 HTML 文档"></a><center>VSCode 写 HTML 文档</center></h1><h2 id="一、VSCode-的使用"><a href="#一、VSCode-的使用" class="headerlink" title="一、VSCode 的使用"></a><font color="born">一、VSCode 的使用</font></h2><h3 id="1-1-软件的下载和基本的-html-文件创建"><a href="#1-1-软件的下载和基本的-html-文件创建" class="headerlink" title="1.1 软件的下载和基本的 html 文件创建"></a>1.1 软件的下载和基本的 html 文件创建</h3><ul>
+<li><p>VSCode 下载可以去<a href="https://code.visualstudio.com/">VSCode官网</a>下载</p>
+</li>
+<li><p>新建文件，该文件名和和文件格式为<font color="red">.html</font>即可</p>
+</li>
+<li><p>在新建的 html 文件中输入 ! 接着回车或按 Tab 键即可生成网页骨架。</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!-- 输入 ! 回车可快速生成下面骨架 --&gt;</span>
+<span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1.0<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>修改网页的&lt; title &gt; 和 &lt; body &gt; 标签为自己想修改的内容然后右键选择Open In Default Browser 在默认浏览器中打开，可能你的右键没有这个选项，需要安装插件。</p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gliqfg55fxj317a0s8djx.jpg" alt="默认浏览器中打开网页" width="70%/"></center>
+</li>
+<li><p>觉得页面代码字体不合适可以通过 command + 加号键、和 command + 减号键调整字体大小。</p>
+</li>
+</ul>
+<h3 id="1-2-VSCode-插件使用"><a href="#1-2-VSCode-插件使用" class="headerlink" title="1.2 VSCode 插件使用"></a>1.2 VSCode 插件使用</h3><ul>
+<li><p>插件安装方法，在最左边的是插件功能选择，之后再搜索框搜索插件名安装，重启 VSCode 即可生效。</p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gliqprm66nj319e0tsdnt.jpg" alt="VSCode插件安装" width="70%/"></center>
+</li>
+<li><p>推荐安装的插件</p>
+<ul>
+<li><font color="red">Chinese(Simplified)Language Pack for VS Code</font>：中文（简体）语言包</li>
+<li><font color="red">Open in Browser</font>：右键选择在浏览器中打开 html 文件，上面演示的功能</li>
+<li><font color="red">JS-CSS-HTML Formatter</font>：每次保存，都会自动格式化js、css 和 html 代码</li>
+<li><font color="red">Auto Rename Tag</font>：自动重命名配对的 HTML/XML 标签</li>
+<li><font color="red">CSS Peek</font>：追踪至样式</li>
+</ul>
+<p>更多好用的插件希望大家相互推荐~</p>
+</li>
+</ul>
+<h3 id="1-3-VSCode-工具生成的骨架标签新增的代码"><a href="#1-3-VSCode-工具生成的骨架标签新增的代码" class="headerlink" title="1.3 VSCode 工具生成的骨架标签新增的代码"></a>1.3 VSCode 工具生成的骨架标签新增的代码</h3><ul>
+<li><p><font color="red">文档类型声明标签 &lt; !DOCTYPE &gt;</font>：告诉浏览器使用那种 HTML 版本来显示网页</p>
+<p>&lt; !DOCTYPE html &gt; 表示当前页面采用的是 HTML5 版本来显示网页。&lt; !DOCTYPE html &gt; 不是一个 HTML 标签，它只是一个文档类型声明标签。</p>
+</li>
+<li><p><font color="red">lang 语言种类</font>：用来定义当前文档显示的语言</p>
+<p><font color="red">en</font> 定义语言为英语，<font color="red">zh-CN</font>  定义语言为中文。无论哪种都可以在网页里写中英文，都能正常显示，这个属性只用于<font color="red">浏览器翻译功能的判断</font>而已。</p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glircl05pzj314w0kuacx.jpg" alt="lang 属性的影响" width="67%/"></center>
+</li>
+<li><p><font color="red">字符集</font>：是多个字符的集合，以便计算机能够识别和存储各种文字</p>
+<p>在&lt; head&gt; 标签内，可以通过 &lt; meta&gt; 标签的 charset 属性来规定 HTML 文档使用的字符编码集。</p>
+<p>charset 常用值有：GB2312、BIG5、GBK 和 UTF-8，其中 <font color="red">UTF-8</font> 也被称为<font color="red">万国码</font>，基本包含了全世界所有国家需要用到的字符。</p>
+<p>【注意】:<font color="red">上面语法是必须要写的代码，否则可能引起乱码的情况。一般情况下，统一使用“UTF-8”编码，尽量统一写成标准的 “UTF-8”，不要写成 “utf8” 或 “UTF8”。</font></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>工具技巧</category>
+      </categories>
+      <tags>
+        <tag>VSCode</tag>
+        <tag>Html</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>HTML 标签（下）</title>
     <url>/2020/12/11/html-biao-qian-xia/</url>
     <content><![CDATA[<h1 id="HTML-标签（下）"><a href="#HTML-标签（下）" class="headerlink" title="HTML 标签（下）"></a><center>HTML 标签（下）</center></h1><h2 id="一、表格标签"><a href="#一、表格标签" class="headerlink" title="一、表格标签"></a><font color="born">一、表格标签</font></h2><h3 id="1-1-表格的主要作用"><a href="#1-1-表格的主要作用" class="headerlink" title="1.1 表格的主要作用"></a>1.1 表格的主要作用</h3><p>​    表格主要是用来显示、展示数据，不是用来布局的。</p>
@@ -258,72 +324,6 @@
       </tags>
   </entry>
   <entry>
-    <title>VSCode写HTML文档</title>
-    <url>/2020/12/16/vscode-xie-html-wen-dang/</url>
-    <content><![CDATA[<h1 id="VSCode-写-HTML-文档"><a href="#VSCode-写-HTML-文档" class="headerlink" title="VSCode 写 HTML 文档"></a><center>VSCode 写 HTML 文档</center></h1><h2 id="一、VSCode-的使用"><a href="#一、VSCode-的使用" class="headerlink" title="一、VSCode 的使用"></a><font color="born">一、VSCode 的使用</font></h2><h3 id="1-1-软件的下载和基本的-html-文件创建"><a href="#1-1-软件的下载和基本的-html-文件创建" class="headerlink" title="1.1 软件的下载和基本的 html 文件创建"></a>1.1 软件的下载和基本的 html 文件创建</h3><ul>
-<li><p>VSCode 下载可以去<a href="https://code.visualstudio.com/">VSCode官网</a>下载</p>
-</li>
-<li><p>新建文件，该文件名和和文件格式为<font color="red">.html</font>即可</p>
-</li>
-<li><p>在新建的 html 文件中输入 ! 接着回车或按 Tab 键即可生成网页骨架。</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!-- 输入 ! 回车可快速生成下面骨架 --&gt;</span>
-<span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1.0<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
-    
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>修改网页的&lt; title &gt; 和 &lt; body &gt; 标签为自己想修改的内容然后右键选择Open In Default Browser 在默认浏览器中打开，可能你的右键没有这个选项，需要安装插件。</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gliqfg55fxj317a0s8djx.jpg" alt="默认浏览器中打开网页" width="70%/"></center>
-</li>
-<li><p>觉得页面代码字体不合适可以通过 command + 加号键、和 command + 减号键调整字体大小。</p>
-</li>
-</ul>
-<h3 id="1-2-VSCode-插件使用"><a href="#1-2-VSCode-插件使用" class="headerlink" title="1.2 VSCode 插件使用"></a>1.2 VSCode 插件使用</h3><ul>
-<li><p>插件安装方法，在最左边的是插件功能选择，之后再搜索框搜索插件名安装，重启 VSCode 即可生效。</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gliqprm66nj319e0tsdnt.jpg" alt="VSCode插件安装" width="70%/"></center>
-</li>
-<li><p>推荐安装的插件</p>
-<ul>
-<li><font color="red">Chinese(Simplified)Language Pack for VS Code</font>：中文（简体）语言包</li>
-<li><font color="red">Open in Browser</font>：右键选择在浏览器中打开 html 文件，上面演示的功能</li>
-<li><font color="red">JS-CSS-HTML Formatter</font>：每次保存，都会自动格式化js、css 和 html 代码</li>
-<li><font color="red">Auto Rename Tag</font>：自动重命名配对的 HTML/XML 标签</li>
-<li><font color="red">CSS Peek</font>：追踪至样式</li>
-</ul>
-<p>更多好用的插件希望大家相互推荐~</p>
-</li>
-</ul>
-<h3 id="1-3-VSCode-工具生成的骨架标签新增的代码"><a href="#1-3-VSCode-工具生成的骨架标签新增的代码" class="headerlink" title="1.3 VSCode 工具生成的骨架标签新增的代码"></a>1.3 VSCode 工具生成的骨架标签新增的代码</h3><ul>
-<li><p><font color="red">文档类型声明标签 &lt; !DOCTYPE &gt;</font>：告诉浏览器使用那种 HTML 版本来显示网页</p>
-<p>&lt; !DOCTYPE html &gt; 表示当前页面采用的是 HTML5 版本来显示网页。&lt; !DOCTYPE html &gt; 不是一个 HTML 标签，它只是一个文档类型声明标签。</p>
-</li>
-<li><p><font color="red">lang 语言种类</font>：用来定义当前文档显示的语言</p>
-<p><font color="red">en</font> 定义语言为英语，<font color="red">zh-CN</font>  定义语言为中文。无论哪种都可以在网页里写中英文，都能正常显示，这个属性只用于<font color="red">浏览器翻译功能的判断</font>而已。</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glircl05pzj314w0kuacx.jpg" alt="lang 属性的影响" width="67%/"></center>
-</li>
-<li><p><font color="red">字符集</font>：是多个字符的集合，以便计算机能够识别和存储各种文字</p>
-<p>在&lt; head&gt; 标签内，可以通过 &lt; meta&gt; 标签的 charset 属性来规定 HTML 文档使用的字符编码集。</p>
-<p>charset 常用值有：GB2312、BIG5、GBK 和 UTF-8，其中 <font color="red">UTF-8</font> 也被称为<font color="red">万国码</font>，基本包含了全世界所有国家需要用到的字符。</p>
-<p>【注意】:<font color="red">上面语法是必须要写的代码，否则可能引起乱码的情况。一般情况下，统一使用“UTF-8”编码，尽量统一写成标准的 “UTF-8”，不要写成 “utf8” 或 “UTF8”。</font></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>工具技巧</category>
-      </categories>
-      <tags>
-        <tag>VSCode</tag>
-        <tag>Html</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/2020/12/07/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -340,6 +340,72 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>力扣290-单词规律</title>
+    <url>/2020/12/16/li-kou-290-dan-ci-gui-lu/</url>
+    <content><![CDATA[<h1 id="力扣290-单词规律"><a href="#力扣290-单词规律" class="headerlink" title="力扣290-单词规律"></a><center>力扣290-单词规律</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>​        给定一种规律 pattern 和一个字符串 str ，判断 str 是否遵循相同的规律。这里的遵循指完全匹配，例如， pattern 里的每个字母和字符串 str 中的每个非空单词之间存在着双向连接的对应规律。</p>
+<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
+<li><p><strong>示例1：</strong></p>
+<p><strong>输入：</strong> pattern = “abba”, str = “dog cat cat dog”<br><strong>输出：</strong> true</p>
+</li>
+<li><p><strong>示例2：</strong></p>
+<p><strong>输入：</strong> pattern = “abba”, str = “dog cat cat fish”<br><strong>输出：</strong> false</p>
+</li>
+<li><p><strong>示例3：</strong></p>
+<p><strong>输入：</strong> pattern = “aaaa”, str = “dog cat cat dog”</p>
+<p><strong>输出：</strong> false</p>
+</li>
+<li><p><strong>示例4：</strong></p>
+<p><strong>输入：</strong> pattern = “abba”, str = “dog dog dog dog”</p>
+<p><strong>输出：</strong> false</p>
+</li>
+<li><p><strong>说明：</strong> 你可以假设  pattern 只包含小写字母，str 包含了由单个空格分隔的小写字母。</p>
+</li>
+</ul>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/word-pattern">https://leetcode-cn.com/problems/word-pattern</a></p>
+<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="born">二、解题思路</font></h2><h3 id="2-1-题目意思理解"><a href="#2-1-题目意思理解" class="headerlink" title="2.1 题目意思理解"></a>2.1 题目意思理解</h3><p>​    这个题目是个很简单的题目，很容易想到思路。</p>
+<ul>
+<li>首先用 split 函数将字符串 str 按空格切割成字符串数组 arraystr []。</li>
+<li>比较 pattern 与 arraystr 的长度，如果不相同直接返回 false ，否则进入下面的比较过程。</li>
+<li>建立一个 HashMap，键用来存储 pattern 中的字母，值用来存储 arraystr 数组中对应位置的单词，当然在存储的过程中会进行检验的，当键值对都没存在过时则加入 HashMap ，当有一个（键或值）存在时，取出该键值对与当前准备插入的比较，若完全相同则符合，直接下一个，若有一个（键或值）不相同时，则直接返回 false 。</li>
+<li>如果程序跑到了最后还没返回 false 则返回 true 。</li>
+</ul>
+<h3 id="2-2-详细代码（Java）"><a href="#2-2-详细代码（Java）" class="headerlink" title="2.2 详细代码（Java）"></a>2.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">wordPattern</span><span class="token punctuation">(</span><span class="token class-name">String</span> pattern<span class="token punctuation">,</span> <span class="token class-name">String</span> s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arraystr <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                     <span class="token comment">// 分割字符串</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>arraystr<span class="token punctuation">.</span>length <span class="token operator">!=</span> pattern<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>   <span class="token comment">// 长度不同，直接返回false</span>
+        <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Character</span><span class="token punctuation">,</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>pattern<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>map<span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span>pattern<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>               <span class="token comment">// 当前键在map中没存在过</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>map<span class="token punctuation">.</span><span class="token function">containsValue</span><span class="token punctuation">(</span>arraystr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>                <span class="token comment">// 当前值在map中也没存在过</span>
+                    map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>pattern<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span>arraystr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token comment">// 都没存在则加入map</span>
+                <span class="token keyword">else</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>                                  <span class="token comment">// 健不存在但值存在，返回false</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token punctuation">{</span>                                                  <span class="token comment">// 键存在</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>pattern<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>arraystr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// 值也存在，并且就是对应的键值对，什么也不做跳过</span>
+                <span class="token keyword">else</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>                                  <span class="token comment">// 所存的键值对与当前不一样，返回false</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>                                                <span class="token comment">// 遍历结束，没有中途返回false的说明符合规律</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>代码第13行进行字符串内容的比较的时候一定要用<font color="red">.equals</font>函数来比较，不能用<font color="red">==</font>或<font color="red">!=</font>，否则都会出错。</li>
+</ul>
+<h3 id="2-3-算法执行结果"><a href="#2-3-算法执行结果" class="headerlink" title="2.3 算法执行结果"></a>2.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glpj9qxoc0j30pa0cw3zq.jpg" alt="算法执行结果" width="80%/"></center>
+
+<h2 id="三、总结分析"><a href="#三、总结分析" class="headerlink" title="三、总结分析"></a><font color="born">三、总结分析</font></h2><p>​    题目很简单，单纯的哈希表的练习。</p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>简单</tag>
+        <tag>力扣</tag>
+        <tag>哈希表</tag>
+      </tags>
   </entry>
   <entry>
     <title>个人博客搭建</title>
@@ -488,72 +554,6 @@
       </tags>
   </entry>
   <entry>
-    <title>力扣290-单词规律</title>
-    <url>/2020/12/16/li-kou-290-dan-ci-gui-lu/</url>
-    <content><![CDATA[<h1 id="力扣290-单词规律"><a href="#力扣290-单词规律" class="headerlink" title="力扣290-单词规律"></a><center>力扣290-单词规律</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>​        给定一种规律 pattern 和一个字符串 str ，判断 str 是否遵循相同的规律。这里的遵循指完全匹配，例如， pattern 里的每个字母和字符串 str 中的每个非空单词之间存在着双向连接的对应规律。</p>
-<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
-<li><p><strong>示例1：</strong></p>
-<p><strong>输入：</strong> pattern = “abba”, str = “dog cat cat dog”<br><strong>输出：</strong> true</p>
-</li>
-<li><p><strong>示例2：</strong></p>
-<p><strong>输入：</strong> pattern = “abba”, str = “dog cat cat fish”<br><strong>输出：</strong> false</p>
-</li>
-<li><p><strong>示例3：</strong></p>
-<p><strong>输入：</strong> pattern = “aaaa”, str = “dog cat cat dog”</p>
-<p><strong>输出：</strong> false</p>
-</li>
-<li><p><strong>示例4：</strong></p>
-<p><strong>输入：</strong> pattern = “abba”, str = “dog dog dog dog”</p>
-<p><strong>输出：</strong> false</p>
-</li>
-<li><p><strong>说明：</strong> 你可以假设  pattern 只包含小写字母，str 包含了由单个空格分隔的小写字母。</p>
-</li>
-</ul>
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/word-pattern">https://leetcode-cn.com/problems/word-pattern</a></p>
-<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="born">二、解题思路</font></h2><h3 id="2-1-题目意思理解"><a href="#2-1-题目意思理解" class="headerlink" title="2.1 题目意思理解"></a>2.1 题目意思理解</h3><p>​    这个题目是个很简单的题目，很容易想到思路。</p>
-<ul>
-<li>首先用 split 函数将字符串 str 按空格切割成字符串数组 arraystr []。</li>
-<li>比较 pattern 与 arraystr 的长度，如果不相同直接返回 false ，否则进入下面的比较过程。</li>
-<li>建立一个 HashMap，键用来存储 pattern 中的字母，值用来存储 arraystr 数组中对应位置的单词，当然在存储的过程中会进行检验的，当键值对都没存在过时则加入 HashMap ，当有一个（键或值）存在时，取出该键值对与当前准备插入的比较，若完全相同则符合，直接下一个，若有一个（键或值）不相同时，则直接返回 false 。</li>
-<li>如果程序跑到了最后还没返回 false 则返回 true 。</li>
-</ul>
-<h3 id="2-2-详细代码（Java）"><a href="#2-2-详细代码（Java）" class="headerlink" title="2.2 详细代码（Java）"></a>2.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">wordPattern</span><span class="token punctuation">(</span><span class="token class-name">String</span> pattern<span class="token punctuation">,</span> <span class="token class-name">String</span> s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arraystr <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                     <span class="token comment">// 分割字符串</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>arraystr<span class="token punctuation">.</span>length <span class="token operator">!=</span> pattern<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>   <span class="token comment">// 长度不同，直接返回false</span>
-        <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Character</span><span class="token punctuation">,</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>pattern<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>map<span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span>pattern<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>               <span class="token comment">// 当前键在map中没存在过</span>
-                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>map<span class="token punctuation">.</span><span class="token function">containsValue</span><span class="token punctuation">(</span>arraystr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>                <span class="token comment">// 当前值在map中也没存在过</span>
-                    map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>pattern<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span>arraystr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token comment">// 都没存在则加入map</span>
-                <span class="token keyword">else</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>                                  <span class="token comment">// 健不存在但值存在，返回false</span>
-            <span class="token punctuation">}</span>
-            <span class="token keyword">else</span> <span class="token punctuation">{</span>                                                  <span class="token comment">// 键存在</span>
-                <span class="token keyword">if</span> <span class="token punctuation">(</span>map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>pattern<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>arraystr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// 值也存在，并且就是对应的键值对，什么也不做跳过</span>
-                <span class="token keyword">else</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>                                  <span class="token comment">// 所存的键值对与当前不一样，返回false</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>                                                <span class="token comment">// 遍历结束，没有中途返回false的说明符合规律</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<ul>
-<li>代码第13行进行字符串内容的比较的时候一定要用<font color="red">.equals</font>函数来比较，不能用<font color="red">==</font>或<font color="red">!=</font>，否则都会出错。</li>
-</ul>
-<h3 id="2-3-算法执行结果"><a href="#2-3-算法执行结果" class="headerlink" title="2.3 算法执行结果"></a>2.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glpj9qxoc0j30pa0cw3zq.jpg" alt="算法执行结果" width="80%/"></center>
-
-<h2 id="三、总结分析"><a href="#三、总结分析" class="headerlink" title="三、总结分析"></a><font color="born">三、总结分析</font></h2><p>​    题目很简单，单纯的哈希表的练习。</p>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>简单</tag>
-        <tag>算法题</tag>
-        <tag>哈希表</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>力扣316-去除重复字母</title>
     <url>/2020/12/20/li-kou-316-qu-chu-chong-fu-zi-mu/</url>
     <content><![CDATA[<h1 id="力扣316-去除重复字母"><a href="#力扣316-去除重复字母" class="headerlink" title="力扣316-去除重复字母"></a><center>力扣316-去除重复字母</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  给你一个字符串 <code>s</code> ，请你去除字符串中重复的字母，使得每个字母只出现一次。需保证<strong>返回结果的字典序最小</strong>（要求不能打乱其他字符的相对位置）。</p>
@@ -627,7 +627,7 @@
         <category>算法</category>
       </categories>
       <tags>
-        <tag>算法题</tag>
+        <tag>力扣</tag>
         <tag>中等</tag>
         <tag>栈</tag>
         <tag>字符串</tag>
@@ -735,104 +735,9 @@
       </categories>
       <tags>
         <tag>简单</tag>
-        <tag>算法题</tag>
+        <tag>力扣</tag>
         <tag>字符串</tag>
         <tag>位运算</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>力扣49-字母异位分组</title>
-    <url>/2020/12/21/li-kou-49-zi-mu-yi-wei-fen-zu/</url>
-    <content><![CDATA[<h1 id="力扣49-字母异位分组"><a href="#力扣49-字母异位分组" class="headerlink" title="力扣49-字母异位分组"></a><center>力扣49-字母异位分组</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  给定一个字符串数组，将字母异位词组合在一起。字母异位词指字母相同，但排列不同的字符串。</p>
-<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
-<li><p><strong>示例1：</strong></p>
-<p>  <strong>输入：</strong> [“eat”, “tea”, “tan”, “ate”, “nat”, “bat”]</p>
-<p>  <strong>输出：</strong></p>
-  <pre class="line-numbers language-none"><code class="language-none">[
-  ["ate","eat","tea"],
-  ["nat","tan"],
-  ["bat"]
-]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-</li>
-</ul>
-<p><strong>说明：</strong></p>
-<ul>
-<li><p>  所有输入均为小写字母。</p>
-</li>
-<li><p>  不考虑答案输出的顺序。</p>
-</li>
-</ul>
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/group-anagrams/">https://leetcode-cn.com/problems/group-anagrams/</a></p>
-<h2 id="二、解题思路一"><a href="#二、解题思路一" class="headerlink" title="二、解题思路一"></a><font color="born">二、解题思路一</font></h2><h3 id="2-1-题目意思理解"><a href="#2-1-题目意思理解" class="headerlink" title="2.1 题目意思理解"></a>2.1 题目意思理解</h3><p>  这道题题目意思比较简单，即单词的字母组成上相同的但排列顺序不同的分为一个组，遍历每一个单词和保存结果lists中的每一个组中单词是不是异位的，是则加入改组，不是则判断下一组，直到遍历完存在的所有组，则创建一个新组加入。</p>
-<h3 id="2-2-详细代码（Java）"><a href="#2-2-详细代码（Java）" class="headerlink" title="2.2 详细代码（Java）"></a>2.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> <span class="token function">groupAnagrams</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> strs<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> lists <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// 定义保存结果的 lists</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>strs<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>                  <span class="token comment">// 遍历每一个单词</span>
-            <span class="token keyword">boolean</span> flag <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>                           <span class="token comment">// 记录是否有加入已经存在的组</span>
-            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> list <span class="token operator">:</span> lists<span class="token punctuation">)</span> <span class="token punctuation">{</span>               <span class="token comment">// 遍历lists中的每一个组</span>
-                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isSameWords</span><span class="token punctuation">(</span>strs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span>list<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>   <span class="token punctuation">{</span>   <span class="token comment">// 判断当前组的第一个单词和遍历的单词是否异位</span>
-                    list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>strs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                      <span class="token comment">// 是异位则加入该组</span>
-                    flag <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>                            <span class="token comment">// 状态改为已加入组的状态</span>
-                    <span class="token keyword">continue</span><span class="token punctuation">;</span>                               <span class="token comment">// 跳过后面的组</span>
-                <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>flag <span class="token operator">==</span> <span class="token boolean">false</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token comment">// 没有加入组，说明没有与任何已经存在的组异位，自己独自建组加入lists</span>
-                <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>strs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                lists<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> lists<span class="token punctuation">;</span>           <span class="token comment">// 最终返回lists</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">isSameWords</span><span class="token punctuation">(</span><span class="token class-name">String</span> word1<span class="token punctuation">,</span><span class="token class-name">String</span> word2<span class="token punctuation">)</span><span class="token punctuation">{</span>   <span class="token comment">// 判断两个单词是否异位</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>word1<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">!=</span> word2<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-        <span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> chars1 <span class="token operator">=</span> word1<span class="token punctuation">.</span><span class="token function">toCharArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> chars2 <span class="token operator">=</span> word2<span class="token punctuation">.</span><span class="token function">toCharArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>chars1<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>chars2<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> <span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span>chars1<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span>chars2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="2-3-算法执行结果"><a href="#2-3-算法执行结果" class="headerlink" title="2.3 算法执行结果"></a>2.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glve3zxthnj30s60ei75o.jpg" alt="算法执行结果" width="80%/"></center>
-
-<p>  结果比较惨，但还好也是自己很快就相处来的方法，接着再思考思考提升下性能。</p>
-<h2 id="三、解题思路二（哈希表）"><a href="#三、解题思路二（哈希表）" class="headerlink" title="三、解题思路二（哈希表）"></a><font color="born">三、解题思路二（哈希表）</font></h2><h3 id="3-1-题目意思理解"><a href="#3-1-题目意思理解" class="headerlink" title="3.1 题目意思理解"></a>3.1 题目意思理解</h3><p>  大概意思跟上一种思路一致，用哈希表来存储结果，每一个单词先转换成字符数组，然后排序，再把排序后的字符数组转换成字符串作为同类异位单词的 key ，组作为 value。例如示例：[“eat”, “tea”, “tan”, “ate”, “nat”, “bat”]，对于 “eat” 和 “tea” 单词他们转化求 key 都是 “aet” ，即属于同一个组。</p>
-<h3 id="3-2-详细代码（Java）"><a href="#3-2-详细代码（Java）" class="headerlink" title="3.2 详细代码（Java）"></a>3.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> <span class="token function">groupAnagrams</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> strs<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> hashMap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// 定义哈希表存储分组结果</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span><span class="token number">0</span> <span class="token punctuation">;</span>i<span class="token operator">&lt;</span>strs<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>              <span class="token comment">// 遍历每一个单词</span>
-            <span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> chars <span class="token operator">=</span> strs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">toCharArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// 单词转换成字符数组</span>
-            <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>chars<span class="token punctuation">)</span><span class="token punctuation">;</span>                         <span class="token comment">// 对单词字符数组排序</span>
-            <span class="token class-name">String</span> key <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>chars<span class="token punctuation">)</span><span class="token punctuation">;</span>             <span class="token comment">// 得到单词对应的 key </span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>hashMap<span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>              <span class="token comment">// 如果这个 key 在哈希表中存在 </span>
-                <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> list <span class="token operator">=</span> hashMap<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// 取出 key 对应的组 </span>
-                list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>strs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                      <span class="token comment">// 将该单词加入到这个组 </span>
-            <span class="token punctuation">}</span>
-            <span class="token keyword">else</span> <span class="token punctuation">{</span>                                          <span class="token comment">// 如果这个 key 在哈希表中不存在 </span>
-                <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 要新创建一个组</span>
-                list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>strs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                          <span class="token comment">// 新创建的组中加入该单词</span>
-                hashMap<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span>list<span class="token punctuation">)</span><span class="token punctuation">;</span>                      <span class="token comment">// 新创建的组加入哈希表中</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> result <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span>hashMap<span class="token punctuation">.</span><span class="token function">values</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 哈希表值的部分转换成需要输出的格式</span>
-        <span class="token keyword">return</span> result<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="3-3-算法执行结果"><a href="#3-3-算法执行结果" class="headerlink" title="3.3 算法执行结果"></a>3.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glvftwputnj30ry0ec0u4.jpg" alt="改进算法执行结果" width="80%/"></center>
-
-<p>  这个结果还行，两种方法思路上差别还是存在很大差距的，哈希表的运用大幅度提升了性能。</p>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>算法题</tag>
-        <tag>哈希表</tag>
-        <tag>中等</tag>
-        <tag>字符串</tag>
       </tags>
   </entry>
   <entry>
@@ -910,10 +815,143 @@
         <category>算法</category>
       </categories>
       <tags>
-        <tag>算法题</tag>
+        <tag>力扣</tag>
         <tag>中等</tag>
         <tag>数组</tag>
         <tag>技巧题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>力扣714-买卖股票的最佳时机含手续费</title>
+    <url>/2020/12/17/li-kou-714-mai-mai-gu-piao-de-zui-jia-shi-ji-han-shou-xu-fei/</url>
+    <content><![CDATA[<h1 id="力扣714-买卖股票的最佳时机含手续费"><a href="#力扣714-买卖股票的最佳时机含手续费" class="headerlink" title="力扣714-买卖股票的最佳时机含手续费"></a><center>力扣714-买卖股票的最佳时机含手续费</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>​    给定一个整数数组 prices，其中第 i 个元素代表了第 i 天的股票价格 ；非负整数 fee 代表了交易股票的手续费用。你可以无限次地完成交易，但是你每笔交易都需要付手续费。如果你已经购买了一个股票，在卖出它之前你就不能再继续购买股票了。返回获得利润的最大值。</p>
+<p>​    注意：这里的一笔交易指买入持有并卖出股票的整个过程，每笔交易你只需要为支付一次手续费。</p>
+<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
+<li><p><strong>示例一</strong></p>
+<p>  <strong>输入：</strong> prices = [1, 3, 2, 8, 4, 9], fee = 2</p>
+<p>  <strong>输出：</strong> 8</p>
+<p>  <strong>解释：</strong> 能够达到的最大利润:</p>
+<p>  在此处买入 prices[0] = 1<br>  在此处卖出 prices[3] = 8<br>  在此处买入 prices[4] = 4<br>  在此处卖出 prices[5] = 9<br>  总利润: ((8 - 1) - 2) + ((9 - 4) - 2) = 8.</p>
+</li>
+<li><p><strong>注意：</strong></p>
+<ul>
+<li>  <code>0 &lt; prices.length &lt;= 50000</code>.</li>
+<li>  <code>0 &lt; prices[i] &lt; 50000</code>.</li>
+<li>  <code>0 &lt;= fee &lt; 50000</code>.</li>
+</ul>
+</li>
+</ul>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee">https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee</a></p>
+<h2 id="二、解题思路（动态规划）"><a href="#二、解题思路（动态规划）" class="headerlink" title="二、解题思路（动态规划）"></a><font color="born">二、解题思路（动态规划）</font></h2><h3 id="2-1-题目理解"><a href="#2-1-题目理解" class="headerlink" title="2.1 题目理解"></a>2.1 题目理解</h3><ul>
+<li>  <strong>题前感慨（时间紧不用看，跳至【言归正传】部分）</strong></li>
+</ul>
+<p> 给定每日股票价格的数组，每天可以选择是否买入/卖出，持有时不能再次买入，每笔交易有固定的手续费，求可获得的最大利润。给定每日股票价格的数组，每天可以选择是否买入/卖出，持有时不能再次买入，每笔交易有固定的手续费，求可获得的最大利润。</p>
+<p> 这是一道入门的动态规划题目……当说出这句话的时候表示说话者已经对动态规划有所掌握了，所以能很快的分析出它是一道动态规划题，并且很容易就能想到什么状态变量，转移方程的所以它是一道简单的动态规划题目。但对于很多算法新手来说，难的是识别它是个动态规划题。</p>
+<p> 本文主要解决该算法题，下面会结合本题简单说到动态规划，动态规划的详细讲解自己也会全面的整理一份资料供自己总结复习，同时也分享出来给需要的网友参考~。</p>
+<ul>
+<li>  <strong>言归正传</strong></li>
+</ul>
+<p> <strong>【1.识别动态规划】</strong>动态规划所处理的问题是一个多阶段决策问题，一般由初始状态开始，通过对中间阶段决策的选择，达到结束状态，此问题当中我们的初试状态就是第0天开始，结束状态就是第n天结束。中间的买入/卖出就是中间决策的选择。</p>
+<p> <strong>【2.确定状态定义状态变量】</strong>知道是动态规划题后就老老实实的确定状态和定义状态变量，如何正确合理的确定状态也至关重要，例如这里可以以每天交易结束后手里是否有股票为状态，两种状态：有股票，没有股票。我们的目的是求最后的最大利润的，所以定义状态变量可以这样定义：dp[i][0] 表示第 i 天交易结束后手里没有股票的最大利润。dp[i][1] 表示第 i 天交易结束后手里有股票的最大利润。</p>
+<p> <strong>【3.推导状态转移方程】</strong>先考虑 dp[i][0] 的转移方程，第 i 天结束，手里没有股票，那么一定是今天没有买入。可能的状态有前一天可能是也没有股票状态 dp[i-1][0]，或前一天结束时手里有股票 dp[i-1][1]被我今天卖了。因此转移方程为：<br>$$<br>dp[i][0] = max{dp[i-1][0],dp[i-1][1]+prices[i]-fee}<br>$$<br> 在考虑 dp[i][1] 的转移方程，第 i 天结束后，手里有股票，那么一定是今天没有卖出。可能的状态有前一天本来就是有股票状态 dp[i-1][1]，或者前一天结束时没有股票dp[i-1][0]，但我今天买入了。因此转移方程为：<br>$$<br>dp[i][1] = max{dp[i-1][1],dp[i-1][0]-prices[i]}<br>$$<br> <strong>【4.确定边界】</strong>其实就是确定初始状态，第0天交易结束时有 dp[0][0] = 0，dp[0][1] = -prices[0]。</p>
+<h3 id="2-2-详细代码（Java）"><a href="#2-2-详细代码（Java）" class="headerlink" title="2.2 详细代码（Java）"></a>2.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">maxProfit</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> prices<span class="token punctuation">,</span> <span class="token keyword">int</span> fee<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>prices<span class="token punctuation">.</span>length <span class="token operator">&lt;=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> dp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>prices<span class="token punctuation">.</span>length<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>     <span class="token comment">// 状态变量，存储每天有或没有股票的最大收益</span>
+        dp<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>           <span class="token comment">// 初始值，第0天没股票即没有买入，收益为0</span>
+        dp<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token operator">-</span>prices<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// 初始值，第0天有股票即买入了，收益为-prices[0]</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>prices<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>        <span class="token comment">// 循环更新每天的状态</span>
+            dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> fee<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">-</span> prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>prices<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>prices<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 返回最后一天两种状态的最大值</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="2-3-算法执行结果"><a href="#2-3-算法执行结果" class="headerlink" title="2.3 算法执行结果"></a>2.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glqwb0qsl4j30s40eijst.jpg" alt="算法执行结果" width="80%/"></center>
+
+<p> 算法性能不是很好，其他很多题友可能想出了更好的方法。这里重点总结该题对动态规划的运用，空间复杂度上可以稍微提升一下，因为在上述算法中定义了一个二维数组去求每一天的状态，是没有必要的，因为最后的输出只需要最后一天的。我们可以定义两个变量来存储就好了。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">maxProfit</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> prices<span class="token punctuation">,</span> <span class="token keyword">int</span> fee<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>prices<span class="token punctuation">.</span>length <span class="token operator">&lt;=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> nothave <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>            <span class="token comment">// 初始值，第0天没股票即没有买入，收益为0</span>
+        <span class="token keyword">int</span> have <span class="token operator">=</span> <span class="token operator">-</span>prices<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>      <span class="token comment">// 初始值，第0天有股票即买入了，收益为-prices[0]</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>prices<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token comment">// 循环更新状态值</span>
+            <span class="token keyword">int</span> n <span class="token operator">=</span> nothave<span class="token punctuation">,</span>y <span class="token operator">=</span> have<span class="token punctuation">;</span>           <span class="token comment">// 下面的更新中都要用到之前的值，所以要临时存储一下</span>
+            nothave <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span>y <span class="token operator">+</span> prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> fee<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            have <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>y<span class="token punctuation">,</span>n <span class="token operator">-</span> prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>nothave<span class="token punctuation">,</span>have<span class="token punctuation">)</span><span class="token punctuation">;</span>          <span class="token comment">// 返回两种状态的最大值</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glqwvrsntgj30ry0eeq4c.jpg" alt="改进算法执行结果" width="80%/"></center>
+
+<p> 出乎意的是性能得到了很大的提升…….</p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>力扣</tag>
+        <tag>中等</tag>
+        <tag>动态规划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>力扣738-单调递增的数字</title>
+    <url>/2020/12/15/li-kou-738-dan-diao-di-zeng-de-shu-zi/</url>
+    <content><![CDATA[<h1 id="力扣738-单调递增的数字"><a href="#力扣738-单调递增的数字" class="headerlink" title="力扣738-单调递增的数字"></a><center>力扣738-单调递增的数字</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>​        给定一个非负整数 N，找出小于或等于N的最大的整数，同时这个整数需要满足其各个位数上的数字是单调递增。    </p>
+<p>​    （当且仅当每个相邻位数上的数字 x 和 y 满足 x &lt;= y 时，我们称这个整数是单调递增的。）</p>
+<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
+<li><p><strong>示例1：</strong></p>
+<p><strong>输入：</strong>N = 10<br><strong>输出：</strong>9</p>
+</li>
+<li><p><strong>示例2：</strong></p>
+<p><strong>输入：</strong>N = 1234<br><strong>输出：</strong>1234</p>
+</li>
+<li><p><strong>示例3：</strong></p>
+<p><strong>输入：</strong>N = 332</p>
+<p><strong>输出：</strong>299</p>
+</li>
+<li><p><strong>说明：</strong>N 是在[0, 10<sup>9</sup>]范围内的一个整数。</p>
+</li>
+</ul>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/monotone-increasing-digits">https://leetcode-cn.com/problems/monotone-increasing-digits</a></p>
+<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="born">二、解题思路</font></h2><h3 id="2-1-题目意思理解"><a href="#2-1-题目意思理解" class="headerlink" title="2.1 题目意思理解"></a>2.1 题目意思理解</h3><p>​    按照题目意思，我们从前往后去分析数据，如果当前位数上的值小于后一位的值时，那么当前位值要 -1，右边的所有位置 9 。否则按照位数向右递归。</p>
+<h3 id="2-2-详细代码（Java）"><a href="#2-2-详细代码（Java）" class="headerlink" title="2.2 详细代码（Java）"></a>2.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">monotoneIncreasingDigits</span><span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token class-name">N</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 将 int 转换成字符串再转换成字符数组 </span>
+       <span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> strN <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token class-name">N</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toCharArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     
+       <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token comment">// 找到前一个数值大于当前数值的位置</span>
+       <span class="token keyword">while</span> <span class="token punctuation">(</span>i<span class="token operator">&lt;</span>strN<span class="token punctuation">.</span>length <span class="token operator">&amp;&amp;</span> strN<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">&lt;=</span>strN<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>  i<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token comment">// 原数字不是单调递增的</span>
+       <span class="token keyword">if</span> <span class="token punctuation">(</span>i<span class="token operator">&lt;</span>strN<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">{</span>
+           <span class="token comment">// 前一个数值大了，执行减一操作，减一后要检验之前的</span>
+           <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> strN<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">&gt;</span>strN<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+               strN<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">--</span><span class="token punctuation">;</span>
+               i<span class="token operator">--</span><span class="token punctuation">;</span>
+           <span class="token punctuation">}</span>
+           <span class="token comment">// 讲最终修改后的位置之后都改为 9</span>
+           <span class="token keyword">for</span> <span class="token punctuation">(</span>i<span class="token operator">+=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>strN<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> strN<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">'9'</span><span class="token punctuation">;</span>        
+       <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>strN<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="2-3-算法执行结果"><a href="#2-3-算法执行结果" class="headerlink" title="2.3 算法执行结果"></a>2.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glodhbs9wpj310y0cq0u3.jpg" alt="算法执行结果" width="80%/"></center>
+
+<h2 id="三、总结分析"><a href="#三、总结分析" class="headerlink" title="三、总结分析"></a><font color="born">三、总结分析</font></h2><p>​        从前往后遍历，如果前面的值大于后面的值就把当前位数减一然后把后面的值变成9，以此类推</p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>力扣</tag>
+        <tag>中等</tag>
+        <tag>数组</tag>
+        <tag>贪心</tag>
       </tags>
   </entry>
   <entry>
@@ -1019,142 +1057,9 @@
         <category>算法</category>
       </categories>
       <tags>
-        <tag>算法题</tag>
+        <tag>力扣</tag>
         <tag>中等</tag>
         <tag>数组</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>力扣714-买卖股票的最佳时机含手续费</title>
-    <url>/2020/12/17/li-kou-714-mai-mai-gu-piao-de-zui-jia-shi-ji-han-shou-xu-fei/</url>
-    <content><![CDATA[<h1 id="力扣714-买卖股票的最佳时机含手续费"><a href="#力扣714-买卖股票的最佳时机含手续费" class="headerlink" title="力扣714-买卖股票的最佳时机含手续费"></a><center>力扣714-买卖股票的最佳时机含手续费</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>​    给定一个整数数组 prices，其中第 i 个元素代表了第 i 天的股票价格 ；非负整数 fee 代表了交易股票的手续费用。你可以无限次地完成交易，但是你每笔交易都需要付手续费。如果你已经购买了一个股票，在卖出它之前你就不能再继续购买股票了。返回获得利润的最大值。</p>
-<p>​    注意：这里的一笔交易指买入持有并卖出股票的整个过程，每笔交易你只需要为支付一次手续费。</p>
-<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
-<li><p><strong>示例一</strong></p>
-<p>  <strong>输入：</strong> prices = [1, 3, 2, 8, 4, 9], fee = 2</p>
-<p>  <strong>输出：</strong> 8</p>
-<p>  <strong>解释：</strong> 能够达到的最大利润:</p>
-<p>  在此处买入 prices[0] = 1<br>  在此处卖出 prices[3] = 8<br>  在此处买入 prices[4] = 4<br>  在此处卖出 prices[5] = 9<br>  总利润: ((8 - 1) - 2) + ((9 - 4) - 2) = 8.</p>
-</li>
-<li><p><strong>注意：</strong></p>
-<ul>
-<li>  <code>0 &lt; prices.length &lt;= 50000</code>.</li>
-<li>  <code>0 &lt; prices[i] &lt; 50000</code>.</li>
-<li>  <code>0 &lt;= fee &lt; 50000</code>.</li>
-</ul>
-</li>
-</ul>
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee">https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee</a></p>
-<h2 id="二、解题思路（动态规划）"><a href="#二、解题思路（动态规划）" class="headerlink" title="二、解题思路（动态规划）"></a><font color="born">二、解题思路（动态规划）</font></h2><h3 id="2-1-题目理解"><a href="#2-1-题目理解" class="headerlink" title="2.1 题目理解"></a>2.1 题目理解</h3><ul>
-<li>  <strong>题前感慨（时间紧不用看，跳至【言归正传】部分）</strong></li>
-</ul>
-<p> 给定每日股票价格的数组，每天可以选择是否买入/卖出，持有时不能再次买入，每笔交易有固定的手续费，求可获得的最大利润。给定每日股票价格的数组，每天可以选择是否买入/卖出，持有时不能再次买入，每笔交易有固定的手续费，求可获得的最大利润。</p>
-<p> 这是一道入门的动态规划题目……当说出这句话的时候表示说话者已经对动态规划有所掌握了，所以能很快的分析出它是一道动态规划题，并且很容易就能想到什么状态变量，转移方程的所以它是一道简单的动态规划题目。但对于很多算法新手来说，难的是识别它是个动态规划题。</p>
-<p> 本文主要解决该算法题，下面会结合本题简单说到动态规划，动态规划的详细讲解自己也会全面的整理一份资料供自己总结复习，同时也分享出来给需要的网友参考~。</p>
-<ul>
-<li>  <strong>言归正传</strong></li>
-</ul>
-<p> <strong>【1.识别动态规划】</strong>动态规划所处理的问题是一个多阶段决策问题，一般由初始状态开始，通过对中间阶段决策的选择，达到结束状态，此问题当中我们的初试状态就是第0天开始，结束状态就是第n天结束。中间的买入/卖出就是中间决策的选择。</p>
-<p> <strong>【2.确定状态定义状态变量】</strong>知道是动态规划题后就老老实实的确定状态和定义状态变量，如何正确合理的确定状态也至关重要，例如这里可以以每天交易结束后手里是否有股票为状态，两种状态：有股票，没有股票。我们的目的是求最后的最大利润的，所以定义状态变量可以这样定义：dp[i][0] 表示第 i 天交易结束后手里没有股票的最大利润。dp[i][1] 表示第 i 天交易结束后手里有股票的最大利润。</p>
-<p> <strong>【3.推导状态转移方程】</strong>先考虑 dp[i][0] 的转移方程，第 i 天结束，手里没有股票，那么一定是今天没有买入。可能的状态有前一天可能是也没有股票状态 dp[i-1][0]，或前一天结束时手里有股票 dp[i-1][1]被我今天卖了。因此转移方程为：<br>$$<br>dp[i][0] = max{dp[i-1][0],dp[i-1][1]+prices[i]-fee}<br>$$<br> 在考虑 dp[i][1] 的转移方程，第 i 天结束后，手里有股票，那么一定是今天没有卖出。可能的状态有前一天本来就是有股票状态 dp[i-1][1]，或者前一天结束时没有股票dp[i-1][0]，但我今天买入了。因此转移方程为：<br>$$<br>dp[i][1] = max{dp[i-1][1],dp[i-1][0]-prices[i]}<br>$$<br> <strong>【4.确定边界】</strong>其实就是确定初始状态，第0天交易结束时有 dp[0][0] = 0，dp[0][1] = -prices[0]。</p>
-<h3 id="2-2-详细代码（Java）"><a href="#2-2-详细代码（Java）" class="headerlink" title="2.2 详细代码（Java）"></a>2.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">maxProfit</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> prices<span class="token punctuation">,</span> <span class="token keyword">int</span> fee<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>prices<span class="token punctuation">.</span>length <span class="token operator">&lt;=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> dp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>prices<span class="token punctuation">.</span>length<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>     <span class="token comment">// 状态变量，存储每天有或没有股票的最大收益</span>
-        dp<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>           <span class="token comment">// 初始值，第0天没股票即没有买入，收益为0</span>
-        dp<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token operator">-</span>prices<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// 初始值，第0天有股票即买入了，收益为-prices[0]</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>prices<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>        <span class="token comment">// 循环更新每天的状态</span>
-            dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> fee<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">-</span> prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>prices<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>prices<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 返回最后一天两种状态的最大值</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="2-3-算法执行结果"><a href="#2-3-算法执行结果" class="headerlink" title="2.3 算法执行结果"></a>2.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glqwb0qsl4j30s40eijst.jpg" alt="算法执行结果" width="80%/"></center>
-
-<p> 算法性能不是很好，其他很多题友可能想出了更好的方法。这里重点总结该题对动态规划的运用，空间复杂度上可以稍微提升一下，因为在上述算法中定义了一个二维数组去求每一天的状态，是没有必要的，因为最后的输出只需要最后一天的。我们可以定义两个变量来存储就好了。</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">maxProfit</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> prices<span class="token punctuation">,</span> <span class="token keyword">int</span> fee<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>prices<span class="token punctuation">.</span>length <span class="token operator">&lt;=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">int</span> nothave <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>            <span class="token comment">// 初始值，第0天没股票即没有买入，收益为0</span>
-        <span class="token keyword">int</span> have <span class="token operator">=</span> <span class="token operator">-</span>prices<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>      <span class="token comment">// 初始值，第0天有股票即买入了，收益为-prices[0]</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>prices<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token comment">// 循环更新状态值</span>
-            <span class="token keyword">int</span> n <span class="token operator">=</span> nothave<span class="token punctuation">,</span>y <span class="token operator">=</span> have<span class="token punctuation">;</span>           <span class="token comment">// 下面的更新中都要用到之前的值，所以要临时存储一下</span>
-            nothave <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span>y <span class="token operator">+</span> prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> fee<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            have <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>y<span class="token punctuation">,</span>n <span class="token operator">-</span> prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>nothave<span class="token punctuation">,</span>have<span class="token punctuation">)</span><span class="token punctuation">;</span>          <span class="token comment">// 返回两种状态的最大值</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glqwvrsntgj30ry0eeq4c.jpg" alt="改进算法执行结果" width="80%/"></center>
-
-<p> 出乎意的是性能得到了很大的提升…….</p>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>算法题</tag>
-        <tag>中等</tag>
-        <tag>动态规划</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>力扣738-单调递增的数字</title>
-    <url>/2020/12/15/li-kou-738-dan-diao-di-zeng-de-shu-zi/</url>
-    <content><![CDATA[<h1 id="力扣738-单调递增的数字"><a href="#力扣738-单调递增的数字" class="headerlink" title="力扣738-单调递增的数字"></a><center>力扣738-单调递增的数字</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>​        给定一个非负整数 N，找出小于或等于N的最大的整数，同时这个整数需要满足其各个位数上的数字是单调递增。    </p>
-<p>​    （当且仅当每个相邻位数上的数字 x 和 y 满足 x &lt;= y 时，我们称这个整数是单调递增的。）</p>
-<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
-<li><p><strong>示例1：</strong></p>
-<p><strong>输入：</strong>N = 10<br><strong>输出：</strong>9</p>
-</li>
-<li><p><strong>示例2：</strong></p>
-<p><strong>输入：</strong>N = 1234<br><strong>输出：</strong>1234</p>
-</li>
-<li><p><strong>示例3：</strong></p>
-<p><strong>输入：</strong>N = 332</p>
-<p><strong>输出：</strong>299</p>
-</li>
-<li><p><strong>说明：</strong>N 是在[0, 10<sup>9</sup>]范围内的一个整数。</p>
-</li>
-</ul>
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/monotone-increasing-digits">https://leetcode-cn.com/problems/monotone-increasing-digits</a></p>
-<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="born">二、解题思路</font></h2><h3 id="2-1-题目意思理解"><a href="#2-1-题目意思理解" class="headerlink" title="2.1 题目意思理解"></a>2.1 题目意思理解</h3><p>​    按照题目意思，我们从前往后去分析数据，如果当前位数上的值小于后一位的值时，那么当前位值要 -1，右边的所有位置 9 。否则按照位数向右递归。</p>
-<h3 id="2-2-详细代码（Java）"><a href="#2-2-详细代码（Java）" class="headerlink" title="2.2 详细代码（Java）"></a>2.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">monotoneIncreasingDigits</span><span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token class-name">N</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment">// 将 int 转换成字符串再转换成字符数组 </span>
-       <span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> strN <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token class-name">N</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toCharArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     
-       <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token comment">// 找到前一个数值大于当前数值的位置</span>
-       <span class="token keyword">while</span> <span class="token punctuation">(</span>i<span class="token operator">&lt;</span>strN<span class="token punctuation">.</span>length <span class="token operator">&amp;&amp;</span> strN<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">&lt;=</span>strN<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>  i<span class="token operator">++</span><span class="token punctuation">;</span>
-        <span class="token comment">// 原数字不是单调递增的</span>
-       <span class="token keyword">if</span> <span class="token punctuation">(</span>i<span class="token operator">&lt;</span>strN<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">{</span>
-           <span class="token comment">// 前一个数值大了，执行减一操作，减一后要检验之前的</span>
-           <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> strN<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">&gt;</span>strN<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-               strN<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">--</span><span class="token punctuation">;</span>
-               i<span class="token operator">--</span><span class="token punctuation">;</span>
-           <span class="token punctuation">}</span>
-           <span class="token comment">// 讲最终修改后的位置之后都改为 9</span>
-           <span class="token keyword">for</span> <span class="token punctuation">(</span>i<span class="token operator">+=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>strN<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> strN<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">'9'</span><span class="token punctuation">;</span>        
-       <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>strN<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="2-3-算法执行结果"><a href="#2-3-算法执行结果" class="headerlink" title="2.3 算法执行结果"></a>2.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glodhbs9wpj310y0cq0u3.jpg" alt="算法执行结果" width="80%/"></center>
-
-<h2 id="三、总结分析"><a href="#三、总结分析" class="headerlink" title="三、总结分析"></a><font color="born">三、总结分析</font></h2><p>​        从前往后遍历，如果前面的值大于后面的值就把当前位数减一然后把后面的值变成9，以此类推</p>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>算法题</tag>
-        <tag>中等</tag>
-        <tag>数组</tag>
-        <tag>贪心</tag>
       </tags>
   </entry>
   <entry>
@@ -1215,334 +1120,104 @@
       </categories>
       <tags>
         <tag>简单</tag>
-        <tag>算法题</tag>
+        <tag>力扣</tag>
         <tag>数组</tag>
         <tag>动态规划</tag>
       </tags>
   </entry>
   <entry>
-    <title>HTML 标签（上）</title>
-    <url>/2020/12/10/html-biao-qian-shang/</url>
-    <content><![CDATA[<h1 id="HTML-标签（上）"><a href="#HTML-标签（上）" class="headerlink" title="HTML 标签（上）"></a><center>HTML 标签（上）</center></h1><h2 id="一、HTML-简介"><a href="#一、HTML-简介" class="headerlink" title="一、HTML 简介"></a><font color="born">一、HTML 简介</font></h2><h3 id="1-1-网页"><a href="#1-1-网页" class="headerlink" title="1.1 网页"></a>1.1 网页</h3><ul>
-<li><p><strong>什么是网页？</strong></p>
-<p>要知道什么是网页，先要理解网站的概念。<font color="red">网站</font>是指在因特网上根据一定的规则，使用 HTML 等制作的用于展示特定内容相关的网页集合。<font color="red">网页</font>就是网站中的一页，通常是 <font color="red">HTML 格式的文件</font>，它要通过浏览器来阅读。</p>
-<p><font color="red">网页是构成网站的基本元素</font>，它通常由图片、链接、文字、声音、视频等<font color="red">元素</font>组成。通常我们看到的网页，常见以 <font color="red">.htm</font> 或 <font color="red">.html</font> 后缀结尾的文件，因此将其俗称为 <font color="red">HTML 文件</font>。</p>
+    <title>力扣49-字母异位分组</title>
+    <url>/2020/12/21/li-kou-49-zi-mu-yi-wei-fen-zu/</url>
+    <content><![CDATA[<h1 id="力扣49-字母异位分组"><a href="#力扣49-字母异位分组" class="headerlink" title="力扣49-字母异位分组"></a><center>力扣49-字母异位分组</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  给定一个字符串数组，将字母异位词组合在一起。字母异位词指字母相同，但排列不同的字符串。</p>
+<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
+<li><p><strong>示例1：</strong></p>
+<p>  <strong>输入：</strong> [“eat”, “tea”, “tan”, “ate”, “nat”, “bat”]</p>
+<p>  <strong>输出：</strong></p>
+  <pre class="line-numbers language-none"><code class="language-none">[
+  ["ate","eat","tea"],
+  ["nat","tan"],
+  ["bat"]
+]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 </li>
-<li><p><strong>什么是 HTML</strong></p>
-<p><font color="red">HTML</font> 指的是超文本标记语言（ <font color="red"><strong>H</strong>yper <strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage</font>），它是用来描述网页的一种语言。是具有一套标记标签的标记语</p>
-<p>所谓的超文本，有两层含义：</p>
+</ul>
+<p><strong>说明：</strong></p>
 <ul>
-<li>它可以加入图片、声音、动画、多媒体等内容（超越了文本限制）。</li>
-<li>它还可以从一个文件跳转到另一个文件，与世界各地主机的文件链接（超级链接文本）。</li>
-</ul>
+<li><p>  所有输入均为小写字母。</p>
 </li>
-<li><p><strong>网页的形成</strong></p>
-<p>网页是由网页元素组成的，这些元素是利用 html 标签描述出来，然后通过浏览器解析来显示给用户的。</p>
-<p>前端人员开发代码 —-&gt; 浏览器解析、渲染代码 —-&gt; 生成最后的 Web 页面</p>
+<li><p>  不考虑答案输出的顺序。</p>
 </li>
 </ul>
-<h3 id="1-2-常用的浏览器"><a href="#1-2-常用的浏览器" class="headerlink" title="1.2 常用的浏览器"></a>1.2 常用的浏览器</h3><ul>
-<li><p><strong>常用的浏览器</strong></p>
-<p>浏览器是网页显示、运行的平台。常用的浏览器有 IE 、火狐（Firefox）、谷歌（Chrome）、Safari、和 Opera 等。</p>
-<p>查看浏览器市场份额：<a href="http://tongji.baidu.com/data/browser">http://tongji.baidu.com/data/browser</a> 谷歌浏览器占最大市场份额，强烈推荐使用。</p>
-</li>
-<li><p><strong>浏览器内核</strong></p>
-<p>浏览器内核（渲染引擎）：负责读取网页内容，整理讯息，计算网页显示方式并显示页面。</p>
-<table border="1" cellspacing="0" align="center" style="text-align: center;width: 75%">
-  <tbody style="width: 100%;">
-        <tr><!--表头-->
-            <th>浏览器</th><th>内核</th><th>备注</th>
-        </tr>
-        <tr><!--第二行-->
-            <td>IE</td><td>Trident</td><td>IE、猎豹安全、360极速浏览器、百度浏览器</td>
-        </tr>
-        <tr><!--第三行-->
-            <td>Firefox</td><td>Gecko</td><td>火狐浏览器内核</td>
-        </tr>
-        <tr><!--第四行-->
-            <td>Safari</td><td>Webkit</td><td>苹果浏览器内核</td>
-        </tr>
-        <tr><!--第五行-->
-            <td>Chrome/Opera</td><td>Blink</td><td>谷歌、Opera 浏览器内核。其实是 WebKit 的分支。</td>
-        </tr>
-  </tbody>
-</table>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/group-anagrams/">https://leetcode-cn.com/problems/group-anagrams/</a></p>
+<h2 id="二、解题思路一"><a href="#二、解题思路一" class="headerlink" title="二、解题思路一"></a><font color="born">二、解题思路一</font></h2><h3 id="2-1-题目意思理解"><a href="#2-1-题目意思理解" class="headerlink" title="2.1 题目意思理解"></a>2.1 题目意思理解</h3><p>  这道题题目意思比较简单，即单词的字母组成上相同的但排列顺序不同的分为一个组，遍历每一个单词和保存结果lists中的每一个组中单词是不是异位的，是则加入改组，不是则判断下一组，直到遍历完存在的所有组，则创建一个新组加入。</p>
+<h3 id="2-2-详细代码（Java）"><a href="#2-2-详细代码（Java）" class="headerlink" title="2.2 详细代码（Java）"></a>2.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> <span class="token function">groupAnagrams</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> strs<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> lists <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// 定义保存结果的 lists</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>strs<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>                  <span class="token comment">// 遍历每一个单词</span>
+            <span class="token keyword">boolean</span> flag <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>                           <span class="token comment">// 记录是否有加入已经存在的组</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> list <span class="token operator">:</span> lists<span class="token punctuation">)</span> <span class="token punctuation">{</span>               <span class="token comment">// 遍历lists中的每一个组</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isSameWords</span><span class="token punctuation">(</span>strs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span>list<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>   <span class="token punctuation">{</span>   <span class="token comment">// 判断当前组的第一个单词和遍历的单词是否异位</span>
+                    list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>strs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                      <span class="token comment">// 是异位则加入该组</span>
+                    flag <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>                            <span class="token comment">// 状态改为已加入组的状态</span>
+                    <span class="token keyword">continue</span><span class="token punctuation">;</span>                               <span class="token comment">// 跳过后面的组</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>flag <span class="token operator">==</span> <span class="token boolean">false</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token comment">// 没有加入组，说明没有与任何已经存在的组异位，自己独自建组加入lists</span>
+                <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>strs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                lists<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> lists<span class="token punctuation">;</span>           <span class="token comment">// 最终返回lists</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">isSameWords</span><span class="token punctuation">(</span><span class="token class-name">String</span> word1<span class="token punctuation">,</span><span class="token class-name">String</span> word2<span class="token punctuation">)</span><span class="token punctuation">{</span>   <span class="token comment">// 判断两个单词是否异位</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>word1<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">!=</span> word2<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> chars1 <span class="token operator">=</span> word1<span class="token punctuation">.</span><span class="token function">toCharArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> chars2 <span class="token operator">=</span> word2<span class="token punctuation">.</span><span class="token function">toCharArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>chars1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>chars2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span>chars1<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span>chars2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>目前国内一般浏览器都会采用 Webkit/Blink 内核，如360、UC、QQ、搜狗等浏览器。</p>
-</li>
-</ul>
-<h3 id="1-3-Web-标准"><a href="#1-3-Web-标准" class="headerlink" title="1.3 Web 标准"></a>1.3 Web 标准</h3><p>​    Web 标准是由 W3C组织和其他标准化组织制定的一系列标准的集合。W3C（万维网联盟）是国际最著名的标准化组织。</p>
-<ul>
-<li><p><strong>为什么需要 web 标准</strong></p>
-<p>浏览器不同，它们显示页面或者渲染效果就有些许差异。有了 web 标准就可以消除所有浏览器的显示差异。</p>
-</li>
-<li><p><strong>web 标准的构成</strong></p>
-<p>web 标准主要包括 <font color="red">结构（Structure）</font>、 <font color="red">表现（Presentation）</font>、 <font color="red">行为（Behavior）</font>三个方面。</p>
-<ul>
-<li>结构：结构用于对<strong>网页元素</strong>进行整理和分类，主要用 HTML。</li>
-<li>表现：表现用于设置网页元素的板式、颜色、大小等<strong>外观样式</strong>，主要用 CSS。</li>
-<li>行为：行为是指网页模型的定义及<strong>交互</strong>的编写，主要用 Javascript。</li>
-</ul>
-<p>web 标准提出的最佳体验方案：<font color="red">结构、样式、行为相分离</font>。即应该把<font color="red">结构写到 HTML 文件中，表现写到 CSS 中，行为写到 JavaScript 文件中</font>。</p>
-</li>
-</ul>
-<h2 id="二、HTML-标签介绍"><a href="#二、HTML-标签介绍" class="headerlink" title="二、HTML 标签介绍"></a><font color="born">二、HTML 标签介绍</font></h2><h3 id="2-1-HTML-语法规范"><a href="#2-1-HTML-语法规范" class="headerlink" title="2.1 HTML 语法规范"></a>2.1 HTML 语法规范</h3><ul>
-<li><p><strong>基本语法概述</strong></p>
-<p>HTML 标签是<font color="red">由尖括号包围的关键词</font>，例如 <font color="red">&lt;html&gt;</font>。</p>
-<p>HTML 标签通常是成对出现的，例如 &lt;html&gt; 和 &lt;/html&gt; ，它们称为<font color="red">双标签</font>。第一个是开始标签，第二个是结束标签。</p>
-<p>也有特殊的标签是单个的标签，例如 &lt;br /&gt; ，它们称为<font color="red">单标签</font>。</p>
-</li>
-<li><p><strong>标签关系</strong></p>
-<p>双标签关系可以分为包含关系和并列关系两类。</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html">/* 包含关系 */
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>  
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
-/* 并列关系 */
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tead</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="2-3-算法执行结果"><a href="#2-3-算法执行结果" class="headerlink" title="2.3 算法执行结果"></a>2.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glve3zxthnj30s60ei75o.jpg" alt="算法执行结果" width="80%/"></center>
 
-</li>
-</ul>
-<h3 id="2-2-HTML-基本结构标签"><a href="#2-2-HTML-基本结构标签" class="headerlink" title="2.2 HTML 基本结构标签"></a>2.2 HTML 基本结构标签</h3><ul>
-<li><p><strong>第一个 HTML 网页</strong></p>
-<p>每一个网页都会有一个基本的结构标签（也称之为骨架标签），页面内容也是在这些基本标签上书写的。HTML 页面也称为 HTML 文档。</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>我的第一个页面<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
-    从来没有真正的绝境, 只有心灵的迷途|
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>  结果比较惨，但还好也是自己很快就相处来的方法，接着再思考思考提升下性能。</p>
+<h2 id="三、解题思路二（哈希表）"><a href="#三、解题思路二（哈希表）" class="headerlink" title="三、解题思路二（哈希表）"></a><font color="born">三、解题思路二（哈希表）</font></h2><h3 id="3-1-题目意思理解"><a href="#3-1-题目意思理解" class="headerlink" title="3.1 题目意思理解"></a>3.1 题目意思理解</h3><p>  大概意思跟上一种思路一致，用哈希表来存储结果，每一个单词先转换成字符数组，然后排序，再把排序后的字符数组转换成字符串作为同类异位单词的 key ，组作为 value。例如示例：[“eat”, “tea”, “tan”, “ate”, “nat”, “bat”]，对于 “eat” 和 “tea” 单词他们转化求 key 都是 “aet” ，即属于同一个组。</p>
+<h3 id="3-2-详细代码（Java）"><a href="#3-2-详细代码（Java）" class="headerlink" title="3.2 详细代码（Java）"></a>3.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> <span class="token function">groupAnagrams</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> strs<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> hashMap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// 定义哈希表存储分组结果</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span><span class="token number">0</span> <span class="token punctuation">;</span>i<span class="token operator">&lt;</span>strs<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>              <span class="token comment">// 遍历每一个单词</span>
+            <span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> chars <span class="token operator">=</span> strs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">toCharArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// 单词转换成字符数组</span>
+            <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>chars<span class="token punctuation">)</span><span class="token punctuation">;</span>                         <span class="token comment">// 对单词字符数组排序</span>
+            <span class="token class-name">String</span> key <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>chars<span class="token punctuation">)</span><span class="token punctuation">;</span>             <span class="token comment">// 得到单词对应的 key </span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>hashMap<span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>              <span class="token comment">// 如果这个 key 在哈希表中存在 </span>
+                <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> list <span class="token operator">=</span> hashMap<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// 取出 key 对应的组 </span>
+                list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>strs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                      <span class="token comment">// 将该单词加入到这个组 </span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token punctuation">{</span>                                          <span class="token comment">// 如果这个 key 在哈希表中不存在 </span>
+                <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 要新创建一个组</span>
+                list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>strs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                          <span class="token comment">// 新创建的组中加入该单词</span>
+                hashMap<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span>list<span class="token punctuation">)</span><span class="token punctuation">;</span>                      <span class="token comment">// 新创建的组加入哈希表中</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">List</span><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span><span class="token punctuation">&gt;</span></span> result <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span>hashMap<span class="token punctuation">.</span><span class="token function">values</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 哈希表值的部分转换成需要输出的格式</span>
+        <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glh0faw7tij30xs0kugnd.jpg" alt="我的第一个网页" width="100%/"></center>
+<h3 id="3-3-算法执行结果"><a href="#3-3-算法执行结果" class="headerlink" title="3.3 算法执行结果"></a>3.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glvftwputnj30ry0ec0u4.jpg" alt="改进算法执行结果" width="80%/"></center>
 
-<table border="1" cellspacing="0" align="center" style="text-align: center;width: 68%">
-        <tbody><tr><!--表头-->
-            <th>标签名</th><th>定义</th><th>说明</th>
-        </tr>
-        <tr><!--第二行-->
-            <td>&lt;html&gt;&lt;/html&gt;</td><td>HTML 标签</td><td>页面中最大的标签，我们称为根标签</td>
-        </tr>
-        <tr><!--第三行-->
-            <td>&lt;head&gt;&lt;/head&gt;</td><td>文档的头部</td><td>网页的相关信息写在这里，必须要有 title 标签</td>
-        </tr>
-        <tr><!--第四行-->
-            <td>&lt;title&gt;&lt;/title&gt;</td><td>文档的标题</td><td>网页的标题</td>
-        </tr>
-        <tr><!--第五行-->
-            <td>&lt;body&gt;&lt;/body&gt;</td><td>文档的主体</td><td>元素内容，页面内容都放这里</td>
-        </tr>
-</tbody></table>
-
-</li>
-</ul>
-<h2 id="三、开发工具-VSCode-的使用"><a href="#三、开发工具-VSCode-的使用" class="headerlink" title="三、开发工具 VSCode 的使用"></a><font color="born">三、开发工具 VSCode 的使用</font></h2><p>​    工欲善其事必先利其器，网页的开发工具有很多，Dreamweaver、sublime、WebStorm、HBuilder、Visual Studio Code等。其中 VSCode 在前端开发中最长用。</p>
-<h3 id="3-1-软件的下载和基本的-html-文件创建"><a href="#3-1-软件的下载和基本的-html-文件创建" class="headerlink" title="3.1 软件的下载和基本的 html 文件创建"></a>3.1 软件的下载和基本的 html 文件创建</h3><ul>
-<li><p>VSCode 下载可以去<a href="https://code.visualstudio.com/">VSCode官网</a>下载</p>
-</li>
-<li><p>新建文件，该文件名和和文件格式为 <font color="red">.html</font> 即可</p>
-</li>
-<li><p>在新建的 html 文件中输入 ! 接着回车或按 Tab 键即可生成网页骨架。</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!-- 输入 ! 回车可快速生成下面骨架 --&gt;</span>
-<span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1.0<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
-    
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>修改网页的&lt;title&gt; 和 &lt;body&gt; 标签为自己想修改的内容然后右键选择Open In Default Browser 在默认浏览器中打开，可能你的右键没有这个选项，需要安装插件。</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gliqfg55fxj317a0s8djx.jpg" alt="默认浏览器中打开网页" width="70%/"></center>
-</li>
-<li><p>觉得页面代码字体不合适可以通过 command + 加号键、和 command + 减号键调整字体大小。</p>
-</li>
-</ul>
-<h3 id="3-2-VSCode-插件使用"><a href="#3-2-VSCode-插件使用" class="headerlink" title="3.2 VSCode 插件使用"></a>3.2 VSCode 插件使用</h3><ul>
-<li><p><strong>插件安装方法，在最左边的是插件功能选择，之后再搜索框搜索插件名安装，重启 VSCode 即可生效。</strong></p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gliqprm66nj319e0tsdnt.jpg" alt="VSCode插件安装" width="70%/"></center>
-</li>
-<li><p><strong>推荐安装的插件</strong></p>
-<ul>
-<li><font color="red">Chinese(Simplified)Language Pack for VS Code</font>：中文（简体）语言包</li>
-<li><font color="red">Open in Browser</font>：右键选择在浏览器中打开 html 文件，上面演示的功能</li>
-<li><font color="red">JS-CSS-HTML Formatter</font>：每次保存，都会自动格式化js、css 和 html 代码</li>
-<li><font color="red">Auto Rename Tag</font>：自动重命名配对的 HTML/XML 标签</li>
-<li><font color="red">CSS Peek</font>：追踪至样式</li>
-</ul>
-<p>更多好用的插件希望大家相互推荐~</p>
-</li>
-</ul>
-<h3 id="3-3-VSCode-工具生成的骨架标签新增的代码"><a href="#3-3-VSCode-工具生成的骨架标签新增的代码" class="headerlink" title="3.3 VSCode 工具生成的骨架标签新增的代码"></a>3.3 VSCode 工具生成的骨架标签新增的代码</h3><ul>
-<li><p><strong><font color="red">文档类型声明标签 &lt; !DOCTYPE &gt;</font>：告诉浏览器使用那种 HTML 版本来显示网页</strong></p>
-<p>&lt;!DOCTYPE html&gt; 表示当前页面采用的是 HTML5 版本来显示网页。&lt;!DOCTYPE html&gt; 不是一个 HTML 标签，它只是一个文档类型声明标签。</p>
-</li>
-<li><p><strong><font color="red">lang 语言种类</font>：用来定义当前文档显示的语言</strong></p>
-<p><font color="red">en</font> 定义语言为英语，<font color="red">zh-CN</font>  定义语言为中文。无论哪种都可以在网页里写中英文，都能正常显示，这个属性只用于<font color="red">浏览器翻译功能的判断</font>而已。</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glircl05pzj314w0kuacx.jpg" alt="lang 属性的影响" width="67%/"></center>
-</li>
-<li><p><strong><font color="red">字符集</font>：是多个字符的集合，以便计算机能够识别和存储各种文字</strong></p>
-<p>在&lt;head&gt; 标签内，可以通过 &lt;meta&gt; 标签的 charset 属性来规定 HTML 文档使用的字符编码集。</p>
-<p>charset 常用值有：GB2312、BIG5、GBK 和 UTF-8，其中 <font color="red">UTF-8</font> 也被称为<font color="red">万国码</font>，基本包含了全世界所有国家需要用到的字符。</p>
-<p>【注意】:<font color="red">上面语法是必须要写的代码，否则可能引起乱码的情况。一般情况下，统一使用“UTF-8”编码，尽量统一写成标准的 “UTF-8”，不要写成 “utf8” 或 “UTF8”。</font></p>
-</li>
-</ul>
-<h2 id="四、HTML-常用标签"><a href="#四、HTML-常用标签" class="headerlink" title="四、HTML 常用标签"></a><font color="born">四、HTML 常用标签</font></h2><p>​    学习标签是有技巧的，重点是记住每个标签的语义。简单理解就是指标签的含义，即这个标签是用来干嘛的。 根据标签的语义，在合适的地方给一个最为合理的标签，可以让页面结构更清晰。</p>
-<h3 id="4-1-标题标签-lt-h1-gt-lt-h6-gt"><a href="#4-1-标题标签-lt-h1-gt-lt-h6-gt" class="headerlink" title="4.1 标题标签<h1> - <h6>"></a>4.1 标题标签&lt;h1&gt; - &lt;h6&gt;</h3><ul>
-<li><p>为了使网页更具有语义化，我们经常会在页面中用到标题标签。HTML 提供了 6 个等级的网页标题， 即 &lt;h1&gt; - &lt;h6&gt;。</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>标题一共六级选,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>文字加粗一行显。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">&gt;</span></span>由大到小依次减，<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">&gt;</span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h4</span><span class="token punctuation">&gt;</span></span>从重到轻随之变。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h4</span><span class="token punctuation">&gt;</span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h5</span><span class="token punctuation">&gt;</span></span>语法规范书写后，<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h5</span><span class="token punctuation">&gt;</span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h6</span><span class="token punctuation">&gt;</span></span>具体效果刷新见。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h6</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gliu2cxuncj31680p2mzq.jpg" alt="标题标签演示" width="70%/"></center>
-</li>
-<li><p>h 是单词 head 的缩写，意为头部、标题。</p>
-</li>
-<li><p>标签语义：作为标题使用，并且依据重要性递减。</p>
-</li>
-<li><p>特点有：</p>
-<ul>
-<li><p>加了标题的文字会变的加粗，字号也会依次变大。</p>
-</li>
-<li><p><font color="red">一个标题独占一行。</font></p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="4-2-lt-p-gt-段落标签和-lt-br-gt-换行标签"><a href="#4-2-lt-p-gt-段落标签和-lt-br-gt-换行标签" class="headerlink" title="4.2 <p> 段落标签和 <br /> 换行标签"></a>4.2 &lt;p&gt; 段落标签和 &lt;br /&gt; 换行标签</h3><ul>
-<li><p>在网页中，要把文字有条理地显示出来，就需要将这些文字分段显示。在 HTML 标签中，<font color="red">&lt;p&gt;</font>标签用于<font color="red">定义段落</font>，它可以将整个网页分为若干个段落。</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;p&gt; 我是一个段落标签 &lt;/p&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li><p>p 是单词 paragraph的缩写，意为段落。 </p>
-</li>
-<li><p>标签语义：可以把 HTML 文档分割为若干段落。</p>
-</li>
-<li><p>特点:</p>
-<ul>
-<li>文本在一个段落中会根据浏览器窗口的大小自动换行。</li>
-<li><font color="red">段落和段落之间保有空隙</font>。</li>
-</ul>
-</li>
-<li><p>在 HTML 中，一个段落中的文字会从左到右依次排列，直到浏览器窗口的右端，然后才自动换行。如果希望某段文本强制换行显示，就需要使用换行标签 &lt;br /&gt;。</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span> 我是一个段落标签 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span> 我是一个换行的<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/&gt;</span></span>段落标签 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gliuhmfyyqj30vm0kujtg.jpg" alt="段落和换行标签" width="80%/"></center>
-</li>
-<li><p>br 是单词 break 的缩写，意为打断、换行。 </p>
-</li>
-<li><p>标签语义:强制换行。</p>
-</li>
-<li><p>特点:</p>
-<ul>
-<li>&lt;br /&gt; 是个<font color="red">单标签</font>。</li>
-<li>&lt;br /&gt; 标签只是简单地开始新的一行，跟段落不一样，段落之间会插入一些垂直的间距。</li>
-</ul>
-</li>
-</ul>
-<h3 id="4-3-文本格式化标签"><a href="#4-3-文本格式化标签" class="headerlink" title="4.3 文本格式化标签"></a>4.3 文本格式化标签</h3><ul>
-<li><p>在网页中，有时需要为文字设置<strong>粗体</strong>、<em>斜体</em> 或<u>下划线</u>或<del>删除线</del>等效果，这时就需要用到 HTML 中的<font color="red">文本格式化标签</font>，使文字以特殊的方式显示。</p>
-</li>
-<li><p>标签语义: 突出重要性, 比普通文字更重要。格式化标签表</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glj5j35gaaj31g20aqac5.jpg" alt="格式化标签表" width="100%;/"></center>
-
-
-
-</li>
-</ul>
-<h3 id="4-4-lt-div-gt-和-lt-span-gt-盒子标签"><a href="#4-4-lt-div-gt-和-lt-span-gt-盒子标签" class="headerlink" title="4.4 <div> 和 <span> 盒子标签"></a>4.4 &lt;div&gt; 和 &lt;span&gt; 盒子标签</h3><ul>
-<li><p>&lt;div&gt; 和 &lt;span&gt; 是没有语义的，它们就是一个盒子，用来装内容的。</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span> 我是div1,同时演示下<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">&gt;</span></span>加粗<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">&gt;</span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span> 我是div2,同时演示下<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>em</span><span class="token punctuation">&gt;</span></span>倾斜<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>em</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span> 我是span1,同时演示下<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>del</span><span class="token punctuation">&gt;</span></span>删除线<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>del</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span> 我是span2,同时演示下<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ins</span><span class="token punctuation">&gt;</span></span>下划线<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ins</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gliv2nuen5j30vm0kuq5e.jpg" alt="文本格式化标签和盒子标签" width="67%/"></center>
-</li>
-<li><p>div 是 division 的缩写，表示分割、分区。span 意为跨度、跨距。</p>
-</li>
-<li><p>特点：</p>
-<ul>
-<li><font color="red">&lt;div&gt; </font>标签用来布局，但是现在一行只能放一个&lt;div&gt;。 <font color="red">大盒子</font></li>
-<li><font color="red">&lt;span&gt;</font> 标签用来布局，一行上可以多个 &lt;span&gt;。<font color="red">小盒子</font></li>
-</ul>
-</li>
-</ul>
-<h3 id="4-5-lt-img-gt-图像标签"><a href="#4-5-lt-img-gt-图像标签" class="headerlink" title="4.5 < img> 图像标签"></a>4.5 &lt; img&gt; 图像标签</h3><ul>
-<li><p>在 HTML 标签中，&lt;img&gt; 标签用于定义 HTML 页面中的图像。</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>图像URL<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li><p><font color="red">img</font> 是单词 image 的缩写，意为图像。</p>
-</li>
-<li><p><font color="red">src</font> 是 &lt;img&gt; 标签的<font color="red">必须属性</font>，它用于<font color="red">指定图像文件的路径和文件名</font>。</p>
-</li>
-<li><p>图像标签的属性：</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glj5uulhwsj31g40f076e.jpg" alt="图像标签属性表" width="90%/"></center>
-</li>
-<li><p>图像标签属性注意点：</p>
-<ul>
-<li>图像标签可以拥有多个属性，必须写在标签名的后面。</li>
-<li>属性之间<font color="red">不分先后</font>顺序，标签名与属性、属性与属性之间均<font color="red">以空格分开</font>。</li>
-<li>属性采取<font color="red">键值对</font>&gt;的格式，即 key=“value” 的格式，<font color="red">属性 = “属性值”</font>。</li>
-</ul>
-</li>
-<li><p>路径可以分为： </p>
-<ul>
-<li><font color="red">相对路径</font>是以引用文件所在位置为参考基础，而建立出的目录路劲，这里简单来说，图片相对于 HTML 页面的位置。相对路径是从代码所在的这个文件出发，去寻找目标文件的，而我们这里所说的上一级 、下一级和同一级就是图片相对于 HTML 页面的位置。</li>
-</ul>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glj5xrztm6j31g808swg8.jpg" alt="相对路劲的分类" width="100%/"></center>
-
-<ul>
-<li><font color="red">绝对路径</font>是指目录下的绝对位置，直接到达目标位置，通常是从盘符开始的路径。例如，Windown系统上”<font color="red">D:\web\img\logo.gif</font>“或MacOS系统上”<font color="red">/Users/ganmingpro/Desktop/log.jpg</font>“或完整的网络地址”<a href="http://www.itcast.cn/images/logo.gif&quot;%E3%80%82">http://www.itcast.cn/images/logo.gif"。</a></li>
-</ul>
-</li>
-</ul>
-<h3 id="4-6-lt-a-gt-超链接标签"><a href="#4-6-lt-a-gt-超链接标签" class="headerlink" title="4.6 <a> 超链接标签"></a>4.6 &lt;a&gt; 超链接标签</h3><ul>
-<li><p>超链接可以链接到其他想要跳转的地方</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>跳转目标<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>目标窗口的弹出方式<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span> 文本或图像 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li><p>a 是单词 anchor 的缩写，意为:锚。</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glj5zx89x5j317c06o3zf.jpg" alt="相对路劲的分类" width="100%/"></center>
-</li>
-<li><p>链接的分类：</p>
-<ol>
-<li><font color="red">外部链接</font>：例如&lt;a href=”<a href="http://www.baidu.com&quot;>/">http://www.baidu.com"&gt;</a> 百度 &lt;/a&gt;。</li>
-<li><font color="red">内部链接</font>：网站内部页面之间的相互链接. 直接链接内部页面名称即可，例如 &lt;a href=”index.html”&gt; 首页 &lt;/a&gt;。</li>
-<li><font color="red">空链接</font>：如果当时没有确定链接目标时，&lt;a href=”#”&gt; 首页 &lt;/a&gt; 。</li>
-<li><font color="red">下载链接</font>：如果 href 里面地址是一个文件或者压缩包，点击这个链接会下载这个文件。</li>
-<li><font color="red">网页元素链接</font>：在网页中的各种网页元素，如文本、图像、表格、音频、视频等都可以添加超链接。</li>
-<li><font color="red">锚点链接</font>：当我们想点击链接，可以快速定位到页面中的某个位置时用锚点链接。<ul>
-<li>在链接文本的 href 属性中，设置属性值为<font color="red">#名字</font> 的形式，如&lt;a href=”#two”&gt; 第2集 &lt;/a&gt;。</li>
-<li>找到目标位置标签，里面添加一个 <font color="red">id 属性 = 刚才的名字</font> ，如&lt;h3 id=”two”&gt;第2集介绍&lt;/h3&gt;。</li>
-</ul>
-</li>
-</ol>
-</li>
-</ul>
-<h3 id="4-7-HTML-中的注释和特殊字符"><a href="#4-7-HTML-中的注释和特殊字符" class="headerlink" title="4.7 HTML 中的注释和特殊字符"></a>4.7 HTML 中的注释和特殊字符</h3><ul>
-<li><p>注释：如果需要在 HTML 文档中添加一些便于阅读和理解但又不需要显示在页面中的注释文字，就需要使用注释标签。 HTML 中的注释以” <font color="red">&lt;!–</font> “开头，以” <font color="red">–&gt;</font> “结束。VSCode 中注释快捷键为 command + / (MacOS)。</p>
-</li>
-<li><p>特殊字符：在 HTML 页面中，一些特殊的符号很难或者不方便直接使用，此时我们就可以使用下面的字符来替代。</p>
-</li>
-</ul>
-  <center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glj00syet3j31700rmwh2.jpg" alt="特殊字符表" width="100%/"></center>
-
+<p>  这个结果还行，两种方法思路上差别还是存在很大差距的，哈希表的运用大幅度提升了性能。</p>
 ]]></content>
       <categories>
-        <category>前端开发</category>
+        <category>算法</category>
       </categories>
       <tags>
-        <tag>html</tag>
-        <tag>markdown</tag>
+        <tag>力扣</tag>
+        <tag>哈希表</tag>
+        <tag>中等</tag>
+        <tag>字符串</tag>
       </tags>
   </entry>
   <entry>
@@ -2091,6 +1766,331 @@
       <tags>
         <tag>前端</tag>
         <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HTML 标签（上）</title>
+    <url>/2020/12/10/html-biao-qian-shang/</url>
+    <content><![CDATA[<h1 id="HTML-标签（上）"><a href="#HTML-标签（上）" class="headerlink" title="HTML 标签（上）"></a><center>HTML 标签（上）</center></h1><h2 id="一、HTML-简介"><a href="#一、HTML-简介" class="headerlink" title="一、HTML 简介"></a><font color="born">一、HTML 简介</font></h2><h3 id="1-1-网页"><a href="#1-1-网页" class="headerlink" title="1.1 网页"></a>1.1 网页</h3><ul>
+<li><p><strong>什么是网页？</strong></p>
+<p>要知道什么是网页，先要理解网站的概念。<font color="red">网站</font>是指在因特网上根据一定的规则，使用 HTML 等制作的用于展示特定内容相关的网页集合。<font color="red">网页</font>就是网站中的一页，通常是 <font color="red">HTML 格式的文件</font>，它要通过浏览器来阅读。</p>
+<p><font color="red">网页是构成网站的基本元素</font>，它通常由图片、链接、文字、声音、视频等<font color="red">元素</font>组成。通常我们看到的网页，常见以 <font color="red">.htm</font> 或 <font color="red">.html</font> 后缀结尾的文件，因此将其俗称为 <font color="red">HTML 文件</font>。</p>
+</li>
+<li><p><strong>什么是 HTML</strong></p>
+<p><font color="red">HTML</font> 指的是超文本标记语言（ <font color="red"><strong>H</strong>yper <strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage</font>），它是用来描述网页的一种语言。是具有一套标记标签的标记语</p>
+<p>所谓的超文本，有两层含义：</p>
+<ul>
+<li>它可以加入图片、声音、动画、多媒体等内容（超越了文本限制）。</li>
+<li>它还可以从一个文件跳转到另一个文件，与世界各地主机的文件链接（超级链接文本）。</li>
+</ul>
+</li>
+<li><p><strong>网页的形成</strong></p>
+<p>网页是由网页元素组成的，这些元素是利用 html 标签描述出来，然后通过浏览器解析来显示给用户的。</p>
+<p>前端人员开发代码 —-&gt; 浏览器解析、渲染代码 —-&gt; 生成最后的 Web 页面</p>
+</li>
+</ul>
+<h3 id="1-2-常用的浏览器"><a href="#1-2-常用的浏览器" class="headerlink" title="1.2 常用的浏览器"></a>1.2 常用的浏览器</h3><ul>
+<li><p><strong>常用的浏览器</strong></p>
+<p>浏览器是网页显示、运行的平台。常用的浏览器有 IE 、火狐（Firefox）、谷歌（Chrome）、Safari、和 Opera 等。</p>
+<p>查看浏览器市场份额：<a href="http://tongji.baidu.com/data/browser">http://tongji.baidu.com/data/browser</a> 谷歌浏览器占最大市场份额，强烈推荐使用。</p>
+</li>
+<li><p><strong>浏览器内核</strong></p>
+<p>浏览器内核（渲染引擎）：负责读取网页内容，整理讯息，计算网页显示方式并显示页面。</p>
+<table border="1" cellspacing="0" align="center" style="text-align: center;width: 75%">
+  <tbody style="width: 100%;">
+        <tr><!--表头-->
+            <th>浏览器</th><th>内核</th><th>备注</th>
+        </tr>
+        <tr><!--第二行-->
+            <td>IE</td><td>Trident</td><td>IE、猎豹安全、360极速浏览器、百度浏览器</td>
+        </tr>
+        <tr><!--第三行-->
+            <td>Firefox</td><td>Gecko</td><td>火狐浏览器内核</td>
+        </tr>
+        <tr><!--第四行-->
+            <td>Safari</td><td>Webkit</td><td>苹果浏览器内核</td>
+        </tr>
+        <tr><!--第五行-->
+            <td>Chrome/Opera</td><td>Blink</td><td>谷歌、Opera 浏览器内核。其实是 WebKit 的分支。</td>
+        </tr>
+  </tbody>
+</table>
+
+<p>目前国内一般浏览器都会采用 Webkit/Blink 内核，如360、UC、QQ、搜狗等浏览器。</p>
+</li>
+</ul>
+<h3 id="1-3-Web-标准"><a href="#1-3-Web-标准" class="headerlink" title="1.3 Web 标准"></a>1.3 Web 标准</h3><p>​    Web 标准是由 W3C组织和其他标准化组织制定的一系列标准的集合。W3C（万维网联盟）是国际最著名的标准化组织。</p>
+<ul>
+<li><p><strong>为什么需要 web 标准</strong></p>
+<p>浏览器不同，它们显示页面或者渲染效果就有些许差异。有了 web 标准就可以消除所有浏览器的显示差异。</p>
+</li>
+<li><p><strong>web 标准的构成</strong></p>
+<p>web 标准主要包括 <font color="red">结构（Structure）</font>、 <font color="red">表现（Presentation）</font>、 <font color="red">行为（Behavior）</font>三个方面。</p>
+<ul>
+<li>结构：结构用于对<strong>网页元素</strong>进行整理和分类，主要用 HTML。</li>
+<li>表现：表现用于设置网页元素的板式、颜色、大小等<strong>外观样式</strong>，主要用 CSS。</li>
+<li>行为：行为是指网页模型的定义及<strong>交互</strong>的编写，主要用 Javascript。</li>
+</ul>
+<p>web 标准提出的最佳体验方案：<font color="red">结构、样式、行为相分离</font>。即应该把<font color="red">结构写到 HTML 文件中，表现写到 CSS 中，行为写到 JavaScript 文件中</font>。</p>
+</li>
+</ul>
+<h2 id="二、HTML-标签介绍"><a href="#二、HTML-标签介绍" class="headerlink" title="二、HTML 标签介绍"></a><font color="born">二、HTML 标签介绍</font></h2><h3 id="2-1-HTML-语法规范"><a href="#2-1-HTML-语法规范" class="headerlink" title="2.1 HTML 语法规范"></a>2.1 HTML 语法规范</h3><ul>
+<li><p><strong>基本语法概述</strong></p>
+<p>HTML 标签是<font color="red">由尖括号包围的关键词</font>，例如 <font color="red">&lt;html&gt;</font>。</p>
+<p>HTML 标签通常是成对出现的，例如 &lt;html&gt; 和 &lt;/html&gt; ，它们称为<font color="red">双标签</font>。第一个是开始标签，第二个是结束标签。</p>
+<p>也有特殊的标签是单个的标签，例如 &lt;br /&gt; ，它们称为<font color="red">单标签</font>。</p>
+</li>
+<li><p><strong>标签关系</strong></p>
+<p>双标签关系可以分为包含关系和并列关系两类。</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">/* 包含关系 */
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+/* 并列关系 */
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tead</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+</li>
+</ul>
+<h3 id="2-2-HTML-基本结构标签"><a href="#2-2-HTML-基本结构标签" class="headerlink" title="2.2 HTML 基本结构标签"></a>2.2 HTML 基本结构标签</h3><ul>
+<li><p><strong>第一个 HTML 网页</strong></p>
+<p>每一个网页都会有一个基本的结构标签（也称之为骨架标签），页面内容也是在这些基本标签上书写的。HTML 页面也称为 HTML 文档。</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>我的第一个页面<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    从来没有真正的绝境, 只有心灵的迷途|
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glh0faw7tij30xs0kugnd.jpg" alt="我的第一个网页" width="100%/"></center>
+
+<table border="1" cellspacing="0" align="center" style="text-align: center;width: 68%">
+        <tbody><tr><!--表头-->
+            <th>标签名</th><th>定义</th><th>说明</th>
+        </tr>
+        <tr><!--第二行-->
+            <td>&lt;html&gt;&lt;/html&gt;</td><td>HTML 标签</td><td>页面中最大的标签，我们称为根标签</td>
+        </tr>
+        <tr><!--第三行-->
+            <td>&lt;head&gt;&lt;/head&gt;</td><td>文档的头部</td><td>网页的相关信息写在这里，必须要有 title 标签</td>
+        </tr>
+        <tr><!--第四行-->
+            <td>&lt;title&gt;&lt;/title&gt;</td><td>文档的标题</td><td>网页的标题</td>
+        </tr>
+        <tr><!--第五行-->
+            <td>&lt;body&gt;&lt;/body&gt;</td><td>文档的主体</td><td>元素内容，页面内容都放这里</td>
+        </tr>
+</tbody></table>
+
+</li>
+</ul>
+<h2 id="三、开发工具-VSCode-的使用"><a href="#三、开发工具-VSCode-的使用" class="headerlink" title="三、开发工具 VSCode 的使用"></a><font color="born">三、开发工具 VSCode 的使用</font></h2><p>​    工欲善其事必先利其器，网页的开发工具有很多，Dreamweaver、sublime、WebStorm、HBuilder、Visual Studio Code等。其中 VSCode 在前端开发中最长用。</p>
+<h3 id="3-1-软件的下载和基本的-html-文件创建"><a href="#3-1-软件的下载和基本的-html-文件创建" class="headerlink" title="3.1 软件的下载和基本的 html 文件创建"></a>3.1 软件的下载和基本的 html 文件创建</h3><ul>
+<li><p>VSCode 下载可以去<a href="https://code.visualstudio.com/">VSCode官网</a>下载</p>
+</li>
+<li><p>新建文件，该文件名和和文件格式为 <font color="red">.html</font> 即可</p>
+</li>
+<li><p>在新建的 html 文件中输入 ! 接着回车或按 Tab 键即可生成网页骨架。</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!-- 输入 ! 回车可快速生成下面骨架 --&gt;</span>
+<span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1.0<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>修改网页的&lt;title&gt; 和 &lt;body&gt; 标签为自己想修改的内容然后右键选择Open In Default Browser 在默认浏览器中打开，可能你的右键没有这个选项，需要安装插件。</p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gliqfg55fxj317a0s8djx.jpg" alt="默认浏览器中打开网页" width="70%/"></center>
+</li>
+<li><p>觉得页面代码字体不合适可以通过 command + 加号键、和 command + 减号键调整字体大小。</p>
+</li>
+</ul>
+<h3 id="3-2-VSCode-插件使用"><a href="#3-2-VSCode-插件使用" class="headerlink" title="3.2 VSCode 插件使用"></a>3.2 VSCode 插件使用</h3><ul>
+<li><p><strong>插件安装方法，在最左边的是插件功能选择，之后再搜索框搜索插件名安装，重启 VSCode 即可生效。</strong></p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gliqprm66nj319e0tsdnt.jpg" alt="VSCode插件安装" width="70%/"></center>
+</li>
+<li><p><strong>推荐安装的插件</strong></p>
+<ul>
+<li><font color="red">Chinese(Simplified)Language Pack for VS Code</font>：中文（简体）语言包</li>
+<li><font color="red">Open in Browser</font>：右键选择在浏览器中打开 html 文件，上面演示的功能</li>
+<li><font color="red">JS-CSS-HTML Formatter</font>：每次保存，都会自动格式化js、css 和 html 代码</li>
+<li><font color="red">Auto Rename Tag</font>：自动重命名配对的 HTML/XML 标签</li>
+<li><font color="red">CSS Peek</font>：追踪至样式</li>
+</ul>
+<p>更多好用的插件希望大家相互推荐~</p>
+</li>
+</ul>
+<h3 id="3-3-VSCode-工具生成的骨架标签新增的代码"><a href="#3-3-VSCode-工具生成的骨架标签新增的代码" class="headerlink" title="3.3 VSCode 工具生成的骨架标签新增的代码"></a>3.3 VSCode 工具生成的骨架标签新增的代码</h3><ul>
+<li><p><strong><font color="red">文档类型声明标签 &lt; !DOCTYPE &gt;</font>：告诉浏览器使用那种 HTML 版本来显示网页</strong></p>
+<p>&lt;!DOCTYPE html&gt; 表示当前页面采用的是 HTML5 版本来显示网页。&lt;!DOCTYPE html&gt; 不是一个 HTML 标签，它只是一个文档类型声明标签。</p>
+</li>
+<li><p><strong><font color="red">lang 语言种类</font>：用来定义当前文档显示的语言</strong></p>
+<p><font color="red">en</font> 定义语言为英语，<font color="red">zh-CN</font>  定义语言为中文。无论哪种都可以在网页里写中英文，都能正常显示，这个属性只用于<font color="red">浏览器翻译功能的判断</font>而已。</p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glircl05pzj314w0kuacx.jpg" alt="lang 属性的影响" width="67%/"></center>
+</li>
+<li><p><strong><font color="red">字符集</font>：是多个字符的集合，以便计算机能够识别和存储各种文字</strong></p>
+<p>在&lt;head&gt; 标签内，可以通过 &lt;meta&gt; 标签的 charset 属性来规定 HTML 文档使用的字符编码集。</p>
+<p>charset 常用值有：GB2312、BIG5、GBK 和 UTF-8，其中 <font color="red">UTF-8</font> 也被称为<font color="red">万国码</font>，基本包含了全世界所有国家需要用到的字符。</p>
+<p>【注意】:<font color="red">上面语法是必须要写的代码，否则可能引起乱码的情况。一般情况下，统一使用“UTF-8”编码，尽量统一写成标准的 “UTF-8”，不要写成 “utf8” 或 “UTF8”。</font></p>
+</li>
+</ul>
+<h2 id="四、HTML-常用标签"><a href="#四、HTML-常用标签" class="headerlink" title="四、HTML 常用标签"></a><font color="born">四、HTML 常用标签</font></h2><p>​    学习标签是有技巧的，重点是记住每个标签的语义。简单理解就是指标签的含义，即这个标签是用来干嘛的。 根据标签的语义，在合适的地方给一个最为合理的标签，可以让页面结构更清晰。</p>
+<h3 id="4-1-标题标签-lt-h1-gt-lt-h6-gt"><a href="#4-1-标题标签-lt-h1-gt-lt-h6-gt" class="headerlink" title="4.1 标题标签<h1> - <h6>"></a>4.1 标题标签&lt;h1&gt; - &lt;h6&gt;</h3><ul>
+<li><p>为了使网页更具有语义化，我们经常会在页面中用到标题标签。HTML 提供了 6 个等级的网页标题， 即 &lt;h1&gt; - &lt;h6&gt;。</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>标题一共六级选,<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>文字加粗一行显。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">&gt;</span></span>由大到小依次减，<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">&gt;</span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h4</span><span class="token punctuation">&gt;</span></span>从重到轻随之变。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h4</span><span class="token punctuation">&gt;</span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h5</span><span class="token punctuation">&gt;</span></span>语法规范书写后，<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h5</span><span class="token punctuation">&gt;</span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h6</span><span class="token punctuation">&gt;</span></span>具体效果刷新见。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h6</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gliu2cxuncj31680p2mzq.jpg" alt="标题标签演示" width="70%/"></center>
+</li>
+<li><p>h 是单词 head 的缩写，意为头部、标题。</p>
+</li>
+<li><p>标签语义：作为标题使用，并且依据重要性递减。</p>
+</li>
+<li><p>特点有：</p>
+<ul>
+<li><p>加了标题的文字会变的加粗，字号也会依次变大。</p>
+</li>
+<li><p><font color="red">一个标题独占一行。</font></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-2-lt-p-gt-段落标签和-lt-br-gt-换行标签"><a href="#4-2-lt-p-gt-段落标签和-lt-br-gt-换行标签" class="headerlink" title="4.2 <p> 段落标签和 <br /> 换行标签"></a>4.2 &lt;p&gt; 段落标签和 &lt;br /&gt; 换行标签</h3><ul>
+<li><p>在网页中，要把文字有条理地显示出来，就需要将这些文字分段显示。在 HTML 标签中，<font color="red">&lt;p&gt;</font>标签用于<font color="red">定义段落</font>，它可以将整个网页分为若干个段落。</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;p&gt; 我是一个段落标签 &lt;/p&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>p 是单词 paragraph的缩写，意为段落。 </p>
+</li>
+<li><p>标签语义：可以把 HTML 文档分割为若干段落。</p>
+</li>
+<li><p>特点:</p>
+<ul>
+<li>文本在一个段落中会根据浏览器窗口的大小自动换行。</li>
+<li><font color="red">段落和段落之间保有空隙</font>。</li>
+</ul>
+</li>
+<li><p>在 HTML 中，一个段落中的文字会从左到右依次排列，直到浏览器窗口的右端，然后才自动换行。如果希望某段文本强制换行显示，就需要使用换行标签 &lt;br /&gt;。</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span> 我是一个段落标签 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span> 我是一个换行的<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/&gt;</span></span>段落标签 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gliuhmfyyqj30vm0kujtg.jpg" alt="段落和换行标签" width="80%/"></center>
+</li>
+<li><p>br 是单词 break 的缩写，意为打断、换行。 </p>
+</li>
+<li><p>标签语义:强制换行。</p>
+</li>
+<li><p>特点:</p>
+<ul>
+<li>&lt;br /&gt; 是个<font color="red">单标签</font>。</li>
+<li>&lt;br /&gt; 标签只是简单地开始新的一行，跟段落不一样，段落之间会插入一些垂直的间距。</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-3-文本格式化标签"><a href="#4-3-文本格式化标签" class="headerlink" title="4.3 文本格式化标签"></a>4.3 文本格式化标签</h3><ul>
+<li><p>在网页中，有时需要为文字设置<strong>粗体</strong>、<em>斜体</em> 或<u>下划线</u>或<del>删除线</del>等效果，这时就需要用到 HTML 中的<font color="red">文本格式化标签</font>，使文字以特殊的方式显示。</p>
+</li>
+<li><p>标签语义: 突出重要性, 比普通文字更重要。格式化标签表</p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glj5j35gaaj31g20aqac5.jpg" alt="格式化标签表" width="100%;/"></center>
+
+
+
+</li>
+</ul>
+<h3 id="4-4-lt-div-gt-和-lt-span-gt-盒子标签"><a href="#4-4-lt-div-gt-和-lt-span-gt-盒子标签" class="headerlink" title="4.4 <div> 和 <span> 盒子标签"></a>4.4 &lt;div&gt; 和 &lt;span&gt; 盒子标签</h3><ul>
+<li><p>&lt;div&gt; 和 &lt;span&gt; 是没有语义的，它们就是一个盒子，用来装内容的。</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span> 我是div1,同时演示下<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">&gt;</span></span>加粗<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">&gt;</span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span> 我是div2,同时演示下<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>em</span><span class="token punctuation">&gt;</span></span>倾斜<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>em</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span> 我是span1,同时演示下<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>del</span><span class="token punctuation">&gt;</span></span>删除线<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>del</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span> 我是span2,同时演示下<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ins</span><span class="token punctuation">&gt;</span></span>下划线<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ins</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gliv2nuen5j30vm0kuq5e.jpg" alt="文本格式化标签和盒子标签" width="67%/"></center>
+</li>
+<li><p>div 是 division 的缩写，表示分割、分区。span 意为跨度、跨距。</p>
+</li>
+<li><p>特点：</p>
+<ul>
+<li><font color="red">&lt;div&gt; </font>标签用来布局，但是现在一行只能放一个&lt;div&gt;。 <font color="red">大盒子</font></li>
+<li><font color="red">&lt;span&gt;</font> 标签用来布局，一行上可以多个 &lt;span&gt;。<font color="red">小盒子</font></li>
+</ul>
+</li>
+</ul>
+<h3 id="4-5-lt-img-gt-图像标签"><a href="#4-5-lt-img-gt-图像标签" class="headerlink" title="4.5 < img> 图像标签"></a>4.5 &lt; img&gt; 图像标签</h3><ul>
+<li><p>在 HTML 标签中，&lt;img&gt; 标签用于定义 HTML 页面中的图像。</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>图像URL<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p><font color="red">img</font> 是单词 image 的缩写，意为图像。</p>
+</li>
+<li><p><font color="red">src</font> 是 &lt;img&gt; 标签的<font color="red">必须属性</font>，它用于<font color="red">指定图像文件的路径和文件名</font>。</p>
+</li>
+<li><p>图像标签的属性：</p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glj5uulhwsj31g40f076e.jpg" alt="图像标签属性表" width="90%/"></center>
+</li>
+<li><p>图像标签属性注意点：</p>
+<ul>
+<li>图像标签可以拥有多个属性，必须写在标签名的后面。</li>
+<li>属性之间<font color="red">不分先后</font>顺序，标签名与属性、属性与属性之间均<font color="red">以空格分开</font>。</li>
+<li>属性采取<font color="red">键值对</font>&gt;的格式，即 key=“value” 的格式，<font color="red">属性 = “属性值”</font>。</li>
+</ul>
+</li>
+<li><p>路径可以分为： </p>
+<ul>
+<li><font color="red">相对路径</font>是以引用文件所在位置为参考基础，而建立出的目录路劲，这里简单来说，图片相对于 HTML 页面的位置。相对路径是从代码所在的这个文件出发，去寻找目标文件的，而我们这里所说的上一级 、下一级和同一级就是图片相对于 HTML 页面的位置。</li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glj5xrztm6j31g808swg8.jpg" alt="相对路劲的分类" width="100%/"></center>
+
+<ul>
+<li><font color="red">绝对路径</font>是指目录下的绝对位置，直接到达目标位置，通常是从盘符开始的路径。例如，Windown系统上”<font color="red">D:\web\img\logo.gif</font>“或MacOS系统上”<font color="red">/Users/ganmingpro/Desktop/log.jpg</font>“或完整的网络地址”<a href="http://www.itcast.cn/images/logo.gif&quot;%E3%80%82">http://www.itcast.cn/images/logo.gif"。</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="4-6-lt-a-gt-超链接标签"><a href="#4-6-lt-a-gt-超链接标签" class="headerlink" title="4.6 <a> 超链接标签"></a>4.6 &lt;a&gt; 超链接标签</h3><ul>
+<li><p>超链接可以链接到其他想要跳转的地方</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>跳转目标<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>目标窗口的弹出方式<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span> 文本或图像 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>a 是单词 anchor 的缩写，意为:锚。</p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glj5zx89x5j317c06o3zf.jpg" alt="相对路劲的分类" width="100%/"></center>
+</li>
+<li><p>链接的分类：</p>
+<ol>
+<li><font color="red">外部链接</font>：例如&lt;a href=”<a href="http://www.baidu.com&quot;>/">http://www.baidu.com"&gt;</a> 百度 &lt;/a&gt;。</li>
+<li><font color="red">内部链接</font>：网站内部页面之间的相互链接. 直接链接内部页面名称即可，例如 &lt;a href=”index.html”&gt; 首页 &lt;/a&gt;。</li>
+<li><font color="red">空链接</font>：如果当时没有确定链接目标时，&lt;a href=”#”&gt; 首页 &lt;/a&gt; 。</li>
+<li><font color="red">下载链接</font>：如果 href 里面地址是一个文件或者压缩包，点击这个链接会下载这个文件。</li>
+<li><font color="red">网页元素链接</font>：在网页中的各种网页元素，如文本、图像、表格、音频、视频等都可以添加超链接。</li>
+<li><font color="red">锚点链接</font>：当我们想点击链接，可以快速定位到页面中的某个位置时用锚点链接。<ul>
+<li>在链接文本的 href 属性中，设置属性值为<font color="red">#名字</font> 的形式，如&lt;a href=”#two”&gt; 第2集 &lt;/a&gt;。</li>
+<li>找到目标位置标签，里面添加一个 <font color="red">id 属性 = 刚才的名字</font> ，如&lt;h3 id=”two”&gt;第2集介绍&lt;/h3&gt;。</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="4-7-HTML-中的注释和特殊字符"><a href="#4-7-HTML-中的注释和特殊字符" class="headerlink" title="4.7 HTML 中的注释和特殊字符"></a>4.7 HTML 中的注释和特殊字符</h3><ul>
+<li><p>注释：如果需要在 HTML 文档中添加一些便于阅读和理解但又不需要显示在页面中的注释文字，就需要使用注释标签。 HTML 中的注释以” <font color="red">&lt;!–</font> “开头，以” <font color="red">–&gt;</font> “结束。VSCode 中注释快捷键为 command + / (MacOS)。</p>
+</li>
+<li><p>特殊字符：在 HTML 页面中，一些特殊的符号很难或者不方便直接使用，此时我们就可以使用下面的字符来替代。</p>
+</li>
+</ul>
+  <center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glj00syet3j31700rmwh2.jpg" alt="特殊字符表" width="100%/"></center>
+
+]]></content>
+      <categories>
+        <category>前端开发</category>
+      </categories>
+      <tags>
+        <tag>html</tag>
+        <tag>markdown</tag>
       </tags>
   </entry>
 </search>
