@@ -6,7 +6,7 @@
   <link href="http://ganming1.github.io/atom.xml" rel="self"/>
   
   <link href="http://ganming1.github.io/"/>
-  <updated>2020-12-21T10:31:07.272Z</updated>
+  <updated>2020-12-22T16:02:43.111Z</updated>
   <id>http://ganming1.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>力扣103-二叉树的锯齿形层序遍历</title>
+    <link href="http://ganming1.github.io/2020/12/22/li-kou-103-er-cha-shu-de-ju-chi-xing-ceng-xu-bian-li/"/>
+    <id>http://ganming1.github.io/2020/12/22/li-kou-103-er-cha-shu-de-ju-chi-xing-ceng-xu-bian-li/</id>
+    <published>2020-12-22T14:22:55.000Z</published>
+    <updated>2020-12-22T16:02:43.111Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;力扣103-二叉树的锯齿形层序遍历&quot;&gt;&lt;a href=&quot;#力扣103-二叉树的锯齿形层序遍历&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="中等" scheme="http://ganming1.github.io/tags/%E4%B8%AD%E7%AD%89/"/>
+    
+    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
+    
+    <category term="树" scheme="http://ganming1.github.io/tags/%E6%A0%91/"/>
+    
+    <category term="层序遍历" scheme="http://ganming1.github.io/tags/%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86/"/>
+    
+  </entry>
   
   <entry>
     <title>力扣49-字母异位分组</title>
@@ -37,11 +68,11 @@
     <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
+    <category term="中等" scheme="http://ganming1.github.io/tags/%E4%B8%AD%E7%AD%89/"/>
+    
     <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
     
     <category term="哈希表" scheme="http://ganming1.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
-    
-    <category term="中等" scheme="http://ganming1.github.io/tags/%E4%B8%AD%E7%AD%89/"/>
     
     <category term="字符串" scheme="http://ganming1.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
@@ -68,9 +99,9 @@
     <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
-    
     <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
+    
+    <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
     
     <category term="数组" scheme="http://ganming1.github.io/tags/%E6%95%B0%E7%BB%84/"/>
     
@@ -99,13 +130,13 @@
     <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
-    
     <category term="中等" scheme="http://ganming1.github.io/tags/%E4%B8%AD%E7%AD%89/"/>
     
-    <category term="栈" scheme="http://ganming1.github.io/tags/%E6%A0%88/"/>
+    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
     
     <category term="字符串" scheme="http://ganming1.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+    <category term="栈" scheme="http://ganming1.github.io/tags/%E6%A0%88/"/>
     
   </entry>
   
@@ -130,9 +161,9 @@
     <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
-    
     <category term="中等" scheme="http://ganming1.github.io/tags/%E4%B8%AD%E7%AD%89/"/>
+    
+    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
     
     <category term="数组" scheme="http://ganming1.github.io/tags/%E6%95%B0%E7%BB%84/"/>
     
@@ -145,7 +176,7 @@
     <link href="http://ganming1.github.io/2020/12/18/li-kou-389-zhao-bu-tong/"/>
     <id>http://ganming1.github.io/2020/12/18/li-kou-389-zhao-bu-tong/</id>
     <published>2020-12-18T06:34:42.000Z</published>
-    <updated>2020-12-21T10:33:02.649Z</updated>
+    <updated>2020-12-22T11:03:10.000Z</updated>
     
     
       
@@ -161,13 +192,13 @@
     <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
-    
     <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
     
-    <category term="字符串" scheme="http://ganming1.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
     
     <category term="位运算" scheme="http://ganming1.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    
+    <category term="字符串" scheme="http://ganming1.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
   </entry>
   
@@ -192,9 +223,9 @@
     <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
-    
     <category term="中等" scheme="http://ganming1.github.io/tags/%E4%B8%AD%E7%AD%89/"/>
+    
+    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
     
     <category term="动态规划" scheme="http://ganming1.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
@@ -275,9 +306,9 @@
     <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
-    
     <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
+    
+    <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
     
     <category term="哈希表" scheme="http://ganming1.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
     
@@ -304,9 +335,9 @@
     <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
-    
     <category term="中等" scheme="http://ganming1.github.io/tags/%E4%B8%AD%E7%AD%89/"/>
+    
+    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
     
     <category term="数组" scheme="http://ganming1.github.io/tags/%E6%95%B0%E7%BB%84/"/>
     
@@ -335,9 +366,9 @@
     <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
-    
     <category term="中等" scheme="http://ganming1.github.io/tags/%E4%B8%AD%E7%AD%89/"/>
+    
+    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
     
     <category term="数组" scheme="http://ganming1.github.io/tags/%E6%95%B0%E7%BB%84/"/>
     
@@ -377,7 +408,7 @@
     <link href="http://ganming1.github.io/2020/12/10/html-biao-qian-shang/"/>
     <id>http://ganming1.github.io/2020/12/10/html-biao-qian-shang/</id>
     <published>2020-12-10T13:06:03.000Z</published>
-    <updated>2020-12-18T10:07:14.656Z</updated>
+    <updated>2020-12-22T06:15:51.649Z</updated>
     
     
       
