@@ -258,72 +258,6 @@
       </tags>
   </entry>
   <entry>
-    <title>VSCode写HTML文档</title>
-    <url>/2020/12/16/vscode-xie-html-wen-dang/</url>
-    <content><![CDATA[<h1 id="VSCode-写-HTML-文档"><a href="#VSCode-写-HTML-文档" class="headerlink" title="VSCode 写 HTML 文档"></a><center>VSCode 写 HTML 文档</center></h1><h2 id="一、VSCode-的使用"><a href="#一、VSCode-的使用" class="headerlink" title="一、VSCode 的使用"></a><font color="born">一、VSCode 的使用</font></h2><h3 id="1-1-软件的下载和基本的-html-文件创建"><a href="#1-1-软件的下载和基本的-html-文件创建" class="headerlink" title="1.1 软件的下载和基本的 html 文件创建"></a>1.1 软件的下载和基本的 html 文件创建</h3><ul>
-<li><p>VSCode 下载可以去<a href="https://code.visualstudio.com/">VSCode官网</a>下载</p>
-</li>
-<li><p>新建文件，该文件名和和文件格式为<font color="red">.html</font>即可</p>
-</li>
-<li><p>在新建的 html 文件中输入 ! 接着回车或按 Tab 键即可生成网页骨架。</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!-- 输入 ! 回车可快速生成下面骨架 --&gt;</span>
-<span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1.0<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
-    
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>修改网页的&lt; title &gt; 和 &lt; body &gt; 标签为自己想修改的内容然后右键选择Open In Default Browser 在默认浏览器中打开，可能你的右键没有这个选项，需要安装插件。</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gliqfg55fxj317a0s8djx.jpg" alt="默认浏览器中打开网页" width="70%/"></center>
-</li>
-<li><p>觉得页面代码字体不合适可以通过 command + 加号键、和 command + 减号键调整字体大小。</p>
-</li>
-</ul>
-<h3 id="1-2-VSCode-插件使用"><a href="#1-2-VSCode-插件使用" class="headerlink" title="1.2 VSCode 插件使用"></a>1.2 VSCode 插件使用</h3><ul>
-<li><p>插件安装方法，在最左边的是插件功能选择，之后再搜索框搜索插件名安装，重启 VSCode 即可生效。</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gliqprm66nj319e0tsdnt.jpg" alt="VSCode插件安装" width="70%/"></center>
-</li>
-<li><p>推荐安装的插件</p>
-<ul>
-<li><font color="red">Chinese(Simplified)Language Pack for VS Code</font>：中文（简体）语言包</li>
-<li><font color="red">Open in Browser</font>：右键选择在浏览器中打开 html 文件，上面演示的功能</li>
-<li><font color="red">JS-CSS-HTML Formatter</font>：每次保存，都会自动格式化js、css 和 html 代码</li>
-<li><font color="red">Auto Rename Tag</font>：自动重命名配对的 HTML/XML 标签</li>
-<li><font color="red">CSS Peek</font>：追踪至样式</li>
-</ul>
-<p>更多好用的插件希望大家相互推荐~</p>
-</li>
-</ul>
-<h3 id="1-3-VSCode-工具生成的骨架标签新增的代码"><a href="#1-3-VSCode-工具生成的骨架标签新增的代码" class="headerlink" title="1.3 VSCode 工具生成的骨架标签新增的代码"></a>1.3 VSCode 工具生成的骨架标签新增的代码</h3><ul>
-<li><p><font color="red">文档类型声明标签 &lt; !DOCTYPE &gt;</font>：告诉浏览器使用那种 HTML 版本来显示网页</p>
-<p>&lt; !DOCTYPE html &gt; 表示当前页面采用的是 HTML5 版本来显示网页。&lt; !DOCTYPE html &gt; 不是一个 HTML 标签，它只是一个文档类型声明标签。</p>
-</li>
-<li><p><font color="red">lang 语言种类</font>：用来定义当前文档显示的语言</p>
-<p><font color="red">en</font> 定义语言为英语，<font color="red">zh-CN</font>  定义语言为中文。无论哪种都可以在网页里写中英文，都能正常显示，这个属性只用于<font color="red">浏览器翻译功能的判断</font>而已。</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glircl05pzj314w0kuacx.jpg" alt="lang 属性的影响" width="67%/"></center>
-</li>
-<li><p><font color="red">字符集</font>：是多个字符的集合，以便计算机能够识别和存储各种文字</p>
-<p>在&lt; head&gt; 标签内，可以通过 &lt; meta&gt; 标签的 charset 属性来规定 HTML 文档使用的字符编码集。</p>
-<p>charset 常用值有：GB2312、BIG5、GBK 和 UTF-8，其中 <font color="red">UTF-8</font> 也被称为<font color="red">万国码</font>，基本包含了全世界所有国家需要用到的字符。</p>
-<p>【注意】:<font color="red">上面语法是必须要写的代码，否则可能引起乱码的情况。一般情况下，统一使用“UTF-8”编码，尽量统一写成标准的 “UTF-8”，不要写成 “utf8” 或 “UTF8”。</font></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>工具技巧</category>
-      </categories>
-      <tags>
-        <tag>VSCode</tag>
-        <tag>Html</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>String-基础</title>
     <url>/2020/12/23/string-ji-chu/</url>
     <content><![CDATA[<h1 id="类-String-基础知识"><a href="#类-String-基础知识" class="headerlink" title="类 String 基础知识"></a><center>类 String 基础知识</center></h1><h2 id="一、类-String-简单介绍"><a href="#一、类-String-简单介绍" class="headerlink" title="一、类 String 简单介绍"></a><font color="#A22015">一、类 String 简单介绍</font></h2><p>  类 <code>String</code> 是 <code>java.lang</code>包下的类，所以不需要导包就可以直接使用。String 类代表字符串。Java 程序中的所有字符串字面值（如 <code>"abc"</code> ）都作为此类的实例实现。</p>
@@ -601,6 +535,72 @@ XXX YYY ZZZ <span aria-hidden="true" class="line-numbers-rows"><span></span><spa
       <tags>
         <tag>Java</tag>
         <tag>字符串</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VSCode写HTML文档</title>
+    <url>/2020/12/16/vscode-xie-html-wen-dang/</url>
+    <content><![CDATA[<h1 id="VSCode-写-HTML-文档"><a href="#VSCode-写-HTML-文档" class="headerlink" title="VSCode 写 HTML 文档"></a><center>VSCode 写 HTML 文档</center></h1><h2 id="一、VSCode-的使用"><a href="#一、VSCode-的使用" class="headerlink" title="一、VSCode 的使用"></a><font color="born">一、VSCode 的使用</font></h2><h3 id="1-1-软件的下载和基本的-html-文件创建"><a href="#1-1-软件的下载和基本的-html-文件创建" class="headerlink" title="1.1 软件的下载和基本的 html 文件创建"></a>1.1 软件的下载和基本的 html 文件创建</h3><ul>
+<li><p>VSCode 下载可以去<a href="https://code.visualstudio.com/">VSCode官网</a>下载</p>
+</li>
+<li><p>新建文件，该文件名和和文件格式为<font color="red">.html</font>即可</p>
+</li>
+<li><p>在新建的 html 文件中输入 ! 接着回车或按 Tab 键即可生成网页骨架。</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!-- 输入 ! 回车可快速生成下面骨架 --&gt;</span>
+<span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1.0<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>修改网页的&lt; title &gt; 和 &lt; body &gt; 标签为自己想修改的内容然后右键选择Open In Default Browser 在默认浏览器中打开，可能你的右键没有这个选项，需要安装插件。</p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gliqfg55fxj317a0s8djx.jpg" alt="默认浏览器中打开网页" width="70%/"></center>
+</li>
+<li><p>觉得页面代码字体不合适可以通过 command + 加号键、和 command + 减号键调整字体大小。</p>
+</li>
+</ul>
+<h3 id="1-2-VSCode-插件使用"><a href="#1-2-VSCode-插件使用" class="headerlink" title="1.2 VSCode 插件使用"></a>1.2 VSCode 插件使用</h3><ul>
+<li><p>插件安装方法，在最左边的是插件功能选择，之后再搜索框搜索插件名安装，重启 VSCode 即可生效。</p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gliqprm66nj319e0tsdnt.jpg" alt="VSCode插件安装" width="70%/"></center>
+</li>
+<li><p>推荐安装的插件</p>
+<ul>
+<li><font color="red">Chinese(Simplified)Language Pack for VS Code</font>：中文（简体）语言包</li>
+<li><font color="red">Open in Browser</font>：右键选择在浏览器中打开 html 文件，上面演示的功能</li>
+<li><font color="red">JS-CSS-HTML Formatter</font>：每次保存，都会自动格式化js、css 和 html 代码</li>
+<li><font color="red">Auto Rename Tag</font>：自动重命名配对的 HTML/XML 标签</li>
+<li><font color="red">CSS Peek</font>：追踪至样式</li>
+</ul>
+<p>更多好用的插件希望大家相互推荐~</p>
+</li>
+</ul>
+<h3 id="1-3-VSCode-工具生成的骨架标签新增的代码"><a href="#1-3-VSCode-工具生成的骨架标签新增的代码" class="headerlink" title="1.3 VSCode 工具生成的骨架标签新增的代码"></a>1.3 VSCode 工具生成的骨架标签新增的代码</h3><ul>
+<li><p><font color="red">文档类型声明标签 &lt; !DOCTYPE &gt;</font>：告诉浏览器使用那种 HTML 版本来显示网页</p>
+<p>&lt; !DOCTYPE html &gt; 表示当前页面采用的是 HTML5 版本来显示网页。&lt; !DOCTYPE html &gt; 不是一个 HTML 标签，它只是一个文档类型声明标签。</p>
+</li>
+<li><p><font color="red">lang 语言种类</font>：用来定义当前文档显示的语言</p>
+<p><font color="red">en</font> 定义语言为英语，<font color="red">zh-CN</font>  定义语言为中文。无论哪种都可以在网页里写中英文，都能正常显示，这个属性只用于<font color="red">浏览器翻译功能的判断</font>而已。</p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glircl05pzj314w0kuacx.jpg" alt="lang 属性的影响" width="67%/"></center>
+</li>
+<li><p><font color="red">字符集</font>：是多个字符的集合，以便计算机能够识别和存储各种文字</p>
+<p>在&lt; head&gt; 标签内，可以通过 &lt; meta&gt; 标签的 charset 属性来规定 HTML 文档使用的字符编码集。</p>
+<p>charset 常用值有：GB2312、BIG5、GBK 和 UTF-8，其中 <font color="red">UTF-8</font> 也被称为<font color="red">万国码</font>，基本包含了全世界所有国家需要用到的字符。</p>
+<p>【注意】:<font color="red">上面语法是必须要写的代码，否则可能引起乱码的情况。一般情况下，统一使用“UTF-8”编码，尽量统一写成标准的 “UTF-8”，不要写成 “utf8” 或 “UTF8”。</font></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>工具技巧</category>
+      </categories>
+      <tags>
+        <tag>VSCode</tag>
+        <tag>Html</tag>
       </tags>
   </entry>
   <entry>
@@ -1155,6 +1155,150 @@ XXX YYY ZZZ <span aria-hidden="true" class="line-numbers-rows"><span></span><spa
       </tags>
   </entry>
   <entry>
+    <title>力扣376-摆动序列</title>
+    <url>/2020/12/24/li-kou-376-bai-dong-xu-lie/</url>
+    <content><![CDATA[<h1 id="力扣376-摆动序列"><a href="#力扣376-摆动序列" class="headerlink" title="力扣376-摆动序列"></a><center>力扣376-摆动序列</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="#A22015">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  如果连续数字之间的差严格地在正数和负数之间交替，则数字序列称为 <strong>摆动序列</strong> 。第一个差（如果存在的话）可能是正数或负数。少于两个元素的序列也是摆动序列。</p>
+<p>  例如， <code>[1,7,4,9,2,5]</code> 是一个摆动序列，因为差值 <code>(6,-3,5,-7,3)</code> 是正负交替出现的。相反, <code>[1,4,7,2,5]</code> 和 <code>[1,7,4,5,5]</code> 不是摆动序列，第一个序列是因为它的前两个差值都是正数，第二个序列是因为它的最后一个差值为零。</p>
+<p>  给定一个整数序列，返回作为摆动序列的最长子序列的长度。 通过从原始序列中删除一些（也可以不删除）元素来获得子序列，剩下的元素保持其原始顺序。</p>
+<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
+<li><p><strong>示例1：</strong></p>
+<p>  <strong>输入：</strong> [1,7,4,9,2,5]<br><strong>输出：</strong> 6<br><strong>解释：</strong> 整个序列均为摆动序列。</p>
+</li>
+<li><p><strong>示例2：</strong></p>
+<p>  <strong>输入：</strong> [1,17,5,10,13,15,10,5,16,8]<br><strong>输出：</strong> 7<br><strong>解释：</strong> 这个序列包含几个长度为 7 摆动序列，其中一个可为[1,17,10,13,10,16,8]。</p>
+</li>
+<li><p><strong>示例3：</strong></p>
+<p>  <strong>输入：</strong> [1,2,3,4,5,6,7,8,9]<br><strong>输出：</strong> 2</p>
+</li>
+</ul>
+<p><strong>进阶：</strong><br>你能否用 O(<em>n</em>) 时间复杂度完成此题?</p>
+<p>来源：力扣（LeetCode）<br>链接：<a href="">https://leetcode-cn.com/problems/wiggle-subsequence</a></p>
+<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="#A22015">二、解题思路</font></h2><h3 id="2-1-动态规划（dp）思路解题"><a href="#2-1-动态规划（dp）思路解题" class="headerlink" title="2.1 动态规划（dp）思路解题"></a>2.1 动态规划（dp）思路解题</h3><ul>
+<li>  <strong>解题思路</strong></li>
+</ul>
+<p>  在自己思考这个题目的时候就觉得这是一个<font color="red">动态规划</font>的题目，但没能写出整体过程，参考官方题解。</p>
+<ul>
+<li>  当序列长度为 <code>0</code> 或 <code>1</code> 时，摆动序列的长度也对应为 <code>0</code> 或 <code>1</code> 。当序列长度 <code>&gt;=2</code> 时，需要讨论。</li>
+<li>  遍历序列：<code>up[i]</code> 表示前 <code>i</code> 个数据并且最后是上升的最长摆动序列，称为最长上升摆动序列，<code>down[i]</code> 表示前 <code>i</code> 个数据并且最后是下降的最长摆动序列，称为最长下降摆动序列。</li>
+</ul>
+<p>讨论当前第 <code>i</code> 个数的加入：</p>
+<ul>
+<li><p>  <code>nums[i] = nums[i-1]</code> ：摆动序列长度不变</p>
+</li>
+<li><p><code>nums[i] &gt; nums[i-1]</code> ：下降摆动序列不变</p>
+<p>  1.当 <code>nums[i]</code> 放入<font color="red">最长下降摆动序列</font> <code>up[i] = down[i-1] + 1</code><br>2.当 <code>nums[i]</code> 放入<font color="red">最长上升摆动序列</font> <code>up[i] = up[i-1]</code> </p>
+</li>
+<li><p><code>nums[i] &lt; nums[i-1]</code> ：上升摆动序列不变</p>
+<p>  1.当 <code>nums[i]</code> 放入<font color="red">最长上升摆动序列</font> <code>down[i] = up[i-1] + 1</code><br>2.当 <code>nums[i]</code> 放入<font color="red">最长下降摆动序列</font> <code>down[i] = down[i-1]</code></p>
+</li>
+<li><p>  <strong>详细代码（Java）</strong></p>
+</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">wiggleMaxLength</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> len <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>              <span class="token comment">// 记录数组的长度</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>len<span class="token operator">&lt;=</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> len<span class="token punctuation">;</span>             <span class="token comment">// 如果数组不超过2个数，那么就是摆动序列</span>
+        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> up <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>len<span class="token punctuation">]</span><span class="token punctuation">;</span>            <span class="token comment">// 记录到每个位置的上升摆动序列长度</span>
+        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> down <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>len<span class="token punctuation">]</span><span class="token punctuation">;</span>          <span class="token comment">// 记录到每个位置的下降摆动序列长度</span>
+        up<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> down<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>                <span class="token comment">// 第一个位置即可以看做是上升的或是下降的长度为1的摆动序列</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>      <span class="token comment">// 从第二个元素开始遍历</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&gt;</span>nums<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>     <span class="token comment">// 如果后一个元素比前一个大，则只会影响上升摆动序列长度</span>
+                up<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>up<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>down<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// 只更新上升摆动序列长度</span>
+                down<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> down<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>            <span class="token comment">// 下降序列长度不会影响</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&lt;</span>nums<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token comment">// 如果后一个元素比前一个小，则只会影响下降摆动序列长度，同上分析</span>
+                down<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>up<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>down<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                up<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> up<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token punctuation">{</span>      <span class="token comment">// 如果后一个元素等于前值，则上升和下降都不影响</span>
+                up<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> up<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+                down<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> down<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>up<span class="token punctuation">[</span>len<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>down<span class="token punctuation">[</span>len<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>  <strong>代码执行结果</strong></li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glze7uqljpj30ry0eidh8.jpg" alt="动规算法执行结果" width="100%/"></center>
+
+<p>  观察到上述代码每次更新 up 和 down 数组时只用到了前一个值，并且最后返回结果也只用到最后的值，故在空间上还可以做一定的优化。</p>
+<ul>
+<li>  <strong>优化代码</strong></li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">wiggleMaxLength</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> len <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>          <span class="token comment">// 记录数组长度</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>len<span class="token operator">&lt;=</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> len<span class="token punctuation">;</span>         <span class="token comment">// 如果数组不超过2个数，那么就是摆动序列</span>
+        <span class="token keyword">int</span> up <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span>down <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>            <span class="token comment">// 刚开始第一个元素即是上升序列又是下降序列，且长度为1</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>      <span class="token comment">// 从第二个开始遍历</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&gt;</span>nums<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>     <span class="token comment">// 如果后一个元素比前一个大，只更新上升摆动序列长度</span>
+                up <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>up<span class="token punctuation">,</span>down<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&lt;</span>nums<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment">// 如果后一个元素比前一个小，只更新下降摆动序列长度</span>
+                down <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>down<span class="token punctuation">,</span>up<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>up<span class="token punctuation">,</span>down<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>  <strong>优化执行结果</strong></li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glzeh352vpj30ry0ecwfv.jpg" alt="优化动规执行结果" width="100%/"></center>
+
+<p>  空间复杂度上得到了一点提升，注意力扣每次跑代码测试用例可能有所差异，相同的代码每次跑结果可能都会有些差异。</p>
+<h3 id="2-2-贪心思路解题"><a href="#2-2-贪心思路解题" class="headerlink" title="2.2 贪心思路解题"></a>2.2 贪心思路解题</h3><ul>
+<li>  <strong>解题思路</strong></li>
+</ul>
+<p>  本题要求通过从原始序列中删除一些（也可以不删除）元素来获得子序列，剩下的元素保持其原始顺序。那么当我么碰到连续上升或连续下降的数据时就要执行删除操作啦，那么问题就是留下哪一个数能使整个留下来的子序列为最长摆动序列。</p>
+<p><strong>局部最优：</strong> 当碰到单调坡度时，保留峰值即是局部最优的情况。<br><strong>整体最优：</strong> 当整个序列有最多保留下来的峰值时，就是达到最长摆动序列的全局最优情况。</p>
+<p>  至于上述所说的为什么成立，这里借用网友题解的一张图尝试说明下原因，我个人觉得当我们碰到连续递增的序列时，例如 10，13，15 时，我们应该选择最大的保留，这样在后序数据中选择一个下降的数可接受范围更大，即可能使我们最终留下来的摆动序列最长。递减的序列同样道理应该选择最小的数保留。</p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glzf1f6r49j31040dyjth.jpg" alt="示例2分析" width="100%/"></center>
+
+<ul>
+<li>  <strong>详细代码（Java）</strong></li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">wiggleMaxLength</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> len <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>          <span class="token comment">// 记录数组长度</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>len <span class="token operator">&lt;=</span> <span class="token number">1</span><span class="token punctuation">)</span>   <span class="token keyword">return</span> len<span class="token punctuation">;</span>     <span class="token comment">// 如果数组不超过2个数，那么就是摆动序列</span>
+        <span class="token keyword">int</span> curdiff <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>                <span class="token comment">// 开始时的当前差值设为0</span>
+        <span class="token keyword">int</span> prediff <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>                <span class="token comment">// 开始时的之前差值设为0</span>
+        <span class="token keyword">int</span> count <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>                  <span class="token comment">// 刚开始第一个元素是峰值，统计1个</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>      <span class="token comment">// 从第二个开始遍历</span>
+            curdiff <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> nums<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// 计算当前差值</span>
+            <span class="token comment">// 如果当前差值与之前差值变号了，并且当前差值不是0则表示是峰值</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>curdiff <span class="token operator">&gt;</span><span class="token number">0</span> <span class="token operator">&amp;&amp;</span> prediff<span class="token operator">&lt;=</span><span class="token number">0</span> <span class="token operator">||</span> curdiff<span class="token generics"><span class="token punctuation">&lt;</span>0<span class="token operator">&amp;</span><span class="token operator">&amp;</span>prediff<span class="token punctuation">&gt;</span></span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                count<span class="token operator">++</span><span class="token punctuation">;</span>
+                prediff <span class="token operator">=</span> curdiff<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> count<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>  <strong>代码执行结果</strong></li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glzfhdk8hmj30si0eo3zx.jpg" alt="贪心算法执行结果" width="100%/"></center>
+
+<h2 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a><font color="#A22015">三、总结</font></h2><p>  此题真的是动态规划和贪心算法里的经典题型。值得自己深入研究，很多想法虽然都是看别人的题解自己整理的，但在自己整理的过程中也想明白了很多细节。</p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>中等</tag>
+        <tag>力扣</tag>
+        <tag>贪心</tag>
+        <tag>动态规划</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>力扣387-字符串中的第一个唯一字符</title>
     <url>/2020/12/23/li-kou-387-zi-fu-chuan-zhong-de-di-yi-ge-wei-yi-zi-fu/</url>
     <content><![CDATA[<h1 id="力扣387-字符串中的第一个唯一字符"><a href="#力扣387-字符串中的第一个唯一字符" class="headerlink" title="力扣387-字符串中的第一个唯一字符"></a><center>力扣387-字符串中的第一个唯一字符</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="#A22015">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  给定一个字符串，找到它的第一个不重复的字符，并返回它的索引。如果不存在，则返回 -1。</p>
@@ -1206,6 +1350,86 @@ XXX YYY ZZZ <span aria-hidden="true" class="line-numbers-rows"><span></span><spa
         <tag>字符串</tag>
         <tag>力扣</tag>
         <tag>简单</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>力扣48-旋转图像</title>
+    <url>/2020/12/19/li-kou-48-xuan-zhuan-tu-xiang/</url>
+    <content><![CDATA[<h1 id="力扣48-旋转图像"><a href="#力扣48-旋转图像" class="headerlink" title="力扣48-旋转图像"></a><center>力扣48-旋转图像</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  给定一个 <em>n</em> × <em>n</em> 的二维矩阵表示一个图像。将图像顺时针旋转 90 度。</p>
+<p>说明：</p>
+<p>  你必须在<strong>原地</strong>旋转图像，这意味着你需要直接修改输入的二维矩阵。<strong>请不要</strong>使用另一个矩阵来旋转图像。</p>
+<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
+<li><p><strong>示例1：</strong></p>
+  <pre class="line-numbers language-none"><code class="language-none">给定 matrix = 
+[
+  [1,2,3],
+  [4,5,6],
+  [7,8,9]
+],
+原地旋转输入矩阵，使其变为:
+[
+  [7,4,1],
+  [8,5,2],
+  [9,6,3]
+]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p><strong>示例2：</strong></p>
+  <pre class="line-numbers language-none"><code class="language-none">给定 matrix =
+[
+  [ 5, 1, 9,11],
+  [ 2, 4, 8,10],
+  [13, 3, 6, 7],
+  [15,14,12,16]
+],
+原地旋转输入矩阵，使其变为:
+[
+  [15,13, 2, 5],
+  [14, 3, 4, 1],
+  [12, 6, 8, 9],
+  [16, 7,10,11]
+]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+</li>
+</ul>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/rotate-image">https://leetcode-cn.com/problems/rotate-image</a></p>
+<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="born">二、解题思路</font></h2><h3 id="2-1-题目意思理解"><a href="#2-1-题目意思理解" class="headerlink" title="2.1 题目意思理解"></a>2.1 题目意思理解</h3><p>  这个题因为以前见过知道怎么做所以很快就回忆起了正常的思路是对矩阵进行两次翻转就能达到顺时针旋转90°的目的：①水平翻转，②沿次对角线翻转。下面以一个简单的数组演示主次对角线的区别，其实谁先谁后也会有所影响的。自己可以动手画画探究探究。</p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glxlcx2hzsj30o60aiwg8.jpg" alt="不同翻转顺序" width="80%/"></center>
+
+<h3 id="2-2-详细代码（Java）"><a href="#2-2-详细代码（Java）" class="headerlink" title="2.2 详细代码（Java）"></a>2.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">rotate</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> matrix<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> r <span class="token operator">=</span> matrix<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> k <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>k<span class="token operator">&lt;</span>r<span class="token punctuation">;</span>k<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>        <span class="token comment">// 实现水平翻转</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>j <span class="token operator">=</span> r<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>j<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">,</span>j<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">int</span> temp <span class="token operator">=</span> matrix<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        matrix<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> matrix<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        matrix<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>r<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>      <span class="token comment">// 实现沿次对角线的翻转</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>j<span class="token operator">&lt;</span>r<span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span>i<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">int</span> temp <span class="token operator">=</span> matrix<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        matrix<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> matrix<span class="token punctuation">[</span>r<span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span>r<span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        matrix<span class="token punctuation">[</span>r<span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span>r<span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>代码<font color="red">第14行</font>要找好翻转每个位置对应的坐标变换是怎么变的。当（row1,col1）、（row2,col2）这两个位置关于次对角线对称的时候，我发现是<font color="red">row1 + col2 = 行数-1</font>；<font color="red">col1 + row2 = 行数-1</font>；可以简单理解为<font color="red">新的行标</font>font和<font color="red">旧的列标</font> “互余”，<font color="red">新的列标</font>与<font color="red">旧的行标</font> “互余”</li>
+</ul>
+<h3 id="2-3-算法执行结果"><a href="#2-3-算法执行结果" class="headerlink" title="2.3 算法执行结果"></a>2.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gltm0e1416j30ry0ee3zw.jpg" alt="算法执行结果" width="80%/"></center>
+
+<h2 id="三、总结分析"><a href="#三、总结分析" class="headerlink" title="三、总结分析"></a><font color="born">三、总结分析</font></h2><p>  这道题像是一道技巧题，有些题目如果有特定的技巧，特定的规律，往往都会比正常解放快很多。</p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>中等</tag>
+        <tag>力扣</tag>
+        <tag>数组</tag>
+        <tag>技巧题</tag>
       </tags>
   </entry>
   <entry>
@@ -1316,86 +1540,6 @@ XXX YYY ZZZ <span aria-hidden="true" class="line-numbers-rows"><span></span><spa
       </tags>
   </entry>
   <entry>
-    <title>力扣48-旋转图像</title>
-    <url>/2020/12/19/li-kou-48-xuan-zhuan-tu-xiang/</url>
-    <content><![CDATA[<h1 id="力扣48-旋转图像"><a href="#力扣48-旋转图像" class="headerlink" title="力扣48-旋转图像"></a><center>力扣48-旋转图像</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  给定一个 <em>n</em> × <em>n</em> 的二维矩阵表示一个图像。将图像顺时针旋转 90 度。</p>
-<p>说明：</p>
-<p>  你必须在<strong>原地</strong>旋转图像，这意味着你需要直接修改输入的二维矩阵。<strong>请不要</strong>使用另一个矩阵来旋转图像。</p>
-<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
-<li><p><strong>示例1：</strong></p>
-  <pre class="line-numbers language-none"><code class="language-none">给定 matrix = 
-[
-  [1,2,3],
-  [4,5,6],
-  [7,8,9]
-],
-原地旋转输入矩阵，使其变为:
-[
-  [7,4,1],
-  [8,5,2],
-  [9,6,3]
-]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p><strong>示例2：</strong></p>
-  <pre class="line-numbers language-none"><code class="language-none">给定 matrix =
-[
-  [ 5, 1, 9,11],
-  [ 2, 4, 8,10],
-  [13, 3, 6, 7],
-  [15,14,12,16]
-],
-原地旋转输入矩阵，使其变为:
-[
-  [15,13, 2, 5],
-  [14, 3, 4, 1],
-  [12, 6, 8, 9],
-  [16, 7,10,11]
-]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-</li>
-</ul>
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/rotate-image">https://leetcode-cn.com/problems/rotate-image</a></p>
-<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="born">二、解题思路</font></h2><h3 id="2-1-题目意思理解"><a href="#2-1-题目意思理解" class="headerlink" title="2.1 题目意思理解"></a>2.1 题目意思理解</h3><p>  这个题因为以前见过知道怎么做所以很快就回忆起了正常的思路是对矩阵进行两次翻转就能达到顺时针旋转90°的目的：①水平翻转，②沿次对角线翻转。下面以一个简单的数组演示主次对角线的区别，其实谁先谁后也会有所影响的。自己可以动手画画探究探究。</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glxlcx2hzsj30o60aiwg8.jpg" alt="不同翻转顺序" width="80%/"></center>
-
-<h3 id="2-2-详细代码（Java）"><a href="#2-2-详细代码（Java）" class="headerlink" title="2.2 详细代码（Java）"></a>2.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">rotate</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> matrix<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">int</span> r <span class="token operator">=</span> matrix<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> k <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>k<span class="token operator">&lt;</span>r<span class="token punctuation">;</span>k<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>        <span class="token comment">// 实现水平翻转</span>
-      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>j <span class="token operator">=</span> r<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>j<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">,</span>j<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">int</span> temp <span class="token operator">=</span> matrix<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        matrix<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> matrix<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        matrix<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>r<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>      <span class="token comment">// 实现沿次对角线的翻转</span>
-      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>j<span class="token operator">&lt;</span>r<span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span>i<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">int</span> temp <span class="token operator">=</span> matrix<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        matrix<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> matrix<span class="token punctuation">[</span>r<span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span>r<span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        matrix<span class="token punctuation">[</span>r<span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span>r<span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<ul>
-<li>代码<font color="red">第14行</font>要找好翻转每个位置对应的坐标变换是怎么变的。当（row1,col1）、（row2,col2）这两个位置关于次对角线对称的时候，我发现是<font color="red">row1 + col2 = 行数-1</font>；<font color="red">col1 + row2 = 行数-1</font>；可以简单理解为<font color="red">新的行标</font>font和<font color="red">旧的列标</font> “互余”，<font color="red">新的列标</font>与<font color="red">旧的行标</font> “互余”</li>
-</ul>
-<h3 id="2-3-算法执行结果"><a href="#2-3-算法执行结果" class="headerlink" title="2.3 算法执行结果"></a>2.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gltm0e1416j30ry0ee3zw.jpg" alt="算法执行结果" width="80%/"></center>
-
-<h2 id="三、总结分析"><a href="#三、总结分析" class="headerlink" title="三、总结分析"></a><font color="born">三、总结分析</font></h2><p>  这道题像是一道技巧题，有些题目如果有特定的技巧，特定的规律，往往都会比正常解放快很多。</p>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>中等</tag>
-        <tag>力扣</tag>
-        <tag>数组</tag>
-        <tag>技巧题</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>力扣49-字母异位分组</title>
     <url>/2020/12/21/li-kou-49-zi-mu-yi-wei-fen-zu/</url>
     <content><![CDATA[<h1 id="力扣49-字母异位分组"><a href="#力扣49-字母异位分组" class="headerlink" title="力扣49-字母异位分组"></a><center>力扣49-字母异位分组</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  给定一个字符串数组，将字母异位词组合在一起。字母异位词指字母相同，但排列不同的字符串。</p>
@@ -1488,6 +1632,83 @@ XXX YYY ZZZ <span aria-hidden="true" class="line-numbers-rows"><span></span><spa
         <tag>中等</tag>
         <tag>力扣</tag>
         <tag>哈希表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>力扣714-买卖股票的最佳时机含手续费</title>
+    <url>/2020/12/17/li-kou-714-mai-mai-gu-piao-de-zui-jia-shi-ji-han-shou-xu-fei/</url>
+    <content><![CDATA[<h1 id="力扣714-买卖股票的最佳时机含手续费"><a href="#力扣714-买卖股票的最佳时机含手续费" class="headerlink" title="力扣714-买卖股票的最佳时机含手续费"></a><center>力扣714-买卖股票的最佳时机含手续费</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>​    给定一个整数数组 prices，其中第 i 个元素代表了第 i 天的股票价格 ；非负整数 fee 代表了交易股票的手续费用。你可以无限次地完成交易，但是你每笔交易都需要付手续费。如果你已经购买了一个股票，在卖出它之前你就不能再继续购买股票了。返回获得利润的最大值。</p>
+<p>​    注意：这里的一笔交易指买入持有并卖出股票的整个过程，每笔交易你只需要为支付一次手续费。</p>
+<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
+<li><p><strong>示例一</strong></p>
+<p>  <strong>输入：</strong> prices = [1, 3, 2, 8, 4, 9], fee = 2</p>
+<p>  <strong>输出：</strong> 8</p>
+<p>  <strong>解释：</strong> 能够达到的最大利润:</p>
+<p>  在此处买入 prices[0] = 1<br>  在此处卖出 prices[3] = 8<br>  在此处买入 prices[4] = 4<br>  在此处卖出 prices[5] = 9<br>  总利润: ((8 - 1) - 2) + ((9 - 4) - 2) = 8.</p>
+</li>
+<li><p><strong>注意：</strong></p>
+<ul>
+<li>  <code>0 &lt; prices.length &lt;= 50000</code>.</li>
+<li>  <code>0 &lt; prices[i] &lt; 50000</code>.</li>
+<li>  <code>0 &lt;= fee &lt; 50000</code>.</li>
+</ul>
+</li>
+</ul>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee">https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee</a></p>
+<h2 id="二、解题思路（动态规划）"><a href="#二、解题思路（动态规划）" class="headerlink" title="二、解题思路（动态规划）"></a><font color="born">二、解题思路（动态规划）</font></h2><h3 id="2-1-题目理解"><a href="#2-1-题目理解" class="headerlink" title="2.1 题目理解"></a>2.1 题目理解</h3><ul>
+<li>  <strong>题前感慨（时间紧不用看，跳至【言归正传】部分）</strong></li>
+</ul>
+<p> 给定每日股票价格的数组，每天可以选择是否买入/卖出，持有时不能再次买入，每笔交易有固定的手续费，求可获得的最大利润。给定每日股票价格的数组，每天可以选择是否买入/卖出，持有时不能再次买入，每笔交易有固定的手续费，求可获得的最大利润。</p>
+<p> 这是一道入门的动态规划题目……当说出这句话的时候表示说话者已经对动态规划有所掌握了，所以能很快的分析出它是一道动态规划题，并且很容易就能想到什么状态变量，转移方程的所以它是一道简单的动态规划题目。但对于很多算法新手来说，难的是识别它是个动态规划题。</p>
+<p> 本文主要解决该算法题，下面会结合本题简单说到动态规划，动态规划的详细讲解自己也会全面的整理一份资料供自己总结复习，同时也分享出来给需要的网友参考~。</p>
+<ul>
+<li>  <strong>言归正传</strong></li>
+</ul>
+<p> <strong>【1.识别动态规划】</strong>动态规划所处理的问题是一个多阶段决策问题，一般由初始状态开始，通过对中间阶段决策的选择，达到结束状态，此问题当中我们的初试状态就是第0天开始，结束状态就是第n天结束。中间的买入/卖出就是中间决策的选择。</p>
+<p> <strong>【2.确定状态定义状态变量】</strong>知道是动态规划题后就老老实实的确定状态和定义状态变量，如何正确合理的确定状态也至关重要，例如这里可以以每天交易结束后手里是否有股票为状态，两种状态：有股票，没有股票。我们的目的是求最后的最大利润的，所以定义状态变量可以这样定义：dp[i][0] 表示第 i 天交易结束后手里没有股票的最大利润。dp[i][1] 表示第 i 天交易结束后手里有股票的最大利润。</p>
+<p> <strong>【3.推导状态转移方程】</strong>先考虑 dp[i][0] 的转移方程，第 i 天结束，手里没有股票，那么一定是今天没有买入。可能的状态有前一天可能是也没有股票状态 dp[i-1][0]，或前一天结束时手里有股票 dp[i-1][1]被我今天卖了。因此转移方程为：<br>$$<br>dp[i][0] = max{dp[i-1][0],dp[i-1][1]+prices[i]-fee}<br>$$<br> 在考虑 dp[i][1] 的转移方程，第 i 天结束后，手里有股票，那么一定是今天没有卖出。可能的状态有前一天本来就是有股票状态 dp[i-1][1]，或者前一天结束时没有股票dp[i-1][0]，但我今天买入了。因此转移方程为：<br>$$<br>dp[i][1] = max{dp[i-1][1],dp[i-1][0]-prices[i]}<br>$$<br> <strong>【4.确定边界】</strong>其实就是确定初始状态，第0天交易结束时有 dp[0][0] = 0，dp[0][1] = -prices[0]。</p>
+<h3 id="2-2-详细代码（Java）"><a href="#2-2-详细代码（Java）" class="headerlink" title="2.2 详细代码（Java）"></a>2.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">maxProfit</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> prices<span class="token punctuation">,</span> <span class="token keyword">int</span> fee<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>prices<span class="token punctuation">.</span>length <span class="token operator">&lt;=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> dp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>prices<span class="token punctuation">.</span>length<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>     <span class="token comment">// 状态变量，存储每天有或没有股票的最大收益</span>
+        dp<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>           <span class="token comment">// 初始值，第0天没股票即没有买入，收益为0</span>
+        dp<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token operator">-</span>prices<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// 初始值，第0天有股票即买入了，收益为-prices[0]</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>prices<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>        <span class="token comment">// 循环更新每天的状态</span>
+            dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> fee<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">-</span> prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>prices<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>prices<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 返回最后一天两种状态的最大值</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="2-3-算法执行结果"><a href="#2-3-算法执行结果" class="headerlink" title="2.3 算法执行结果"></a>2.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glqwb0qsl4j30s40eijst.jpg" alt="算法执行结果" width="80%/"></center>
+
+<p> 算法性能不是很好，其他很多题友可能想出了更好的方法。这里重点总结该题对动态规划的运用，空间复杂度上可以稍微提升一下，因为在上述算法中定义了一个二维数组去求每一天的状态，是没有必要的，因为最后的输出只需要最后一天的。我们可以定义两个变量来存储就好了。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">maxProfit</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> prices<span class="token punctuation">,</span> <span class="token keyword">int</span> fee<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>prices<span class="token punctuation">.</span>length <span class="token operator">&lt;=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> nothave <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>            <span class="token comment">// 初始值，第0天没股票即没有买入，收益为0</span>
+        <span class="token keyword">int</span> have <span class="token operator">=</span> <span class="token operator">-</span>prices<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>      <span class="token comment">// 初始值，第0天有股票即买入了，收益为-prices[0]</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>prices<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token comment">// 循环更新状态值</span>
+            <span class="token keyword">int</span> n <span class="token operator">=</span> nothave<span class="token punctuation">,</span>y <span class="token operator">=</span> have<span class="token punctuation">;</span>           <span class="token comment">// 下面的更新中都要用到之前的值，所以要临时存储一下</span>
+            nothave <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span>y <span class="token operator">+</span> prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> fee<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            have <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>y<span class="token punctuation">,</span>n <span class="token operator">-</span> prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>nothave<span class="token punctuation">,</span>have<span class="token punctuation">)</span><span class="token punctuation">;</span>          <span class="token comment">// 返回两种状态的最大值</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glqwvrsntgj30ry0eeq4c.jpg" alt="改进算法执行结果" width="80%/"></center>
+
+<p> 出乎意的是性能得到了很大的提升…….</p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>中等</tag>
+        <tag>力扣</tag>
+        <tag>动态规划</tag>
       </tags>
   </entry>
   <entry>
@@ -1596,83 +1817,6 @@ XXX YYY ZZZ <span aria-hidden="true" class="line-numbers-rows"><span></span><spa
         <tag>中等</tag>
         <tag>力扣</tag>
         <tag>数组</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>力扣714-买卖股票的最佳时机含手续费</title>
-    <url>/2020/12/17/li-kou-714-mai-mai-gu-piao-de-zui-jia-shi-ji-han-shou-xu-fei/</url>
-    <content><![CDATA[<h1 id="力扣714-买卖股票的最佳时机含手续费"><a href="#力扣714-买卖股票的最佳时机含手续费" class="headerlink" title="力扣714-买卖股票的最佳时机含手续费"></a><center>力扣714-买卖股票的最佳时机含手续费</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>​    给定一个整数数组 prices，其中第 i 个元素代表了第 i 天的股票价格 ；非负整数 fee 代表了交易股票的手续费用。你可以无限次地完成交易，但是你每笔交易都需要付手续费。如果你已经购买了一个股票，在卖出它之前你就不能再继续购买股票了。返回获得利润的最大值。</p>
-<p>​    注意：这里的一笔交易指买入持有并卖出股票的整个过程，每笔交易你只需要为支付一次手续费。</p>
-<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
-<li><p><strong>示例一</strong></p>
-<p>  <strong>输入：</strong> prices = [1, 3, 2, 8, 4, 9], fee = 2</p>
-<p>  <strong>输出：</strong> 8</p>
-<p>  <strong>解释：</strong> 能够达到的最大利润:</p>
-<p>  在此处买入 prices[0] = 1<br>  在此处卖出 prices[3] = 8<br>  在此处买入 prices[4] = 4<br>  在此处卖出 prices[5] = 9<br>  总利润: ((8 - 1) - 2) + ((9 - 4) - 2) = 8.</p>
-</li>
-<li><p><strong>注意：</strong></p>
-<ul>
-<li>  <code>0 &lt; prices.length &lt;= 50000</code>.</li>
-<li>  <code>0 &lt; prices[i] &lt; 50000</code>.</li>
-<li>  <code>0 &lt;= fee &lt; 50000</code>.</li>
-</ul>
-</li>
-</ul>
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee">https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee</a></p>
-<h2 id="二、解题思路（动态规划）"><a href="#二、解题思路（动态规划）" class="headerlink" title="二、解题思路（动态规划）"></a><font color="born">二、解题思路（动态规划）</font></h2><h3 id="2-1-题目理解"><a href="#2-1-题目理解" class="headerlink" title="2.1 题目理解"></a>2.1 题目理解</h3><ul>
-<li>  <strong>题前感慨（时间紧不用看，跳至【言归正传】部分）</strong></li>
-</ul>
-<p> 给定每日股票价格的数组，每天可以选择是否买入/卖出，持有时不能再次买入，每笔交易有固定的手续费，求可获得的最大利润。给定每日股票价格的数组，每天可以选择是否买入/卖出，持有时不能再次买入，每笔交易有固定的手续费，求可获得的最大利润。</p>
-<p> 这是一道入门的动态规划题目……当说出这句话的时候表示说话者已经对动态规划有所掌握了，所以能很快的分析出它是一道动态规划题，并且很容易就能想到什么状态变量，转移方程的所以它是一道简单的动态规划题目。但对于很多算法新手来说，难的是识别它是个动态规划题。</p>
-<p> 本文主要解决该算法题，下面会结合本题简单说到动态规划，动态规划的详细讲解自己也会全面的整理一份资料供自己总结复习，同时也分享出来给需要的网友参考~。</p>
-<ul>
-<li>  <strong>言归正传</strong></li>
-</ul>
-<p> <strong>【1.识别动态规划】</strong>动态规划所处理的问题是一个多阶段决策问题，一般由初始状态开始，通过对中间阶段决策的选择，达到结束状态，此问题当中我们的初试状态就是第0天开始，结束状态就是第n天结束。中间的买入/卖出就是中间决策的选择。</p>
-<p> <strong>【2.确定状态定义状态变量】</strong>知道是动态规划题后就老老实实的确定状态和定义状态变量，如何正确合理的确定状态也至关重要，例如这里可以以每天交易结束后手里是否有股票为状态，两种状态：有股票，没有股票。我们的目的是求最后的最大利润的，所以定义状态变量可以这样定义：dp[i][0] 表示第 i 天交易结束后手里没有股票的最大利润。dp[i][1] 表示第 i 天交易结束后手里有股票的最大利润。</p>
-<p> <strong>【3.推导状态转移方程】</strong>先考虑 dp[i][0] 的转移方程，第 i 天结束，手里没有股票，那么一定是今天没有买入。可能的状态有前一天可能是也没有股票状态 dp[i-1][0]，或前一天结束时手里有股票 dp[i-1][1]被我今天卖了。因此转移方程为：<br>$$<br>dp[i][0] = max{dp[i-1][0],dp[i-1][1]+prices[i]-fee}<br>$$<br> 在考虑 dp[i][1] 的转移方程，第 i 天结束后，手里有股票，那么一定是今天没有卖出。可能的状态有前一天本来就是有股票状态 dp[i-1][1]，或者前一天结束时没有股票dp[i-1][0]，但我今天买入了。因此转移方程为：<br>$$<br>dp[i][1] = max{dp[i-1][1],dp[i-1][0]-prices[i]}<br>$$<br> <strong>【4.确定边界】</strong>其实就是确定初始状态，第0天交易结束时有 dp[0][0] = 0，dp[0][1] = -prices[0]。</p>
-<h3 id="2-2-详细代码（Java）"><a href="#2-2-详细代码（Java）" class="headerlink" title="2.2 详细代码（Java）"></a>2.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">maxProfit</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> prices<span class="token punctuation">,</span> <span class="token keyword">int</span> fee<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>prices<span class="token punctuation">.</span>length <span class="token operator">&lt;=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> dp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>prices<span class="token punctuation">.</span>length<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>     <span class="token comment">// 状态变量，存储每天有或没有股票的最大收益</span>
-        dp<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>           <span class="token comment">// 初始值，第0天没股票即没有买入，收益为0</span>
-        dp<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token operator">-</span>prices<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// 初始值，第0天有股票即买入了，收益为-prices[0]</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>prices<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>        <span class="token comment">// 循环更新每天的状态</span>
-            dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> fee<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">-</span> prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>prices<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>prices<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 返回最后一天两种状态的最大值</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="2-3-算法执行结果"><a href="#2-3-算法执行结果" class="headerlink" title="2.3 算法执行结果"></a>2.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glqwb0qsl4j30s40eijst.jpg" alt="算法执行结果" width="80%/"></center>
-
-<p> 算法性能不是很好，其他很多题友可能想出了更好的方法。这里重点总结该题对动态规划的运用，空间复杂度上可以稍微提升一下，因为在上述算法中定义了一个二维数组去求每一天的状态，是没有必要的，因为最后的输出只需要最后一天的。我们可以定义两个变量来存储就好了。</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">maxProfit</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> prices<span class="token punctuation">,</span> <span class="token keyword">int</span> fee<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>prices<span class="token punctuation">.</span>length <span class="token operator">&lt;=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">int</span> nothave <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>            <span class="token comment">// 初始值，第0天没股票即没有买入，收益为0</span>
-        <span class="token keyword">int</span> have <span class="token operator">=</span> <span class="token operator">-</span>prices<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>      <span class="token comment">// 初始值，第0天有股票即买入了，收益为-prices[0]</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>prices<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token comment">// 循环更新状态值</span>
-            <span class="token keyword">int</span> n <span class="token operator">=</span> nothave<span class="token punctuation">,</span>y <span class="token operator">=</span> have<span class="token punctuation">;</span>           <span class="token comment">// 下面的更新中都要用到之前的值，所以要临时存储一下</span>
-            nothave <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span>y <span class="token operator">+</span> prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> fee<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            have <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>y<span class="token punctuation">,</span>n <span class="token operator">-</span> prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>nothave<span class="token punctuation">,</span>have<span class="token punctuation">)</span><span class="token punctuation">;</span>          <span class="token comment">// 返回两种状态的最大值</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glqwvrsntgj30ry0eeq4c.jpg" alt="改进算法执行结果" width="80%/"></center>
-
-<p> 出乎意的是性能得到了很大的提升…….</p>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>中等</tag>
-        <tag>力扣</tag>
-        <tag>动态规划</tag>
       </tags>
   </entry>
   <entry>
@@ -1790,8 +1934,8 @@ XXX YYY ZZZ <span aria-hidden="true" class="line-numbers-rows"><span></span><spa
       <tags>
         <tag>力扣</tag>
         <tag>简单</tag>
-        <tag>数组</tag>
         <tag>动态规划</tag>
+        <tag>数组</tag>
       </tags>
   </entry>
   <entry>

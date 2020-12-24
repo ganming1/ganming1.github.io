@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="算法 位运算 力扣 找不同">
+    <meta name="keywords" content="摆动序列 贪心 动态规划">
     <meta name="description" content="努力做个it技术分享者">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>力扣389-找不同 | ItDaChuang</title>
+    <title>力扣376-摆动序列 | ItDaChuang</title>
     <link rel="icon" type="image/png" href="/medias/G.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">力扣389-找不同</h1>
+                    <h1 class="description center-align post-title">力扣376-摆动序列</h1>
                 </div>
             </div>
         </div>
@@ -434,20 +434,20 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
-                                <span class="chip bg-color">字符串</span>
+                            <a href="/tags/%E4%B8%AD%E7%AD%89/">
+                                <span class="chip bg-color">中等</span>
                             </a>
                         
                             <a href="/tags/%E5%8A%9B%E6%89%A3/">
                                 <span class="chip bg-color">力扣</span>
                             </a>
                         
-                            <a href="/tags/%E7%AE%80%E5%8D%95/">
-                                <span class="chip bg-color">简单</span>
+                            <a href="/tags/%E8%B4%AA%E5%BF%83/">
+                                <span class="chip bg-color">贪心</span>
                             </a>
                         
-                            <a href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">
-                                <span class="chip bg-color">位运算</span>
+                            <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                                <span class="chip bg-color">动态规划</span>
                             </a>
                         
                     </div>
@@ -471,28 +471,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-12-18
+                    2020-12-24
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-12-22
+                    2020-12-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    7 分
                 </div>
                 
 
@@ -515,99 +515,136 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="力扣389-找不同"><a href="#力扣389-找不同" class="headerlink" title="力扣389-找不同"></a><center>力扣389-找不同</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  给定两个字符串 <strong><em>s</em></strong> 和 <strong><em>t</em></strong>，它们只包含小写字母。字符串 <strong><em>t</em></strong> 由字符串 <strong><em>s</em></strong> 随机重排，然后在随机位置添加一个字母。请找出在 <strong><em>t</em></strong> 中被添加的字母。</p>
+                <h1 id="力扣376-摆动序列"><a href="#力扣376-摆动序列" class="headerlink" title="力扣376-摆动序列"></a><center>力扣376-摆动序列</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="#A22015">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  如果连续数字之间的差严格地在正数和负数之间交替，则数字序列称为 <strong>摆动序列</strong> 。第一个差（如果存在的话）可能是正数或负数。少于两个元素的序列也是摆动序列。</p>
+<p>  例如， <code>[1,7,4,9,2,5]</code> 是一个摆动序列，因为差值 <code>(6,-3,5,-7,3)</code> 是正负交替出现的。相反, <code>[1,4,7,2,5]</code> 和 <code>[1,7,4,5,5]</code> 不是摆动序列，第一个序列是因为它的前两个差值都是正数，第二个序列是因为它的最后一个差值为零。</p>
+<p>  给定一个整数序列，返回作为摆动序列的最长子序列的长度。 通过从原始序列中删除一些（也可以不删除）元素来获得子序列，剩下的元素保持其原始顺序。</p>
 <h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
-<li><p><strong>示例一</strong></p>
-<p>  <strong>输入：</strong> s = “abcd”, t = “abcde”</p>
-<p>  <strong>输出：</strong> “e”</p>
-<p>  <strong>解释：</strong> ‘e’ 是那个被添加的字母。</p>
+<li><p><strong>示例1：</strong></p>
+<p>  <strong>输入：</strong> [1,7,4,9,2,5]<br><strong>输出：</strong> 6<br><strong>解释：</strong> 整个序列均为摆动序列。</p>
 </li>
-<li><p><strong>示例二</strong></p>
-<p>  <strong>输入：</strong> s = “”, t = “y”</p>
-<p>  <strong>输出：</strong> “y”</p>
+<li><p><strong>示例2：</strong></p>
+<p>  <strong>输入：</strong> [1,17,5,10,13,15,10,5,16,8]<br><strong>输出：</strong> 7<br><strong>解释：</strong> 这个序列包含几个长度为 7 摆动序列，其中一个可为[1,17,10,13,10,16,8]。</p>
 </li>
-<li><p><strong>示例三</strong></p>
-<p>  <strong>输入：</strong> s = “a”, t = “aa”</p>
-<p>  <strong>输出：</strong> “a”</p>
-</li>
-<li><p><strong>示例四</strong></p>
-<p>  <strong>输入：</strong> s = “ae”, t = “aea”</p>
-<p>  <strong>输出：</strong> “a”</p>
+<li><p><strong>示例3：</strong></p>
+<p>  <strong>输入：</strong> [1,2,3,4,5,6,7,8,9]<br><strong>输出：</strong> 2</p>
 </li>
 </ul>
-<p><strong>提示：</strong></p>
+<p><strong>进阶：</strong><br>你能否用 O(<em>n</em>) 时间复杂度完成此题?</p>
+<p>来源：力扣（LeetCode）<br>链接：<a href="">https://leetcode-cn.com/problems/wiggle-subsequence</a></p>
+<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="#A22015">二、解题思路</font></h2><h3 id="2-1-动态规划（dp）思路解题"><a href="#2-1-动态规划（dp）思路解题" class="headerlink" title="2.1 动态规划（dp）思路解题"></a>2.1 动态规划（dp）思路解题</h3><ul>
+<li>  <strong>解题思路</strong></li>
+</ul>
+<p>  在自己思考这个题目的时候就觉得这是一个<font color="red">动态规划</font>的题目，但没能写出整体过程，参考官方题解。</p>
 <ul>
-<li>  <code>0 &lt;= s.length &lt;= 1000</code></li>
-<li>  <code>t.length == s.length + 1</code></li>
-<li>  <code>s</code> 和 <code>t</code> 只包含小写字母</li>
+<li>  当序列长度为 <code>0</code> 或 <code>1</code> 时，摆动序列的长度也对应为 <code>0</code> 或 <code>1</code> 。当序列长度 <code>&gt;=2</code> 时，需要讨论。</li>
+<li>  遍历序列：<code>up[i]</code> 表示前 <code>i</code> 个数据并且最后是上升的最长摆动序列，称为最长上升摆动序列，<code>down[i]</code> 表示前 <code>i</code> 个数据并且最后是下降的最长摆动序列，称为最长下降摆动序列。</li>
 </ul>
-<p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/find-the-difference/">https://leetcode-cn.com/problems/find-the-difference/</a></p>
-<h2 id="二、解题思路1"><a href="#二、解题思路1" class="headerlink" title="二、解题思路1"></a><font color="born">二、解题思路1</font></h2><h3 id="2-1-题目理解分析"><a href="#2-1-题目理解分析" class="headerlink" title="2.1 题目理解分析"></a>2.1 题目理解分析</h3><p>  题目很直白，也非常容易想到思路，我第一个思路就是用一个 HashMap 去存储 s 字符串中每个字符的个数（字符作为 key ，个数作为 value）。然后遍历 t 字符串的时候去减掉对应字符的个数值，当有不在 HashMap 中的字符或个数已经为0的字符即为加进去的字符。</p>
-<h3 id="2-2-详细代码（Java）"><a href="#2-2-详细代码（Java）" class="headerlink" title="2.2 详细代码（Java）"></a>2.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-  <span class="token keyword">public</span> <span class="token keyword">char</span> <span class="token function">findTheDifference</span><span class="token punctuation">(</span><span class="token class-name">String</span> s<span class="token punctuation">,</span> <span class="token class-name">String</span> t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Character</span><span class="token punctuation">,</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// 定义 map </span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>                   <span class="token comment">// 统计 s 中的每个字符个数</span>
-      <span class="token keyword">char</span> ch <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>ch<span class="token punctuation">,</span>map<span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span>ch<span class="token punctuation">)</span><span class="token operator">?</span>map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>ch<span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">1</span><span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<p>讨论当前第 <code>i</code> 个数的加入：</p>
+<ul>
+<li><p>  <code>nums[i] = nums[i-1]</code> ：摆动序列长度不变</p>
+</li>
+<li><p><code>nums[i] &gt; nums[i-1]</code> ：下降摆动序列不变</p>
+<p>  1.当 <code>nums[i]</code> 放入<font color="red">最长下降摆动序列</font> <code>up[i] = down[i-1] + 1</code><br>2.当 <code>nums[i]</code> 放入<font color="red">最长上升摆动序列</font> <code>up[i] = up[i-1]</code> </p>
+</li>
+<li><p><code>nums[i] &lt; nums[i-1]</code> ：上升摆动序列不变</p>
+<p>  1.当 <code>nums[i]</code> 放入<font color="red">最长上升摆动序列</font> <code>down[i] = up[i-1] + 1</code><br>2.当 <code>nums[i]</code> 放入<font color="red">最长下降摆动序列</font> <code>down[i] = down[i-1]</code></p>
+</li>
+<li><p>  <strong>详细代码（Java）</strong></p>
+</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">wiggleMaxLength</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> len <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>              <span class="token comment">// 记录数组的长度</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>len<span class="token operator">&lt;=</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> len<span class="token punctuation">;</span>             <span class="token comment">// 如果数组不超过2个数，那么就是摆动序列</span>
+        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> up <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>len<span class="token punctuation">]</span><span class="token punctuation">;</span>            <span class="token comment">// 记录到每个位置的上升摆动序列长度</span>
+        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> down <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>len<span class="token punctuation">]</span><span class="token punctuation">;</span>          <span class="token comment">// 记录到每个位置的下降摆动序列长度</span>
+        up<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> down<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>                <span class="token comment">// 第一个位置即可以看做是上升的或是下降的长度为1的摆动序列</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>      <span class="token comment">// 从第二个元素开始遍历</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&gt;</span>nums<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>     <span class="token comment">// 如果后一个元素比前一个大，则只会影响上升摆动序列长度</span>
+                up<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>up<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>down<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// 只更新上升摆动序列长度</span>
+                down<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> down<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>            <span class="token comment">// 下降序列长度不会影响</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&lt;</span>nums<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token comment">// 如果后一个元素比前一个小，则只会影响下降摆动序列长度，同上分析</span>
+                down<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>up<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>down<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                up<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> up<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token punctuation">{</span>      <span class="token comment">// 如果后一个元素等于前值，则上升和下降都不影响</span>
+                up<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> up<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+                down<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> down<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>up<span class="token punctuation">[</span>len<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>down<span class="token punctuation">[</span>len<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>t<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>                   <span class="token comment">// 检验 t 中添加进去的字符</span>
-      <span class="token keyword">char</span> ch <span class="token operator">=</span> t<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>map<span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span>ch<span class="token punctuation">)</span><span class="token operator">&amp;&amp;</span>map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>ch<span class="token punctuation">)</span><span class="token operator">&gt;</span><span class="token number">0</span><span class="token punctuation">)</span> 
-        map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>ch<span class="token punctuation">,</span>map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>ch<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                  <span class="token comment">// 如果字符在 map 中存在，并且个数大于0，则个数减一</span>
-      <span class="token keyword">else</span> <span class="token keyword">return</span> ch<span class="token punctuation">;</span>                                 <span class="token comment">// 否则为添加进去的那个字符，直接返回</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>  <strong>代码执行结果</strong></li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glze7uqljpj30ry0eidh8.jpg" alt="动规算法执行结果" width="100%/"></center>
+
+<p>  观察到上述代码每次更新 up 和 down 数组时只用到了前一个值，并且最后返回结果也只用到最后的值，故在空间上还可以做一定的优化。</p>
+<ul>
+<li>  <strong>优化代码</strong></li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">wiggleMaxLength</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> len <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>          <span class="token comment">// 记录数组长度</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>len<span class="token operator">&lt;=</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> len<span class="token punctuation">;</span>         <span class="token comment">// 如果数组不超过2个数，那么就是摆动序列</span>
+        <span class="token keyword">int</span> up <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span>down <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>            <span class="token comment">// 刚开始第一个元素即是上升序列又是下降序列，且长度为1</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>      <span class="token comment">// 从第二个开始遍历</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&gt;</span>nums<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>     <span class="token comment">// 如果后一个元素比前一个大，只更新上升摆动序列长度</span>
+                up <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>up<span class="token punctuation">,</span>down<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&lt;</span>nums<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment">// 如果后一个元素比前一个小，只更新下降摆动序列长度</span>
+                down <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>down<span class="token punctuation">,</span>up<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>up<span class="token punctuation">,</span>down<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> <span class="token string">' '</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="2-3-算法执行结果"><a href="#2-3-算法执行结果" class="headerlink" title="2.3 算法执行结果"></a>2.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gls1b3l77vj30ry0egq4b.jpg" alt="算法执行结果" width="80%/"></center>
-
-<p>  算法简单是简单，结果也很残忍，时间上只击败8.17%的用户，不行~~~还得想想其他思路提升性能。下面是将存储方法改为数组存储，因为题目限制了只有小写字母，所有用26长度的 int 数组就可以达到统计个数的目的。</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-  <span class="token keyword">public</span> <span class="token keyword">char</span> <span class="token function">findTheDifference</span><span class="token punctuation">(</span><span class="token class-name">String</span> s<span class="token punctuation">,</span> <span class="token class-name">String</span> t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> count <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token number">26</span><span class="token punctuation">]</span><span class="token punctuation">;</span>                   <span class="token comment">// 定义数组存储个数</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>            <span class="token comment">// 同时对 s 和 t 中字符个数统计</span>
-      count<span class="token punctuation">[</span>s<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token operator">-</span><span class="token string">'a'</span><span class="token punctuation">]</span><span class="token operator">++</span><span class="token punctuation">;</span>                <span class="token comment">// s 中的字符相应位置加1</span>
-      count<span class="token punctuation">[</span>t<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token operator">-</span><span class="token string">'a'</span><span class="token punctuation">]</span><span class="token operator">--</span><span class="token punctuation">;</span>                <span class="token comment">// t 中的字符相应位置减1</span>
-    <span class="token punctuation">}</span>
-    count<span class="token punctuation">[</span>t<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>t<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token string">'a'</span><span class="token punctuation">]</span><span class="token operator">--</span><span class="token punctuation">;</span>        <span class="token comment">// t 中最后一个字符相应位置减1</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">26</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>                   <span class="token comment">// 查找添加的字符</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>count<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
-        <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">)</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>               <span class="token comment">// 个数为-1的即为添加的字符，其他都是0</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> <span class="token string">' '</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gls1x0qlnrj30s20eg0u5.jpg" alt="改进算法执行结果" width="80%/"></center>
-
-<p>  速度上得到了不小的提升，不过还不是很理想。再去参考参考别的大神的题解看看…….</p>
-<h2 id="三、解题思路2-位运算"><a href="#三、解题思路2-位运算" class="headerlink" title="三、解题思路2(位运算)"></a><font color="born">三、解题思路2(位运算)</font></h2><h3 id="3-1-题目理解分析"><a href="#3-1-题目理解分析" class="headerlink" title="3.1 题目理解分析"></a>3.1 题目理解分析</h3><p>  这题说的是字符串 t 只比 s 多了一个字符，其他字符他们的数量都是一样的，如果我们把字符串 s 和 t 合并就会发现，除了那个多出的字符出现奇数次，其他的所有字符都是出现偶数次，这种情况我们就可以用<font color="red">异或运算</font>来解决啦。</p>
 <ul>
-<li><p>异或运算的三点规律：</p>
-<p>  1.<font color="red">a^a=0</font>：任何数字和自己异或都是0</p>
-<p>  2.<font color="red">a^0=a</font>：任何数字和0异或还是自己</p>
-<p>  3.<font color="red">a^b^a=a^a^b</font>：异或运算具有交换律</p>
-</li>
-<li><p>用题目示例一举例</p>
-<p>  s = “abcd”，t = “abcde”，合并之后为 “abcdabcde” ，每一位都进行异或运算为 a^b^c^d^a^b^c^d^e ，再利用上述规律3 可以交换为 a^a^b^b^c^c^d^d^e ，再用规律1可以得到 0^0^0^0^e ，最后由规律2得到最后结果为 e。</p>
-</li>
+<li>  <strong>优化执行结果</strong></li>
 </ul>
-<h3 id="3-2-详细代码（Java）"><a href="#3-2-详细代码（Java）" class="headerlink" title="3.2 详细代码（Java）"></a>3.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-  <span class="token keyword">public</span> <span class="token keyword">char</span> <span class="token function">findTheDifference</span><span class="token punctuation">(</span><span class="token class-name">String</span> s<span class="token punctuation">,</span> <span class="token class-name">String</span> t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> chars <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toCharArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// 合并 s 和 t 并且转化为 char 数组</span>
-    <span class="token keyword">char</span> result <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>                            <span class="token comment">// 定义输出结果的字符</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">char</span> aChar <span class="token operator">:</span> chars<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      result <span class="token operator">^=</span> aChar<span class="token punctuation">;</span>                        <span class="token comment">// 对每一个字符进行异或操作</span>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glzeh352vpj30ry0ecwfv.jpg" alt="优化动规执行结果" width="100%/"></center>
+
+<p>  空间复杂度上得到了一点提升，注意力扣每次跑代码测试用例可能有所差异，相同的代码每次跑结果可能都会有些差异。</p>
+<h3 id="2-2-贪心思路解题"><a href="#2-2-贪心思路解题" class="headerlink" title="2.2 贪心思路解题"></a>2.2 贪心思路解题</h3><ul>
+<li>  <strong>解题思路</strong></li>
+</ul>
+<p>  本题要求通过从原始序列中删除一些（也可以不删除）元素来获得子序列，剩下的元素保持其原始顺序。那么当我么碰到连续上升或连续下降的数据时就要执行删除操作啦，那么问题就是留下哪一个数能使整个留下来的子序列为最长摆动序列。</p>
+<p><strong>局部最优：</strong> 当碰到单调坡度时，保留峰值即是局部最优的情况。<br><strong>整体最优：</strong> 当整个序列有最多保留下来的峰值时，就是达到最长摆动序列的全局最优情况。</p>
+<p>  至于上述所说的为什么成立，这里借用网友题解的一张图尝试说明下原因，我个人觉得当我们碰到连续递增的序列时，例如 10，13，15 时，我们应该选择最大的保留，这样在后序数据中选择一个下降的数可接受范围更大，即可能使我们最终留下来的摆动序列最长。递减的序列同样道理应该选择最小的数保留。</p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glzf1f6r49j31040dyjth.jpg" alt="示例2分析" width="100%/"></center>
+
+<ul>
+<li>  <strong>详细代码（Java）</strong></li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">wiggleMaxLength</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> len <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>          <span class="token comment">// 记录数组长度</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>len <span class="token operator">&lt;=</span> <span class="token number">1</span><span class="token punctuation">)</span>   <span class="token keyword">return</span> len<span class="token punctuation">;</span>     <span class="token comment">// 如果数组不超过2个数，那么就是摆动序列</span>
+        <span class="token keyword">int</span> curdiff <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>                <span class="token comment">// 开始时的当前差值设为0</span>
+        <span class="token keyword">int</span> prediff <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>                <span class="token comment">// 开始时的之前差值设为0</span>
+        <span class="token keyword">int</span> count <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>                  <span class="token comment">// 刚开始第一个元素是峰值，统计1个</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>      <span class="token comment">// 从第二个开始遍历</span>
+            curdiff <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> nums<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// 计算当前差值</span>
+            <span class="token comment">// 如果当前差值与之前差值变号了，并且当前差值不是0则表示是峰值</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>curdiff <span class="token operator">&gt;</span><span class="token number">0</span> <span class="token operator">&amp;&amp;</span> prediff<span class="token operator">&lt;=</span><span class="token number">0</span> <span class="token operator">||</span> curdiff<span class="token generics"><span class="token punctuation">&lt;</span>0<span class="token operator">&amp;</span><span class="token operator">&amp;</span>prediff<span class="token punctuation">&gt;</span></span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                count<span class="token operator">++</span><span class="token punctuation">;</span>
+                prediff <span class="token operator">=</span> curdiff<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> count<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> result<span class="token punctuation">;</span>                              <span class="token comment">// 返回保留结果的字符</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="3-3-算法执行结果"><a href="#3-3-算法执行结果" class="headerlink" title="3.3 算法执行结果"></a>3.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gls34pyssvj30s40egta3.jpg" alt="异或方法执行结果" width="80%/"></center>
+<ul>
+<li>  <strong>代码执行结果</strong></li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glzfhdk8hmj30si0eo3zx.jpg" alt="贪心算法执行结果" width="100%/"></center>
 
-<p>  代码少就算了，性能还直接飙升100%，所以位运算还是得掌握啊！！！</p>
-<h2 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a><font color="born">四、总结</font></h2><p>  感觉任何事情都是这样的，你拍脑门就能想到的事情，很多人也同样能轻松想到，并且肯定并不是很好的。方法稍微高级一点的，它掌握起来可能更费力一点，但带给你的结果肯定也是可观的。跟生活中的很多道理类似……</p>
+<h2 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a><font color="#A22015">三、总结</font></h2><p>  此题真的是动态规划和贪心算法里的经典题型。值得自己深入研究，很多想法虽然都是看别人的题解自己整理的，但在自己整理的过程中也想明白了很多细节。</p>
 
                 
             </div>
@@ -634,7 +671,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://ganming1.github.io/2020/12/18/li-kou-389-zhao-bu-tong/">http://ganming1.github.io/2020/12/18/li-kou-389-zhao-bu-tong/</a>
+                    <a href="http://ganming1.github.io/2020/12/24/li-kou-376-bai-dong-xu-lie/">http://ganming1.github.io/2020/12/24/li-kou-376-bai-dong-xu-lie/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -672,20 +709,20 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
-                                    <span class="chip bg-color">字符串</span>
+                                <a href="/tags/%E4%B8%AD%E7%AD%89/">
+                                    <span class="chip bg-color">中等</span>
                                 </a>
                             
                                 <a href="/tags/%E5%8A%9B%E6%89%A3/">
                                     <span class="chip bg-color">力扣</span>
                                 </a>
                             
-                                <a href="/tags/%E7%AE%80%E5%8D%95/">
-                                    <span class="chip bg-color">简单</span>
+                                <a href="/tags/%E8%B4%AA%E5%BF%83/">
+                                    <span class="chip bg-color">贪心</span>
                                 </a>
                             
-                                <a href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">
-                                    <span class="chip bg-color">位运算</span>
+                                <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                                    <span class="chip bg-color">动态规划</span>
                                 </a>
                             
                         </div>
@@ -901,29 +938,30 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/12/19/li-kou-48-xuan-zhuan-tu-xiang/">
+                <a href="/2020/12/24/li-kou-376-bai-dong-xu-lie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="力扣48-旋转图像">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="力扣376-摆动序列">
                         
-                        <span class="card-title">力扣48-旋转图像</span>
+                        <span class="card-title">力扣376-摆动序列</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            给定一个 *n* × *n* 的二维矩阵表示一个图像。将图像顺时针旋转 90 度。你必须在原地旋转图像，这意味着你需要直接修改输入的二维矩阵。请不要使用另一个矩阵来旋转图像。
+                            如果连续数字之间的差严格地在正数和负数之间交替，则数字序列称为摆动序列 。第一个差（如果存在的话）可能是正数或负数。少于两个元素的序列也是摆动序列。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-19
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-24
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -936,6 +974,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -947,12 +986,12 @@
                         <span class="chip bg-color">力扣</span>
                     </a>
                     
-                    <a href="/tags/%E6%95%B0%E7%BB%84/">
-                        <span class="chip bg-color">数组</span>
+                    <a href="/tags/%E8%B4%AA%E5%BF%83/">
+                        <span class="chip bg-color">贪心</span>
                     </a>
                     
-                    <a href="/tags/%E6%8A%80%E5%B7%A7%E9%A2%98/">
-                        <span class="chip bg-color">技巧题</span>
+                    <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                        <span class="chip bg-color">动态规划</span>
                     </a>
                     
                 </div>
@@ -966,24 +1005,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/12/17/li-kou-714-mai-mai-gu-piao-de-zui-jia-shi-ji-han-shou-xu-fei/">
+                <a href="/2020/12/24/li-kou-217-cun-zai-chong-fu-yuan-su/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="力扣714-买卖股票的最佳时机含手续费">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="力扣217-存在重复元素">
                         
-                        <span class="card-title">力扣714-买卖股票的最佳时机含手续费</span>
+                        <span class="card-title">力扣217-存在重复元素</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            给定一个整数数组 prices，其中第 i 个元素代表了第 i 天的股票价格 ；非负整数 fee 代表了交易股票的手续费用。你可以无限次地完成交易，但是你每笔交易都需要付手续费。如果你已经购买了一个股票，在卖出它之前你就不能再继续购买股票了。返回获得利润的最大值。
+                            给定一个整数数组，判断是否存在重复元素。如果任意一值在数组中出现至少两次，函数返回 true 。如果数组中每个元素都不相同，则返回 false 。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-24
                             </span>
                         <span class="publish-author">
                             
@@ -1000,16 +1039,20 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E4%B8%AD%E7%AD%89/">
-                        <span class="chip bg-color">中等</span>
-                    </a>
-                    
                     <a href="/tags/%E5%8A%9B%E6%89%A3/">
                         <span class="chip bg-color">力扣</span>
                     </a>
                     
-                    <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
-                        <span class="chip bg-color">动态规划</span>
+                    <a href="/tags/%E7%AE%80%E5%8D%95/">
+                        <span class="chip bg-color">简单</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">
+                        <span class="chip bg-color">哈希表</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%8E%92%E5%BA%8F/">
+                        <span class="chip bg-color">排序</span>
                     </a>
                     
                 </div>
