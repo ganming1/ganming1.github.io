@@ -6,7 +6,7 @@
   <link href="http://ganming1.github.io/atom.xml" rel="self"/>
   
   <link href="http://ganming1.github.io/"/>
-  <updated>2020-12-23T15:58:38.948Z</updated>
+  <updated>2020-12-24T06:01:13.366Z</updated>
   <id>http://ganming1.github.io/</id>
   
   <author>
@@ -15,6 +15,66 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>力扣217-存在重复元素</title>
+    <link href="http://ganming1.github.io/2020/12/24/li-kou-217-cun-zai-chong-fu-yuan-su/"/>
+    <id>http://ganming1.github.io/2020/12/24/li-kou-217-cun-zai-chong-fu-yuan-su/</id>
+    <published>2020-12-24T05:10:48.000Z</published>
+    <updated>2020-12-24T06:01:13.366Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;力扣217-存在重复元素&quot;&gt;&lt;a href=&quot;#力扣217-存在重复元素&quot; class=&quot;headerlink&quot; title=&quot;力扣217-存在重复元素&quot;&gt;&lt;/a&gt;&lt;center&gt;力扣217-存在重复元素&lt;/center&gt;&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
+    
+    <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
+    
+    <category term="哈希表" scheme="http://ganming1.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
+    
+    <category term="排序" scheme="http://ganming1.github.io/tags/%E6%8E%92%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>力扣135-分发糖果</title>
+    <link href="http://ganming1.github.io/2020/12/24/li-kou-135-fen-fa-tang-guo/"/>
+    <id>http://ganming1.github.io/2020/12/24/li-kou-135-fen-fa-tang-guo/</id>
+    <published>2020-12-24T03:41:57.000Z</published>
+    <updated>2020-12-24T04:59:17.674Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;力扣135-分发糖果&quot;&gt;&lt;a href=&quot;#力扣135-分发糖果&quot; class=&quot;headerlink&quot; title=&quot;力扣135-分发糖果&quot;&gt;&lt;/a&gt;&lt;center&gt;力扣135-分发糖果&lt;/center&gt;&lt;/h1&gt;&lt;h2 id=&quot;一、原题题目&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
+    
+    <category term="困难" scheme="http://ganming1.github.io/tags/%E5%9B%B0%E9%9A%BE/"/>
+    
+    <category term="贪心" scheme="http://ganming1.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
+    
+  </entry>
   
   <entry>
     <title>String-基础</title>
@@ -395,9 +455,9 @@
     
     <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
     
-    <category term="数组" scheme="http://ganming1.github.io/tags/%E6%95%B0%E7%BB%84/"/>
-    
     <category term="贪心" scheme="http://ganming1.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
+    
+    <category term="数组" scheme="http://ganming1.github.io/tags/%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
