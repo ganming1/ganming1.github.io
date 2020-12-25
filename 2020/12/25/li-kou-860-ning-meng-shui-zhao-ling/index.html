@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="摆动序列 贪心 动态规划">
+    <meta name="keywords" content="力扣 贪心 柃檬水找零">
     <meta name="description" content="努力做个it技术分享者">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>力扣376-摆动序列 | ItDaChuang</title>
+    <title>力扣860-柠檬水找零 | ItDaChuang</title>
     <link rel="icon" type="image/png" href="/medias/G.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">力扣376-摆动序列</h1>
+                    <h1 class="description center-align post-title">力扣860-柠檬水找零</h1>
                 </div>
             </div>
         </div>
@@ -434,20 +434,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E4%B8%AD%E7%AD%89/">
-                                <span class="chip bg-color">中等</span>
-                            </a>
-                        
                             <a href="/tags/%E5%8A%9B%E6%89%A3/">
                                 <span class="chip bg-color">力扣</span>
                             </a>
                         
-                            <a href="/tags/%E8%B4%AA%E5%BF%83/">
-                                <span class="chip bg-color">贪心</span>
+                            <a href="/tags/%E7%AE%80%E5%8D%95/">
+                                <span class="chip bg-color">简单</span>
                             </a>
                         
-                            <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
-                                <span class="chip bg-color">动态规划</span>
+                            <a href="/tags/%E8%B4%AA%E5%BF%83/">
+                                <span class="chip bg-color">贪心</span>
                             </a>
                         
                     </div>
@@ -471,7 +467,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-12-24
+                    2020-12-25
                 </div>
                 
 
@@ -485,14 +481,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.8k
+                    986
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    3 分
                 </div>
                 
 
@@ -515,136 +511,78 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="力扣376-摆动序列"><a href="#力扣376-摆动序列" class="headerlink" title="力扣376-摆动序列"></a><center>力扣376-摆动序列</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="#A22015">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  如果连续数字之间的差严格地在正数和负数之间交替，则数字序列称为 <strong>摆动序列</strong> 。第一个差（如果存在的话）可能是正数或负数。少于两个元素的序列也是摆动序列。</p>
-<p>  例如， <code>[1,7,4,9,2,5]</code> 是一个摆动序列，因为差值 <code>(6,-3,5,-7,3)</code> 是正负交替出现的。相反, <code>[1,4,7,2,5]</code> 和 <code>[1,7,4,5,5]</code> 不是摆动序列，第一个序列是因为它的前两个差值都是正数，第二个序列是因为它的最后一个差值为零。</p>
-<p>  给定一个整数序列，返回作为摆动序列的最长子序列的长度。 通过从原始序列中删除一些（也可以不删除）元素来获得子序列，剩下的元素保持其原始顺序。</p>
+                <h1 id="力扣860-柠檬水找零"><a href="#力扣860-柠檬水找零" class="headerlink" title="力扣860-柠檬水找零"></a><center>力扣860-柠檬水找零</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="#A22015">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  在柠檬水摊上，每一杯柠檬水的售价为 <code>5</code> 美元。顾客排队购买你的产品，（按账单 <code>bills</code> 支付的顺序）一次购买一杯。每位顾客只买一杯柠檬水，然后向你付 <code>5</code> 美元、<code>10</code> 美元或 <code>20</code> 美元。你必须给每个顾客正确找零，也就是说净交易是每位顾客向你支付 <code>5</code> 美元。</p>
+<p>  注意，一开始你手头没有任何零钱。如果你能给每位顾客正确找零，返回 true ，否则返回 false 。</p>
 <h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
 <li><p><strong>示例1：</strong></p>
-<p>  <strong>输入：</strong> [1,7,4,9,2,5]<br><strong>输出：</strong> 6<br><strong>解释：</strong> 整个序列均为摆动序列。</p>
+<p>  <strong>输入：</strong>  <code>[5,5,5,10,20]</code><br><strong>输出：</strong> <code>true</code><br><strong>解释：</strong> 前 <code>3</code> 位顾客那里，我们按顺序收取 <code>3</code> 张 <code>5</code> 美元的钞票。<br>  第 <code>4</code> 位顾客那里，我们收取一张 <code>10</code> 美元的钞票，并返还 <code>5</code> 美元。<br>  第 <code>5</code> 位顾客那里，我们找还一张 <code>10</code> 美元的钞票和一张 <code>5</code> 美元的钞票。<br>  由于所有客户都得到了正确的找零，所以我们输出 <code>true</code>。</p>
 </li>
 <li><p><strong>示例2：</strong></p>
-<p>  <strong>输入：</strong> [1,17,5,10,13,15,10,5,16,8]<br><strong>输出：</strong> 7<br><strong>解释：</strong> 这个序列包含几个长度为 7 摆动序列，其中一个可为[1,17,10,13,10,16,8]。</p>
+<p>  <strong>输入：</strong> <code>[5,5,10]</code><br><strong>输出：</strong> <code>true</code></p>
 </li>
 <li><p><strong>示例3：</strong></p>
-<p>  <strong>输入：</strong> [1,2,3,4,5,6,7,8,9]<br><strong>输出：</strong> 2</p>
+<p>  <strong>输入：</strong> <code>[10,10]</code><br><strong>输出：</strong> <code>false</code></p>
+</li>
+<li><p><strong>示例4：</strong></p>
+<p>  <strong>输入：</strong> <code>[5,5,10,10,20]</code><br><strong>输出：</strong> <code>false</code><br><strong>解释：</strong> 前 <code>2</code> 位顾客那里，我们按顺序收取 <code>2</code> 张 <code>5</code> 美元的钞票。<br>  对于接下来的 <code>2</code> 位顾客，我们收取一张 <code>10</code> 美元的钞票，然后返还 <code>5</code> 美元。<br>  对于最后一位顾客，我们无法退回 <code>15</code> 美元，因为我们现在只有两张 <code>10</code> 美元的钞票。<br>  由于不是每位顾客都得到了正确的找零，所以答案是 <code>false</code>。</p>
 </li>
 </ul>
-<p><strong>进阶：</strong><br>你能否用 O(<em>n</em>) 时间复杂度完成此题?</p>
-<p>来源：力扣（LeetCode）<br>链接：<a href="">https://leetcode-cn.com/problems/wiggle-subsequence</a></p>
-<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="#A22015">二、解题思路</font></h2><h3 id="2-1-动态规划（dp）思路解题"><a href="#2-1-动态规划（dp）思路解题" class="headerlink" title="2.1 动态规划（dp）思路解题"></a>2.1 动态规划（dp）思路解题</h3><ul>
+<p><strong>提示：</strong></p>
+<ul>
+<li>  <code>0 &lt;= bills.length &lt;= 10000</code></li>
+<li>  <code>bills[i]</code> 不是 <code>5</code> 就是 <code>10</code> 或是 <code>20</code></li>
+</ul>
+<p>来源：力扣（LeetCode）<br>链接：<a href="">https://leetcode-cn.com/problems/lemonade-change</a></p>
+<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="#A22015">二、解题思路</font></h2><h3 id="2-1-贪心思路解题"><a href="#2-1-贪心思路解题" class="headerlink" title="2.1 贪心思路解题"></a>2.1 贪心思路解题</h3><ul>
 <li>  <strong>解题思路</strong></li>
 </ul>
-<p>  在自己思考这个题目的时候就觉得这是一个<font color="red">动态规划</font>的题目，但没能写出整体过程，参考官方题解。</p>
+<p>  读完题目我又感觉这是一道贪心的题，都有点怀疑自己啦！这几天看到题老是想到贪心。这里我用三个变量 <code>five</code> <code>ten</code> <code>twenty</code> 来存储手头上拥有的 <code>5</code> 美元，<code>10</code> 美元，<code>20</code> 美元钞票的数量，当遍历账单时，按如下规则处理：</p>
 <ul>
-<li>  当序列长度为 <code>0</code> 或 <code>1</code> 时，摆动序列的长度也对应为 <code>0</code> 或 <code>1</code> 。当序列长度 <code>&gt;=2</code> 时，需要讨论。</li>
-<li>  遍历序列：<code>up[i]</code> 表示前 <code>i</code> 个数据并且最后是上升的最长摆动序列，称为最长上升摆动序列，<code>down[i]</code> 表示前 <code>i</code> 个数据并且最后是下降的最长摆动序列，称为最长下降摆动序列。</li>
-</ul>
-<p>讨论当前第 <code>i</code> 个数的加入：</p>
-<ul>
-<li><p>  <code>nums[i] = nums[i-1]</code> ：摆动序列长度不变</p>
+<li><p>  <code>5</code> 美元：不用找零，直接 <code>five + 1</code></p>
 </li>
-<li><p><code>nums[i] &gt; nums[i-1]</code> ：下降摆动序列不变</p>
-<p>  1.当 <code>nums[i]</code> 放入<font color="red">最长下降摆动序列</font> <code>up[i] = down[i-1] + 1</code><br>2.当 <code>nums[i]</code> 放入<font color="red">最长上升摆动序列</font> <code>up[i] = up[i-1]</code> </p>
+<li><p>  <code>10</code> 美元：必须要找零一个 <code>5</code> 美元，如果有即 <code>five &gt; 0</code> ，则 <code>five - 1</code> ，否则返回 <code>false</code></p>
 </li>
-<li><p><code>nums[i] &lt; nums[i-1]</code> ：上升摆动序列不变</p>
-<p>  1.当 <code>nums[i]</code> 放入<font color="red">最长上升摆动序列</font> <code>down[i] = up[i-1] + 1</code><br>2.当 <code>nums[i]</code> 放入<font color="red">最长下降摆动序列</font> <code>down[i] = down[i-1]</code></p>
-</li>
-<li><p>  <strong>详细代码（Java）</strong></p>
+<li><p><code>20</code> 美元：必须找零 <code>15</code> 美元，尽可能的先找一个 <code>10</code> 美元，再找一个 <code>5</code> 美元（贪心的体现）如果没有 <code>10</code> 美元的，则需要找三个 <code>5</code> 美元的，否则返回 <code>false</code></p>
+<p>  1.如果 <code>five &gt;= 1 &amp;&amp; ten &gt;= 1</code> ，则 <code>five - 1</code> ,<code>ten - 1</code><br>2.如果 <code>ten == 0 &amp;&amp; five &gt;= 3</code> ，则 <code>five - 3</code><br>3.否则返回 <code>false</code></p>
 </li>
 </ul>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">wiggleMaxLength</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> len <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>              <span class="token comment">// 记录数组的长度</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>len<span class="token operator">&lt;=</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> len<span class="token punctuation">;</span>             <span class="token comment">// 如果数组不超过2个数，那么就是摆动序列</span>
-        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> up <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>len<span class="token punctuation">]</span><span class="token punctuation">;</span>            <span class="token comment">// 记录到每个位置的上升摆动序列长度</span>
-        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> down <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>len<span class="token punctuation">]</span><span class="token punctuation">;</span>          <span class="token comment">// 记录到每个位置的下降摆动序列长度</span>
-        up<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> down<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>                <span class="token comment">// 第一个位置即可以看做是上升的或是下降的长度为1的摆动序列</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>      <span class="token comment">// 从第二个元素开始遍历</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&gt;</span>nums<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>     <span class="token comment">// 如果后一个元素比前一个大，则只会影响上升摆动序列长度</span>
-                up<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>up<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>down<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// 只更新上升摆动序列长度</span>
-                down<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> down<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>            <span class="token comment">// 下降序列长度不会影响</span>
-            <span class="token punctuation">}</span>
-            <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&lt;</span>nums<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token comment">// 如果后一个元素比前一个小，则只会影响下降摆动序列长度，同上分析</span>
-                down<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>up<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>down<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                up<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> up<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-            <span class="token keyword">else</span> <span class="token punctuation">{</span>      <span class="token comment">// 如果后一个元素等于前值，则上升和下降都不影响</span>
-                up<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> up<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-                down<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> down<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>up<span class="token punctuation">[</span>len<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>down<span class="token punctuation">[</span>len<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<ul>
-<li>  <strong>代码执行结果</strong></li>
-</ul>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glze7uqljpj30ry0eidh8.jpg" alt="动规算法执行结果" width="100%/"></center>
-
-<p>  观察到上述代码每次更新 up 和 down 数组时只用到了前一个值，并且最后返回结果也只用到最后的值，故在空间上还可以做一定的优化。</p>
-<ul>
-<li>  <strong>优化代码</strong></li>
-</ul>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">wiggleMaxLength</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> len <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>          <span class="token comment">// 记录数组长度</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>len<span class="token operator">&lt;=</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> len<span class="token punctuation">;</span>         <span class="token comment">// 如果数组不超过2个数，那么就是摆动序列</span>
-        <span class="token keyword">int</span> up <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span>down <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>            <span class="token comment">// 刚开始第一个元素即是上升序列又是下降序列，且长度为1</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>      <span class="token comment">// 从第二个开始遍历</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&gt;</span>nums<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>     <span class="token comment">// 如果后一个元素比前一个大，只更新上升摆动序列长度</span>
-                up <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>up<span class="token punctuation">,</span>down<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-            <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&lt;</span>nums<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment">// 如果后一个元素比前一个小，只更新下降摆动序列长度</span>
-                down <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>down<span class="token punctuation">,</span>up<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>up<span class="token punctuation">,</span>down<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<ul>
-<li>  <strong>优化执行结果</strong></li>
-</ul>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glzeh352vpj30ry0ecwfv.jpg" alt="优化动规执行结果" width="100%/"></center>
-
-<p>  空间复杂度上得到了一点提升，注意力扣每次跑代码测试用例可能有所差异，相同的代码每次跑结果可能都会有些差异。</p>
-<h3 id="2-2-贪心思路解题"><a href="#2-2-贪心思路解题" class="headerlink" title="2.2 贪心思路解题"></a>2.2 贪心思路解题</h3><ul>
-<li>  <strong>解题思路</strong></li>
-</ul>
-<p>  本题要求通过从原始序列中删除一些（也可以不删除）元素来获得子序列，剩下的元素保持其原始顺序。那么当我么碰到连续上升或连续下降的数据时就要执行删除操作啦，那么问题就是留下哪一个数能使整个留下来的子序列为最长摆动序列。</p>
-<p><strong>局部最优：</strong> 当碰到单调坡度时，保留峰值即是局部最优的情况。<br><strong>整体最优：</strong> 当整个序列有最多保留下来的峰值时，就是达到最长摆动序列的全局最优情况。</p>
-<p>  至于上述所说的为什么成立，这里借用网友题解的一张图尝试说明下原因，我个人觉得当我们碰到连续递增的序列时，例如 10，13，15 时，我们应该选择最大的保留，这样在后序数据中选择一个下降的数可接受范围更大，即可能使我们最终留下来的摆动序列最长。递减的序列同样道理应该选择最小的数保留。</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glzf1f6r49j31040dyjth.jpg" alt="示例2分析" width="100%/"></center>
-
 <ul>
 <li>  <strong>详细代码（Java）</strong></li>
 </ul>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">wiggleMaxLength</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> len <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>          <span class="token comment">// 记录数组长度</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>len <span class="token operator">&lt;=</span> <span class="token number">1</span><span class="token punctuation">)</span>   <span class="token keyword">return</span> len<span class="token punctuation">;</span>     <span class="token comment">// 如果数组不超过2个数，那么就是摆动序列</span>
-        <span class="token keyword">int</span> curdiff <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>                <span class="token comment">// 开始时的当前差值设为0</span>
-        <span class="token keyword">int</span> prediff <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>                <span class="token comment">// 开始时的之前差值设为0</span>
-        <span class="token keyword">int</span> count <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>                  <span class="token comment">// 刚开始第一个元素是峰值，统计1个</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>      <span class="token comment">// 从第二个开始遍历</span>
-            curdiff <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> nums<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// 计算当前差值</span>
-            <span class="token comment">// 如果当前差值与之前差值变号了，并且当前差值不是0则表示是峰值</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>curdiff <span class="token operator">&gt;</span><span class="token number">0</span> <span class="token operator">&amp;&amp;</span> prediff<span class="token operator">&lt;=</span><span class="token number">0</span> <span class="token operator">||</span> curdiff<span class="token generics"><span class="token punctuation">&lt;</span>0<span class="token operator">&amp;</span><span class="token operator">&amp;</span>prediff<span class="token punctuation">&gt;</span></span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-                count<span class="token operator">++</span><span class="token punctuation">;</span>
-                prediff <span class="token operator">=</span> curdiff<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">lemonadeChange</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> bills<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> five <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>ten <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>                   <span class="token comment">// 定义两个用于找零面额钞票数量的变量</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>bills<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>     <span class="token comment">// 遍历每一个账单</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>bills<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span><span class="token number">5</span><span class="token punctuation">)</span>    five<span class="token operator">++</span><span class="token punctuation">;</span>         <span class="token comment">// 当前账单为5美元，直接收下，不用找零</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>bills<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">{</span>                  <span class="token comment">// 当前账单为10美元</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>five <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>                 <span class="token comment">// 有5美元的找</span>
+                    ten<span class="token operator">++</span><span class="token punctuation">;</span>                      <span class="token comment">// 则收10美元</span>
+                    five<span class="token operator">--</span><span class="token punctuation">;</span>                     <span class="token comment">// 找零5美元</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">else</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>              <span class="token comment">// 没有5美元的找则返回false</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>bills<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">{</span>                  <span class="token comment">// 当前账单为20美元</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>five<span class="token operator">&gt;</span><span class="token number">0</span><span class="token operator">&amp;&amp;</span>ten<span class="token operator">&gt;</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>             <span class="token comment">// 有10美元和5美元的找</span>
+                    five<span class="token operator">--</span><span class="token punctuation">;</span>                     <span class="token comment">// 找零一个10美元</span>
+                    ten<span class="token operator">--</span><span class="token punctuation">;</span>                      <span class="token comment">// 找零一个5美元</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>ten <span class="token operator">==</span> <span class="token number">0</span><span class="token operator">&amp;&amp;</span>five<span class="token operator">&gt;</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">{</span>     <span class="token comment">// 没有10美元只有足够5美元的找</span>
+                    five<span class="token operator">-=</span><span class="token number">3</span><span class="token punctuation">;</span>                    <span class="token comment">// 找零三个5美元</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">else</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>              <span class="token comment">// 没有可找零的方案返回false</span>
             <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> count<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>  <strong>代码执行结果</strong></li>
 </ul>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glzfhdk8hmj30si0eo3zx.jpg" alt="贪心算法执行结果" width="100%/"></center>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm0axzdb9cj30s00eg3zw.jpg" alt="算法执行结果" width="100%/"></center>
 
-<h2 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a><font color="#A22015">三、总结</font></h2><p>  此题真的是动态规划和贪心算法里的经典题型。值得自己深入研究，很多想法虽然都是看别人的题解自己整理的，但在自己整理的过程中也想明白了很多细节。</p>
+<p>  写代码时发现 <code>twenty</code> 这个变量没有用到，故在上述代码中没有添加。之后也去参考了其他的题解，这个题好像也没啥可优化的啦~</p>
+<h2 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a><font color="#A22015">三、总结</font></h2><p>  最近贪心题目做的有点勤呀！能马上感觉到这个是贪心就满足了，至少说明对贪心有点理解啦~加油！</p>
 
                 
             </div>
@@ -671,7 +609,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://ganming1.github.io/2020/12/24/li-kou-376-bai-dong-xu-lie/">http://ganming1.github.io/2020/12/24/li-kou-376-bai-dong-xu-lie/</a>
+                    <a href="http://ganming1.github.io/2020/12/25/li-kou-860-ning-meng-shui-zhao-ling/">http://ganming1.github.io/2020/12/25/li-kou-860-ning-meng-shui-zhao-ling/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -709,20 +647,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E4%B8%AD%E7%AD%89/">
-                                    <span class="chip bg-color">中等</span>
-                                </a>
-                            
                                 <a href="/tags/%E5%8A%9B%E6%89%A3/">
                                     <span class="chip bg-color">力扣</span>
                                 </a>
                             
-                                <a href="/tags/%E8%B4%AA%E5%BF%83/">
-                                    <span class="chip bg-color">贪心</span>
+                                <a href="/tags/%E7%AE%80%E5%8D%95/">
+                                    <span class="chip bg-color">简单</span>
                                 </a>
                             
-                                <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
-                                    <span class="chip bg-color">动态规划</span>
+                                <a href="/tags/%E8%B4%AA%E5%BF%83/">
+                                    <span class="chip bg-color">贪心</span>
                                 </a>
                             
                         </div>
@@ -938,29 +872,30 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/12/25/li-kou-455-fen-fa-bing-gan/">
+                <a href="/2020/12/25/li-kou-860-ning-meng-shui-zhao-ling/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="力扣455-分发饼干">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="力扣860-柠檬水找零">
                         
-                        <span class="card-title">力扣455-分发饼干</span>
+                        <span class="card-title">力扣860-柠檬水找零</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            假设你是一位很棒的家长，想要给你的孩子们一些小饼干。但是，每个孩子最多只能给一块饼干。
+                            在柠檬水摊上，每一杯柠檬水的售价为 5 美元。顾客排队购买你的产品，（按账单 bills 支付的顺序）一次购买一杯。每位顾客只买一杯柠檬水，然后向你付 5 美元、10 美元或 20 美元。你必须给每个顾客正确找零，也就是说净交易是每位顾客向你支付 5 美元。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-25
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-25
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -973,6 +908,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -999,24 +935,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/12/24/li-kou-217-cun-zai-chong-fu-yuan-su/">
+                <a href="/2020/12/25/li-kou-455-fen-fa-bing-gan/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="力扣217-存在重复元素">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="力扣455-分发饼干">
                         
-                        <span class="card-title">力扣217-存在重复元素</span>
+                        <span class="card-title">力扣455-分发饼干</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            给定一个整数数组，判断是否存在重复元素。如果任意一值在数组中出现至少两次，函数返回 true 。如果数组中每个元素都不相同，则返回 false 。
+                            假设你是一位很棒的家长，想要给你的孩子们一些小饼干。但是，每个孩子最多只能给一块饼干。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-25
                             </span>
                         <span class="publish-author">
                             
@@ -1041,12 +977,8 @@
                         <span class="chip bg-color">简单</span>
                     </a>
                     
-                    <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">
-                        <span class="chip bg-color">哈希表</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%8E%92%E5%BA%8F/">
-                        <span class="chip bg-color">排序</span>
+                    <a href="/tags/%E8%B4%AA%E5%BF%83/">
+                        <span class="chip bg-color">贪心</span>
                     </a>
                     
                 </div>
