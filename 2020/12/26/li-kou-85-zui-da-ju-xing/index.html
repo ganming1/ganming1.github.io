@@ -434,12 +434,16 @@
                     
                     <div class="article-tag">
                         
+                            <a href="/tags/%E5%9B%B0%E9%9A%BE/">
+                                <span class="chip bg-color">困难</span>
+                            </a>
+                        
                             <a href="/tags/%E5%8A%9B%E6%89%A3/">
                                 <span class="chip bg-color">力扣</span>
                             </a>
                         
-                            <a href="/tags/%E5%9B%B0%E9%9A%BE/">
-                                <span class="chip bg-color">困难</span>
+                            <a href="/tags/%E6%A0%88/">
+                                <span class="chip bg-color">栈</span>
                             </a>
                         
                     </div>
@@ -470,21 +474,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-12-26
+                    2020-12-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    736
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    3 分
                 </div>
                 
 
@@ -538,74 +542,60 @@
 <h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="#A22015">二、解题思路</font></h2><h3 id="2-1-递归思路解题"><a href="#2-1-递归思路解题" class="headerlink" title="2.1 递归思路解题"></a>2.1 递归思路解题</h3><ul>
 <li>  <strong>解题思路</strong></li>
 </ul>
-<p>  读完题目思考片刻，确定这是一道<font color="red">递归</font>的题。定义状态 <code>count(m,n)</code> 表示当矩形是 <code>m x n</code>网格时从左上到右下的路径数，由于每次只可以往下走和往右走，故 <code>count(m,n) = count(m,n-1) + count(m-1,n)</code> 此时的行数和列数都要大于 <code>1</code> ，当 <code>m == 1</code> 或 <code>n == 1</code> 时 <code>count(m,n) = 1</code> 是我们的递归出口。</p>
-<ul>
-<li>  <strong>详细代码（Java）</strong></li>
-</ul>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">uniquePaths</span><span class="token punctuation">(</span><span class="token keyword">int</span> m<span class="token punctuation">,</span> <span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>m <span class="token operator">==</span> <span class="token number">1</span><span class="token operator">||</span>n<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span>   <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>			<span class="token comment">// 递归出口</span>
-        <span class="token keyword">else</span> <span class="token keyword">return</span> <span class="token function">uniquePaths</span><span class="token punctuation">(</span>m<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span>n<span class="token punctuation">)</span><span class="token operator">+</span><span class="token function">uniquePaths</span><span class="token punctuation">(</span>m<span class="token punctuation">,</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">// 递归</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<ul>
-<li>  <strong>代码执行结果</strong></li>
-</ul>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm0dnnbvopj30s808ojrr.jpg" alt="递归执行结果" width="100%/"></center>
-
-<p>  代码执行结果超出时间限制，因为计算 <code>uniquePaths(m,n)</code> 时会先去计算 <code>uniquePaths(m-1,n)</code> 和 <code>uniquePaths(m,n-1)</code>，之后由会一层一层往下去计算，知道碰到递归出口才有结果，并再将结果一层一层的往回传，故时间消耗很大。这也是<font color="red">自顶向下</font>的递归解题</p>
-<h3 id="2-1-动态规划思路解题"><a href="#2-1-动态规划思路解题" class="headerlink" title="2.1 动态规划思路解题"></a>2.1 动态规划思路解题</h3><ul>
-<li>  <strong>解题思路</strong></li>
-</ul>
-<p>  由于上面的递归时间消耗太大，我们就改变策略<font color="red">自底向上</font>的计算结果，并将结果保留在如下二维数组 <code>result</code> 中，当所处的位置和终点位于同一行或同一列时，就只能直接沿直线走到终点，所以这些位置都是 <code>1</code> 种路径，如图的绿色位置，由于每次走都只能往下或右走，故<font color="red">当前位置的路径数</font>取决于<font color="red">下面位置与右边位置的路径之和</font>，即 <code>result[i][j] = result[i+1][j] + result[i][j+1]</code> 并且我们的填表顺序也有要求，必须是当前位置下方和右方的都已经填好，才能填当前位置。我们可以按照下图中细箭头的方向向上填表，同时沿着粗箭头向左填表，填完表后返回 <code>result[0][0]</code> 即为最终结果。 </p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm0elputkpj30my0bitat.jpg" alt="动态规划图解" width="100%/"></center>
+<p>  这个题基于力扣第84题-柱状图中最大的矩形可以比较容易的想到思路，我们可以一行一行的考虑最大的矩形，如图所示。利用上一题的思路还是很容易想到解题思路的。</p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm4xwx93olj30c50c6mxt.jpg" alt="递归执行结果" width="100%/"></center>
 
 <ul>
 <li>  <strong>详细代码（Java）</strong></li>
 </ul>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">uniquePaths</span><span class="token punctuation">(</span><span class="token keyword">int</span> m<span class="token punctuation">,</span> <span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> result <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>m<span class="token punctuation">]</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>                 <span class="token comment">// 定义结果表</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> result<span class="token punctuation">[</span>m<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>     <span class="token comment">// 初始化最后一行为1</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>m<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> result<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>     <span class="token comment">// 初始化最后一列为1</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> n<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">;</span>i<span class="token operator">&gt;=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>             <span class="token comment">// 列从右往左填</span>
-            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> m<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">;</span>j<span class="token operator">&gt;=</span><span class="token number">0</span><span class="token punctuation">;</span>j<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>         <span class="token comment">// 行从下往上填</span>
-                result<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> result<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">+</span>result<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>   <span class="token comment">// 当前位置等于下面和右边之和</span>
-            <span class="token punctuation">}</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">maximalRectangle</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> matrix<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>matrix<span class="token punctuation">.</span>length <span class="token operator">==</span> <span class="token number">0</span><span class="token operator">||</span> matrix <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>   <span class="token comment">// 当字符二维数组不存在输出0</span>
+    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> a <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>matrix<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">]</span><span class="token punctuation">;</span>        <span class="token comment">// 记录每一行中每一个位置向上连续1的个数</span>
+    <span class="token keyword">int</span> max <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>        <span class="token comment">// 记录最大的矩形面积，初始化为0</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>matrix<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>        <span class="token comment">// 遍历每一行</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>j<span class="token operator">&lt;</span>matrix<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment">// 统计每一个位置向上连续1的个数</span>
+        <span class="token keyword">int</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>      <span class="token comment">// 每一个位置初始化向上连续1的个数为0</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> k <span class="token operator">=</span> i<span class="token punctuation">;</span>k<span class="token operator">&gt;=</span><span class="token number">0</span><span class="token punctuation">;</span>k<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>   <span class="token comment">// 向上遍历</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>matrix<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">==</span><span class="token string">'1'</span><span class="token punctuation">)</span>count<span class="token operator">++</span><span class="token punctuation">;</span>
+          <span class="token keyword">else</span> <span class="token keyword">break</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> result<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>        <span class="token comment">// 返回起点结果</span>
+        a<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> count<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      max <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>max<span class="token punctuation">,</span><span class="token function">largestRectangleArea</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    <span class="token keyword">return</span> max<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 第84题-柱状图中最大的矩形</span>
+<span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">largestRectangleArea</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> heights<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>heights <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">||</span> heights<span class="token punctuation">.</span>length<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>   <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>   <span class="token comment">// 数组为空返回0</span>
+    <span class="token keyword">int</span> len <span class="token operator">=</span> heights<span class="token punctuation">.</span>length<span class="token punctuation">;</span>       <span class="token comment">// 记录长度</span>
+    <span class="token keyword">int</span> <span class="token class-name">Smax</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>                   <span class="token comment">// 记录最大面积</span>
+    <span class="token class-name">Deque</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> stack <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayDeque</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span>len<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>       <span class="token comment">// 遍历每一个元素</span>
+      <span class="token comment">// 栈不为空，且当前元素小于栈顶元素，则计算栈顶元素能勾勒矩形的面积</span>
+      <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>stack<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;&amp;</span>heights<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&lt;</span>heights<span class="token punctuation">[</span>stack<span class="token punctuation">.</span><span class="token function">peekLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">int</span> right <span class="token operator">=</span> i<span class="token punctuation">;</span>          <span class="token comment">// 右边界为当前下标</span>
+        <span class="token keyword">int</span> height <span class="token operator">=</span> heights<span class="token punctuation">[</span>stack<span class="token punctuation">.</span><span class="token function">pollLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 栈顶出栈记录高度</span>
+        <span class="token keyword">int</span> left <span class="token operator">=</span> stack<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">?</span><span class="token operator">-</span><span class="token number">1</span><span class="token operator">:</span>stack<span class="token punctuation">.</span><span class="token function">peekLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 左边界：栈不空则为栈顶元素，否则为-1</span>
+        <span class="token class-name">Smax</span> <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token class-name">Smax</span><span class="token punctuation">,</span>height<span class="token operator">*</span><span class="token punctuation">(</span>right<span class="token operator">-</span>left<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// 计算面积比较</span>
+      <span class="token punctuation">}</span>
+      stack<span class="token punctuation">.</span><span class="token function">addLast</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// 栈顶元素不大于当前值，入栈</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>stack<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>   <span class="token comment">// 遍历完了数组</span>
+      <span class="token keyword">int</span> right <span class="token operator">=</span> len<span class="token punctuation">;</span>        <span class="token comment">// 右边界为数组长度</span>
+      <span class="token keyword">int</span> height <span class="token operator">=</span> heights<span class="token punctuation">[</span>stack<span class="token punctuation">.</span><span class="token function">pollLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 栈顶出栈记录高度</span>
+      <span class="token keyword">int</span> left <span class="token operator">=</span> stack<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">?</span><span class="token operator">-</span><span class="token number">1</span><span class="token operator">:</span>stack<span class="token punctuation">.</span><span class="token function">peekLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 左边界：栈不空则为栈顶元素，否则为-1</span>
+      <span class="token class-name">Smax</span> <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token class-name">Smax</span><span class="token punctuation">,</span>height<span class="token operator">*</span><span class="token punctuation">(</span>right<span class="token operator">-</span>left<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// 计算面积比较</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token class-name">Smax</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>  <strong>代码执行结果</strong></li>
 </ul>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm0f0v5qb3j30ry0ee0u4.jpg" alt="动态规划执行结果" width="100%/"></center>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm4ys2up18j30s40egq4b.jpg" alt="递归执行结果" width="100%/"></center>
 
-<p>  时间上完胜，空间效果也不错，做完后也去看看了题解，一方面看看自己思考的结论对不对（主要看上面的方法是不是递归和动态规划，其实有的时候还傻傻的分不太清）另一方面就是看看有没有改进的地方，看到空间上还有提升的空间，主要是我们刚刚定义的结果二维数组并不是都有用的在计算结果的时候只需要保留部分就好，这里我实在是懒得再去优化了，不是很难，想尝试的朋友可以写写看。</p>
-<h3 id="2-3-数学公式思路解题"><a href="#2-3-数学公式思路解题" class="headerlink" title="2.3 数学公式思路解题"></a>2.3 数学公式思路解题</h3><ul>
-<li>  <strong>解题思路</strong></li>
-</ul>
-<p>  其次看到还有一种解题思路是通过数学公式的方法，这里也只简单介绍一下：我们要想到达终点，需要往下走n-1步，往右走 <code>m-1</code>步，总共需要走 <code>n+m-2</code> 步。他无论往右走还是往下走他的总的步数是不会变的。也就相当于总共要走 <code>n+m-2</code>步，往右走 <code>m-1</code> 步总共有多少种走法，很明显这就是一个排列组合问题，公式如下</p>
-<p><left><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm0fd3eml8j30d406lweo.jpg" alt="动态规划执行结果" width="40%/">  <img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm0fdp9gccj30k705wt92.jpg" alt="动态规划执行结果" width="60%/"></left></p>
-<ul>
-<li>  <strong>详细代码（Java）</strong></li>
-</ul>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">uniquePaths</span><span class="token punctuation">(</span><span class="token keyword">int</span> m<span class="token punctuation">,</span> <span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">int</span> <span class="token class-name">N</span> <span class="token operator">=</span> n <span class="token operator">+</span> m <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">;</span>
-    <span class="token keyword">double</span> res <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> m<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-        res <span class="token operator">=</span> res <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token class-name">N</span> <span class="token operator">-</span> <span class="token punctuation">(</span>m <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> i<span class="token punctuation">)</span> <span class="token operator">/</span> i<span class="token punctuation">;</span>
-    <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> res<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<ul>
-<li>  <strong>代码执行结果</strong></li>
-</ul>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm0fjia88sj30s00ei75o.jpg" alt="数学技巧执行结果" width="100%/"></center>
-
-<h2 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a><font color="#A22015">三、总结</font></h2><p>  这里推荐着重理解动态规划和递归的解题思路，虽然这个题的递归超时了，但很多题目里递归也是一种很好的解题思路。</p>
+<h2 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a><font color="#A22015">三、总结</font></h2><p>  这两天的题目都是困难，做的很吃力，这个题就先这样做着吧，后面有精力在分析多方法。</p>
 
                 
             </div>
@@ -670,12 +660,16 @@
                     
                         <div class="article-tag">
                             
+                                <a href="/tags/%E5%9B%B0%E9%9A%BE/">
+                                    <span class="chip bg-color">困难</span>
+                                </a>
+                            
                                 <a href="/tags/%E5%8A%9B%E6%89%A3/">
                                     <span class="chip bg-color">力扣</span>
                                 </a>
                             
-                                <a href="/tags/%E5%9B%B0%E9%9A%BE/">
-                                    <span class="chip bg-color">困难</span>
+                                <a href="/tags/%E6%A0%88/">
+                                    <span class="chip bg-color">栈</span>
                                 </a>
                             
                         </div>
@@ -929,12 +923,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%8A%9B%E6%89%A3/">
-                        <span class="chip bg-color">力扣</span>
-                    </a>
-                    
                     <a href="/tags/%E5%9B%B0%E9%9A%BE/">
                         <span class="chip bg-color">困难</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8A%9B%E6%89%A3/">
+                        <span class="chip bg-color">力扣</span>
                     </a>
                     
                     <a href="/tags/%E6%A0%88/">
@@ -986,12 +980,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E4%B8%AD%E7%AD%89/">
-                        <span class="chip bg-color">中等</span>
-                    </a>
-                    
                     <a href="/tags/%E5%8A%9B%E6%89%A3/">
                         <span class="chip bg-color">力扣</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%B8%AD%E7%AD%89/">
+                        <span class="chip bg-color">中等</span>
                     </a>
                     
                     <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
@@ -1150,7 +1144,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">33.4k</span>&nbsp;字
+                class="white-color">32.9k</span>&nbsp;字
             
             
             
