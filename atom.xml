@@ -6,7 +6,7 @@
   <link href="http://ganming1.github.io/atom.xml" rel="self"/>
   
   <link href="http://ganming1.github.io/"/>
-  <updated>2020-12-29T11:54:12.712Z</updated>
+  <updated>2020-12-29T17:33:50.235Z</updated>
   <id>http://ganming1.github.io/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>力扣1046-最后一块石头的重量</title>
+    <link href="http://ganming1.github.io/2020/12/30/li-kou-1046-zui-hou-yi-kuai-shi-tou-de-chong-liang/"/>
+    <id>http://ganming1.github.io/2020/12/30/li-kou-1046-zui-hou-yi-kuai-shi-tou-de-chong-liang/</id>
+    <published>2020-12-29T16:24:06.000Z</published>
+    <updated>2020-12-29T17:33:50.235Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;力扣1046-最后一块石头的重量&quot;&gt;&lt;a href=&quot;#力扣1046-最后一块石头的重量&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
+    
+    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
+    
+    <category term="排序" scheme="http://ganming1.github.io/tags/%E6%8E%92%E5%BA%8F/"/>
+    
+    <category term="数组" scheme="http://ganming1.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>力扣205-同构字符串</title>
+    <link href="http://ganming1.github.io/2020/12/29/li-kou-205-tong-gou-zi-fu-chuan/"/>
+    <id>http://ganming1.github.io/2020/12/29/li-kou-205-tong-gou-zi-fu-chuan/</id>
+    <published>2020-12-29T12:50:14.000Z</published>
+    <updated>2020-12-29T15:46:03.719Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;力扣205-同构字符串&quot;&gt;&lt;a href=&quot;#力扣205-同构字符串&quot; class=&quot;headerlink&quot; title=&quot;力扣205-同构字符串&quot;&gt;&lt;/a&gt;&lt;center&gt;力扣205-同构字符串&lt;/center&gt;&lt;/h1&gt;&lt;h2 id=&quot;一、原题题目&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
+    
+    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
+    
+  </entry>
   
   <entry>
     <title>力扣84-柱状图中最大的矩形</title>
@@ -37,9 +93,9 @@
     <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="困难" scheme="http://ganming1.github.io/tags/%E5%9B%B0%E9%9A%BE/"/>
-    
     <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
+    
+    <category term="困难" scheme="http://ganming1.github.io/tags/%E5%9B%B0%E9%9A%BE/"/>
     
     <category term="栈" scheme="http://ganming1.github.io/tags/%E6%A0%88/"/>
     
@@ -66,9 +122,9 @@
     <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="困难" scheme="http://ganming1.github.io/tags/%E5%9B%B0%E9%9A%BE/"/>
-    
     <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
+    
+    <category term="困难" scheme="http://ganming1.github.io/tags/%E5%9B%B0%E9%9A%BE/"/>
     
     <category term="栈" scheme="http://ganming1.github.io/tags/%E6%A0%88/"/>
     
@@ -128,11 +184,11 @@
     <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
+    <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
+    
     <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
     
     <category term="贪心" scheme="http://ganming1.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
-    
-    <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
     
   </entry>
   
@@ -157,11 +213,11 @@
     <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
+    <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
+    
     <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
     
     <category term="贪心" scheme="http://ganming1.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
-    
-    <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
     
   </entry>
   
@@ -188,9 +244,9 @@
     
     <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
     
-    <category term="贪心" scheme="http://ganming1.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
-    
     <category term="中等" scheme="http://ganming1.github.io/tags/%E4%B8%AD%E7%AD%89/"/>
+    
+    <category term="贪心" scheme="http://ganming1.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
     
     <category term="动态规划" scheme="http://ganming1.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
@@ -217,13 +273,13 @@
     <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
-    
     <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
     
-    <category term="哈希表" scheme="http://ganming1.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
+    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
     
     <category term="排序" scheme="http://ganming1.github.io/tags/%E6%8E%92%E5%BA%8F/"/>
+    
+    <category term="哈希表" scheme="http://ganming1.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
     
   </entry>
   
@@ -248,9 +304,9 @@
     <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="困难" scheme="http://ganming1.github.io/tags/%E5%9B%B0%E9%9A%BE/"/>
-    
     <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
+    
+    <category term="困难" scheme="http://ganming1.github.io/tags/%E5%9B%B0%E9%9A%BE/"/>
     
     <category term="贪心" scheme="http://ganming1.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
     
@@ -306,9 +362,9 @@
     
     <category term="字符串" scheme="http://ganming1.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
-    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
-    
     <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
+    
+    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
     
   </entry>
   
@@ -395,13 +451,13 @@
     <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
-    
     <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
     
-    <category term="动态规划" scheme="http://ganming1.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
     
     <category term="数组" scheme="http://ganming1.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+    <category term="动态规划" scheme="http://ganming1.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
   </entry>
   
@@ -459,9 +515,9 @@
     
     <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
     
-    <category term="中等" scheme="http://ganming1.github.io/tags/%E4%B8%AD%E7%AD%89/"/>
-    
     <category term="数组" scheme="http://ganming1.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+    <category term="中等" scheme="http://ganming1.github.io/tags/%E4%B8%AD%E7%AD%89/"/>
     
     <category term="技巧题" scheme="http://ganming1.github.io/tags/%E6%8A%80%E5%B7%A7%E9%A2%98/"/>
     
@@ -490,9 +546,9 @@
     
     <category term="字符串" scheme="http://ganming1.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
-    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
-    
     <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
+    
+    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
     
     <category term="位运算" scheme="http://ganming1.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
     
@@ -551,62 +607,6 @@
     <category term="前端" scheme="http://ganming1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
     <category term="CSS" scheme="http://ganming1.github.io/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VSCode写HTML文档</title>
-    <link href="http://ganming1.github.io/2020/12/16/vscode-xie-html-wen-dang/"/>
-    <id>http://ganming1.github.io/2020/12/16/vscode-xie-html-wen-dang/</id>
-    <published>2020-12-16T05:44:19.000Z</published>
-    <updated>2020-12-16T04:13:38.405Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;VSCode-写-HTML-文档&quot;&gt;&lt;a href=&quot;#VSCode-写-HTML-文档&quot; class=&quot;headerlink&quot; title=&quot;VSCode 写 HTML 文档&quot;&gt;&lt;/a&gt;&lt;center&gt;VSCode 写 HTML</summary>
-        
-      
-    
-    
-    
-    <category term="工具技巧" scheme="http://ganming1.github.io/categories/%E5%B7%A5%E5%85%B7%E6%8A%80%E5%B7%A7/"/>
-    
-    
-    <category term="VSCode" scheme="http://ganming1.github.io/tags/VSCode/"/>
-    
-    <category term="Html" scheme="http://ganming1.github.io/tags/Html/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣290-单词规律</title>
-    <link href="http://ganming1.github.io/2020/12/16/li-kou-290-dan-ci-gui-lu/"/>
-    <id>http://ganming1.github.io/2020/12/16/li-kou-290-dan-ci-gui-lu/</id>
-    <published>2020-12-16T02:17:07.000Z</published>
-    <updated>2020-12-21T10:31:32.733Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;力扣290-单词规律&quot;&gt;&lt;a href=&quot;#力扣290-单词规律&quot; class=&quot;headerlink&quot; title=&quot;力扣290-单词规律&quot;&gt;&lt;/a&gt;&lt;center&gt;力扣290-单词规律&lt;/center&gt;&lt;/h1&gt;&lt;h2 id=&quot;一、原题题目&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
-    
-    <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
-    
-    <category term="哈希表" scheme="http://ganming1.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
     
   </entry>
   
