@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="力扣205-同构字符串, 博客 技术">
+    <meta name="keywords" content="力扣 数组 哈希表 同构字符串">
     <meta name="description" content="努力做个it技术分享者">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -434,18 +434,39 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%AE%80%E5%8D%95/">
-                                <span class="chip bg-color">简单</span>
+                            <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+                                <span class="chip bg-color">字符串</span>
                             </a>
                         
                             <a href="/tags/%E5%8A%9B%E6%89%A3/">
                                 <span class="chip bg-color">力扣</span>
                             </a>
                         
+                            <a href="/tags/%E7%AE%80%E5%8D%95/">
+                                <span class="chip bg-color">简单</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%95%B0%E7%BB%84/">
+                                <span class="chip bg-color">数组</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">
+                                <span class="chip bg-color">哈希表</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                算法
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -461,21 +482,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-12-29
+                    2020-12-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    500
+                    859
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -515,7 +536,7 @@
 <li>  可以假设 <code>s</code> 和 <code>t</code> 长度相同。</li>
 </ul>
 <p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/isomorphic-strings/">https://leetcode-cn.com/problems/isomorphic-strings/</a></p>
-<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="#A22015">二、解题思路</font></h2><ul>
+<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="#A22015">二、解题思路</font></h2><h3 id="2-1-利用【哈希表映射】解题"><a href="#2-1-利用【哈希表映射】解题" class="headerlink" title="2.1 利用【哈希表映射】解题"></a>2.1 利用【哈希表映射】解题</h3><ul>
 <li>  <strong>解题思路</strong></li>
 </ul>
 <p>  这个题比较简单，简单思考想到用哈希表来存储映射关系，用 s 中的字符作为键， t 当中对应位置的字符作为值存储，当碰到下列两种情况需要返回 false 。否则将映射加入哈希表，直到遍历完字符串返回 true 。</p>
@@ -539,9 +560,59 @@
 <ul>
 <li>  <strong>代码执行结果</strong></li>
 </ul>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm55kb6pplj30s00ekwfw.jpg" alt="代码执行结果" width="100%/"></center>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm55kb6pplj30s00ekwfw.jpg" alt="哈希表映射执行结果" width="100%/"></center>
 
-<h2 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a><font color="#A22015">三、总结</font></h2><p>  这两天的题目都是困难，做的很吃力，这个题就先这样做着吧，后面有精力在分析多方法。</p>
+<h2 id="2-2-利用【数组映射】解题"><a href="#2-2-利用【数组映射】解题" class="headerlink" title="2.2 利用【数组映射】解题"></a>2.2 利用【数组映射】解题</h2><ul>
+<li>  <strong>解题思路</strong></li>
+</ul>
+<p>  相同上面利用哈希表的思路，这里换做用数组来保存映射关系。</p>
+<ul>
+<li>  <strong>详细代码（Java）</strong></li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isIsomorphic</span><span class="token punctuation">(</span><span class="token class-name">String</span> s<span class="token punctuation">,</span> <span class="token class-name">String</span> t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> sTt <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token number">256</span><span class="token punctuation">]</span><span class="token punctuation">;</span>			<span class="token comment">// 保存 s 到 t 的映射</span>
+    <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span>sTt<span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>					<span class="token comment">// 初试都填充为-1</span>
+    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> tTs <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token number">256</span><span class="token punctuation">]</span><span class="token punctuation">;</span>			<span class="token comment">// 保存 s 到 t 的映射</span>
+    <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span>tTs<span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>					<span class="token comment">// 初试都填充为-1</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>sTt<span class="token punctuation">[</span>s<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">!=</span><span class="token operator">-</span><span class="token number">1</span><span class="token operator">&amp;&amp;</span>sTt<span class="token punctuation">[</span>s<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">!=</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">(</span>t<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> 
+        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>		<span class="token comment">// !=-1表示已经保存过当前位置元素S到t的映射，但是保存的值与当前t中当前位置值不一样</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>tTs<span class="token punctuation">[</span>t<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">!=</span><span class="token operator">-</span><span class="token number">1</span><span class="token operator">&amp;&amp;</span>tTs<span class="token punctuation">[</span>t<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">!=</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> 
+        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>		<span class="token comment">// !=-1表示已经保存过当前位置元素t到s的映射，但是保存的值与当前s中当前位置值不一样</span>
+      sTt<span class="token punctuation">[</span>s<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">(</span>t<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">// 没保存过，保存s到t的映射</span>
+      tTs<span class="token punctuation">[</span>t<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">// 同时保存t到s的映射</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>  <strong>代码执行结果</strong></li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm594p0vm2j30s00emgn0.jpg" alt="数组映射执行结果" width="100%/"></center>
+
+<h2 id="2-2-利用【数组连边】解题"><a href="#2-2-利用【数组连边】解题" class="headerlink" title="2.2 利用【数组连边】解题"></a>2.2 利用【数组连边】解题</h2><ul>
+<li>  <strong>解题思路</strong></li>
+</ul>
+<p>  还是定义两个数组，为具有对应关系的字符连边并赋予权值，初始值为 0 表示未有映射关系，同为 0 才能连边。</p>
+<ul>
+<li>  <strong>详细代码（Java）</strong></li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isIsomorphic</span><span class="token punctuation">(</span><span class="token class-name">String</span> s<span class="token punctuation">,</span> <span class="token class-name">String</span> t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> sm <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token number">256</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> tm <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token number">256</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>sm<span class="token punctuation">[</span>s<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">!=</span>tm<span class="token punctuation">[</span>t<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+          	<span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        sm<span class="token punctuation">[</span>s<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> tm<span class="token punctuation">[</span>t<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>	<span class="token comment">// 连边符权值</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>  <strong>代码执行结果</strong></li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm59mivx4fj30s00ee0u5.jpg" alt="数组连边执行结果" width="100%/"></center>
+
 
                 
             </div>
@@ -606,12 +677,24 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%AE%80%E5%8D%95/">
-                                    <span class="chip bg-color">简单</span>
+                                <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+                                    <span class="chip bg-color">字符串</span>
                                 </a>
                             
                                 <a href="/tags/%E5%8A%9B%E6%89%A3/">
                                     <span class="chip bg-color">力扣</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%AE%80%E5%8D%95/">
+                                    <span class="chip bg-color">简单</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%95%B0%E7%BB%84/">
+                                    <span class="chip bg-color">数组</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">
+                                    <span class="chip bg-color">哈希表</span>
                                 </a>
                             
                         </div>
@@ -865,12 +948,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%AE%80%E5%8D%95/">
-                        <span class="chip bg-color">简单</span>
-                    </a>
-                    
                     <a href="/tags/%E5%8A%9B%E6%89%A3/">
                         <span class="chip bg-color">力扣</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%AE%80%E5%8D%95/">
+                        <span class="chip bg-color">简单</span>
                     </a>
                     
                     <a href="/tags/%E6%8E%92%E5%BA%8F/">
@@ -1082,7 +1165,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">34.1k</span>&nbsp;字
+                class="white-color">34.4k</span>&nbsp;字
             
             
             
