@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="算法 旋转图像 力扣">
+    <meta name="keywords" content="力扣84 算法">
     <meta name="description" content="努力做个it技术分享者">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>力扣48-旋转图像 | ItDaChuang</title>
+    <title>力扣84-柱状图中最大的矩形 | ItDaChuang</title>
     <link rel="icon" type="image/png" href="/medias/G.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">力扣48-旋转图像</h1>
+                    <h1 class="description center-align post-title">力扣84-柱状图中最大的矩形</h1>
                 </div>
             </div>
         </div>
@@ -434,20 +434,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E4%B8%AD%E7%AD%89/">
-                                <span class="chip bg-color">中等</span>
-                            </a>
-                        
                             <a href="/tags/%E5%8A%9B%E6%89%A3/">
                                 <span class="chip bg-color">力扣</span>
                             </a>
                         
-                            <a href="/tags/%E6%95%B0%E7%BB%84/">
-                                <span class="chip bg-color">数组</span>
+                            <a href="/tags/%E5%9B%B0%E9%9A%BE/">
+                                <span class="chip bg-color">困难</span>
                             </a>
                         
-                            <a href="/tags/%E6%8A%80%E5%B7%A7%E9%A2%98/">
-                                <span class="chip bg-color">技巧题</span>
+                            <a href="/tags/%E6%A0%88/">
+                                <span class="chip bg-color">栈</span>
                             </a>
                         
                     </div>
@@ -471,28 +467,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-12-19
+                    2020-12-26
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-12-23
+                    2020-12-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    567
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    5 分
                 </div>
                 
 
@@ -515,72 +511,112 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="力扣48-旋转图像"><a href="#力扣48-旋转图像" class="headerlink" title="力扣48-旋转图像"></a><center>力扣48-旋转图像</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  给定一个 <em>n</em> × <em>n</em> 的二维矩阵表示一个图像。将图像顺时针旋转 90 度。</p>
-<p>说明：</p>
-<p>  你必须在<strong>原地</strong>旋转图像，这意味着你需要直接修改输入的二维矩阵。<strong>请不要</strong>使用另一个矩阵来旋转图像。</p>
-<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
-<li><p><strong>示例1：</strong></p>
-  <pre class="line-numbers language-none"><code class="language-none">给定 matrix = 
-[
-  [1,2,3],
-  [4,5,6],
-  [7,8,9]
-],
-原地旋转输入矩阵，使其变为:
-[
-  [7,4,1],
-  [8,5,2],
-  [9,6,3]
-]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p><strong>示例2：</strong></p>
-  <pre class="line-numbers language-none"><code class="language-none">给定 matrix =
-[
-  [ 5, 1, 9,11],
-  [ 2, 4, 8,10],
-  [13, 3, 6, 7],
-  [15,14,12,16]
-],
-原地旋转输入矩阵，使其变为:
-[
-  [15,13, 2, 5],
-  [14, 3, 4, 1],
-  [12, 6, 8, 9],
-  [16, 7,10,11]
-]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <h1 id="力扣84-柱状图中最大的矩形"><a href="#力扣84-柱状图中最大的矩形" class="headerlink" title="力扣84-柱状图中最大的矩形"></a><center>力扣84-柱状图中最大的矩形</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="#A22015">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  给定 <em>n</em> 个非负整数，用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为 1 。求在该柱状图中，能够勾勒出来的矩形的最大面积。</p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm0krk2pd2j305805odft.jpg" alt="动态规划执行结果" width="48%/"> <img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm0krz66b4j305805o0sv.jpg" alt="动态规划执行结果" width="48%/"></center>
 
+<p>  以上左图是柱状图的示例，其中每个柱子的宽度为 1，给定的高度为 <code>[2,1,5,6,2,3]</code>。右图中阴影部分为所能勾勒出的最大矩形面积，其面积为 <code>10</code> 个单位。</p>
+<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
+<li><p><strong>示例：</strong></p>
+<p>  <strong>输入：</strong>  [2,1,5,6,2,3]<br><strong>输出：</strong> 10</p>
 </li>
 </ul>
-<p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/rotate-image">https://leetcode-cn.com/problems/rotate-image</a></p>
-<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="born">二、解题思路</font></h2><h3 id="2-1-题目意思理解"><a href="#2-1-题目意思理解" class="headerlink" title="2.1 题目意思理解"></a>2.1 题目意思理解</h3><p>  这个题因为以前见过知道怎么做所以很快就回忆起了正常的思路是对矩阵进行两次翻转就能达到顺时针旋转90°的目的：①水平翻转，②沿次对角线翻转。下面以一个简单的数组演示主次对角线的区别，其实谁先谁后也会有所影响的。自己可以动手画画探究探究。</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glxlcx2hzsj30o60aiwg8.jpg" alt="不同翻转顺序" width="80%/"></center>
-
-<h3 id="2-2-详细代码（Java）"><a href="#2-2-详细代码（Java）" class="headerlink" title="2.2 详细代码（Java）"></a>2.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">rotate</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> matrix<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">int</span> r <span class="token operator">=</span> matrix<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> k <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>k<span class="token operator">&lt;</span>r<span class="token punctuation">;</span>k<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>        <span class="token comment">// 实现水平翻转</span>
-      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>j <span class="token operator">=</span> r<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>j<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">,</span>j<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">int</span> temp <span class="token operator">=</span> matrix<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        matrix<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> matrix<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        matrix<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>r<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>      <span class="token comment">// 实现沿次对角线的翻转</span>
-      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>j<span class="token operator">&lt;</span>r<span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span>i<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">int</span> temp <span class="token operator">=</span> matrix<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        matrix<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> matrix<span class="token punctuation">[</span>r<span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span>r<span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        matrix<span class="token punctuation">[</span>r<span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span>r<span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>来源：力扣（LeetCode）<br><br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/largest-rectangle-in-histogram/">https://leetcode-cn.com/problems/largest-rectangle-in-histogram/</a></p>
+<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="#A22015">二、解题思路</font></h2><h3 id="2-1-【暴力】思路解题"><a href="#2-1-【暴力】思路解题" class="headerlink" title="2.1 【暴力】思路解题"></a>2.1 【暴力】思路解题</h3><ul>
+<li>  <strong>解题思路</strong></li>
+</ul>
+<p>  读完题目没有想到这个题算是什么类型的题，但自己有一个解题思路：遍历数组的每一个元素，确定其左右比它高的元素个数和，包含它自己作为以它为参考中心的能勾勒出的矩形的宽，以它的值为高去计算面积。与最大面积值比较是否取代最大面积值。</p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm3k5iy5n0j31bw0qudjk.jpg" alt="暴力解法图解" width="100%/"></center>
 
 <ul>
-<li>代码<font color="red">第14行</font>要找好翻转每个位置对应的坐标变换是怎么变的。当（row1,col1）、（row2,col2）这两个位置关于次对角线对称的时候，我发现是<font color="red">row1 + col2 = 行数-1</font>；<font color="red">col1 + row2 = 行数-1</font>；可以简单理解为<font color="red">新的行标</font>font和<font color="red">旧的列标</font> “互余”，<font color="red">新的列标</font>与<font color="red">旧的行标</font> “互余”</li>
+<li>  <strong>详细代码（Java）</strong></li>
 </ul>
-<h3 id="2-3-算法执行结果"><a href="#2-3-算法执行结果" class="headerlink" title="2.3 算法执行结果"></a>2.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gltm0e1416j30ry0ee3zw.jpg" alt="算法执行结果" width="80%/"></center>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">largestRectangleArea</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> heights<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>heights <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">||</span> heights<span class="token punctuation">.</span>length<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>   <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>   <span class="token comment">// 数组为空返回0</span>
+        <span class="token keyword">int</span> len <span class="token operator">=</span> heights<span class="token punctuation">.</span>length<span class="token punctuation">;</span>       <span class="token comment">// 记录长度</span>
+        <span class="token keyword">int</span> max <span class="token operator">=</span> heights<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>           <span class="token comment">// 开始把最大面积定位heights[0]</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>      <span class="token comment">// 遍历每一个元素</span>
+            <span class="token keyword">int</span> left <span class="token operator">=</span> i<span class="token punctuation">,</span>right <span class="token operator">=</span> i<span class="token punctuation">;</span>     <span class="token comment">// 定义开始小于自己的左右边界，开始都等于自己</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span>left<span class="token operator">&gt;=</span><span class="token number">0</span><span class="token operator">&amp;&amp;</span>heights<span class="token punctuation">[</span>left<span class="token punctuation">]</span><span class="token operator">&gt;=</span>heights<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>  left<span class="token operator">--</span><span class="token punctuation">;</span>     <span class="token comment">// 往左边去找小于自己的左边界</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span>right<span class="token operator">&lt;</span>len<span class="token operator">&amp;&amp;</span>heights<span class="token punctuation">[</span>right<span class="token punctuation">]</span><span class="token operator">&gt;=</span>heights<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>   right<span class="token operator">++</span><span class="token punctuation">;</span><span class="token comment">// 往右边去找小于自己的右边界</span>
+            max <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>max<span class="token punctuation">,</span><span class="token punctuation">(</span>right<span class="token operator">-</span>left<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">*</span>heights<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 此时的宽为 right - left -1</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> max<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="三、总结分析"><a href="#三、总结分析" class="headerlink" title="三、总结分析"></a><font color="born">三、总结分析</font></h2><p>  这道题像是一道技巧题，有些题目如果有特定的技巧，特定的规律，往往都会比正常解放快很多。</p>
+<ul>
+<li><p><strong>性能分析</strong></p>
+<p>  时间复杂度：O(<em>N</em><sup>2</sup>)，这里 <em>N</em> 是输入数组的长度。<br>空间复杂度：O(1)。</p>
+</li>
+<li><p>  <strong>代码执行结果</strong></p>
+</li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm0lexr4xdj30rw0eagn0.jpg" alt="递归执行结果" width="100%/"></center>
+
+<p>  虽然是通过了，但时间和空间上性能都不是很好。看了相关题解介绍后才知道自己想的这种是暴力解法，之所以效率低，是因为每考虑过一个位置后没有为后面的计算提供相关信息简化后面的运算。</p>
+<h3 id="2-1-【栈】思路解题"><a href="#2-1-【栈】思路解题" class="headerlink" title="2.1 【栈】思路解题"></a>2.1 【栈】思路解题</h3><ul>
+<li>  <strong>解题思路</strong></li>
+</ul>
+<p>  上述的暴力解法每次遍历的时候没有记录相关的信息给后面的计算提供帮助，所以效率比较低，但是读了官方题解之后其实感觉还是不是很明白，左思右想后大概应该是这么个思路过程。</p>
+<p>  我们在暴力解法中，需要不断的向左右去找严格比当前值小的下标，然后计算宽度。左边是我们已经遍历过的数据，但是没能保存住最下值的下标（需要优化的地方），右边的最小值还是需要继续遍历去找到。这里我直接在参考的题解上得出下面利用栈的过程：其实就是两种情况：</p>
+<ol>
+<li> 当前位置的值（高度）大于栈顶位置的值（高度）时，当前位置的下标入栈：因为后面的位置高度比栈顶位置的高度大，及还没找到比它小的右边界，所以入栈先不能计算栈顶元素位置的最大矩形。</li>
+<li> 当前位置的值（高度）小于栈顶位置的值（高度）时，记下当前位置下标即是栈顶元素的右边界，说明栈顶元素就可以求出最大矩形，则出栈，对应值作为高度，再找到左边比它小的左边界即可，如果栈不为空即新的栈顶位置就是左边界，栈为空则左边界一直可以到第一个元素，即下标为0，为了计算统一，我们定这种情况的左边界为-1。</li>
+</ol>
+<p>  下面以示例 <code>[2,1,5,6,2,3]</code> 一步一步演示过程：</p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm4sn4j74zj31440acwha.jpg" alt="第一步" width="100%/"></center>
+
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm4uqfblg3j314i0asgqu.jpg" alt="第二步" width="100%/"></center>
+
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm4t0nuu5zj31520bc0vi.jpg" alt="第三步" width="100%/"></center>
+
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm4t2b2125j31480bw775.jpg" alt="第四步" width="100%/"></center>
+
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm4urogw0dj31460b2gr6.jpg" alt="第五步" width="100%/"></center>
+
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm4usv3oxij31420bc797.jpg" alt="第六步" width="100%/"></center>
+
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm4ueuwt48j314y0agq57.jpg" alt="第七步" width="100%/"></center>
+
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm4utxc4ozj313w0asgpv.jpg" alt="第八步" width="100%/"></center>
+
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm4uwifxhsj31480astcr.jpg" alt="第九步" width="100%/"></center>
+
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm4uzfhrinj31400ba78i.jpg" alt="第十步" width="100%/"></center>
+
+<p>  经过上述步骤后最后 Smax 即保存的最大矩形面积。</p>
+<ul>
+<li>  <strong>详细代码（Java）</strong></li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">largestRectangleArea</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> heights<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>heights <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">||</span> heights<span class="token punctuation">.</span>length<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>   <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>   <span class="token comment">// 数组为空返回0</span>
+        <span class="token keyword">int</span> len <span class="token operator">=</span> heights<span class="token punctuation">.</span>length<span class="token punctuation">;</span>       <span class="token comment">// 记录长度</span>
+        <span class="token keyword">int</span> <span class="token class-name">Smax</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>                   <span class="token comment">// 记录最大面积</span>
+        <span class="token class-name">Deque</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> stack <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayDeque</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span>len<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>       <span class="token comment">// 遍历每一个元素</span>
+            <span class="token comment">// 栈不为空，且当前元素小于栈顶元素，则计算栈顶元素能勾勒矩形的面积</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>stack<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;&amp;</span>heights<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&lt;</span>heights<span class="token punctuation">[</span>stack<span class="token punctuation">.</span><span class="token function">peekLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">int</span> right <span class="token operator">=</span> i<span class="token punctuation">;</span>          <span class="token comment">// 右边界为当前下标</span>
+                <span class="token keyword">int</span> height <span class="token operator">=</span> heights<span class="token punctuation">[</span>stack<span class="token punctuation">.</span><span class="token function">pollLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 栈顶出栈记录高度</span>
+                <span class="token keyword">int</span> left <span class="token operator">=</span> stack<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">?</span><span class="token operator">-</span><span class="token number">1</span><span class="token operator">:</span>stack<span class="token punctuation">.</span><span class="token function">peekLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 左边界：栈不空则为栈顶元素，否则为-1</span>
+                <span class="token class-name">Smax</span> <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token class-name">Smax</span><span class="token punctuation">,</span>height<span class="token operator">*</span><span class="token punctuation">(</span>right<span class="token operator">-</span>left<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// 计算面积比较</span>
+            <span class="token punctuation">}</span>
+            stack<span class="token punctuation">.</span><span class="token function">addLast</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// 栈顶元素不大于当前值，入栈</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>stack<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>   <span class="token comment">// 遍历完了数组</span>
+            <span class="token keyword">int</span> right <span class="token operator">=</span> len<span class="token punctuation">;</span>        <span class="token comment">// 右边界为数组长度</span>
+            <span class="token keyword">int</span> height <span class="token operator">=</span> heights<span class="token punctuation">[</span>stack<span class="token punctuation">.</span><span class="token function">pollLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 栈顶出栈记录高度</span>
+            <span class="token keyword">int</span> left <span class="token operator">=</span> stack<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">?</span><span class="token operator">-</span><span class="token number">1</span><span class="token operator">:</span>stack<span class="token punctuation">.</span><span class="token function">peekLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 左边界：栈不空则为栈顶元素，否则为-1</span>
+            <span class="token class-name">Smax</span> <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token class-name">Smax</span><span class="token punctuation">,</span>height<span class="token operator">*</span><span class="token punctuation">(</span>right<span class="token operator">-</span>left<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// 计算面积比较</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token class-name">Smax</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>  <strong>代码执行结果</strong></li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm4vy9bkh7j30s60eiwfw.jpg" alt="栈思路执行结果" width="100%/"></center>
+
+<h2 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a><font color="#A22015">三、总结</font></h2><p>  画上面的演示过程太费时间啦！哎~不过现在搞的挺明白的也好。</p>
 
                 
             </div>
@@ -607,7 +643,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://ganming1.github.io/2020/12/19/li-kou-48-xuan-zhuan-tu-xiang/">http://ganming1.github.io/2020/12/19/li-kou-48-xuan-zhuan-tu-xiang/</a>
+                    <a href="http://ganming1.github.io/2020/12/26/li-kou-84-zhu-zhuang-tu-zhong-zui-da-de-ju-xing/">http://ganming1.github.io/2020/12/26/li-kou-84-zhu-zhuang-tu-zhong-zui-da-de-ju-xing/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -645,20 +681,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E4%B8%AD%E7%AD%89/">
-                                    <span class="chip bg-color">中等</span>
-                                </a>
-                            
                                 <a href="/tags/%E5%8A%9B%E6%89%A3/">
                                     <span class="chip bg-color">力扣</span>
                                 </a>
                             
-                                <a href="/tags/%E6%95%B0%E7%BB%84/">
-                                    <span class="chip bg-color">数组</span>
+                                <a href="/tags/%E5%9B%B0%E9%9A%BE/">
+                                    <span class="chip bg-color">困难</span>
                                 </a>
                             
-                                <a href="/tags/%E6%8A%80%E5%B7%A7%E9%A2%98/">
-                                    <span class="chip bg-color">技巧题</span>
+                                <a href="/tags/%E6%A0%88/">
+                                    <span class="chip bg-color">栈</span>
                                 </a>
                             
                         </div>
@@ -874,29 +906,30 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/12/20/li-kou-316-qu-chu-chong-fu-zi-mu/">
+                <a href="/2020/12/26/li-kou-84-zhu-zhuang-tu-zhong-zui-da-de-ju-xing/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="力扣316-去除重复字母">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="力扣84-柱状图中最大的矩形">
                         
-                        <span class="card-title">力扣316-去除重复字母</span>
+                        <span class="card-title">力扣84-柱状图中最大的矩形</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            给你一个字符串 `s` ，请你去除字符串中重复的字母，使得每个字母只出现一次。需保证返回结果的字典序最小（要求不能打乱其他字符的相对位置）。
+                            给定n个非负整数，用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为 1 。求在该柱状图中，能够勾勒出来的矩形的最大面积。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-26
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -909,19 +942,16 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
-                        <span class="chip bg-color">字符串</span>
-                    </a>
-                    
-                    <a href="/tags/%E4%B8%AD%E7%AD%89/">
-                        <span class="chip bg-color">中等</span>
-                    </a>
-                    
                     <a href="/tags/%E5%8A%9B%E6%89%A3/">
                         <span class="chip bg-color">力扣</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%9B%B0%E9%9A%BE/">
+                        <span class="chip bg-color">困难</span>
                     </a>
                     
                     <a href="/tags/%E6%A0%88/">
@@ -939,24 +969,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/12/18/li-kou-389-zhao-bu-tong/">
+                <a href="/2020/12/26/li-kou-85-zui-da-ju-xing/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="力扣389-找不同">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="力扣85-最大矩形">
                         
-                        <span class="card-title">力扣389-找不同</span>
+                        <span class="card-title">力扣85-最大矩形</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            给定两个字符串 s 和 t，它们只包含小写字母。字符串 t 由字符串 s 随机重排，然后在随机位置添加一个字母。请找出在 t 中被添加的字母。
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-26
                             </span>
                         <span class="publish-author">
                             
@@ -973,20 +1003,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
-                        <span class="chip bg-color">字符串</span>
-                    </a>
-                    
                     <a href="/tags/%E5%8A%9B%E6%89%A3/">
                         <span class="chip bg-color">力扣</span>
                     </a>
                     
-                    <a href="/tags/%E7%AE%80%E5%8D%95/">
-                        <span class="chip bg-color">简单</span>
-                    </a>
-                    
-                    <a href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">
-                        <span class="chip bg-color">位运算</span>
+                    <a href="/tags/%E5%9B%B0%E9%9A%BE/">
+                        <span class="chip bg-color">困难</span>
                     </a>
                     
                 </div>

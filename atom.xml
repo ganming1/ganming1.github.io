@@ -6,7 +6,7 @@
   <link href="http://ganming1.github.io/atom.xml" rel="self"/>
   
   <link href="http://ganming1.github.io/"/>
-  <updated>2020-12-25T13:46:57.650Z</updated>
+  <updated>2020-12-29T10:48:31.567Z</updated>
   <id>http://ganming1.github.io/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>力扣84-柱状图中最大的矩形</title>
+    <link href="http://ganming1.github.io/2020/12/26/li-kou-84-zhu-zhuang-tu-zhong-zui-da-de-ju-xing/"/>
+    <id>http://ganming1.github.io/2020/12/26/li-kou-84-zhu-zhuang-tu-zhong-zui-da-de-ju-xing/</id>
+    <published>2020-12-25T16:34:59.000Z</published>
+    <updated>2020-12-29T10:48:31.567Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;力扣84-柱状图中最大的矩形&quot;&gt;&lt;a href=&quot;#力扣84-柱状图中最大的矩形&quot; class=&quot;headerlink&quot; title=&quot;力扣84-柱状图中最大的矩形&quot;&gt;&lt;/a&gt;&lt;center&gt;力扣84-柱状图中最大的矩形&lt;/center&gt;&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
+    
+    <category term="困难" scheme="http://ganming1.github.io/tags/%E5%9B%B0%E9%9A%BE/"/>
+    
+    <category term="栈" scheme="http://ganming1.github.io/tags/%E6%A0%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>力扣85-最大矩形</title>
+    <link href="http://ganming1.github.io/2020/12/26/li-kou-85-zui-da-ju-xing/"/>
+    <id>http://ganming1.github.io/2020/12/26/li-kou-85-zui-da-ju-xing/</id>
+    <published>2020-12-25T16:10:24.000Z</published>
+    <updated>2020-12-25T16:23:19.525Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;力扣85-最大矩形&quot;&gt;&lt;a href=&quot;#力扣85-最大矩形&quot; class=&quot;headerlink&quot; title=&quot;力扣85-最大矩形&quot;&gt;&lt;/a&gt;&lt;center&gt;力扣85-最大矩形&lt;/center&gt;&lt;/h1&gt;&lt;h2 id=&quot;一、原题题目&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
+    
+    <category term="困难" scheme="http://ganming1.github.io/tags/%E5%9B%B0%E9%9A%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>力扣62-不同路径</title>
@@ -72,9 +128,9 @@
     
     <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
     
-    <category term="贪心" scheme="http://ganming1.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
-    
     <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
+    
+    <category term="贪心" scheme="http://ganming1.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
     
   </entry>
   
@@ -101,9 +157,9 @@
     
     <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
     
-    <category term="贪心" scheme="http://ganming1.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
-    
     <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
+    
+    <category term="贪心" scheme="http://ganming1.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
     
   </entry>
   
@@ -549,66 +605,6 @@
     <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
     
     <category term="哈希表" scheme="http://ganming1.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣738-单调递增的数字</title>
-    <link href="http://ganming1.github.io/2020/12/15/li-kou-738-dan-diao-di-zeng-de-shu-zi/"/>
-    <id>http://ganming1.github.io/2020/12/15/li-kou-738-dan-diao-di-zeng-de-shu-zi/</id>
-    <published>2020-12-15T01:58:19.000Z</published>
-    <updated>2020-12-21T10:34:29.033Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;力扣738-单调递增的数字&quot;&gt;&lt;a href=&quot;#力扣738-单调递增的数字&quot; class=&quot;headerlink&quot; title=&quot;力扣738-单调递增的数字&quot;&gt;&lt;/a&gt;&lt;center&gt;力扣738-单调递增的数字&lt;/center&gt;&lt;/h1&gt;&lt;h2</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="中等" scheme="http://ganming1.github.io/tags/%E4%B8%AD%E7%AD%89/"/>
-    
-    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
-    
-    <category term="贪心" scheme="http://ganming1.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
-    
-    <category term="数组" scheme="http://ganming1.github.io/tags/%E6%95%B0%E7%BB%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣649-Dota2参议院</title>
-    <link href="http://ganming1.github.io/2020/12/11/li-kou-649-dota2-can-yi-yuan/"/>
-    <id>http://ganming1.github.io/2020/12/11/li-kou-649-dota2-can-yi-yuan/</id>
-    <published>2020-12-11T10:03:34.000Z</published>
-    <updated>2020-12-24T02:35:31.843Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;力扣649-Dota2-参议院&quot;&gt;&lt;a href=&quot;#力扣649-Dota2-参议院&quot; class=&quot;headerlink&quot; title=&quot;力扣649-Dota2 参议院&quot;&gt;&lt;/a&gt;&lt;center&gt;力扣649-Dota2 参议院&lt;/center&gt;&lt;/h1&gt;&lt;h2</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="中等" scheme="http://ganming1.github.io/tags/%E4%B8%AD%E7%AD%89/"/>
-    
-    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
-    
-    <category term="数组" scheme="http://ganming1.github.io/tags/%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="算法 旋转图像 力扣">
+    <meta name="keywords" content="力扣85-最大矩形, 博客 技术">
     <meta name="description" content="努力做个it技术分享者">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>力扣48-旋转图像 | ItDaChuang</title>
+    <title>力扣85-最大矩形 | ItDaChuang</title>
     <link rel="icon" type="image/png" href="/medias/G.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">力扣48-旋转图像</h1>
+                    <h1 class="description center-align post-title">力扣85-最大矩形</h1>
                 </div>
             </div>
         </div>
@@ -434,20 +434,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E4%B8%AD%E7%AD%89/">
-                                <span class="chip bg-color">中等</span>
-                            </a>
-                        
                             <a href="/tags/%E5%8A%9B%E6%89%A3/">
                                 <span class="chip bg-color">力扣</span>
                             </a>
                         
-                            <a href="/tags/%E6%95%B0%E7%BB%84/">
-                                <span class="chip bg-color">数组</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%8A%80%E5%B7%A7%E9%A2%98/">
-                                <span class="chip bg-color">技巧题</span>
+                            <a href="/tags/%E5%9B%B0%E9%9A%BE/">
+                                <span class="chip bg-color">困难</span>
                             </a>
                         
                     </div>
@@ -471,28 +463,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-12-19
+                    2020-12-26
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-12-23
+                    2020-12-26
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    567
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    4 分
                 </div>
                 
 
@@ -515,72 +507,105 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="力扣48-旋转图像"><a href="#力扣48-旋转图像" class="headerlink" title="力扣48-旋转图像"></a><center>力扣48-旋转图像</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  给定一个 <em>n</em> × <em>n</em> 的二维矩阵表示一个图像。将图像顺时针旋转 90 度。</p>
-<p>说明：</p>
-<p>  你必须在<strong>原地</strong>旋转图像，这意味着你需要直接修改输入的二维矩阵。<strong>请不要</strong>使用另一个矩阵来旋转图像。</p>
+                <h1 id="力扣85-最大矩形"><a href="#力扣85-最大矩形" class="headerlink" title="力扣85-最大矩形"></a><center>力扣85-最大矩形</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="#A22015">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  给定一个仅包含 <code>0</code> 和 <code>1</code> 、大小为 <code>rows x cols</code> 的二维二进制矩阵，找出只包含 <code>1</code> 的最大矩形，并返回其面积。</p>
 <h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
 <li><p><strong>示例1：</strong></p>
-  <pre class="line-numbers language-none"><code class="language-none">给定 matrix = 
-[
-  [1,2,3],
-  [4,5,6],
-  [7,8,9]
-],
-原地旋转输入矩阵，使其变为:
-[
-  [7,4,1],
-  [8,5,2],
-  [9,6,3]
-]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+  <center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm0k2iw9laj30b608yt92.jpg" alt="题目示图" width="60%/"></center>
+
+<p>  <strong>输入：</strong>  matrix = [[“1”,”0”,”1”,”0”,”0”],[“1”,”0”,”1”,”1”,”1”],[“1”,”1”,”1”,”1”,”1”],[“1”,”0”,”0”,”1”,”0”]]<br><strong>输出：</strong> 6<br><strong>解释：</strong> 最大矩形如上图所示。</p>
 </li>
 <li><p><strong>示例2：</strong></p>
-  <pre class="line-numbers language-none"><code class="language-none">给定 matrix =
-[
-  [ 5, 1, 9,11],
-  [ 2, 4, 8,10],
-  [13, 3, 6, 7],
-  [15,14,12,16]
-],
-原地旋转输入矩阵，使其变为:
-[
-  [15,13, 2, 5],
-  [14, 3, 4, 1],
-  [12, 6, 8, 9],
-  [16, 7,10,11]
-]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+<p>  <strong>输入：</strong> matrix = []<br><strong>输出：</strong> 0<br></p>
+</li>
+<li><p><strong>示例3：</strong></p>
+<p>  <strong>输入：</strong> matrix = [[“0”]]<br><strong>输出：</strong> 0</p>
+</li>
+<li><p><strong>示例4：</strong></p>
+<p>  <strong>输入：</strong> matrix = [[“1”]]<br><strong>输出：</strong> 1</p>
+</li>
+<li><p><strong>示例5：</strong></p>
+<p>  <strong>输入：</strong> matrix = [[“0”,”0”]]<br><strong>输出：</strong> 0</p>
 </li>
 </ul>
-<p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/rotate-image">https://leetcode-cn.com/problems/rotate-image</a></p>
-<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="born">二、解题思路</font></h2><h3 id="2-1-题目意思理解"><a href="#2-1-题目意思理解" class="headerlink" title="2.1 题目意思理解"></a>2.1 题目意思理解</h3><p>  这个题因为以前见过知道怎么做所以很快就回忆起了正常的思路是对矩阵进行两次翻转就能达到顺时针旋转90°的目的：①水平翻转，②沿次对角线翻转。下面以一个简单的数组演示主次对角线的区别，其实谁先谁后也会有所影响的。自己可以动手画画探究探究。</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glxlcx2hzsj30o60aiwg8.jpg" alt="不同翻转顺序" width="80%/"></center>
-
-<h3 id="2-2-详细代码（Java）"><a href="#2-2-详细代码（Java）" class="headerlink" title="2.2 详细代码（Java）"></a>2.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">rotate</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> matrix<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">int</span> r <span class="token operator">=</span> matrix<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> k <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>k<span class="token operator">&lt;</span>r<span class="token punctuation">;</span>k<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>        <span class="token comment">// 实现水平翻转</span>
-      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>j <span class="token operator">=</span> r<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>j<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">,</span>j<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">int</span> temp <span class="token operator">=</span> matrix<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        matrix<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> matrix<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        matrix<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
+<p><strong>提示：</strong></p>
+<ul>
+<li>  <code>row == matrix.length</code></li>
+<li>  <code>cols == matrix[0].length</code></li>
+<li>  <code>0 &lt;= row, cols &lt;= 200</code></li>
+<li>  <code>matrix[i][j]</code> 为 <code>0</code> 或 <code>1</code></li>
+</ul>
+<p>来源：力扣（LeetCode）<br><br>链接：<a href="">https://leetcode-cn.com/problems/maximal-rectangle/</a></p>
+<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="#A22015">二、解题思路</font></h2><h3 id="2-1-递归思路解题"><a href="#2-1-递归思路解题" class="headerlink" title="2.1 递归思路解题"></a>2.1 递归思路解题</h3><ul>
+<li>  <strong>解题思路</strong></li>
+</ul>
+<p>  读完题目思考片刻，确定这是一道<font color="red">递归</font>的题。定义状态 <code>count(m,n)</code> 表示当矩形是 <code>m x n</code>网格时从左上到右下的路径数，由于每次只可以往下走和往右走，故 <code>count(m,n) = count(m,n-1) + count(m-1,n)</code> 此时的行数和列数都要大于 <code>1</code> ，当 <code>m == 1</code> 或 <code>n == 1</code> 时 <code>count(m,n) = 1</code> 是我们的递归出口。</p>
+<ul>
+<li>  <strong>详细代码（Java）</strong></li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">uniquePaths</span><span class="token punctuation">(</span><span class="token keyword">int</span> m<span class="token punctuation">,</span> <span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>m <span class="token operator">==</span> <span class="token number">1</span><span class="token operator">||</span>n<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span>   <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>			<span class="token comment">// 递归出口</span>
+        <span class="token keyword">else</span> <span class="token keyword">return</span> <span class="token function">uniquePaths</span><span class="token punctuation">(</span>m<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span>n<span class="token punctuation">)</span><span class="token operator">+</span><span class="token function">uniquePaths</span><span class="token punctuation">(</span>m<span class="token punctuation">,</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">// 递归</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>r<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>      <span class="token comment">// 实现沿次对角线的翻转</span>
-      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>j<span class="token operator">&lt;</span>r<span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span>i<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">int</span> temp <span class="token operator">=</span> matrix<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        matrix<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> matrix<span class="token punctuation">[</span>r<span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span>r<span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        matrix<span class="token punctuation">[</span>r<span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span>r<span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
-<li>代码<font color="red">第14行</font>要找好翻转每个位置对应的坐标变换是怎么变的。当（row1,col1）、（row2,col2）这两个位置关于次对角线对称的时候，我发现是<font color="red">row1 + col2 = 行数-1</font>；<font color="red">col1 + row2 = 行数-1</font>；可以简单理解为<font color="red">新的行标</font>font和<font color="red">旧的列标</font> “互余”，<font color="red">新的列标</font>与<font color="red">旧的行标</font> “互余”</li>
+<li>  <strong>代码执行结果</strong></li>
 </ul>
-<h3 id="2-3-算法执行结果"><a href="#2-3-算法执行结果" class="headerlink" title="2.3 算法执行结果"></a>2.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gltm0e1416j30ry0ee3zw.jpg" alt="算法执行结果" width="80%/"></center>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm0dnnbvopj30s808ojrr.jpg" alt="递归执行结果" width="100%/"></center>
 
-<h2 id="三、总结分析"><a href="#三、总结分析" class="headerlink" title="三、总结分析"></a><font color="born">三、总结分析</font></h2><p>  这道题像是一道技巧题，有些题目如果有特定的技巧，特定的规律，往往都会比正常解放快很多。</p>
+<p>  代码执行结果超出时间限制，因为计算 <code>uniquePaths(m,n)</code> 时会先去计算 <code>uniquePaths(m-1,n)</code> 和 <code>uniquePaths(m,n-1)</code>，之后由会一层一层往下去计算，知道碰到递归出口才有结果，并再将结果一层一层的往回传，故时间消耗很大。这也是<font color="red">自顶向下</font>的递归解题</p>
+<h3 id="2-1-动态规划思路解题"><a href="#2-1-动态规划思路解题" class="headerlink" title="2.1 动态规划思路解题"></a>2.1 动态规划思路解题</h3><ul>
+<li>  <strong>解题思路</strong></li>
+</ul>
+<p>  由于上面的递归时间消耗太大，我们就改变策略<font color="red">自底向上</font>的计算结果，并将结果保留在如下二维数组 <code>result</code> 中，当所处的位置和终点位于同一行或同一列时，就只能直接沿直线走到终点，所以这些位置都是 <code>1</code> 种路径，如图的绿色位置，由于每次走都只能往下或右走，故<font color="red">当前位置的路径数</font>取决于<font color="red">下面位置与右边位置的路径之和</font>，即 <code>result[i][j] = result[i+1][j] + result[i][j+1]</code> 并且我们的填表顺序也有要求，必须是当前位置下方和右方的都已经填好，才能填当前位置。我们可以按照下图中细箭头的方向向上填表，同时沿着粗箭头向左填表，填完表后返回 <code>result[0][0]</code> 即为最终结果。 </p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm0elputkpj30my0bitat.jpg" alt="动态规划图解" width="100%/"></center>
+
+<ul>
+<li>  <strong>详细代码（Java）</strong></li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">uniquePaths</span><span class="token punctuation">(</span><span class="token keyword">int</span> m<span class="token punctuation">,</span> <span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> result <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>m<span class="token punctuation">]</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>                 <span class="token comment">// 定义结果表</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> result<span class="token punctuation">[</span>m<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>     <span class="token comment">// 初始化最后一行为1</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>m<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> result<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>     <span class="token comment">// 初始化最后一列为1</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> n<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">;</span>i<span class="token operator">&gt;=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>             <span class="token comment">// 列从右往左填</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> m<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">;</span>j<span class="token operator">&gt;=</span><span class="token number">0</span><span class="token punctuation">;</span>j<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>         <span class="token comment">// 行从下往上填</span>
+                result<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> result<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">+</span>result<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>   <span class="token comment">// 当前位置等于下面和右边之和</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> result<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>        <span class="token comment">// 返回起点结果</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>  <strong>代码执行结果</strong></li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm0f0v5qb3j30ry0ee0u4.jpg" alt="动态规划执行结果" width="100%/"></center>
+
+<p>  时间上完胜，空间效果也不错，做完后也去看看了题解，一方面看看自己思考的结论对不对（主要看上面的方法是不是递归和动态规划，其实有的时候还傻傻的分不太清）另一方面就是看看有没有改进的地方，看到空间上还有提升的空间，主要是我们刚刚定义的结果二维数组并不是都有用的在计算结果的时候只需要保留部分就好，这里我实在是懒得再去优化了，不是很难，想尝试的朋友可以写写看。</p>
+<h3 id="2-3-数学公式思路解题"><a href="#2-3-数学公式思路解题" class="headerlink" title="2.3 数学公式思路解题"></a>2.3 数学公式思路解题</h3><ul>
+<li>  <strong>解题思路</strong></li>
+</ul>
+<p>  其次看到还有一种解题思路是通过数学公式的方法，这里也只简单介绍一下：我们要想到达终点，需要往下走n-1步，往右走 <code>m-1</code>步，总共需要走 <code>n+m-2</code> 步。他无论往右走还是往下走他的总的步数是不会变的。也就相当于总共要走 <code>n+m-2</code>步，往右走 <code>m-1</code> 步总共有多少种走法，很明显这就是一个排列组合问题，公式如下</p>
+<p><left><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm0fd3eml8j30d406lweo.jpg" alt="动态规划执行结果" width="40%/">  <img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm0fdp9gccj30k705wt92.jpg" alt="动态规划执行结果" width="60%/"></left></p>
+<ul>
+<li>  <strong>详细代码（Java）</strong></li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">uniquePaths</span><span class="token punctuation">(</span><span class="token keyword">int</span> m<span class="token punctuation">,</span> <span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> <span class="token class-name">N</span> <span class="token operator">=</span> n <span class="token operator">+</span> m <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token keyword">double</span> res <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> m<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        res <span class="token operator">=</span> res <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token class-name">N</span> <span class="token operator">-</span> <span class="token punctuation">(</span>m <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> i<span class="token punctuation">)</span> <span class="token operator">/</span> i<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> res<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>  <strong>代码执行结果</strong></li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm0fjia88sj30s00ei75o.jpg" alt="数学技巧执行结果" width="100%/"></center>
+
+<h2 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a><font color="#A22015">三、总结</font></h2><p>  这里推荐着重理解动态规划和递归的解题思路，虽然这个题的递归超时了，但很多题目里递归也是一种很好的解题思路。</p>
 
                 
             </div>
@@ -607,7 +632,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://ganming1.github.io/2020/12/19/li-kou-48-xuan-zhuan-tu-xiang/">http://ganming1.github.io/2020/12/19/li-kou-48-xuan-zhuan-tu-xiang/</a>
+                    <a href="http://ganming1.github.io/2020/12/26/li-kou-85-zui-da-ju-xing/">http://ganming1.github.io/2020/12/26/li-kou-85-zui-da-ju-xing/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -645,20 +670,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E4%B8%AD%E7%AD%89/">
-                                    <span class="chip bg-color">中等</span>
-                                </a>
-                            
                                 <a href="/tags/%E5%8A%9B%E6%89%A3/">
                                     <span class="chip bg-color">力扣</span>
                                 </a>
                             
-                                <a href="/tags/%E6%95%B0%E7%BB%84/">
-                                    <span class="chip bg-color">数组</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%8A%80%E5%B7%A7%E9%A2%98/">
-                                    <span class="chip bg-color">技巧题</span>
+                                <a href="/tags/%E5%9B%B0%E9%9A%BE/">
+                                    <span class="chip bg-color">困难</span>
                                 </a>
                             
                         </div>
@@ -878,24 +895,24 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/12/20/li-kou-316-qu-chu-chong-fu-zi-mu/">
+                <a href="/2020/12/26/li-kou-84-zhu-zhuang-tu-zhong-zui-da-de-ju-xing/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="力扣316-去除重复字母">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="力扣84-柱状图中最大的矩形">
                         
-                        <span class="card-title">力扣316-去除重复字母</span>
+                        <span class="card-title">力扣84-柱状图中最大的矩形</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            给你一个字符串 `s` ，请你去除字符串中重复的字母，使得每个字母只出现一次。需保证返回结果的字典序最小（要求不能打乱其他字符的相对位置）。
+                            给定n个非负整数，用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为 1 。求在该柱状图中，能够勾勒出来的矩形的最大面积。
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-20
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-26
                         </span>
                         <span class="publish-author">
                             
@@ -912,16 +929,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
-                        <span class="chip bg-color">字符串</span>
-                    </a>
-                    
-                    <a href="/tags/%E4%B8%AD%E7%AD%89/">
-                        <span class="chip bg-color">中等</span>
-                    </a>
-                    
                     <a href="/tags/%E5%8A%9B%E6%89%A3/">
                         <span class="chip bg-color">力扣</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%9B%B0%E9%9A%BE/">
+                        <span class="chip bg-color">困难</span>
                     </a>
                     
                     <a href="/tags/%E6%A0%88/">
@@ -939,24 +952,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/12/18/li-kou-389-zhao-bu-tong/">
+                <a href="/2020/12/25/li-kou-62-bu-tong-lu-jing/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="力扣389-找不同">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="力扣62-不同路径">
                         
-                        <span class="card-title">力扣389-找不同</span>
+                        <span class="card-title">力扣62-不同路径</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            给定两个字符串 s 和 t，它们只包含小写字母。字符串 t 由字符串 s 随机重排，然后在随机位置添加一个字母。请找出在 t 中被添加的字母。
+                            一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为 Start ）。机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为 Finish ）。问总共有多少条不同的路径？
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-25
                             </span>
                         <span class="publish-author">
                             
@@ -973,20 +986,24 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
-                        <span class="chip bg-color">字符串</span>
+                    <a href="/tags/%E4%B8%AD%E7%AD%89/">
+                        <span class="chip bg-color">中等</span>
                     </a>
                     
                     <a href="/tags/%E5%8A%9B%E6%89%A3/">
                         <span class="chip bg-color">力扣</span>
                     </a>
                     
-                    <a href="/tags/%E7%AE%80%E5%8D%95/">
-                        <span class="chip bg-color">简单</span>
+                    <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+                        <span class="chip bg-color">动态规划</span>
                     </a>
                     
-                    <a href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">
-                        <span class="chip bg-color">位运算</span>
+                    <a href="/tags/%E6%8A%80%E5%B7%A7%E9%A2%98/">
+                        <span class="chip bg-color">技巧题</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%80%92%E5%BD%92/">
+                        <span class="chip bg-color">递归</span>
                     </a>
                     
                 </div>
