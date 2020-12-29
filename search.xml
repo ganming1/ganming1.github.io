@@ -850,6 +850,71 @@ XXX YYY ZZZ <span aria-hidden="true" class="line-numbers-rows"><span></span><spa
       </tags>
   </entry>
   <entry>
+    <title>力扣135-分发糖果</title>
+    <url>/2020/12/24/li-kou-135-fen-fa-tang-guo/</url>
+    <content><![CDATA[<h1 id="力扣135-分发糖果"><a href="#力扣135-分发糖果" class="headerlink" title="力扣135-分发糖果"></a><center>力扣135-分发糖果</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="#A22015">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  老师想给孩子们分发糖果，有 <em>N</em> 个孩子站成了一条直线，老师会根据每个孩子的表现，预先给他们评分。你需要按照以下要求，帮助老师给这些孩子分发糖果：</p>
+<p>  ● 每个孩子至少分配到 1 个糖果。<br>  ● 相邻的孩子中，评分高的孩子必须获得更多的糖果。</p>
+<p>  那么这样下来，老师至少需要准备多少克糖果呢？</p>
+<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
+<li><p><strong>示例1：</strong></p>
+<p>  <strong>输入：</strong> [1, 0, 2]<br><strong>输出：</strong> 5<br><strong>解释：</strong> 你可以分别给这三个孩子分发 2、1、2 颗糖果。</p>
+</li>
+<li><p><strong>示例2：</strong></p>
+<p>  <strong>输入：</strong> [1, 2, 2]<br><strong>输出：</strong> 4<br><strong>解释：</strong> 你可以分别给这三个孩子分发 1、2、1 颗糖果。第三个孩子只得到 1 颗糖果，这已满足上述两个条件。</p>
+</li>
+</ul>
+<p>来源：力扣（LeetCode）<br>链接：<a href="">https://leetcode-cn.com/problems/candy/</a></p>
+<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="#A22015">二、解题思路</font></h2><h3 id="2-1-题目意思理解"><a href="#2-1-题目意思理解" class="headerlink" title="2.1 题目意思理解"></a>2.1 题目意思理解</h3><p>  看到困难的题目就不自信啦~自己思考了一会没想到什么好的思路就开始看别人的题解啦。</p>
+<ul>
+<li><p><strong>规则定义：</strong> 相邻的孩子中，评分高的孩子必须获得更多的糖果。有 A 和 B 两个孩子，A 在 B 的左边。</p>
+<p>  ● 左规则：当 <code>ratingsA &gt; ratingsB</code> A 孩子要比 B 孩子的糖果数量多。<br>● 右规则：当 <code>ratingsA &lt;= ratingsB</code> B 孩子要比 A 孩子的糖果数量多。</p>
+<p>  相邻的学生中，评分高的学生必须获得更多的糖果 <strong>等价于</strong> 所有学生满足左规则且满足右规则。</p>
+</li>
+<li><p><strong>算法流程：</strong></p>
+<p>  1.先从左至右遍历学生成绩 <code>ratings</code>，按照以下规则给糖，并记录在 <code>left</code> 中：</p>
+<p>   ● 先给所有学生 1 颗糖；<br> ● 若 ratings<sub>i</sub> &gt; ratings<sub>i-1</sub> ,则第 i 名学生糖比第 i-1 名学生多一个。<br> ● 若 ratings<sub>i</sub> &lt;= ratings<sub>i-1</sub> ,则第 i 名学生糖的数量不变。（由右向左遍历处理）</p>
+<p>  2.同理，在此规则下从右至左遍历学生成绩并记录在 <code>right</code> 中，可以保证所有学生糖数量 <strong>满足右规则</strong> 。</p>
+<p>  3.最终，取以上 22 轮遍历 <code>left</code> 和 <code>right</code> 对应学生糖果数的 <strong>最大值</strong> ，这样则 <strong>同时满足左规则和右规则</strong> ，即得到每个同学的最少糖果数量。</p>
+</li>
+<li><p><strong>复杂度分析：</strong></p>
+<p>  ● <strong>时间复杂度 O(N)：</strong> 遍历两遍数组即可得到结果；<br>● <strong>空间复杂度 O(N)：</strong> 需要借用<code>left</code>，<code>right</code>的线性额外空间。</p>
+</li>
+</ul>
+<p>以上参考题解来源：<a href="https://leetcode-cn.com/problems/candy/solution/candy-cong-zuo-zhi-you-cong-you-zhi-zuo-qu-zui-da-/">大佬题解</a>  </p>
+<h3 id="2-2-详细代码（Java）"><a href="#2-2-详细代码（Java）" class="headerlink" title="2.2 详细代码（Java）"></a>2.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">candy</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> ratings<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> len <span class="token operator">=</span> ratings<span class="token punctuation">.</span>length<span class="token punctuation">;</span>               <span class="token comment">// 统计人数</span>
+        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> left <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>len<span class="token punctuation">]</span><span class="token punctuation">;</span>              <span class="token comment">// 从左到右记录满足左规则每人应该分的糖数</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>              <span class="token comment">// 统计左规则每人应该分的糖数</span>
+           <span class="token keyword">if</span> <span class="token punctuation">(</span>ratings<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&gt;</span>ratings<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>         <span class="token comment">// 糖数从0开始计，默认分发的一个糖果记在最后的结果 result 里</span>
+               left<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> left<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">int</span> right <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>left<span class="token punctuation">[</span>len<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// 最后一个同学应该得的糖果数（去掉了默认会有的一颗糖）</span>
+        <span class="token keyword">int</span> result <span class="token operator">=</span> len <span class="token operator">+</span> right<span class="token punctuation">;</span>               <span class="token comment">// len:默认每人分一个糖，right:最后一个同学得的糖果数</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> len<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">;</span>i<span class="token operator">&gt;=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>           <span class="token comment">// 统计其他孩子应得到的糖果数</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>ratings<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&gt;</span>ratings<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>    right<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token keyword">else</span> right <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+            result <span class="token operator">+=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>right<span class="token punctuation">,</span>left<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>  上述代码并没有安装2.1中的算法流程写，只保留了 <code>left</code> 数组统计从左到右的满足左规则的结果，满足右规则是用一个临时变量 <code>right</code> 表示，计算比较完后直接统计到最后的结果 <code>result</code> 这样可以进一步节省空间。</p>
+<h3 id="2-3-算法执行结果"><a href="#2-3-算法执行结果" class="headerlink" title="2.3 算法执行结果"></a>2.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glyutxaj0dj30s00eemyk.jpg" alt="算法执行结果" width="100%/"></center>
+
+<h2 id="三、总结分析"><a href="#三、总结分析" class="headerlink" title="三、总结分析"></a><font color="#A22015">三、总结分析</font></h2><p>  这道题还是比较难自己想到这样去做吧，见过做过以后碰到类似的就争取要会做啦~</p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>力扣</tag>
+        <tag>困难</tag>
+        <tag>贪心</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>力扣217-存在重复元素</title>
     <url>/2020/12/24/li-kou-217-cun-zai-chong-fu-yuan-su/</url>
     <content><![CDATA[<h1 id="力扣217-存在重复元素"><a href="#力扣217-存在重复元素" class="headerlink" title="力扣217-存在重复元素"></a><center>力扣217-存在重复元素</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="#A22015">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  给定一个整数数组，判断是否存在重复元素。如果任意一值在数组中出现至少两次，函数返回 <code>true</code> 。如果数组中每个元素都不相同，则返回 <code>false</code> 。</p>
@@ -944,71 +1009,6 @@ XXX YYY ZZZ <span aria-hidden="true" class="line-numbers-rows"><span></span><spa
       </tags>
   </entry>
   <entry>
-    <title>力扣135-分发糖果</title>
-    <url>/2020/12/24/li-kou-135-fen-fa-tang-guo/</url>
-    <content><![CDATA[<h1 id="力扣135-分发糖果"><a href="#力扣135-分发糖果" class="headerlink" title="力扣135-分发糖果"></a><center>力扣135-分发糖果</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="#A22015">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  老师想给孩子们分发糖果，有 <em>N</em> 个孩子站成了一条直线，老师会根据每个孩子的表现，预先给他们评分。你需要按照以下要求，帮助老师给这些孩子分发糖果：</p>
-<p>  ● 每个孩子至少分配到 1 个糖果。<br>  ● 相邻的孩子中，评分高的孩子必须获得更多的糖果。</p>
-<p>  那么这样下来，老师至少需要准备多少克糖果呢？</p>
-<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
-<li><p><strong>示例1：</strong></p>
-<p>  <strong>输入：</strong> [1, 0, 2]<br><strong>输出：</strong> 5<br><strong>解释：</strong> 你可以分别给这三个孩子分发 2、1、2 颗糖果。</p>
-</li>
-<li><p><strong>示例2：</strong></p>
-<p>  <strong>输入：</strong> [1, 2, 2]<br><strong>输出：</strong> 4<br><strong>解释：</strong> 你可以分别给这三个孩子分发 1、2、1 颗糖果。第三个孩子只得到 1 颗糖果，这已满足上述两个条件。</p>
-</li>
-</ul>
-<p>来源：力扣（LeetCode）<br>链接：<a href="">https://leetcode-cn.com/problems/candy/</a></p>
-<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="#A22015">二、解题思路</font></h2><h3 id="2-1-题目意思理解"><a href="#2-1-题目意思理解" class="headerlink" title="2.1 题目意思理解"></a>2.1 题目意思理解</h3><p>  看到困难的题目就不自信啦~自己思考了一会没想到什么好的思路就开始看别人的题解啦。</p>
-<ul>
-<li><p><strong>规则定义：</strong> 相邻的孩子中，评分高的孩子必须获得更多的糖果。有 A 和 B 两个孩子，A 在 B 的左边。</p>
-<p>  ● 左规则：当 <code>ratingsA &gt; ratingsB</code> A 孩子要比 B 孩子的糖果数量多。<br>● 右规则：当 <code>ratingsA &lt;= ratingsB</code> B 孩子要比 A 孩子的糖果数量多。</p>
-<p>  相邻的学生中，评分高的学生必须获得更多的糖果 <strong>等价于</strong> 所有学生满足左规则且满足右规则。</p>
-</li>
-<li><p><strong>算法流程：</strong></p>
-<p>  1.先从左至右遍历学生成绩 <code>ratings</code>，按照以下规则给糖，并记录在 <code>left</code> 中：</p>
-<p>   ● 先给所有学生 1 颗糖；<br> ● 若 ratings<sub>i</sub> &gt; ratings<sub>i-1</sub> ,则第 i 名学生糖比第 i-1 名学生多一个。<br> ● 若 ratings<sub>i</sub> &lt;= ratings<sub>i-1</sub> ,则第 i 名学生糖的数量不变。（由右向左遍历处理）</p>
-<p>  2.同理，在此规则下从右至左遍历学生成绩并记录在 <code>right</code> 中，可以保证所有学生糖数量 <strong>满足右规则</strong> 。</p>
-<p>  3.最终，取以上 22 轮遍历 <code>left</code> 和 <code>right</code> 对应学生糖果数的 <strong>最大值</strong> ，这样则 <strong>同时满足左规则和右规则</strong> ，即得到每个同学的最少糖果数量。</p>
-</li>
-<li><p><strong>复杂度分析：</strong></p>
-<p>  ● <strong>时间复杂度 O(N)：</strong> 遍历两遍数组即可得到结果；<br>● <strong>空间复杂度 O(N)：</strong> 需要借用<code>left</code>，<code>right</code>的线性额外空间。</p>
-</li>
-</ul>
-<p>以上参考题解来源：<a href="https://leetcode-cn.com/problems/candy/solution/candy-cong-zuo-zhi-you-cong-you-zhi-zuo-qu-zui-da-/">大佬题解</a>  </p>
-<h3 id="2-2-详细代码（Java）"><a href="#2-2-详细代码（Java）" class="headerlink" title="2.2 详细代码（Java）"></a>2.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">candy</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> ratings<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> len <span class="token operator">=</span> ratings<span class="token punctuation">.</span>length<span class="token punctuation">;</span>               <span class="token comment">// 统计人数</span>
-        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> left <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>len<span class="token punctuation">]</span><span class="token punctuation">;</span>              <span class="token comment">// 从左到右记录满足左规则每人应该分的糖数</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>              <span class="token comment">// 统计左规则每人应该分的糖数</span>
-           <span class="token keyword">if</span> <span class="token punctuation">(</span>ratings<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&gt;</span>ratings<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>         <span class="token comment">// 糖数从0开始计，默认分发的一个糖果记在最后的结果 result 里</span>
-               left<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> left<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">int</span> right <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>left<span class="token punctuation">[</span>len<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// 最后一个同学应该得的糖果数（去掉了默认会有的一颗糖）</span>
-        <span class="token keyword">int</span> result <span class="token operator">=</span> len <span class="token operator">+</span> right<span class="token punctuation">;</span>               <span class="token comment">// len:默认每人分一个糖，right:最后一个同学得的糖果数</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> len<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">;</span>i<span class="token operator">&gt;=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>           <span class="token comment">// 统计其他孩子应得到的糖果数</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>ratings<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&gt;</span>ratings<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>    right<span class="token operator">++</span><span class="token punctuation">;</span>
-            <span class="token keyword">else</span> right <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-            result <span class="token operator">+=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>right<span class="token punctuation">,</span>left<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> result<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>  上述代码并没有安装2.1中的算法流程写，只保留了 <code>left</code> 数组统计从左到右的满足左规则的结果，满足右规则是用一个临时变量 <code>right</code> 表示，计算比较完后直接统计到最后的结果 <code>result</code> 这样可以进一步节省空间。</p>
-<h3 id="2-3-算法执行结果"><a href="#2-3-算法执行结果" class="headerlink" title="2.3 算法执行结果"></a>2.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glyutxaj0dj30s00eemyk.jpg" alt="算法执行结果" width="100%/"></center>
-
-<h2 id="三、总结分析"><a href="#三、总结分析" class="headerlink" title="三、总结分析"></a><font color="#A22015">三、总结分析</font></h2><p>  这道题还是比较难自己想到这样去做吧，见过做过以后碰到类似的就争取要会做啦~</p>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>力扣</tag>
-        <tag>困难</tag>
-        <tag>贪心</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>力扣290-单词规律</title>
     <url>/2020/12/16/li-kou-290-dan-ci-gui-lu/</url>
     <content><![CDATA[<h1 id="力扣290-单词规律"><a href="#力扣290-单词规律" class="headerlink" title="力扣290-单词规律"></a><center>力扣290-单词规律</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>​        给定一种规律 pattern 和一个字符串 str ，判断 str 是否遵循相同的规律。这里的遵循指完全匹配，例如， pattern 里的每个字母和字符串 str 中的每个非空单词之间存在着双向连接的对应规律。</p>
@@ -1072,6 +1072,86 @@ XXX YYY ZZZ <span aria-hidden="true" class="line-numbers-rows"><span></span><spa
         <tag>力扣</tag>
         <tag>简单</tag>
         <tag>哈希表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>力扣316-去除重复字母</title>
+    <url>/2020/12/20/li-kou-316-qu-chu-chong-fu-zi-mu/</url>
+    <content><![CDATA[<h1 id="力扣316-去除重复字母"><a href="#力扣316-去除重复字母" class="headerlink" title="力扣316-去除重复字母"></a><center>力扣316-去除重复字母</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  给你一个字符串 <code>s</code> ，请你去除字符串中重复的字母，使得每个字母只出现一次。需保证<strong>返回结果的字典序最小</strong>（要求不能打乱其他字符的相对位置）。</p>
+<p><strong>注意：</strong>该题与 1081 <a href="https://leetcode-cn.com/problems/smallest-subsequence-of-distinct-characters">https://leetcode-cn.com/problems/smallest-subsequence-of-distinct-characters</a> 相同</p>
+<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
+<li><p><strong>示例1：</strong></p>
+<p>  <strong>输入：</strong> s = “bcabc”</p>
+<p>  <strong>输出：</strong> “abc”</p>
+</li>
+<li><p><strong>示例2：</strong></p>
+<p>  <strong>输入：</strong> s = “cbacdcbc”</p>
+<p>  <strong>输出：</strong> “acdb”</p>
+</li>
+</ul>
+<p><strong>提示：</strong></p>
+<ul>
+<li>  <code>1 &lt;= s.length &lt;= 10^4</code></li>
+<li>  <code>s</code> 由小写英文字母组成</li>
+</ul>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/remove-duplicate-letters/">https://leetcode-cn.com/problems/remove-duplicate-letters/</a></p>
+<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="born">二、解题思路</font></h2><h3 id="2-1-题目意思理解"><a href="#2-1-题目意思理解" class="headerlink" title="2.1 题目意思理解"></a>2.1 题目意思理解</h3><p>  这里有个<strong>字典序</strong>概念可能大多数人都已经知道啦，咋们简单提一下即可。</p>
+<p>  <strong>字典序：</strong>是指按照单词出现在字典中的顺序去比较字符串的方法。例如 “abc” 的字典序在 “acdb” 的前面。</p>
+<p>  这题自己思考了很久，大概也有自己的思路，但实时起来太过于复杂，最终还是放弃，去看题解了。毕竟刷题嘛，时间有限，看题解也是快速掌握方法思路的方法，前提还是要自己有所思考。</p>
+<p>  看完官方题解后，顿时明白我自己思考的问题在哪里。官方题解里有下面三个数据结构来保存相关信息。<a href="https://leetcode-cn.com/problems/remove-duplicate-letters/solution/qu-chu-zhong-fu-zi-mu-by-leetcode-soluti-vuso/">官方题解</a></p>
+<ul>
+<li><p>  定义一个长度为26的数组会统计每个字符最后出现的位置，用于检测后面是否还存在某个字符的作用。</p>
+</li>
+<li><p>定义一个栈用于存需要选出的字符，会出现下面三种情况：</p>
+<p>  <font color="red">一：</font>如果当前考虑的字符已经存在过则直接跳过这个字符。<font color="red">（代码12行）</font></p>
+<p>  <font color="red">二：</font>如果当前考虑的字符就是排在栈顶字符字典序之后的，且在栈中没有存在过，那么这个字符就要入栈。<font color="red">（代码19行）</font></p>
+<p>  <font color="red">三：</font>如果当前考虑的字符没有在栈中存在过，且是栈顶字符字典序之前的字符，那么就可能要考虑考虑栈顶的元素是否可以先丢弃，选择后面的那个字符来使整个字符串的字典序变小，这里就用到前面的数组，如果后面还有栈顶元素，则此时栈顶元素丢弃，如果后面没有，则不能丢弃，直接将当前元素入栈，这个过程是循环判断的过程。<font color="red">（代码14行）</font></p>
+</li>
+<li><p>  定义一个长度为26的布尔数组用于存储是否在栈中存在了。</p>
+</li>
+</ul>
+<h3 id="2-2-详细代码（Java）"><a href="#2-2-详细代码（Java）" class="headerlink" title="2.2 详细代码（Java）"></a>2.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">removeDuplicateLetters</span><span class="token punctuation">(</span><span class="token class-name">String</span> s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> len <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> chars <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">toCharArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> lastIntex <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token number">26</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// 用于存储每个字符最后出现的位置</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>      <span class="token comment">// 存储每个字符最后出现的位置</span>
+            lastIntex<span class="token punctuation">[</span>chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">-</span><span class="token string">'a'</span><span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token class-name">Deque</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Character</span><span class="token punctuation">&gt;</span></span> stack <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayDeque</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// 定义栈</span>
+        <span class="token keyword">boolean</span><span class="token punctuation">[</span><span class="token punctuation">]</span> visited <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">boolean</span><span class="token punctuation">[</span><span class="token number">26</span><span class="token punctuation">]</span><span class="token punctuation">;</span>            <span class="token comment">// 定义是否存在于栈中的数组</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>  <span class="token comment">// 遍历每一个字符</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>visited<span class="token punctuation">[</span>chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">-</span><span class="token string">'a'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token keyword">continue</span><span class="token punctuation">;</span>       <span class="token comment">// 分析中的第一种情况</span>
+            <span class="token comment">// 分析中的第三种情况</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>stack<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&lt;</span>stack<span class="token punctuation">.</span><span class="token function">peekLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> lastIntex<span class="token punctuation">[</span>stack<span class="token punctuation">.</span><span class="token function">peekLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token string">'a'</span><span class="token punctuation">]</span><span class="token operator">&gt;</span>i<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token class-name">Character</span> top <span class="token operator">=</span> stack<span class="token punctuation">.</span><span class="token function">removeLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                visited<span class="token punctuation">[</span>top<span class="token operator">-</span><span class="token string">'a'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token comment">// 分析中的第二种情况</span>
+            stack<span class="token punctuation">.</span><span class="token function">addLast</span><span class="token punctuation">(</span>chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            visited<span class="token punctuation">[</span>chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">-</span><span class="token string">'a'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">// 以下是把栈中的结果保存成字符串输出</span>
+        <span class="token class-name">StringBuilder</span> resstr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">Character</span> ch <span class="token operator">:</span> stack<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            resstr<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>ch<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> resstr<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="2-3-算法执行结果"><a href="#2-3-算法执行结果" class="headerlink" title="2.3 算法执行结果"></a>2.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gluqpggfhjj30sc0eijst.jpg" alt="算法执行结果" width="80%/"></center>
+
+<h2 id="三、总结分析"><a href="#三、总结分析" class="headerlink" title="三、总结分析"></a><font color="born">三、总结分析</font></h2><p>  这道题自己有思考，虽然没想出来，但觉得每道题无论是否能做出来自己都需要有一个思考的过程，充分的思考可以让自己更容易理解别人的解题思路，印象也会更加深刻，然后自己记录下来供自己以后复习回顾。可能大家看了我上面所写的觉得很难懂，但这是在我的理解之上写的题解，我看到这些肯定能懂了，所以想要完全理解的小伙伴先自己有足够的思考再看官方题解我觉得就够了。</p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>字符串</tag>
+        <tag>中等</tag>
+        <tag>力扣</tag>
+        <tag>栈</tag>
       </tags>
   </entry>
   <entry>
@@ -1216,86 +1296,6 @@ XXX YYY ZZZ <span aria-hidden="true" class="line-numbers-rows"><span></span><spa
         <tag>力扣</tag>
         <tag>贪心</tag>
         <tag>动态规划</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>力扣316-去除重复字母</title>
-    <url>/2020/12/20/li-kou-316-qu-chu-chong-fu-zi-mu/</url>
-    <content><![CDATA[<h1 id="力扣316-去除重复字母"><a href="#力扣316-去除重复字母" class="headerlink" title="力扣316-去除重复字母"></a><center>力扣316-去除重复字母</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  给你一个字符串 <code>s</code> ，请你去除字符串中重复的字母，使得每个字母只出现一次。需保证<strong>返回结果的字典序最小</strong>（要求不能打乱其他字符的相对位置）。</p>
-<p><strong>注意：</strong>该题与 1081 <a href="https://leetcode-cn.com/problems/smallest-subsequence-of-distinct-characters">https://leetcode-cn.com/problems/smallest-subsequence-of-distinct-characters</a> 相同</p>
-<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
-<li><p><strong>示例1：</strong></p>
-<p>  <strong>输入：</strong> s = “bcabc”</p>
-<p>  <strong>输出：</strong> “abc”</p>
-</li>
-<li><p><strong>示例2：</strong></p>
-<p>  <strong>输入：</strong> s = “cbacdcbc”</p>
-<p>  <strong>输出：</strong> “acdb”</p>
-</li>
-</ul>
-<p><strong>提示：</strong></p>
-<ul>
-<li>  <code>1 &lt;= s.length &lt;= 10^4</code></li>
-<li>  <code>s</code> 由小写英文字母组成</li>
-</ul>
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/remove-duplicate-letters/">https://leetcode-cn.com/problems/remove-duplicate-letters/</a></p>
-<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="born">二、解题思路</font></h2><h3 id="2-1-题目意思理解"><a href="#2-1-题目意思理解" class="headerlink" title="2.1 题目意思理解"></a>2.1 题目意思理解</h3><p>  这里有个<strong>字典序</strong>概念可能大多数人都已经知道啦，咋们简单提一下即可。</p>
-<p>  <strong>字典序：</strong>是指按照单词出现在字典中的顺序去比较字符串的方法。例如 “abc” 的字典序在 “acdb” 的前面。</p>
-<p>  这题自己思考了很久，大概也有自己的思路，但实时起来太过于复杂，最终还是放弃，去看题解了。毕竟刷题嘛，时间有限，看题解也是快速掌握方法思路的方法，前提还是要自己有所思考。</p>
-<p>  看完官方题解后，顿时明白我自己思考的问题在哪里。官方题解里有下面三个数据结构来保存相关信息。<a href="https://leetcode-cn.com/problems/remove-duplicate-letters/solution/qu-chu-zhong-fu-zi-mu-by-leetcode-soluti-vuso/">官方题解</a></p>
-<ul>
-<li><p>  定义一个长度为26的数组会统计每个字符最后出现的位置，用于检测后面是否还存在某个字符的作用。</p>
-</li>
-<li><p>定义一个栈用于存需要选出的字符，会出现下面三种情况：</p>
-<p>  <font color="red">一：</font>如果当前考虑的字符已经存在过则直接跳过这个字符。<font color="red">（代码12行）</font></p>
-<p>  <font color="red">二：</font>如果当前考虑的字符就是排在栈顶字符字典序之后的，且在栈中没有存在过，那么这个字符就要入栈。<font color="red">（代码19行）</font></p>
-<p>  <font color="red">三：</font>如果当前考虑的字符没有在栈中存在过，且是栈顶字符字典序之前的字符，那么就可能要考虑考虑栈顶的元素是否可以先丢弃，选择后面的那个字符来使整个字符串的字典序变小，这里就用到前面的数组，如果后面还有栈顶元素，则此时栈顶元素丢弃，如果后面没有，则不能丢弃，直接将当前元素入栈，这个过程是循环判断的过程。<font color="red">（代码14行）</font></p>
-</li>
-<li><p>  定义一个长度为26的布尔数组用于存储是否在栈中存在了。</p>
-</li>
-</ul>
-<h3 id="2-2-详细代码（Java）"><a href="#2-2-详细代码（Java）" class="headerlink" title="2.2 详细代码（Java）"></a>2.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">removeDuplicateLetters</span><span class="token punctuation">(</span><span class="token class-name">String</span> s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> len <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> chars <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">toCharArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> lastIntex <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token number">26</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// 用于存储每个字符最后出现的位置</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>      <span class="token comment">// 存储每个字符最后出现的位置</span>
-            lastIntex<span class="token punctuation">[</span>chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">-</span><span class="token string">'a'</span><span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token class-name">Deque</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Character</span><span class="token punctuation">&gt;</span></span> stack <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayDeque</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// 定义栈</span>
-        <span class="token keyword">boolean</span><span class="token punctuation">[</span><span class="token punctuation">]</span> visited <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">boolean</span><span class="token punctuation">[</span><span class="token number">26</span><span class="token punctuation">]</span><span class="token punctuation">;</span>            <span class="token comment">// 定义是否存在于栈中的数组</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>  <span class="token comment">// 遍历每一个字符</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>visited<span class="token punctuation">[</span>chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">-</span><span class="token string">'a'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token keyword">continue</span><span class="token punctuation">;</span>       <span class="token comment">// 分析中的第一种情况</span>
-            <span class="token comment">// 分析中的第三种情况</span>
-            <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>stack<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&lt;</span>stack<span class="token punctuation">.</span><span class="token function">peekLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> lastIntex<span class="token punctuation">[</span>stack<span class="token punctuation">.</span><span class="token function">peekLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token string">'a'</span><span class="token punctuation">]</span><span class="token operator">&gt;</span>i<span class="token punctuation">)</span><span class="token punctuation">{</span>
-                <span class="token class-name">Character</span> top <span class="token operator">=</span> stack<span class="token punctuation">.</span><span class="token function">removeLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                visited<span class="token punctuation">[</span>top<span class="token operator">-</span><span class="token string">'a'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-            <span class="token comment">// 分析中的第二种情况</span>
-            stack<span class="token punctuation">.</span><span class="token function">addLast</span><span class="token punctuation">(</span>chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            visited<span class="token punctuation">[</span>chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">-</span><span class="token string">'a'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token comment">// 以下是把栈中的结果保存成字符串输出</span>
-        <span class="token class-name">StringBuilder</span> resstr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">Character</span> ch <span class="token operator">:</span> stack<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            resstr<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>ch<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> resstr<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="2-3-算法执行结果"><a href="#2-3-算法执行结果" class="headerlink" title="2.3 算法执行结果"></a>2.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gluqpggfhjj30sc0eijst.jpg" alt="算法执行结果" width="80%/"></center>
-
-<h2 id="三、总结分析"><a href="#三、总结分析" class="headerlink" title="三、总结分析"></a><font color="born">三、总结分析</font></h2><p>  这道题自己有思考，虽然没想出来，但觉得每道题无论是否能做出来自己都需要有一个思考的过程，充分的思考可以让自己更容易理解别人的解题思路，印象也会更加深刻，然后自己记录下来供自己以后复习回顾。可能大家看了我上面所写的觉得很难懂，但这是在我的理解之上写的题解，我看到这些肯定能懂了，所以想要完全理解的小伙伴先自己有足够的思考再看官方题解我觉得就够了。</p>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>字符串</tag>
-        <tag>中等</tag>
-        <tag>力扣</tag>
-        <tag>栈</tag>
       </tags>
   </entry>
   <entry>
@@ -1543,8 +1543,8 @@ XXX YYY ZZZ <span aria-hidden="true" class="line-numbers-rows"><span></span><spa
       </categories>
       <tags>
         <tag>力扣</tag>
-        <tag>简单</tag>
         <tag>贪心</tag>
+        <tag>简单</tag>
       </tags>
   </entry>
   <entry>
@@ -1723,114 +1723,6 @@ XXX YYY ZZZ <span aria-hidden="true" class="line-numbers-rows"><span></span><spa
       </tags>
   </entry>
   <entry>
-    <title>力扣649-Dota2参议院</title>
-    <url>/2020/12/11/li-kou-649-dota2-can-yi-yuan/</url>
-    <content><![CDATA[<h1 id="力扣649-Dota2-参议院"><a href="#力扣649-Dota2-参议院" class="headerlink" title="力扣649-Dota2 参议院"></a><center>力扣649-Dota2 参议院</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>​        Dota2 的世界里有两个阵营：Radiant (天辉)和 Dire(夜魇)。Dota2 参议院由来自两派的参议员组成。现在参议院希望对一个 Dota2 游戏里的改变作出决定。他们以一个基于轮为过程的投票进行。在每一轮中，每一位参议员都可以行使两项权利中的一项：</p>
-<ol>
-<li><p>禁止一名参议员的权利：参议员可以让另一位参议员在这一轮和随后的几轮中丧失<strong>所有的权利</strong>。</p>
-</li>
-<li><p>宣布胜利：如果参议员发现有权利投票的参议员都是<strong>同一个阵营的</strong>，他可以宣布胜利并决定在游戏中的有关变化。</p>
-</li>
-</ol>
-<p>​       给定一个字符串代表每个参议员的阵营。字母 “R” 和 “D” 分别代表了 Radiant（天辉）和 Dire（夜魇）。然后，如果有 n 个参议员，给定字符串的大小将是 n。以轮为基础的过程从给定顺序的第一个参议员开始到最后一个参议员结束。这一过程将持续到投票结束。所有失去权利的参议员将在过程中被跳过。假设每一位参议员都足够聪明，会为自己的政党做出最好的策略，你需要预测哪一方最终会宣布胜利并在 Dota2 游戏中决定改变。输出应该是 Radiant 或 Dire。</p>
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/dota2-senate">https://leetcode-cn.com/problems/dota2-senate</a></p>
-<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
-<li><p><strong>示例1：</strong></p>
-<p><strong>输入：</strong>“RD”<br><strong>输出：</strong>“Radiant”<br><strong>解释：</strong>第一个参议员来自 Radiant 阵营并且他可以使用第一项权利让第二个参议员失去权力，因此第二个参议员将被跳过因为他没有任何权利。然后在第二轮的时候，第一个参议员可以宣布胜利，因为他是唯一一个有投票权的人。</p>
-</li>
-<li><p><strong>示例2：</strong></p>
-<p><strong>输入：</strong>“RDD”<br><strong>输出：</strong>“Dire”<br><strong>解释：</strong><br>第一轮中,第一个来自 Radiant 阵营的参议员可以使用第一项权利禁止第二个参议员的权利，第二个来自 Dire 阵营的参议员会被跳过因为他的权利被禁止，第三个来自 Dire 阵营的参议员可以使用他的第一项权利禁止第一个参议员的权利，因此在第二轮只剩下第三个参议员拥有投票的权利,于是他可以宣布胜利。</p>
-</li>
-<li><p><strong>提示：</strong></p>
-<p>给定字符串的长度在 <code>[1, 10,000]</code> 之间.</p>
-</li>
-</ul>
-<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="born">二、解题思路</font></h2><h3 id="2-1-题目意思理解"><a href="#2-1-题目意思理解" class="headerlink" title="2.1 题目意思理解"></a>2.1 题目意思理解</h3><p>​    如果读明白了题目的意思，应该可以理解当前参议员要么是被前面的另一队参议员禁止了，否则就应该去禁止后面最靠近它的另一队参议员。</p>
-<p>​    可以理解为带攻击属性的一种游戏。先定义下我们的游戏。</p>
-<ul>
-<li><p>游戏有两个队，D队和R队，目标是杀光其他队的所有人，即可获得胜利✌️。战士是一个一个到达战场的。</p>
-</li>
-<li><p>Dnumber 和 Rnumber 分别表示两个队的总人数，可以通过一次遍历输入数据获得。</p>
-</li>
-<li><p>Dattack 和 Rattack 分别表示两个队当前的攻击力属性，为几就表示可以杀死对方几个人。</p>
-</li>
-<li><p>Ddie 和 Rdie 分别表示两个队当前死了多少英雄战士，当死亡人数等于总人数时，对方获胜。</p>
-<p>第一次遍历输入数据</p>
-</li>
-<li><p>需要统计每个对的总人数并进行一轮厮杀。被杀死的战士将其原大写字母改为小写字母记入史册，永垂不朽。</p>
-<p>后几轮遍历就是完全厮杀</p>
-</li>
-<li><p>直到出现哪个对死亡人数达到总队伍人数，对方队获胜。</p>
-</li>
-</ul>
-<h2 id="三、代码实现"><a href="#三、代码实现" class="headerlink" title="三、代码实现"></a><font color="born">三、代码实现</font></h2><h3 id="3-1-详细代码（Java）"><a href="#3-1-详细代码（Java）" class="headerlink" title="3.1 详细代码（Java）"></a>3.1 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-  <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">predictPartyVictory</span><span class="token punctuation">(</span><span class="token class-name">String</span> senate<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">int</span> <span class="token class-name">Rnumber</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token class-name">Dnumber</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>			<span class="token comment">// 记录每个队的总人数</span>
-    <span class="token keyword">int</span> <span class="token class-name">Rattack</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token class-name">Dattack</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>			<span class="token comment">// 记录每个队的攻击值</span>
-    <span class="token keyword">int</span> <span class="token class-name">Rdie</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token class-name">Ddie</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>					<span class="token comment">// 记录每个对的死亡战士</span>
-    <span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> chars <span class="token operator">=</span> senate<span class="token punctuation">.</span><span class="token function">toCharArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">// 将字符串转换成字符数组方便遍历处理</span>
-    <span class="token comment">// 第一轮统计总人数并厮杀一轮</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> chars<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'D'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>		<span class="token comment">// 来的是D队战士</span>
-        <span class="token class-name">Dnumber</span><span class="token operator">++</span><span class="token punctuation">;</span>				<span class="token comment">// D队人数加1</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Rattack</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>		<span class="token comment">// 如果R队攻击值大于0</span>
-          chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'d'</span><span class="token punctuation">;</span>  	<span class="token comment">// 则刚刚上来的D队战士成炮灰</span>
-          <span class="token class-name">Rattack</span><span class="token operator">--</span><span class="token punctuation">;</span>		<span class="token comment">// 同时消耗R队一个攻击值</span>
-          <span class="token class-name">Ddie</span><span class="token operator">++</span><span class="token punctuation">;</span>				<span class="token comment">// D队死亡人数加1</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token class-name">Dattack</span><span class="token operator">++</span><span class="token punctuation">;</span>		<span class="token comment">// 如果R队攻击值为0，则D队攻击值积累加1</span>
-      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>					<span class="token comment">// 来的是R队战士</span>
-        <span class="token class-name">Rnumber</span><span class="token operator">++</span><span class="token punctuation">;</span>				<span class="token comment">// R队人数加1</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Dattack</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>		<span class="token comment">// 如果D队攻击值大于0</span>
-          chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'r'</span><span class="token punctuation">;</span>		<span class="token comment">// 则刚刚上来的R队战士成炮灰</span>
-          <span class="token class-name">Dattack</span><span class="token operator">--</span><span class="token punctuation">;</span>		<span class="token comment">// 同时消耗D队一个攻击值</span>
-          <span class="token class-name">Rdie</span><span class="token operator">++</span><span class="token punctuation">;</span>				<span class="token comment">// R队死亡人数加1</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token class-name">Rattack</span><span class="token operator">++</span><span class="token punctuation">;</span>	    <span class="token comment">// 如果D队攻击值为0，则R队攻击值积累加1</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token comment">// 后几轮厮杀</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> chars<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> chars<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>		<span class="token comment">// 这个 if 判断达到轮战的目的</span>
-        i <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token keyword">continue</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-      <span class="token comment">// 战士战死，直接跳过，先判断这个可以提高性能</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span><span class="token string">'d'</span><span class="token operator">||</span>chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span><span class="token string">'r'</span><span class="token punctuation">)</span>	<span class="token keyword">continue</span><span class="token punctuation">;</span>		
-      <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token class-name">Rdie</span><span class="token operator">==</span><span class="token class-name">Rnumber</span><span class="token punctuation">)</span>   <span class="token keyword">return</span> <span class="token string">"Dire"</span><span class="token punctuation">;</span>			<span class="token comment">// R队被歼灭，D队获胜</span>
-      <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token class-name">Ddie</span><span class="token operator">==</span><span class="token class-name">Dnumber</span><span class="token punctuation">)</span>   <span class="token keyword">return</span> <span class="token string">"Radiant"</span><span class="token punctuation">;</span>		<span class="token comment">// D队被歼灭，R队获胜</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'D'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>	        <span class="token comment">// 来的是D队战士，不加总人数其他同上处理</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Rattack</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-          <span class="token class-name">Rattack</span><span class="token operator">--</span><span class="token punctuation">;</span>
-          chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'d'</span><span class="token punctuation">;</span>
-          <span class="token class-name">Ddie</span><span class="token operator">++</span><span class="token punctuation">;</span>
-          <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Ddie</span> <span class="token operator">==</span> <span class="token class-name">Dnumber</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token string">"Radiant"</span><span class="token punctuation">;</span>	<span class="token comment">// 判断是否结束</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token class-name">Dattack</span><span class="token operator">++</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>						<span class="token comment">// 来的是R队战士，不加总人数其他同上处理</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Dattack</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-          <span class="token class-name">Dattack</span><span class="token operator">--</span><span class="token punctuation">;</span>
-          chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'r'</span><span class="token punctuation">;</span>
-          <span class="token class-name">Rdie</span><span class="token operator">++</span><span class="token punctuation">;</span>
-          <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Rdie</span> <span class="token operator">==</span> <span class="token class-name">Rnumber</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token string">"Dire"</span><span class="token punctuation">;</span>	<span class="token comment">// 判断是否结束</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token class-name">Rattack</span><span class="token operator">++</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> <span class="token string">""</span><span class="token punctuation">;</span>	<span class="token comment">// 因为上面的return语句都在if语句后，所以加上这个不会被执行的return语句</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="3-2-算法执行结果"><a href="#3-2-算法执行结果" class="headerlink" title="3.2 算法执行结果"></a>3.2 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glk8jfyf4bj30s40ee75b.jpg" alt="算法执行结果" width="80%/"></center>
-
-<h2 id="四、总结分析"><a href="#四、总结分析" class="headerlink" title="四、总结分析"></a><font color="born">四、总结分析</font></h2><p>​    个人感觉这个题目是题目意思有点让人费解，读懂题目意思后思路还是挺简单的。</p>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>中等</tag>
-        <tag>力扣</tag>
-        <tag>数组</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>力扣62-不同路径</title>
     <url>/2020/12/25/li-kou-62-bu-tong-lu-jing/</url>
     <content><![CDATA[<h1 id="力扣62-不同路径"><a href="#力扣62-不同路径" class="headerlink" title="力扣62-不同路径"></a><center>力扣62-不同路径</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="#A22015">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  一个机器人位于一个 <code>m x n</code> 网格的左上角 （起始点在下图中标记为 <code>Start</code> ）。机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为 <code>Finish</code> ）。问总共有多少条不同的路径？</p>
@@ -1940,6 +1832,114 @@ XXX YYY ZZZ <span aria-hidden="true" class="line-numbers-rows"><span></span><spa
       </tags>
   </entry>
   <entry>
+    <title>力扣649-Dota2参议院</title>
+    <url>/2020/12/11/li-kou-649-dota2-can-yi-yuan/</url>
+    <content><![CDATA[<h1 id="力扣649-Dota2-参议院"><a href="#力扣649-Dota2-参议院" class="headerlink" title="力扣649-Dota2 参议院"></a><center>力扣649-Dota2 参议院</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>​        Dota2 的世界里有两个阵营：Radiant (天辉)和 Dire(夜魇)。Dota2 参议院由来自两派的参议员组成。现在参议院希望对一个 Dota2 游戏里的改变作出决定。他们以一个基于轮为过程的投票进行。在每一轮中，每一位参议员都可以行使两项权利中的一项：</p>
+<ol>
+<li><p>禁止一名参议员的权利：参议员可以让另一位参议员在这一轮和随后的几轮中丧失<strong>所有的权利</strong>。</p>
+</li>
+<li><p>宣布胜利：如果参议员发现有权利投票的参议员都是<strong>同一个阵营的</strong>，他可以宣布胜利并决定在游戏中的有关变化。</p>
+</li>
+</ol>
+<p>​       给定一个字符串代表每个参议员的阵营。字母 “R” 和 “D” 分别代表了 Radiant（天辉）和 Dire（夜魇）。然后，如果有 n 个参议员，给定字符串的大小将是 n。以轮为基础的过程从给定顺序的第一个参议员开始到最后一个参议员结束。这一过程将持续到投票结束。所有失去权利的参议员将在过程中被跳过。假设每一位参议员都足够聪明，会为自己的政党做出最好的策略，你需要预测哪一方最终会宣布胜利并在 Dota2 游戏中决定改变。输出应该是 Radiant 或 Dire。</p>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/dota2-senate">https://leetcode-cn.com/problems/dota2-senate</a></p>
+<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
+<li><p><strong>示例1：</strong></p>
+<p><strong>输入：</strong>“RD”<br><strong>输出：</strong>“Radiant”<br><strong>解释：</strong>第一个参议员来自 Radiant 阵营并且他可以使用第一项权利让第二个参议员失去权力，因此第二个参议员将被跳过因为他没有任何权利。然后在第二轮的时候，第一个参议员可以宣布胜利，因为他是唯一一个有投票权的人。</p>
+</li>
+<li><p><strong>示例2：</strong></p>
+<p><strong>输入：</strong>“RDD”<br><strong>输出：</strong>“Dire”<br><strong>解释：</strong><br>第一轮中,第一个来自 Radiant 阵营的参议员可以使用第一项权利禁止第二个参议员的权利，第二个来自 Dire 阵营的参议员会被跳过因为他的权利被禁止，第三个来自 Dire 阵营的参议员可以使用他的第一项权利禁止第一个参议员的权利，因此在第二轮只剩下第三个参议员拥有投票的权利,于是他可以宣布胜利。</p>
+</li>
+<li><p><strong>提示：</strong></p>
+<p>给定字符串的长度在 <code>[1, 10,000]</code> 之间.</p>
+</li>
+</ul>
+<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="born">二、解题思路</font></h2><h3 id="2-1-题目意思理解"><a href="#2-1-题目意思理解" class="headerlink" title="2.1 题目意思理解"></a>2.1 题目意思理解</h3><p>​    如果读明白了题目的意思，应该可以理解当前参议员要么是被前面的另一队参议员禁止了，否则就应该去禁止后面最靠近它的另一队参议员。</p>
+<p>​    可以理解为带攻击属性的一种游戏。先定义下我们的游戏。</p>
+<ul>
+<li><p>游戏有两个队，D队和R队，目标是杀光其他队的所有人，即可获得胜利✌️。战士是一个一个到达战场的。</p>
+</li>
+<li><p>Dnumber 和 Rnumber 分别表示两个队的总人数，可以通过一次遍历输入数据获得。</p>
+</li>
+<li><p>Dattack 和 Rattack 分别表示两个队当前的攻击力属性，为几就表示可以杀死对方几个人。</p>
+</li>
+<li><p>Ddie 和 Rdie 分别表示两个队当前死了多少英雄战士，当死亡人数等于总人数时，对方获胜。</p>
+<p>第一次遍历输入数据</p>
+</li>
+<li><p>需要统计每个对的总人数并进行一轮厮杀。被杀死的战士将其原大写字母改为小写字母记入史册，永垂不朽。</p>
+<p>后几轮遍历就是完全厮杀</p>
+</li>
+<li><p>直到出现哪个对死亡人数达到总队伍人数，对方队获胜。</p>
+</li>
+</ul>
+<h2 id="三、代码实现"><a href="#三、代码实现" class="headerlink" title="三、代码实现"></a><font color="born">三、代码实现</font></h2><h3 id="3-1-详细代码（Java）"><a href="#3-1-详细代码（Java）" class="headerlink" title="3.1 详细代码（Java）"></a>3.1 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">predictPartyVictory</span><span class="token punctuation">(</span><span class="token class-name">String</span> senate<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> <span class="token class-name">Rnumber</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token class-name">Dnumber</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>			<span class="token comment">// 记录每个队的总人数</span>
+    <span class="token keyword">int</span> <span class="token class-name">Rattack</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token class-name">Dattack</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>			<span class="token comment">// 记录每个队的攻击值</span>
+    <span class="token keyword">int</span> <span class="token class-name">Rdie</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token class-name">Ddie</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>					<span class="token comment">// 记录每个对的死亡战士</span>
+    <span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> chars <span class="token operator">=</span> senate<span class="token punctuation">.</span><span class="token function">toCharArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">// 将字符串转换成字符数组方便遍历处理</span>
+    <span class="token comment">// 第一轮统计总人数并厮杀一轮</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> chars<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'D'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>		<span class="token comment">// 来的是D队战士</span>
+        <span class="token class-name">Dnumber</span><span class="token operator">++</span><span class="token punctuation">;</span>				<span class="token comment">// D队人数加1</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Rattack</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>		<span class="token comment">// 如果R队攻击值大于0</span>
+          chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'d'</span><span class="token punctuation">;</span>  	<span class="token comment">// 则刚刚上来的D队战士成炮灰</span>
+          <span class="token class-name">Rattack</span><span class="token operator">--</span><span class="token punctuation">;</span>		<span class="token comment">// 同时消耗R队一个攻击值</span>
+          <span class="token class-name">Ddie</span><span class="token operator">++</span><span class="token punctuation">;</span>				<span class="token comment">// D队死亡人数加1</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token class-name">Dattack</span><span class="token operator">++</span><span class="token punctuation">;</span>		<span class="token comment">// 如果R队攻击值为0，则D队攻击值积累加1</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>					<span class="token comment">// 来的是R队战士</span>
+        <span class="token class-name">Rnumber</span><span class="token operator">++</span><span class="token punctuation">;</span>				<span class="token comment">// R队人数加1</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Dattack</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>		<span class="token comment">// 如果D队攻击值大于0</span>
+          chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'r'</span><span class="token punctuation">;</span>		<span class="token comment">// 则刚刚上来的R队战士成炮灰</span>
+          <span class="token class-name">Dattack</span><span class="token operator">--</span><span class="token punctuation">;</span>		<span class="token comment">// 同时消耗D队一个攻击值</span>
+          <span class="token class-name">Rdie</span><span class="token operator">++</span><span class="token punctuation">;</span>				<span class="token comment">// R队死亡人数加1</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token class-name">Rattack</span><span class="token operator">++</span><span class="token punctuation">;</span>	    <span class="token comment">// 如果D队攻击值为0，则R队攻击值积累加1</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 后几轮厮杀</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> chars<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> chars<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>		<span class="token comment">// 这个 if 判断达到轮战的目的</span>
+        i <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">continue</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token comment">// 战士战死，直接跳过，先判断这个可以提高性能</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span><span class="token string">'d'</span><span class="token operator">||</span>chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span><span class="token string">'r'</span><span class="token punctuation">)</span>	<span class="token keyword">continue</span><span class="token punctuation">;</span>		
+      <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token class-name">Rdie</span><span class="token operator">==</span><span class="token class-name">Rnumber</span><span class="token punctuation">)</span>   <span class="token keyword">return</span> <span class="token string">"Dire"</span><span class="token punctuation">;</span>			<span class="token comment">// R队被歼灭，D队获胜</span>
+      <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token class-name">Ddie</span><span class="token operator">==</span><span class="token class-name">Dnumber</span><span class="token punctuation">)</span>   <span class="token keyword">return</span> <span class="token string">"Radiant"</span><span class="token punctuation">;</span>		<span class="token comment">// D队被歼灭，R队获胜</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'D'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>	        <span class="token comment">// 来的是D队战士，不加总人数其他同上处理</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Rattack</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token class-name">Rattack</span><span class="token operator">--</span><span class="token punctuation">;</span>
+          chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'d'</span><span class="token punctuation">;</span>
+          <span class="token class-name">Ddie</span><span class="token operator">++</span><span class="token punctuation">;</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Ddie</span> <span class="token operator">==</span> <span class="token class-name">Dnumber</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token string">"Radiant"</span><span class="token punctuation">;</span>	<span class="token comment">// 判断是否结束</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token class-name">Dattack</span><span class="token operator">++</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>						<span class="token comment">// 来的是R队战士，不加总人数其他同上处理</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Dattack</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token class-name">Dattack</span><span class="token operator">--</span><span class="token punctuation">;</span>
+          chars<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'r'</span><span class="token punctuation">;</span>
+          <span class="token class-name">Rdie</span><span class="token operator">++</span><span class="token punctuation">;</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Rdie</span> <span class="token operator">==</span> <span class="token class-name">Rnumber</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token string">"Dire"</span><span class="token punctuation">;</span>	<span class="token comment">// 判断是否结束</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token class-name">Rattack</span><span class="token operator">++</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token string">""</span><span class="token punctuation">;</span>	<span class="token comment">// 因为上面的return语句都在if语句后，所以加上这个不会被执行的return语句</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="3-2-算法执行结果"><a href="#3-2-算法执行结果" class="headerlink" title="3.2 算法执行结果"></a>3.2 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glk8jfyf4bj30s40ee75b.jpg" alt="算法执行结果" width="80%/"></center>
+
+<h2 id="四、总结分析"><a href="#四、总结分析" class="headerlink" title="四、总结分析"></a><font color="born">四、总结分析</font></h2><p>​    个人感觉这个题目是题目意思有点让人费解，读懂题目意思后思路还是挺简单的。</p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>中等</tag>
+        <tag>力扣</tag>
+        <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>力扣714-买卖股票的最佳时机含手续费</title>
     <url>/2020/12/17/li-kou-714-mai-mai-gu-piao-de-zui-jia-shi-ji-han-shou-xu-fei/</url>
     <content><![CDATA[<h1 id="力扣714-买卖股票的最佳时机含手续费"><a href="#力扣714-买卖股票的最佳时机含手续费" class="headerlink" title="力扣714-买卖股票的最佳时机含手续费"></a><center>力扣714-买卖股票的最佳时机含手续费</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>​    给定一个整数数组 prices，其中第 i 个元素代表了第 i 天的股票价格 ；非负整数 fee 代表了交易股票的手续费用。你可以无限次地完成交易，但是你每笔交易都需要付手续费。如果你已经购买了一个股票，在卖出它之前你就不能再继续购买股票了。返回获得利润的最大值。</p>
@@ -2014,69 +2014,6 @@ XXX YYY ZZZ <span aria-hidden="true" class="line-numbers-rows"><span></span><spa
         <tag>中等</tag>
         <tag>力扣</tag>
         <tag>动态规划</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>力扣746-使用最小花费爬楼梯</title>
-    <url>/2020/12/21/li-kou-746-shi-yong-zui-xiao-hua-fei-pa-lou-ti/</url>
-    <content><![CDATA[<h1 id="力扣746-使用最小花费爬楼梯"><a href="#力扣746-使用最小花费爬楼梯" class="headerlink" title="力扣746-使用最小花费爬楼梯"></a><center>力扣746-使用最小花费爬楼梯</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  数组的每个索引作为一个阶梯，第 i个阶梯对应着一个非负数的体力花费值cost[i]（索引从0开始）。每当你爬上一个阶梯你都要花费对应的体力花费值，然后你可以选择继续爬一个阶梯或者爬两个阶梯。您需要找到达到楼层顶部的最低花费。在开始时，你可以选择从索引为 0 或 1 的元素作为初始阶梯。</p>
-<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
-<li><p><strong>示例1：</strong></p>
-<p>  <strong>输入：</strong> cost = [10, 15, 20]</p>
-<p>  <strong>输出：</strong> 15</p>
-<p>  <strong>解释：</strong> 最低花费是从cost[1]开始，然后走两步即可到阶梯顶，一共花费15。</p>
-</li>
-<li><p><strong>示例2：</strong></p>
-<p>  <strong>输入：</strong> cost = [1, 100, 1, 1, 1, 100, 1, 1, 100, 1]</p>
-<p>  <strong>输出：</strong> 6</p>
-<p>  <strong>解释：</strong> 最低花费方式是从cost[0]开始，逐个经过那些1，跳过cost[3]，一共花费6。</p>
-</li>
-</ul>
-<p><strong>注意：</strong></p>
-<ol>
-<li> <code>cost</code> 的长度将会在 <code>[2, 1000]</code>。</li>
-<li> 每一个 <code>cost[i]</code> 将会是一个Integer类型，范围为 <code>[0, 999]</code>。</li>
-</ol>
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/min-cost-climbing-stairs">https://leetcode-cn.com/problems/min-cost-climbing-stairs</a></p>
-<h2 id="二、解题思路（动态规划）"><a href="#二、解题思路（动态规划）" class="headerlink" title="二、解题思路（动态规划）"></a><font color="born">二、解题思路（动态规划）</font></h2><h3 id="2-1-题目意思理解"><a href="#2-1-题目意思理解" class="headerlink" title="2.1 题目意思理解"></a>2.1 题目意思理解</h3><p>  吐槽一下原题的题目表达太不清晰~。参考网友谈论彻底明白到底是表达的什么<strong>意思：</strong>其实就是让我们要<font color="red">通过整个数组</font>，cost[i] 表示通过该位置的<font color="red">过路费</font>，交了过路费，你可以<font color="red">走一步</font>，也可以<font color="red">走两步</font>，目的是要<font color="red">彻底走完数组</font>，<font color="red">花费最少</font>。可以从 <font color="red">cost[0]</font> 或 <font color="red">cost[1]</font> 开始起步。</p>
-<p>  明白题目意思后比较容易理解该题目也是一个动态规划的题目，几天前也碰到过一个动态规划的题目：<a href="https://ganming1.github.io/2020/12/17/li-kou-714-mai-mai-gu-piao-de-zui-jia-shi-ji-han-shou-xu-fei/">力扣714-买卖股票的最佳时机含手续费</a>，里面有简单介绍动态规划的内容。</p>
-<ul>
-<li><p>  <font color="red">定义状态变量</font> cost[i] 为到达并跨过第 i 级台阶总的最小费用，直接利用原数组保存结果。</p>
-</li>
-<li><p><font color="red">找状态转移方程</font>：</p>
-<p>  1.要到达第 i 级台阶可以有第 i-1 级台阶走一步到达，再交上这一级台阶的过路费跨过。总费用为 cost[i-1] + cost[i]。</p>
-<p>  2.要到达第 i 级台阶也可以由第 i-2 级台阶走两步到达，在交上这一级台阶的过路费跨过。总费用为 cost[i-2] + cost[i]。</p>
-<p>  应该去下面两种情况中的较小值<br></p><center>cost[i] = Math.min(cost[i-1] + cost[i], cost[i-2] + cost[i])</center><p></p>
-</li>
-<li><p>  <font color="red">初始状态</font>即只需要知道到达并跨过第 0 级台阶和到达并跨过第 1 级台阶总的最小费用即可，而到达第 0 和第 1 级台阶没有前面费用需要，所以只需要跨过费用即可，所以初始状态 cost[0] = cost[0]，cost[1] = cost[1]。  </p>
-</li>
-</ul>
-<h3 id="2-2-详细代码（Java）"><a href="#2-2-详细代码（Java）" class="headerlink" title="2.2 详细代码（Java）"></a>2.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">minCostClimbingStairs</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> cost<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>cost <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span>   <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>           <span class="token comment">// 输入异常判断</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>cost<span class="token punctuation">.</span>length <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span>   <span class="token keyword">return</span> cost<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 只有一级台阶</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>cost<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>      <span class="token comment">// 动态规划更新总最小费用</span>
-            <span class="token keyword">int</span> cost1 <span class="token operator">=</span> cost<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">+</span>cost<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>      <span class="token comment">// 上一级台阶通过跨一步到达的</span>
-            <span class="token keyword">int</span> cost2 <span class="token operator">=</span> cost<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">+</span>cost<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>      <span class="token comment">// 上两级台阶通过跨两步到达的</span>
-            cost<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span><span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">min</span><span class="token punctuation">(</span>cost1<span class="token punctuation">,</span>cost2<span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// 选最小的作为跨过这个台阶的总最小费用</span>
-        <span class="token punctuation">}</span>
-        <span class="token comment">// 跨过最后一个台阶走一步或倒数第二个台阶走两步都是完成全过程</span>
-        <span class="token keyword">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">min</span><span class="token punctuation">(</span>cost<span class="token punctuation">[</span>cost<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>cost<span class="token punctuation">[</span>cost<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="2-3-算法执行结果"><a href="#2-3-算法执行结果" class="headerlink" title="2.3 算法执行结果"></a>2.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glvax410v3j30s00eg3zx.jpg" alt="算法执行结果" width="80%/"></center>
-
-<h2 id="三、总结分析"><a href="#三、总结分析" class="headerlink" title="三、总结分析"></a><font color="born">三、总结分析</font></h2><p>  又一道动态规划题，赶紧整理起来。</p>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>力扣</tag>
-        <tag>简单</tag>
-        <tag>动态规划</tag>
-        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
@@ -2256,6 +2193,167 @@ XXX YYY ZZZ <span aria-hidden="true" class="line-numbers-rows"><span></span><spa
       </tags>
   </entry>
   <entry>
+    <title>力扣746-使用最小花费爬楼梯</title>
+    <url>/2020/12/21/li-kou-746-shi-yong-zui-xiao-hua-fei-pa-lou-ti/</url>
+    <content><![CDATA[<h1 id="力扣746-使用最小花费爬楼梯"><a href="#力扣746-使用最小花费爬楼梯" class="headerlink" title="力扣746-使用最小花费爬楼梯"></a><center>力扣746-使用最小花费爬楼梯</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  数组的每个索引作为一个阶梯，第 i个阶梯对应着一个非负数的体力花费值cost[i]（索引从0开始）。每当你爬上一个阶梯你都要花费对应的体力花费值，然后你可以选择继续爬一个阶梯或者爬两个阶梯。您需要找到达到楼层顶部的最低花费。在开始时，你可以选择从索引为 0 或 1 的元素作为初始阶梯。</p>
+<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
+<li><p><strong>示例1：</strong></p>
+<p>  <strong>输入：</strong> cost = [10, 15, 20]</p>
+<p>  <strong>输出：</strong> 15</p>
+<p>  <strong>解释：</strong> 最低花费是从cost[1]开始，然后走两步即可到阶梯顶，一共花费15。</p>
+</li>
+<li><p><strong>示例2：</strong></p>
+<p>  <strong>输入：</strong> cost = [1, 100, 1, 1, 1, 100, 1, 1, 100, 1]</p>
+<p>  <strong>输出：</strong> 6</p>
+<p>  <strong>解释：</strong> 最低花费方式是从cost[0]开始，逐个经过那些1，跳过cost[3]，一共花费6。</p>
+</li>
+</ul>
+<p><strong>注意：</strong></p>
+<ol>
+<li> <code>cost</code> 的长度将会在 <code>[2, 1000]</code>。</li>
+<li> 每一个 <code>cost[i]</code> 将会是一个Integer类型，范围为 <code>[0, 999]</code>。</li>
+</ol>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/min-cost-climbing-stairs">https://leetcode-cn.com/problems/min-cost-climbing-stairs</a></p>
+<h2 id="二、解题思路（动态规划）"><a href="#二、解题思路（动态规划）" class="headerlink" title="二、解题思路（动态规划）"></a><font color="born">二、解题思路（动态规划）</font></h2><h3 id="2-1-题目意思理解"><a href="#2-1-题目意思理解" class="headerlink" title="2.1 题目意思理解"></a>2.1 题目意思理解</h3><p>  吐槽一下原题的题目表达太不清晰~。参考网友谈论彻底明白到底是表达的什么<strong>意思：</strong>其实就是让我们要<font color="red">通过整个数组</font>，cost[i] 表示通过该位置的<font color="red">过路费</font>，交了过路费，你可以<font color="red">走一步</font>，也可以<font color="red">走两步</font>，目的是要<font color="red">彻底走完数组</font>，<font color="red">花费最少</font>。可以从 <font color="red">cost[0]</font> 或 <font color="red">cost[1]</font> 开始起步。</p>
+<p>  明白题目意思后比较容易理解该题目也是一个动态规划的题目，几天前也碰到过一个动态规划的题目：<a href="https://ganming1.github.io/2020/12/17/li-kou-714-mai-mai-gu-piao-de-zui-jia-shi-ji-han-shou-xu-fei/">力扣714-买卖股票的最佳时机含手续费</a>，里面有简单介绍动态规划的内容。</p>
+<ul>
+<li><p>  <font color="red">定义状态变量</font> cost[i] 为到达并跨过第 i 级台阶总的最小费用，直接利用原数组保存结果。</p>
+</li>
+<li><p><font color="red">找状态转移方程</font>：</p>
+<p>  1.要到达第 i 级台阶可以有第 i-1 级台阶走一步到达，再交上这一级台阶的过路费跨过。总费用为 cost[i-1] + cost[i]。</p>
+<p>  2.要到达第 i 级台阶也可以由第 i-2 级台阶走两步到达，在交上这一级台阶的过路费跨过。总费用为 cost[i-2] + cost[i]。</p>
+<p>  应该去下面两种情况中的较小值<br></p><center>cost[i] = Math.min(cost[i-1] + cost[i], cost[i-2] + cost[i])</center><p></p>
+</li>
+<li><p>  <font color="red">初始状态</font>即只需要知道到达并跨过第 0 级台阶和到达并跨过第 1 级台阶总的最小费用即可，而到达第 0 和第 1 级台阶没有前面费用需要，所以只需要跨过费用即可，所以初始状态 cost[0] = cost[0]，cost[1] = cost[1]。  </p>
+</li>
+</ul>
+<h3 id="2-2-详细代码（Java）"><a href="#2-2-详细代码（Java）" class="headerlink" title="2.2 详细代码（Java）"></a>2.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">minCostClimbingStairs</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> cost<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>cost <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span>   <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>           <span class="token comment">// 输入异常判断</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>cost<span class="token punctuation">.</span>length <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span>   <span class="token keyword">return</span> cost<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 只有一级台阶</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>cost<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>      <span class="token comment">// 动态规划更新总最小费用</span>
+            <span class="token keyword">int</span> cost1 <span class="token operator">=</span> cost<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">+</span>cost<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>      <span class="token comment">// 上一级台阶通过跨一步到达的</span>
+            <span class="token keyword">int</span> cost2 <span class="token operator">=</span> cost<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">+</span>cost<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>      <span class="token comment">// 上两级台阶通过跨两步到达的</span>
+            cost<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span><span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">min</span><span class="token punctuation">(</span>cost1<span class="token punctuation">,</span>cost2<span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// 选最小的作为跨过这个台阶的总最小费用</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">// 跨过最后一个台阶走一步或倒数第二个台阶走两步都是完成全过程</span>
+        <span class="token keyword">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">min</span><span class="token punctuation">(</span>cost<span class="token punctuation">[</span>cost<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>cost<span class="token punctuation">[</span>cost<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="2-3-算法执行结果"><a href="#2-3-算法执行结果" class="headerlink" title="2.3 算法执行结果"></a>2.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glvax410v3j30s00eg3zx.jpg" alt="算法执行结果" width="80%/"></center>
+
+<h2 id="三、总结分析"><a href="#三、总结分析" class="headerlink" title="三、总结分析"></a><font color="born">三、总结分析</font></h2><p>  又一道动态规划题，赶紧整理起来。</p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>力扣</tag>
+        <tag>简单</tag>
+        <tag>动态规划</tag>
+        <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>力扣85-最大矩形</title>
+    <url>/2020/12/26/li-kou-85-zui-da-ju-xing/</url>
+    <content><![CDATA[<h1 id="力扣85-最大矩形"><a href="#力扣85-最大矩形" class="headerlink" title="力扣85-最大矩形"></a><center>力扣85-最大矩形</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="#A22015">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  给定一个仅包含 <code>0</code> 和 <code>1</code> 、大小为 <code>rows x cols</code> 的二维二进制矩阵，找出只包含 <code>1</code> 的最大矩形，并返回其面积。</p>
+<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
+<li><p><strong>示例1：</strong></p>
+  <center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm0k2iw9laj30b608yt92.jpg" alt="题目示图" width="60%/"></center>
+
+<p>  <strong>输入：</strong>  matrix = [[“1”,”0”,”1”,”0”,”0”],[“1”,”0”,”1”,”1”,”1”],[“1”,”1”,”1”,”1”,”1”],[“1”,”0”,”0”,”1”,”0”]]<br><strong>输出：</strong> 6<br><strong>解释：</strong> 最大矩形如上图所示。</p>
+</li>
+<li><p><strong>示例2：</strong></p>
+<p>  <strong>输入：</strong> matrix = []<br><strong>输出：</strong> 0<br></p>
+</li>
+<li><p><strong>示例3：</strong></p>
+<p>  <strong>输入：</strong> matrix = [[“0”]]<br><strong>输出：</strong> 0</p>
+</li>
+<li><p><strong>示例4：</strong></p>
+<p>  <strong>输入：</strong> matrix = [[“1”]]<br><strong>输出：</strong> 1</p>
+</li>
+<li><p><strong>示例5：</strong></p>
+<p>  <strong>输入：</strong> matrix = [[“0”,”0”]]<br><strong>输出：</strong> 0</p>
+</li>
+</ul>
+<p><strong>提示：</strong></p>
+<ul>
+<li>  <code>row == matrix.length</code></li>
+<li>  <code>cols == matrix[0].length</code></li>
+<li>  <code>0 &lt;= row, cols &lt;= 200</code></li>
+<li>  <code>matrix[i][j]</code> 为 <code>0</code> 或 <code>1</code></li>
+</ul>
+<p>来源：力扣（LeetCode）<br><br>链接：<a href="">https://leetcode-cn.com/problems/maximal-rectangle/</a></p>
+<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="#A22015">二、解题思路</font></h2><ul>
+<li>  <strong>解题思路</strong></li>
+</ul>
+<p>  这个题基于力扣第84题-柱状图中最大的矩形可以比较容易的想到思路，我们可以一行一行的考虑最大的矩形，如图所示。利用上一题的思路还是很容易想到解题思路的。</p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm4xwx93olj30c50c6mxt.jpg" alt="思路图解" width="100%/"></center>
+
+<ul>
+<li>  <strong>详细代码（Java）</strong></li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">maximalRectangle</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> matrix<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>matrix<span class="token punctuation">.</span>length <span class="token operator">==</span> <span class="token number">0</span><span class="token operator">||</span> matrix <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>   <span class="token comment">// 当字符二维数组不存在输出0</span>
+    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> a <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>matrix<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">]</span><span class="token punctuation">;</span>        <span class="token comment">// 记录每一行中每一个位置向上连续1的个数</span>
+    <span class="token keyword">int</span> max <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>        <span class="token comment">// 记录最大的矩形面积，初始化为0</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>matrix<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>        <span class="token comment">// 遍历每一行</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>j<span class="token operator">&lt;</span>matrix<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment">// 统计每一个位置向上连续1的个数</span>
+        <span class="token keyword">int</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>      <span class="token comment">// 每一个位置初始化向上连续1的个数为0</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> k <span class="token operator">=</span> i<span class="token punctuation">;</span>k<span class="token operator">&gt;=</span><span class="token number">0</span><span class="token punctuation">;</span>k<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>   <span class="token comment">// 向上遍历</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>matrix<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">==</span><span class="token string">'1'</span><span class="token punctuation">)</span>count<span class="token operator">++</span><span class="token punctuation">;</span>
+          <span class="token keyword">else</span> <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        a<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> count<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      max <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>max<span class="token punctuation">,</span><span class="token function">largestRectangleArea</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> max<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 第84题-柱状图中最大的矩形</span>
+<span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">largestRectangleArea</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> heights<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>heights <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">||</span> heights<span class="token punctuation">.</span>length<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>   <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>   <span class="token comment">// 数组为空返回0</span>
+    <span class="token keyword">int</span> len <span class="token operator">=</span> heights<span class="token punctuation">.</span>length<span class="token punctuation">;</span>       <span class="token comment">// 记录长度</span>
+    <span class="token keyword">int</span> <span class="token class-name">Smax</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>                   <span class="token comment">// 记录最大面积</span>
+    <span class="token class-name">Deque</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> stack <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayDeque</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span>len<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>       <span class="token comment">// 遍历每一个元素</span>
+      <span class="token comment">// 栈不为空，且当前元素小于栈顶元素，则计算栈顶元素能勾勒矩形的面积</span>
+      <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>stack<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;&amp;</span>heights<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&lt;</span>heights<span class="token punctuation">[</span>stack<span class="token punctuation">.</span><span class="token function">peekLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">int</span> right <span class="token operator">=</span> i<span class="token punctuation">;</span>          <span class="token comment">// 右边界为当前下标</span>
+        <span class="token keyword">int</span> height <span class="token operator">=</span> heights<span class="token punctuation">[</span>stack<span class="token punctuation">.</span><span class="token function">pollLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 栈顶出栈记录高度</span>
+        <span class="token keyword">int</span> left <span class="token operator">=</span> stack<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">?</span><span class="token operator">-</span><span class="token number">1</span><span class="token operator">:</span>stack<span class="token punctuation">.</span><span class="token function">peekLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 左边界：栈不空则为栈顶元素，否则为-1</span>
+        <span class="token class-name">Smax</span> <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token class-name">Smax</span><span class="token punctuation">,</span>height<span class="token operator">*</span><span class="token punctuation">(</span>right<span class="token operator">-</span>left<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// 计算面积比较</span>
+      <span class="token punctuation">}</span>
+      stack<span class="token punctuation">.</span><span class="token function">addLast</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// 栈顶元素不大于当前值，入栈</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>stack<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>   <span class="token comment">// 遍历完了数组</span>
+      <span class="token keyword">int</span> right <span class="token operator">=</span> len<span class="token punctuation">;</span>        <span class="token comment">// 右边界为数组长度</span>
+      <span class="token keyword">int</span> height <span class="token operator">=</span> heights<span class="token punctuation">[</span>stack<span class="token punctuation">.</span><span class="token function">pollLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 栈顶出栈记录高度</span>
+      <span class="token keyword">int</span> left <span class="token operator">=</span> stack<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">?</span><span class="token operator">-</span><span class="token number">1</span><span class="token operator">:</span>stack<span class="token punctuation">.</span><span class="token function">peekLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 左边界：栈不空则为栈顶元素，否则为-1</span>
+      <span class="token class-name">Smax</span> <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token class-name">Smax</span><span class="token punctuation">,</span>height<span class="token operator">*</span><span class="token punctuation">(</span>right<span class="token operator">-</span>left<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// 计算面积比较</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token class-name">Smax</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>  <strong>代码执行结果</strong></li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm4ys2up18j30s40egq4b.jpg" alt="递归执行结果" width="100%/"></center>
+
+<h2 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a><font color="#A22015">三、总结</font></h2><p>  这两天的题目都是困难，做的很吃力，这个题就先这样做着吧，后面有精力在分析多方法。</p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>力扣</tag>
+        <tag>困难</tag>
+        <tag>栈</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>力扣860-柠檬水找零</title>
     <url>/2020/12/25/li-kou-860-ning-meng-shui-zhao-ling/</url>
     <content><![CDATA[<h1 id="力扣860-柠檬水找零"><a href="#力扣860-柠檬水找零" class="headerlink" title="力扣860-柠檬水找零"></a><center>力扣860-柠檬水找零</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="#A22015">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  在柠檬水摊上，每一杯柠檬水的售价为 <code>5</code> 美元。顾客排队购买你的产品，（按账单 <code>bills</code> 支付的顺序）一次购买一杯。每位顾客只买一杯柠檬水，然后向你付 <code>5</code> 美元、<code>10</code> 美元或 <code>20</code> 美元。你必须给每个顾客正确找零，也就是说净交易是每位顾客向你支付 <code>5</code> 美元。</p>
@@ -2336,106 +2434,8 @@ XXX YYY ZZZ <span aria-hidden="true" class="line-numbers-rows"><span></span><spa
       </categories>
       <tags>
         <tag>力扣</tag>
-        <tag>简单</tag>
         <tag>贪心</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>力扣85-最大矩形</title>
-    <url>/2020/12/26/li-kou-85-zui-da-ju-xing/</url>
-    <content><![CDATA[<h1 id="力扣85-最大矩形"><a href="#力扣85-最大矩形" class="headerlink" title="力扣85-最大矩形"></a><center>力扣85-最大矩形</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="#A22015">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  给定一个仅包含 <code>0</code> 和 <code>1</code> 、大小为 <code>rows x cols</code> 的二维二进制矩阵，找出只包含 <code>1</code> 的最大矩形，并返回其面积。</p>
-<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
-<li><p><strong>示例1：</strong></p>
-  <center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm0k2iw9laj30b608yt92.jpg" alt="题目示图" width="60%/"></center>
-
-<p>  <strong>输入：</strong>  matrix = [[“1”,”0”,”1”,”0”,”0”],[“1”,”0”,”1”,”1”,”1”],[“1”,”1”,”1”,”1”,”1”],[“1”,”0”,”0”,”1”,”0”]]<br><strong>输出：</strong> 6<br><strong>解释：</strong> 最大矩形如上图所示。</p>
-</li>
-<li><p><strong>示例2：</strong></p>
-<p>  <strong>输入：</strong> matrix = []<br><strong>输出：</strong> 0<br></p>
-</li>
-<li><p><strong>示例3：</strong></p>
-<p>  <strong>输入：</strong> matrix = [[“0”]]<br><strong>输出：</strong> 0</p>
-</li>
-<li><p><strong>示例4：</strong></p>
-<p>  <strong>输入：</strong> matrix = [[“1”]]<br><strong>输出：</strong> 1</p>
-</li>
-<li><p><strong>示例5：</strong></p>
-<p>  <strong>输入：</strong> matrix = [[“0”,”0”]]<br><strong>输出：</strong> 0</p>
-</li>
-</ul>
-<p><strong>提示：</strong></p>
-<ul>
-<li>  <code>row == matrix.length</code></li>
-<li>  <code>cols == matrix[0].length</code></li>
-<li>  <code>0 &lt;= row, cols &lt;= 200</code></li>
-<li>  <code>matrix[i][j]</code> 为 <code>0</code> 或 <code>1</code></li>
-</ul>
-<p>来源：力扣（LeetCode）<br><br>链接：<a href="">https://leetcode-cn.com/problems/maximal-rectangle/</a></p>
-<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="#A22015">二、解题思路</font></h2><ul>
-<li>  <strong>解题思路</strong></li>
-</ul>
-<p>  这个题基于力扣第84题-柱状图中最大的矩形可以比较容易的想到思路，我们可以一行一行的考虑最大的矩形，如图所示。利用上一题的思路还是很容易想到解题思路的。</p>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm4xwx93olj30c50c6mxt.jpg" alt="递归执行结果" width="100%/"></center>
-
-<ul>
-<li>  <strong>详细代码（Java）</strong></li>
-</ul>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">maximalRectangle</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> matrix<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>matrix<span class="token punctuation">.</span>length <span class="token operator">==</span> <span class="token number">0</span><span class="token operator">||</span> matrix <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>   <span class="token comment">// 当字符二维数组不存在输出0</span>
-    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> a <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>matrix<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">]</span><span class="token punctuation">;</span>        <span class="token comment">// 记录每一行中每一个位置向上连续1的个数</span>
-    <span class="token keyword">int</span> max <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>        <span class="token comment">// 记录最大的矩形面积，初始化为0</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>matrix<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>        <span class="token comment">// 遍历每一行</span>
-      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>j<span class="token operator">&lt;</span>matrix<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment">// 统计每一个位置向上连续1的个数</span>
-        <span class="token keyword">int</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>      <span class="token comment">// 每一个位置初始化向上连续1的个数为0</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> k <span class="token operator">=</span> i<span class="token punctuation">;</span>k<span class="token operator">&gt;=</span><span class="token number">0</span><span class="token punctuation">;</span>k<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>   <span class="token comment">// 向上遍历</span>
-          <span class="token keyword">if</span> <span class="token punctuation">(</span>matrix<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">==</span><span class="token string">'1'</span><span class="token punctuation">)</span>count<span class="token operator">++</span><span class="token punctuation">;</span>
-          <span class="token keyword">else</span> <span class="token keyword">break</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        a<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> count<span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-      max <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>max<span class="token punctuation">,</span><span class="token function">largestRectangleArea</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> max<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token comment">// 第84题-柱状图中最大的矩形</span>
-<span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">largestRectangleArea</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> heights<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>heights <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">||</span> heights<span class="token punctuation">.</span>length<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>   <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>   <span class="token comment">// 数组为空返回0</span>
-    <span class="token keyword">int</span> len <span class="token operator">=</span> heights<span class="token punctuation">.</span>length<span class="token punctuation">;</span>       <span class="token comment">// 记录长度</span>
-    <span class="token keyword">int</span> <span class="token class-name">Smax</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>                   <span class="token comment">// 记录最大面积</span>
-    <span class="token class-name">Deque</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> stack <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayDeque</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span>len<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>       <span class="token comment">// 遍历每一个元素</span>
-      <span class="token comment">// 栈不为空，且当前元素小于栈顶元素，则计算栈顶元素能勾勒矩形的面积</span>
-      <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>stack<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;&amp;</span>heights<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&lt;</span>heights<span class="token punctuation">[</span>stack<span class="token punctuation">.</span><span class="token function">peekLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">int</span> right <span class="token operator">=</span> i<span class="token punctuation">;</span>          <span class="token comment">// 右边界为当前下标</span>
-        <span class="token keyword">int</span> height <span class="token operator">=</span> heights<span class="token punctuation">[</span>stack<span class="token punctuation">.</span><span class="token function">pollLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 栈顶出栈记录高度</span>
-        <span class="token keyword">int</span> left <span class="token operator">=</span> stack<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">?</span><span class="token operator">-</span><span class="token number">1</span><span class="token operator">:</span>stack<span class="token punctuation">.</span><span class="token function">peekLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 左边界：栈不空则为栈顶元素，否则为-1</span>
-        <span class="token class-name">Smax</span> <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token class-name">Smax</span><span class="token punctuation">,</span>height<span class="token operator">*</span><span class="token punctuation">(</span>right<span class="token operator">-</span>left<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// 计算面积比较</span>
-      <span class="token punctuation">}</span>
-      stack<span class="token punctuation">.</span><span class="token function">addLast</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// 栈顶元素不大于当前值，入栈</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>stack<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>   <span class="token comment">// 遍历完了数组</span>
-      <span class="token keyword">int</span> right <span class="token operator">=</span> len<span class="token punctuation">;</span>        <span class="token comment">// 右边界为数组长度</span>
-      <span class="token keyword">int</span> height <span class="token operator">=</span> heights<span class="token punctuation">[</span>stack<span class="token punctuation">.</span><span class="token function">pollLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 栈顶出栈记录高度</span>
-      <span class="token keyword">int</span> left <span class="token operator">=</span> stack<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">?</span><span class="token operator">-</span><span class="token number">1</span><span class="token operator">:</span>stack<span class="token punctuation">.</span><span class="token function">peekLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 左边界：栈不空则为栈顶元素，否则为-1</span>
-      <span class="token class-name">Smax</span> <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token class-name">Smax</span><span class="token punctuation">,</span>height<span class="token operator">*</span><span class="token punctuation">(</span>right<span class="token operator">-</span>left<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// 计算面积比较</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> <span class="token class-name">Smax</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<ul>
-<li>  <strong>代码执行结果</strong></li>
-</ul>
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm4ys2up18j30s40egq4b.jpg" alt="递归执行结果" width="100%/"></center>
-
-<h2 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a><font color="#A22015">三、总结</font></h2><p>  这两天的题目都是困难，做的很吃力，这个题就先这样做着吧，后面有精力在分析多方法。</p>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>力扣</tag>
-        <tag>困难</tag>
-        <tag>栈</tag>
+        <tag>简单</tag>
       </tags>
   </entry>
   <entry>
