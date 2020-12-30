@@ -6,7 +6,7 @@
   <link href="http://ganming1.github.io/atom.xml" rel="self"/>
   
   <link href="http://ganming1.github.io/"/>
-  <updated>2020-12-29T17:36:52.637Z</updated>
+  <updated>2020-12-30T07:46:45.481Z</updated>
   <id>http://ganming1.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSS的三种元素显示模式</title>
+    <link href="http://ganming1.github.io/2020/12/30/css-de-san-chong-yuan-su-xian-shi-mo-shi/"/>
+    <id>http://ganming1.github.io/2020/12/30/css-de-san-chong-yuan-su-xian-shi-mo-shi/</id>
+    <published>2020-12-30T07:44:38.000Z</published>
+    <updated>2020-12-30T07:46:45.481Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;CSS-的三章元素显示模式&quot;&gt;&lt;a href=&quot;#CSS-的三章元素显示模式&quot; class=&quot;headerlink&quot; title=&quot;CSS 的三章元素显示模式&quot;&gt;&lt;/a&gt;&lt;center&gt;CSS 的三章元素显示模式&lt;/center&gt;&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="前端开发" scheme="http://ganming1.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="CSS" scheme="http://ganming1.github.io/tags/CSS/"/>
+    
+    <category term="前端" scheme="http://ganming1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>力扣1046-最后一块石头的重量</title>
@@ -588,33 +615,6 @@
     <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
     
     <category term="动态规划" scheme="http://ganming1.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSS基础知识(1)</title>
-    <link href="http://ganming1.github.io/2020/12/16/css-ji-chu-zhi-shi-1/"/>
-    <id>http://ganming1.github.io/2020/12/16/css-ji-chu-zhi-shi-1/</id>
-    <published>2020-12-16T08:01:03.000Z</published>
-    <updated>2020-12-30T04:37:57.525Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;CSS基础知识-1&quot;&gt;&lt;a href=&quot;#CSS基础知识-1&quot; class=&quot;headerlink&quot; title=&quot;CSS基础知识(1)&quot;&gt;&lt;/a&gt;&lt;center&gt;CSS基础知识(1)&lt;/center&gt;&lt;/h1&gt;&lt;h2 id=&quot;一、CSS-简介&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="前端开发" scheme="http://ganming1.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
-    
-    
-    <category term="前端" scheme="http://ganming1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-    <category term="CSS" scheme="http://ganming1.github.io/tags/CSS/"/>
     
   </entry>
   
