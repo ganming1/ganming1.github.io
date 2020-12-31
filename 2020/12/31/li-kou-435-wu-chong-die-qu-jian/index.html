@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="力扣 单词规律 哈希表">
+    <meta name="keywords" content="力扣 排序 贪心">
     <meta name="description" content="努力做个it技术分享者">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>力扣290-单词规律 | ItDaChuang</title>
+    <title>力扣435-无重叠区间 | ItDaChuang</title>
     <link rel="icon" type="image/png" href="/medias/G.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">力扣290-单词规律</h1>
+                    <h1 class="description center-align post-title">力扣435-无重叠区间</h1>
                 </div>
             </div>
         </div>
@@ -434,16 +434,20 @@
                     
                     <div class="article-tag">
                         
+                            <a href="/tags/%E4%B8%AD%E7%AD%89/">
+                                <span class="chip bg-color">中等</span>
+                            </a>
+                        
                             <a href="/tags/%E5%8A%9B%E6%89%A3/">
                                 <span class="chip bg-color">力扣</span>
                             </a>
                         
-                            <a href="/tags/%E7%AE%80%E5%8D%95/">
-                                <span class="chip bg-color">简单</span>
+                            <a href="/tags/%E6%8E%92%E5%BA%8F/">
+                                <span class="chip bg-color">排序</span>
                             </a>
                         
-                            <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">
-                                <span class="chip bg-color">哈希表</span>
+                            <a href="/tags/%E8%B4%AA%E5%BF%83/">
+                                <span class="chip bg-color">贪心</span>
                             </a>
                         
                     </div>
@@ -467,28 +471,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-12-16
+                    2020-12-31
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-12-21
+                    2020-12-31
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    674
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    4 分
                 </div>
                 
 
@@ -511,59 +515,81 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="力扣290-单词规律"><a href="#力扣290-单词规律" class="headerlink" title="力扣290-单词规律"></a><center>力扣290-单词规律</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>​        给定一种规律 pattern 和一个字符串 str ，判断 str 是否遵循相同的规律。这里的遵循指完全匹配，例如， pattern 里的每个字母和字符串 str 中的每个非空单词之间存在着双向连接的对应规律。</p>
+                <h1 id="力扣435-无重叠区间"><a href="#力扣435-无重叠区间" class="headerlink" title="力扣435-无重叠区间"></a><center>力扣435-无重叠区间</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="#A22015">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  给定一个区间的集合，找到需要移除区间的最小数量，使剩余区间互不重叠。</p>
+<p><strong>注意:</strong></p>
+<ol>
+<li> 可以认为区间的终点总是大于它的起点。</li>
+<li> 区间 [1,2] 和 [2,3] 的边界相互“接触”，但没有相互重叠。</li>
+</ol>
 <h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
 <li><p><strong>示例1：</strong></p>
-<p><strong>输入：</strong> pattern = “abba”, str = “dog cat cat dog”<br><strong>输出：</strong> true</p>
+<p>  <strong>输入：</strong> <code>[ [1,2], [2,3], [3,4], [1,3] ]</code><br><strong>输出：</strong> <code>1</code> <br><strong>解释：</strong> 移除 <code>[1,3]</code> 后，剩下的区间没有重叠。</p>
 </li>
 <li><p><strong>示例2：</strong></p>
-<p><strong>输入：</strong> pattern = “abba”, str = “dog cat cat fish”<br><strong>输出：</strong> false</p>
+<p>  <strong>输入：</strong> <code>[ [1,2], [1,2], [1,2] ]</code><br><strong>输出：</strong> <code>2</code> <br><strong>解释：</strong> 你需要移除两个 <code>[1,2]</code> 来使剩下的区间没有重叠。</p>
 </li>
 <li><p><strong>示例3：</strong></p>
-<p><strong>输入：</strong> pattern = “aaaa”, str = “dog cat cat dog”</p>
-<p><strong>输出：</strong> false</p>
-</li>
-<li><p><strong>示例4：</strong></p>
-<p><strong>输入：</strong> pattern = “abba”, str = “dog dog dog dog”</p>
-<p><strong>输出：</strong> false</p>
-</li>
-<li><p><strong>说明：</strong> 你可以假设  pattern 只包含小写字母，str 包含了由单个空格分隔的小写字母。</p>
+<p>  <strong>输入：</strong> <code>[ [1,2], [2,3] ]</code><br><strong>输出：</strong> <code>0</code> <br><strong>解释：</strong> 你不需要移除任何区间，因为它们已经是无重叠的了。</p>
 </li>
 </ul>
-<p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/word-pattern">https://leetcode-cn.com/problems/word-pattern</a></p>
-<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="born">二、解题思路</font></h2><h3 id="2-1-题目意思理解"><a href="#2-1-题目意思理解" class="headerlink" title="2.1 题目意思理解"></a>2.1 题目意思理解</h3><p>​    这个题目是个很简单的题目，很容易想到思路。</p>
+<p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/non-overlapping-intervals/">https://leetcode-cn.com/problems/non-overlapping-intervals/</a></p>
+<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="#A22015">二、解题思路</font></h2><h3 id="2-1-利用【贪心-右边界排序】解题"><a href="#2-1-利用【贪心-右边界排序】解题" class="headerlink" title="2.1 利用【贪心+右边界排序】解题"></a>2.1 利用【贪心+右边界排序】解题</h3><ul>
+<li>  <strong>解题思路</strong></li>
+</ul>
+<p>  看了这个题想了很久，总觉得是之前做过，但是就是没想到具体的方法，之后在题解中才回忆到这是一道<font color="red">区间调度问题</font>，例如今天有很多事情安排要做，每件事情有起始时间点和结束时间点，怎么选择安排时间做事才能使处理的事情数最多。</p>
+<p>  这里我们对每个区间的右边界进行从小到大排序，然后依次选择结束时间早并且没有区间重合的区间，有重合的就是我们需要剔除的区间。至于这样下来，为什么就是剔除的最少的？我们可以这么理解，剔除的最少也就是我们要保留的最多，为了使后面能选择的更多我们需要后面留下的空间更大，所以我们每次挑区间右边界最小的区间更合理，这里就是贪心的思路了，每次选右边界最小的就是局部最优，让后面的空间更大。这样处理完得到的结果就是全局最优。这里借用题解里一位大佬的动图演示过程。</p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm73t1ry65g30zk0k0ani.gif" alt="贪心解题图解" style="zoom:100%;"></center>
+
 <ul>
-<li>首先用 split 函数将字符串 str 按空格切割成字符串数组 arraystr []。</li>
-<li>比较 pattern 与 arraystr 的长度，如果不相同直接返回 false ，否则进入下面的比较过程。</li>
-<li>建立一个 HashMap，键用来存储 pattern 中的字母，值用来存储 arraystr 数组中对应位置的单词，当然在存储的过程中会进行检验的，当键值对都没存在过时则加入 HashMap ，当有一个（键或值）存在时，取出该键值对与当前准备插入的比较，若完全相同则符合，直接下一个，若有一个（键或值）不相同时，则直接返回 false 。</li>
-<li>如果程序跑到了最后还没返回 false 则返回 true 。</li>
+<li>  <strong>详细代码（Java）</strong></li>
 </ul>
-<h3 id="2-2-详细代码（Java）"><a href="#2-2-详细代码（Java）" class="headerlink" title="2.2 详细代码（Java）"></a>2.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">wordPattern</span><span class="token punctuation">(</span><span class="token class-name">String</span> pattern<span class="token punctuation">,</span> <span class="token class-name">String</span> s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arraystr <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                     <span class="token comment">// 分割字符串</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>arraystr<span class="token punctuation">.</span>length <span class="token operator">!=</span> pattern<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>   <span class="token comment">// 长度不同，直接返回false</span>
-        <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Character</span><span class="token punctuation">,</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>pattern<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>map<span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span>pattern<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>               <span class="token comment">// 当前键在map中没存在过</span>
-                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>map<span class="token punctuation">.</span><span class="token function">containsValue</span><span class="token punctuation">(</span>arraystr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>                <span class="token comment">// 当前值在map中也没存在过</span>
-                    map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>pattern<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span>arraystr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token comment">// 都没存在则加入map</span>
-                <span class="token keyword">else</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>                                  <span class="token comment">// 健不存在但值存在，返回false</span>
-            <span class="token punctuation">}</span>
-            <span class="token keyword">else</span> <span class="token punctuation">{</span>                                                  <span class="token comment">// 键存在</span>
-                <span class="token keyword">if</span> <span class="token punctuation">(</span>map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>pattern<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>arraystr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// 值也存在，并且就是对应的键值对，什么也不做跳过</span>
-                <span class="token keyword">else</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>                                  <span class="token comment">// 所存的键值对与当前不一样，返回false</span>
-            <span class="token punctuation">}</span>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">eraseOverlapIntervals</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> intervals<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>intervals<span class="token punctuation">.</span>length <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>   <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>       <span class="token comment">// 如果数组没有元素，返回0</span>
+    <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>intervals<span class="token punctuation">,</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token operator">-&gt;</span>a<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">-</span>b<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">// 对数组元素按第二个值(右边界)进行升序排序</span>
+    <span class="token keyword">int</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>                              <span class="token comment">// 统计重叠区间的个数,初始化为0</span>
+    <span class="token keyword">int</span> x_end <span class="token operator">=</span> intervals<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>                <span class="token comment">// 记录现在的结束边界</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>intervals<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token comment">// 从第二个元素开始遍历每一个元素</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>intervals<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">&lt;</span>x_end<span class="token punctuation">)</span><span class="token punctuation">{</span>             <span class="token comment">// 当前元素的左边界小于记录的结束边界则表示重合</span>
+            count<span class="token operator">++</span><span class="token punctuation">;</span>                            <span class="token comment">// 统计重合区间个数+1</span>
         <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>                                                <span class="token comment">// 遍历结束，没有中途返回false的说明符合规律</span>
+        <span class="token keyword">else</span> x_end <span class="token operator">=</span> intervals<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>           <span class="token comment">// 当前元素的左边界不小于记录的右边界则表示不重合，更新记录的结束边界</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    <span class="token keyword">return</span> count<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
-<li>代码第13行进行字符串内容的比较的时候一定要用<font color="red">.equals</font>函数来比较，不能用<font color="red">==</font>或<font color="red">!=</font>，否则都会出错。</li>
+<li>  <strong>代码执行结果</strong></li>
 </ul>
-<h3 id="2-3-算法执行结果"><a href="#2-3-算法执行结果" class="headerlink" title="2.3 算法执行结果"></a>2.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glpj9qxoc0j30pa0cw3zq.jpg" alt="算法执行结果" width="80%/"></center>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm74avtqmwj30s40eewfw.jpg" alt="哈希表映射执行结果" width="100%/"></center>
 
-<h2 id="三、总结分析"><a href="#三、总结分析" class="headerlink" title="三、总结分析"></a><font color="born">三、总结分析</font></h2><p>​    题目很简单，单纯的哈希表的练习。</p>
+<h3 id="2-2-利用【贪心-左边界排序】解题"><a href="#2-2-利用【贪心-左边界排序】解题" class="headerlink" title="2.2 利用【贪心+左边界排序】解题"></a>2.2 利用【贪心+左边界排序】解题</h3><ul>
+<li>  <strong>解题思路</strong></li>
+</ul>
+<p>  在题解里还看到这样的一个思路，是对每个元素的第一个值（左边界）进行排序，碰到有重叠的区间我们选择第二个值（右边界）更小的区间保留，这里其实跟上面的思路一样，为了让后面的空间更大更能选出更多的区间，达到全局最优。代码也比较容易但性能比上一个好，这里不太明白为什么？</p>
+<ul>
+<li>  <strong>详细代码（Java）</strong></li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">eraseOverlapIntervals</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> intervals<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>intervals<span class="token punctuation">.</span>length <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>           <span class="token comment">// 如果数组没有元素，返回0</span>
+    <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>intervals<span class="token punctuation">,</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token operator">-&gt;</span> a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">-</span>b<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// 对数组元素按第一个值(左边界)进行升序排序</span>
+    <span class="token keyword">int</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>                                  <span class="token comment">// 统计重叠区间的个数,初始化为0</span>
+    <span class="token keyword">int</span> end <span class="token operator">=</span> intervals<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>                      <span class="token comment">// 记录现在的结束边界</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>intervals<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>         <span class="token comment">// 从第二个元素开始遍历每一个元素</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>intervals<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">&lt;</span>end<span class="token punctuation">)</span><span class="token punctuation">{</span>                   <span class="token comment">// 当前元素左边界小于记录的结束边界则表示有重合</span>
+            count<span class="token operator">++</span><span class="token punctuation">;</span>                                <span class="token comment">// 统计重合区间个数+1</span>
+            end <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">min</span><span class="token punctuation">(</span>end<span class="token punctuation">,</span>intervals<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// 更新记录的结束边界为重叠区间中右边界更小的值</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span> end <span class="token operator">=</span> intervals<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>                 <span class="token comment">// 当前元素左边界不小于记录的右边界则表示没有重合，更新结束边界</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> count<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>  <strong>代码执行结果</strong></li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1gm759fcn4hj30s00egq4b.jpg" alt="数组映射执行结果" width="100%/"></center>
+
+<p>  在大家的思路中还看到双指针的方法，其实就是对左右边界同时排序，先左边界排序，左边界相同的时候按右边界排序，再来选择。跟上面的思路差别不大。</p>
 
                 
             </div>
@@ -590,7 +616,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://ganming1.github.io/2020/12/16/li-kou-290-dan-ci-gui-lu/">http://ganming1.github.io/2020/12/16/li-kou-290-dan-ci-gui-lu/</a>
+                    <a href="http://ganming1.github.io/2020/12/31/li-kou-435-wu-chong-die-qu-jian/">http://ganming1.github.io/2020/12/31/li-kou-435-wu-chong-die-qu-jian/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -628,16 +654,20 @@
                     
                         <div class="article-tag">
                             
+                                <a href="/tags/%E4%B8%AD%E7%AD%89/">
+                                    <span class="chip bg-color">中等</span>
+                                </a>
+                            
                                 <a href="/tags/%E5%8A%9B%E6%89%A3/">
                                     <span class="chip bg-color">力扣</span>
                                 </a>
                             
-                                <a href="/tags/%E7%AE%80%E5%8D%95/">
-                                    <span class="chip bg-color">简单</span>
+                                <a href="/tags/%E6%8E%92%E5%BA%8F/">
+                                    <span class="chip bg-color">排序</span>
                                 </a>
                             
-                                <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">
-                                    <span class="chip bg-color">哈希表</span>
+                                <a href="/tags/%E8%B4%AA%E5%BF%83/">
+                                    <span class="chip bg-color">贪心</span>
                                 </a>
                             
                         </div>
@@ -853,80 +883,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/12/16/vscode-xie-html-wen-dang/">
+                <a href="/2020/12/31/li-kou-435-wu-chong-die-qu-jian/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="VSCode写HTML文档">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="力扣435-无重叠区间">
                         
-                        <span class="card-title">VSCode写HTML文档</span>
+                        <span class="card-title">力扣435-无重叠区间</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            使用 VSCode 作为网页开发工具的入门使用
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-16
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%B7%A5%E5%85%B7%E6%8A%80%E5%B7%A7/" class="post-category">
-                                    工具技巧
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/VSCode/">
-                        <span class="chip bg-color">VSCode</span>
-                    </a>
-                    
-                    <a href="/tags/Html/">
-                        <span class="chip bg-color">Html</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/12/15/li-kou-738-dan-diao-di-zeng-de-shu-zi/">
-                    <div class="card-image">
-                        
-                        <img src="https://tva1.sinaimg.cn/large/0081Kckwly1glodu0s088j30ca07xt8m.jpg" class="responsive-img" alt="力扣738-单调递增的数字">
-                        
-                        <span class="card-title">力扣738-单调递增的数字</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            给定一个非负整数 N，找出小于或等于N的最大的整数，同时这个整数需要满足其各个位数上的数字是单调递增。
+                            给定一个区间的集合，找到需要移除区间的最小数量，使剩余区间互不重叠。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-15
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-31
                             </span>
                         <span class="publish-author">
                             
@@ -940,6 +919,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -951,12 +931,65 @@
                         <span class="chip bg-color">力扣</span>
                     </a>
                     
-                    <a href="/tags/%E6%95%B0%E7%BB%84/">
-                        <span class="chip bg-color">数组</span>
+                    <a href="/tags/%E6%8E%92%E5%BA%8F/">
+                        <span class="chip bg-color">排序</span>
                     </a>
                     
                     <a href="/tags/%E8%B4%AA%E5%BF%83/">
                         <span class="chip bg-color">贪心</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/12/30/css-de-san-chong-yuan-su-xian-shi-mo-shi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="CSS的三种元素显示模式">
+                        
+                        <span class="card-title">CSS的三种元素显示模式</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            详细整理CSS的三种元素显示模式，代码示例演示特点。以及三种模式的转换和运用。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-30
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" class="post-category">
+                                    前端开发
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/CSS/">
+                        <span class="chip bg-color">CSS</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
                     </a>
                     
                 </div>
