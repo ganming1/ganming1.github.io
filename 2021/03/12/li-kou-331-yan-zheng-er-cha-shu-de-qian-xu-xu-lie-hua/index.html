@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="力扣 算法题解 单调递增">
+    <meta name="keywords" content="力扣331-验证二叉树的前序序列化, 博客 技术">
     <meta name="description" content="努力做个it技术分享者">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>力扣738-单调递增的数字 | ItDaChuang</title>
+    <title>力扣331-验证二叉树的前序序列化 | ItDaChuang</title>
     <link rel="icon" type="image/png" href="/medias/G.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://tva1.sinaimg.cn/large/0081Kckwly1glodu0s088j30ca07xt8m.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">力扣738-单调递增的数字</h1>
+                    <h1 class="description center-align post-title">力扣331-验证二叉树的前序序列化</h1>
                 </div>
             </div>
         </div>
@@ -442,12 +442,8 @@
                                 <span class="chip bg-color">力扣</span>
                             </a>
                         
-                            <a href="/tags/%E6%95%B0%E7%BB%84/">
-                                <span class="chip bg-color">数组</span>
-                            </a>
-                        
-                            <a href="/tags/%E8%B4%AA%E5%BF%83/">
-                                <span class="chip bg-color">贪心</span>
+                            <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">
+                                <span class="chip bg-color">二叉树</span>
                             </a>
                         
                     </div>
@@ -471,28 +467,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-12-15
+                    2021-03-12
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-12-21
+                    2021-03-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    447
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -515,48 +511,95 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="力扣738-单调递增的数字"><a href="#力扣738-单调递增的数字" class="headerlink" title="力扣738-单调递增的数字"></a><center>力扣738-单调递增的数字</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>​        给定一个非负整数 N，找出小于或等于N的最大的整数，同时这个整数需要满足其各个位数上的数字是单调递增。    </p>
-<p>​    （当且仅当每个相邻位数上的数字 x 和 y 满足 x &lt;= y 时，我们称这个整数是单调递增的。）</p>
+                <h1 id="力扣331-验证二叉树的前序序列化"><a href="#力扣331-验证二叉树的前序序列化" class="headerlink" title="力扣331-验证二叉树的前序序列化"></a><center>力扣331-验证二叉树的前序序列化</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="#A22015">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  序列化二叉树的一种方法是使用前序遍历。当我们遇到一个非空节点时，我们可以记录下这个节点的值。如果它是一个空节点，我们可以使用一个标记值记录，例如 <code>#</code>。</p>
+<pre class="line-numbers language-basic" data-language="basic"><code class="language-basic">      _9_
+     <span class="token operator">/</span>   \
+    <span class="token number">3</span>     <span class="token number">2</span>
+   <span class="token operator">/</span> \   <span class="token operator">/</span> \
+  <span class="token number">4</span>   <span class="token number">1</span>  #  <span class="token number">6</span>
+ <span class="token operator">/</span> \ <span class="token operator">/</span> \   <span class="token operator">/</span> \
+#  # # #  #  #<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>例如，上面的二叉树可以被序列化为字符串 <code>“9，3，4，#，#，1，#，#，2，#，6，#，#”</code> 其中 <code>#</code> 代表一个空节点。给定一串以逗号分隔的序列，验证它是否是正确的二叉树的前序序列化。编写一个在不重构树的条件下的可行算法。每个以逗号分隔的字符或为一个整数或为一个表示 null 指针的 <code>#</code> 。你可以认为输入格式总是有效的，例如它永远不会包含两个连续的逗号，比如 <code>"1,,3"</code> 。</p>
 <h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
 <li><p><strong>示例1：</strong></p>
-<p><strong>输入：</strong>N = 10<br><strong>输出：</strong>9</p>
+<p>  <strong>输入：</strong> <code>"9,3,4,#,#,1,#,#,2,#,6,#,#"</code><br><strong>输出：</strong> <code>true</code></p>
 </li>
 <li><p><strong>示例2：</strong></p>
-<p><strong>输入：</strong>N = 1234<br><strong>输出：</strong>1234</p>
+<p>  <strong>输入：</strong> <code>"1,#"</code><br><strong>输出：</strong> <code>false</code></p>
 </li>
 <li><p><strong>示例3：</strong></p>
-<p><strong>输入：</strong>N = 332</p>
-<p><strong>输出：</strong>299</p>
-</li>
-<li><p><strong>说明：</strong>N 是在[0, 10<sup>9</sup>]范围内的一个整数。</p>
+<p>  <strong>输入：</strong> <code>false</code><br><strong>输出：</strong> false</p>
 </li>
 </ul>
-<p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/monotone-increasing-digits">https://leetcode-cn.com/problems/monotone-increasing-digits</a></p>
-<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="born">二、解题思路</font></h2><h3 id="2-1-题目意思理解"><a href="#2-1-题目意思理解" class="headerlink" title="2.1 题目意思理解"></a>2.1 题目意思理解</h3><p>​    按照题目意思，我们从前往后去分析数据，如果当前位数上的值小于后一位的值时，那么当前位值要 -1，右边的所有位置 9 。否则按照位数向右递归。</p>
-<h3 id="2-2-详细代码（Java）"><a href="#2-2-详细代码（Java）" class="headerlink" title="2.2 详细代码（Java）"></a>2.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">monotoneIncreasingDigits</span><span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token class-name">N</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment">// 将 int 转换成字符串再转换成字符数组 </span>
-       <span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> strN <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token class-name">N</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toCharArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     
-       <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token comment">// 找到前一个数值大于当前数值的位置</span>
-       <span class="token keyword">while</span> <span class="token punctuation">(</span>i<span class="token operator">&lt;</span>strN<span class="token punctuation">.</span>length <span class="token operator">&amp;&amp;</span> strN<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">&lt;=</span>strN<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>  i<span class="token operator">++</span><span class="token punctuation">;</span>
-        <span class="token comment">// 原数字不是单调递增的</span>
-       <span class="token keyword">if</span> <span class="token punctuation">(</span>i<span class="token operator">&lt;</span>strN<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">{</span>
-           <span class="token comment">// 前一个数值大了，执行减一操作，减一后要检验之前的</span>
-           <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> strN<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">&gt;</span>strN<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-               strN<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">--</span><span class="token punctuation">;</span>
-               i<span class="token operator">--</span><span class="token punctuation">;</span>
-           <span class="token punctuation">}</span>
-           <span class="token comment">// 讲最终修改后的位置之后都改为 9</span>
-           <span class="token keyword">for</span> <span class="token punctuation">(</span>i<span class="token operator">+=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>strN<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> strN<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">'9'</span><span class="token punctuation">;</span>        
-       <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>strN<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/verify-preorder-serialization-of-a-binary-tree">https://leetcode-cn.com/problems/verify-preorder-serialization-of-a-binary-tree</a></p>
+<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="#A22015">二、解题思路</font></h2><h3 id="2-1-利用【递归思想】解题"><a href="#2-1-利用【递归思想】解题" class="headerlink" title="2.1 利用【递归思想】解题"></a>2.1 利用【递归思想】解题</h3><ul>
+<li>  <strong>解题思路</strong></li>
+</ul>
+<p>  要判断这个字符串是否是一个二叉树的前序序列，如果是，那么根节点的左右子树的序列也必定是一个符合要求的二叉树前序序列。如示例一，当 <code>"9,3,4,#,#,1,#,#,2,#,6,#,#"</code> ，左孩子是节点 3 ，右孩子是节点 2 ，则左子树序列 <code>3，4，#，#，1，#，#</code> 和右子树序列 <code>2，#，6，#，#</code> 都将是一个符合要求的二叉树前序序列。再往下分析就可以得到最简单的二叉树前序序列必定是 <code>#</code> ，或者 <code>n，#，#</code> 。所以当碰到 <code>n，#，#</code> 时，说明节点为 n 的元素作为根节点则下面的都是符合要求的。所以只要是碰到了<code>n，#，#</code> 就将其改成 <code>#</code> 表示它后面的都是符合二叉树的前序序列要求的。</p>
+<p>模拟示例一过程：”9,3,4,#,#,1,#,#,2,#,6,#,#”</p>
+<p>9,3,4,#,# =&gt; 9,3,#，继续<br>9,3,#,1,#,# =&gt; 9,3,#,# =&gt; 9,# ，继续<br>9,#2,#,6,#,# =&gt; 9,#,2,#,# =&gt; 9,#,# =&gt; #，结束</p>
+<center><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gohcqqyzosj31n00qgn1a.jpg" alt="示例一图解" width="100%/"></center>
+
+<p>  可以遍历字符串里的每个元素，用 <code>split()</code> 函数将其以 <code>,</code> 分割为多个字符串数组，用一个容器去装每个元素，如果碰到 <code>n,#,#</code> 则将其该为 <code>#</code>  ，遍历到结束，如果容器中最后只剩下一个 <code>#</code> 则表示该字符串时一个二叉树的前序序列，返回 <code>true</code>，否则返回 <code>false</code> 。 </p>
+<ul>
+<li>  <strong>详细代码（Java）</strong></li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">isValidSerialization</span><span class="token punctuation">(</span><span class="token class-name">String</span> preorder<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// list 作为容器</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">String</span> s <span class="token operator">:</span> preorder<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>     			<span class="token comment">// 用 ，分割字符串并遍历</span>
+    list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>                                  <span class="token comment">// 每个元素加入 list 容器</span>
+    <span class="token keyword">int</span> size <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                       <span class="token comment">// 获取容器中元素个数</span>
+    <span class="token comment">// 判断是否大于三个并且是以 n,#,# 结尾，是则只留下一个 # </span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>size<span class="token operator">&gt;=</span><span class="token number">3</span><span class="token operator">&amp;&amp;</span>list<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>size<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">"#"</span><span class="token punctuation">)</span><span class="token operator">&amp;&amp;</span>list<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>size<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">"#"</span><span class="token punctuation">)</span><span class="token operator">&amp;&amp;</span><span class="token operator">!</span>list<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>size<span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">"#"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      list<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>size<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      list<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>size<span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      size <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> list<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">==</span><span class="token number">1</span><span class="token operator">&amp;&amp;</span>list<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">"#"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="2-3-算法执行结果"><a href="#2-3-算法执行结果" class="headerlink" title="2.3 算法执行结果"></a>2.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glodhbs9wpj310y0cq0u3.jpg" alt="算法执行结果" width="80%/"></center>
+<ul>
+<li>  <strong>代码执行结果</strong></li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gohd5l8ze8j30s40ekdh8.jpg" alt="代码执行结果" width="100%/"></center>
 
-<h2 id="三、总结分析"><a href="#三、总结分析" class="headerlink" title="三、总结分析"></a><font color="born">三、总结分析</font></h2><p>​        从前往后遍历，如果前面的值大于后面的值就把当前位数减一然后把后面的值变成9，以此类推</p>
+<p>  效率不是很好，我用了其他容器好像也提升不了多少。</p>
+<h3 id="2-2-利用【出入度关系】解题"><a href="#2-2-利用【出入度关系】解题" class="headerlink" title="2.2 利用【出入度关系】解题"></a>2.2 利用【出入度关系】解题</h3><ul>
+<li>  <strong>解题思路</strong></li>
+</ul>
+<p>  二叉树的也属于图，节点（包括空节点 #）都是由边链接的，从上到下的关系就会有出度和入度的概念。</p>
+<p>根节点：2个出度，0个入度</p>
+<p>普通节点：2个出度，1个入度</p>
+<p>空节点：0个出度，1个入度</p>
+<p>最终出度和入度的和相同，都等于边的数目，并且在结束前<font color="red">出度一定大于入度</font>（最终都会以两个空节点结束）</p>
+<ul>
+<li>  <strong>详细代码（Java）</strong></li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">isValidSerialization</span><span class="token punctuation">(</span><span class="token class-name">String</span> preorder<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>preorder<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">"#"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>   <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>preorder<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token operator">==</span><span class="token string">'#'</span><span class="token operator">&amp;&amp;</span>preorder<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">!=</span><span class="token number">1</span><span class="token punctuation">)</span>  <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> d <span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>						<span class="token comment">// 出度减入度之差，根节点提前加上</span>
+    <span class="token keyword">boolean</span> b <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>		<span class="token comment">// 判断是否是根节点 根节点 d+2</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">String</span> s <span class="token operator">:</span> preorder<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>d<span class="token operator">&lt;=</span><span class="token number">0</span><span class="token punctuation">)</span>    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>		<span class="token comment">// 没遍历完的情况下如果入度大于或等于了出度，则一定不是</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">{</span>						<span class="token comment">// 是根节点</span>
+        b<span class="token operator">=</span><span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token keyword">continue</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">"#"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  d<span class="token operator">--</span><span class="token punctuation">;</span>		<span class="token comment">// 是空节点 度-2</span>
+      <span class="token keyword">else</span> d<span class="token operator">++</span><span class="token punctuation">;</span>										<span class="token comment">// 是普通节点 度+1</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> d <span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">;</span>					<span class="token comment">// 遍历完如果度为0 则是</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>  <strong>代码执行结果</strong></li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gohds0nja6j30rw0ecjss.jpg" alt="出入度方法执行结果" width="100%/"></center>
+
+
+
 
                 
             </div>
@@ -583,7 +626,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://ganming1.github.io/2020/12/15/li-kou-738-dan-diao-di-zeng-de-shu-zi/">http://ganming1.github.io/2020/12/15/li-kou-738-dan-diao-di-zeng-de-shu-zi/</a>
+                    <a href="http://ganming1.github.io/2021/03/12/li-kou-331-yan-zheng-er-cha-shu-de-qian-xu-xu-lie-hua/">http://ganming1.github.io/2021/03/12/li-kou-331-yan-zheng-er-cha-shu-de-qian-xu-xu-lie-hua/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -629,12 +672,8 @@
                                     <span class="chip bg-color">力扣</span>
                                 </a>
                             
-                                <a href="/tags/%E6%95%B0%E7%BB%84/">
-                                    <span class="chip bg-color">数组</span>
-                                </a>
-                            
-                                <a href="/tags/%E8%B4%AA%E5%BF%83/">
-                                    <span class="chip bg-color">贪心</span>
+                                <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">
+                                    <span class="chip bg-color">二叉树</span>
                                 </a>
                             
                         </div>
@@ -850,85 +889,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/12/16/li-kou-290-dan-ci-gui-lu/">
+                <a href="/2021/03/12/li-kou-331-yan-zheng-er-cha-shu-de-qian-xu-xu-lie-hua/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="力扣290-单词规律">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="力扣331-验证二叉树的前序序列化">
                         
-                        <span class="card-title">力扣290-单词规律</span>
+                        <span class="card-title">力扣331-验证二叉树的前序序列化</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            给定一种规律 pattern 和一个字符串 str ，判断 str 是否遵循相同的规律。这里的遵循指完全匹配，例如， pattern 里的每个字母和字符串 str 中的每个非空单词之间存在着双向连接的对应规律。
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-16
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                    算法
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%8A%9B%E6%89%A3/">
-                        <span class="chip bg-color">力扣</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%AE%80%E5%8D%95/">
-                        <span class="chip bg-color">简单</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">
-                        <span class="chip bg-color">哈希表</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/12/11/li-kou-649-dota2-can-yi-yuan/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="力扣649-Dota2参议院">
-                        
-                        <span class="card-title">力扣649-Dota2参议院</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Dota2 的世界里有两个阵营：Radiant (天辉)和 Dire(夜魇)。Dota2 参议院由来自两派的参议员组成。现在参议院希望对一个 Dota2 游戏里的改变作出决定。他们以一个基于轮为过程的投票进行。在每一轮中，每一位参议员都可以行使两项权利中的一项...
+                            序列化二叉树的一种方法是使用前序遍历。当我们遇到一个非空节点时，我们可以记录下这个节点的值。如果它是一个空节点，我们可以使用一个标记值记录，例如
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-12
                             </span>
                         <span class="publish-author">
                             
@@ -942,6 +925,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -953,8 +937,61 @@
                         <span class="chip bg-color">力扣</span>
                     </a>
                     
-                    <a href="/tags/%E6%95%B0%E7%BB%84/">
-                        <span class="chip bg-color">数组</span>
+                    <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">
+                        <span class="chip bg-color">二叉树</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/03/05/web-apis-jian-jie/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Web APIs 简介（JS 进阶1）">
+                        
+                        <span class="card-title">Web APIs 简介（JS 进阶1）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-05
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" class="post-category">
+                                    前端开发
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                    <a href="/tags/JS/">
+                        <span class="chip bg-color">JS</span>
                     </a>
                     
                 </div>

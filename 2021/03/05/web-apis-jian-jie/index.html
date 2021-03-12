@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="力扣 算法题解 单调递增">
+    <meta name="keywords" content="Web APIs 简介（JS 进阶1）, 博客 技术">
     <meta name="description" content="努力做个it技术分享者">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>力扣738-单调递增的数字 | ItDaChuang</title>
+    <title>Web APIs 简介（JS 进阶1） | ItDaChuang</title>
     <link rel="icon" type="image/png" href="/medias/G.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://tva1.sinaimg.cn/large/0081Kckwly1glodu0s088j30ca07xt8m.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">力扣738-单调递增的数字</h1>
+                    <h1 class="description center-align post-title">Web APIs 简介（JS 进阶1）</h1>
                 </div>
             </div>
         </div>
@@ -434,20 +434,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E4%B8%AD%E7%AD%89/">
-                                <span class="chip bg-color">中等</span>
+                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                <span class="chip bg-color">前端</span>
                             </a>
                         
-                            <a href="/tags/%E5%8A%9B%E6%89%A3/">
-                                <span class="chip bg-color">力扣</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%95%B0%E7%BB%84/">
-                                <span class="chip bg-color">数组</span>
-                            </a>
-                        
-                            <a href="/tags/%E8%B4%AA%E5%BF%83/">
-                                <span class="chip bg-color">贪心</span>
+                            <a href="/tags/JS/">
+                                <span class="chip bg-color">JS</span>
                             </a>
                         
                     </div>
@@ -458,8 +450,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                算法
+                            <a href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" class="post-category">
+                                前端开发
                             </a>
                         
                     </div>
@@ -471,28 +463,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-12-15
+                    2021-03-05
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-12-21
+                    2021-03-05
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    447
+                    720
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -515,48 +507,53 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="力扣738-单调递增的数字"><a href="#力扣738-单调递增的数字" class="headerlink" title="力扣738-单调递增的数字"></a><center>力扣738-单调递增的数字</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>​        给定一个非负整数 N，找出小于或等于N的最大的整数，同时这个整数需要满足其各个位数上的数字是单调递增。    </p>
-<p>​    （当且仅当每个相邻位数上的数字 x 和 y 满足 x &lt;= y 时，我们称这个整数是单调递增的。）</p>
-<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
-<li><p><strong>示例1：</strong></p>
-<p><strong>输入：</strong>N = 10<br><strong>输出：</strong>9</p>
+                <h1 id="Web-APIs-简介"><a href="#Web-APIs-简介" class="headerlink" title="Web APIs 简介"></a><center>Web APIs 简介</center></h1><p><strong>目标：</strong></p>
+<ul>
+<li>  能够说出 Web APIs 阶段与 JavaScript 语法阶段的关联性?</li>
+<li>  能够说出什么是 API?</li>
+<li>  能够说出什么是 Web API?</li>
+</ul>
+<h2 id="一、Web-APIs-和-JS-基础关联性"><a href="#一、Web-APIs-和-JS-基础关联性" class="headerlink" title="一、Web APIs 和 JS 基础关联性"></a><font color="#A22015">一、Web APIs 和 JS 基础关联性</font></h2><h3 id="1-1-JS-的组成"><a href="#1-1-JS-的组成" class="headerlink" title="1.1 JS 的组成"></a>1.1 JS 的组成</h3><p>JavaScript 主要包含三部分内容：</p>
+<ol>
+<li> ECMAScript : JavaScript 语法（JavaScript基础）</li>
+<li> DOM : 页面文档对象模型（Web APIs）</li>
+<li> BOM : 浏览器对象模型（Web APIs ）</li>
+</ol>
+<center><img src="https://tva1.sinaimg.cn/large/008eGmZEly1go8z5lvrwij31720rm486.jpg" alt="JS 的组成"></center>
+
+<h3 id="1-2-JS-基础阶段以及-Web-APIs-阶段"><a href="#1-2-JS-基础阶段以及-Web-APIs-阶段" class="headerlink" title="1.2  JS 基础阶段以及 Web APIs 阶段"></a>1.2  JS 基础阶段以及 Web APIs 阶段</h3><p><font color="red"><strong>JS 基础阶段</strong></font></p>
+<ul>
+<li><p>  学习的是 ECMAScript 标准规定的基本语法</p>
 </li>
-<li><p><strong>示例2：</strong></p>
-<p><strong>输入：</strong>N = 1234<br><strong>输出：</strong>1234</p>
+<li><p>  要求掌握JS基础语法</p>
 </li>
-<li><p><strong>示例3：</strong></p>
-<p><strong>输入：</strong>N = 332</p>
-<p><strong>输出：</strong>299</p>
+<li><p>  只学习基本语法，做不常用的网页交互效果</p>
 </li>
-<li><p><strong>说明：</strong>N 是在[0, 10<sup>9</sup>]范围内的一个整数。</p>
+<li><p>  目的是为了 JS 后面的内容打基础、做铺垫</p>
 </li>
 </ul>
-<p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/monotone-increasing-digits">https://leetcode-cn.com/problems/monotone-increasing-digits</a></p>
-<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="born">二、解题思路</font></h2><h3 id="2-1-题目意思理解"><a href="#2-1-题目意思理解" class="headerlink" title="2.1 题目意思理解"></a>2.1 题目意思理解</h3><p>​    按照题目意思，我们从前往后去分析数据，如果当前位数上的值小于后一位的值时，那么当前位值要 -1，右边的所有位置 9 。否则按照位数向右递归。</p>
-<h3 id="2-2-详细代码（Java）"><a href="#2-2-详细代码（Java）" class="headerlink" title="2.2 详细代码（Java）"></a>2.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">monotoneIncreasingDigits</span><span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token class-name">N</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment">// 将 int 转换成字符串再转换成字符数组 </span>
-       <span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> strN <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token class-name">N</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toCharArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     
-       <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token comment">// 找到前一个数值大于当前数值的位置</span>
-       <span class="token keyword">while</span> <span class="token punctuation">(</span>i<span class="token operator">&lt;</span>strN<span class="token punctuation">.</span>length <span class="token operator">&amp;&amp;</span> strN<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">&lt;=</span>strN<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>  i<span class="token operator">++</span><span class="token punctuation">;</span>
-        <span class="token comment">// 原数字不是单调递增的</span>
-       <span class="token keyword">if</span> <span class="token punctuation">(</span>i<span class="token operator">&lt;</span>strN<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">{</span>
-           <span class="token comment">// 前一个数值大了，执行减一操作，减一后要检验之前的</span>
-           <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> strN<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">&gt;</span>strN<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-               strN<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">--</span><span class="token punctuation">;</span>
-               i<span class="token operator">--</span><span class="token punctuation">;</span>
-           <span class="token punctuation">}</span>
-           <span class="token comment">// 讲最终修改后的位置之后都改为 9</span>
-           <span class="token keyword">for</span> <span class="token punctuation">(</span>i<span class="token operator">+=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>strN<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> strN<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">'9'</span><span class="token punctuation">;</span>        
-       <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>strN<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><font color="red"><strong>Web APIs阶段</strong></font></p>
+<ul>
+<li>  Web APIs 是 W3C 组织的标准</li>
+<li>  Web APIs 主要学习 DOM 和 BOM</li>
+<li>  Web APIs 是 JS 所独有的部分</li>
+<li>  主要学习页面交互功能</li>
+<li>  需要使用 JS 基础的课程内容做基础</li>
+</ul>
+<p>JS 基础学习 ECMAScript 基础语法为后面作铺垫，Web APIs是 JS 的应用，大量使用 Js 基础语法做交互效果。</p>
+<h2 id="二、API-和-Web-API"><a href="#二、API-和-Web-API" class="headerlink" title="二、API 和 Web API"></a><font color="#A22015">二、API 和 Web API</font></h2><h3 id="2-1-API"><a href="#2-1-API" class="headerlink" title="2.1 API"></a>2.1 API</h3><p><font color="red">API ( Application Programming Interface，应用程序编程接口）</font>是一些预先定义的函数,目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而又无需访问源码，或理解内部工作机制的细节。</p>
+<p>简单理解：<font color="red">API 是给程序员提供的一种工具，以便能更轻松的实现想要完成的功能。</font></p>
+<p>比如手机充电的接口:</p>
+<center><img src="https://tva1.sinaimg.cn/large/008eGmZEly1go8zkbc5tej30i00d4n7o.jpg" alt="接口举例"></center>
 
-<h3 id="2-3-算法执行结果"><a href="#2-3-算法执行结果" class="headerlink" title="2.3 算法执行结果"></a>2.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glodhbs9wpj310y0cq0u3.jpg" alt="算法执行结果" width="80%/"></center>
-
-<h2 id="三、总结分析"><a href="#三、总结分析" class="headerlink" title="三、总结分析"></a><font color="born">三、总结分析</font></h2><p>​        从前往后遍历，如果前面的值大于后面的值就把当前位数减一然后把后面的值变成9，以此类推</p>
+<p>我们要实现充电这个功能：<br>●我们不关心手机内部变压器,内部怎么存储电等<br>●我们不关心这个充电线怎么制作的<br>●我们只知道,我们拿着充电线插进充电接口就可以充电<br>●这个充电接口就是一个API</p>
+<h3 id="2-2-Web-API"><a href="#2-2-Web-API" class="headerlink" title="2.2 Web API"></a>2.2 Web API</h3><p><font color="red">Web API 是浏览器</font>提供的一套操作<font color="red">浏览器功能</font>和<font color="red">页面元素</font>的 <font color="red">API </font>( BOM和DOM)。现阶段我们主要针对于浏览器讲解常用的API，主要针对浏览器做交互效果。比如我们想要浏览器弹出一个警示框，直接使用<font color="red">alert( ‘弹出’ )</font> 。 MDN详细API: <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API">https://developer.mozilla.org/zh-CN/docs/Web/API</a>  ，因为Web API很多,所以我们将这个阶段称为Web APIs</p>
+<h3 id="2-3-API-和-Web-API-总结"><a href="#2-3-API-和-Web-API-总结" class="headerlink" title="2.3 API 和 Web API  总结"></a>2.3 API 和 Web API  总结</h3><ol>
+<li><font color="red">API 是为程序员提供的一个接口，帮助其实现某种功能，一般会使用就可以了，不必纠结内部如何实现。</font></li>
+<li>Web API 主要是针对于浏览器提供的接口，主要针对于浏览器做交互效果。</li>
+<li>Web API 一般都有输入和输出（函数的传参和返回值）， Web API很多都是方法（函数）。</li>
+<li>学习 Web API 可以结合前面学习内置对象方法的思路学习，学会查询文档。</li>
+</ol>
 
                 
             </div>
@@ -583,7 +580,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://ganming1.github.io/2020/12/15/li-kou-738-dan-diao-di-zeng-de-shu-zi/">http://ganming1.github.io/2020/12/15/li-kou-738-dan-diao-di-zeng-de-shu-zi/</a>
+                    <a href="http://ganming1.github.io/2021/03/05/web-apis-jian-jie/">http://ganming1.github.io/2021/03/05/web-apis-jian-jie/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -621,20 +618,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E4%B8%AD%E7%AD%89/">
-                                    <span class="chip bg-color">中等</span>
+                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                    <span class="chip bg-color">前端</span>
                                 </a>
                             
-                                <a href="/tags/%E5%8A%9B%E6%89%A3/">
-                                    <span class="chip bg-color">力扣</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%95%B0%E7%BB%84/">
-                                    <span class="chip bg-color">数组</span>
-                                </a>
-                            
-                                <a href="/tags/%E8%B4%AA%E5%BF%83/">
-                                    <span class="chip bg-color">贪心</span>
+                                <a href="/tags/JS/">
+                                    <span class="chip bg-color">JS</span>
                                 </a>
                             
                         </div>
@@ -854,82 +843,25 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/12/16/li-kou-290-dan-ci-gui-lu/">
+                <a href="/2021/03/12/li-kou-331-yan-zheng-er-cha-shu-de-qian-xu-xu-lie-hua/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="力扣290-单词规律">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="力扣331-验证二叉树的前序序列化">
                         
-                        <span class="card-title">力扣290-单词规律</span>
+                        <span class="card-title">力扣331-验证二叉树的前序序列化</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            给定一种规律 pattern 和一个字符串 str ，判断 str 是否遵循相同的规律。这里的遵循指完全匹配，例如， pattern 里的每个字母和字符串 str 中的每个非空单词之间存在着双向连接的对应规律。
+                            序列化二叉树的一种方法是使用前序遍历。当我们遇到一个非空节点时，我们可以记录下这个节点的值。如果它是一个空节点，我们可以使用一个标记值记录，例如
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-16
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-12
                         </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                    算法
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%8A%9B%E6%89%A3/">
-                        <span class="chip bg-color">力扣</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%AE%80%E5%8D%95/">
-                        <span class="chip bg-color">简单</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">
-                        <span class="chip bg-color">哈希表</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/12/11/li-kou-649-dota2-can-yi-yuan/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="力扣649-Dota2参议院">
-                        
-                        <span class="card-title">力扣649-Dota2参议院</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Dota2 的世界里有两个阵营：Radiant (天辉)和 Dire(夜魇)。Dota2 参议院由来自两派的参议员组成。现在参议院希望对一个 Dota2 游戏里的改变作出决定。他们以一个基于轮为过程的投票进行。在每一轮中，每一位参议员都可以行使两项权利中的一项...
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-11
-                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -953,8 +885,65 @@
                         <span class="chip bg-color">力扣</span>
                     </a>
                     
+                    <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">
+                        <span class="chip bg-color">二叉树</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/03/04/jian-zhi-03-shu-zu-zhong-chong-fu-de-shu-zi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="剑指03-数组中重复的数字">
+                        
+                        <span class="card-title">剑指03-数组中重复的数字</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            找出数组中重复的数字。在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1 的范围内。数组中某些数字是重复的，但不知道有几个数字重复了，也不知道每个数字重复了几次。请找出数组中任意一个重复的数字。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-04
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%AE%80%E5%8D%95/">
+                        <span class="chip bg-color">简单</span>
+                    </a>
+                    
                     <a href="/tags/%E6%95%B0%E7%BB%84/">
                         <span class="chip bg-color">数组</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%89%91%E6%8C%87Offer/">
+                        <span class="chip bg-color">剑指Offer</span>
                     </a>
                     
                 </div>

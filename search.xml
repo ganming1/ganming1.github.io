@@ -4106,4 +4106,165 @@ XXX YYY ZZZ <span aria-hidden="true" class="line-numbers-rows"><span></span><spa
         <tag>剑指Offer</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Web APIs 简介（JS 进阶1）</title>
+    <url>/2021/03/05/web-apis-jian-jie/</url>
+    <content><![CDATA[<h1 id="Web-APIs-简介"><a href="#Web-APIs-简介" class="headerlink" title="Web APIs 简介"></a><center>Web APIs 简介</center></h1><p><strong>目标：</strong></p>
+<ul>
+<li>  能够说出 Web APIs 阶段与 JavaScript 语法阶段的关联性?</li>
+<li>  能够说出什么是 API?</li>
+<li>  能够说出什么是 Web API?</li>
+</ul>
+<h2 id="一、Web-APIs-和-JS-基础关联性"><a href="#一、Web-APIs-和-JS-基础关联性" class="headerlink" title="一、Web APIs 和 JS 基础关联性"></a><font color="#A22015">一、Web APIs 和 JS 基础关联性</font></h2><h3 id="1-1-JS-的组成"><a href="#1-1-JS-的组成" class="headerlink" title="1.1 JS 的组成"></a>1.1 JS 的组成</h3><p>JavaScript 主要包含三部分内容：</p>
+<ol>
+<li> ECMAScript : JavaScript 语法（JavaScript基础）</li>
+<li> DOM : 页面文档对象模型（Web APIs）</li>
+<li> BOM : 浏览器对象模型（Web APIs ）</li>
+</ol>
+<center><img src="https://tva1.sinaimg.cn/large/008eGmZEly1go8z5lvrwij31720rm486.jpg" alt="JS 的组成"></center>
+
+<h3 id="1-2-JS-基础阶段以及-Web-APIs-阶段"><a href="#1-2-JS-基础阶段以及-Web-APIs-阶段" class="headerlink" title="1.2  JS 基础阶段以及 Web APIs 阶段"></a>1.2  JS 基础阶段以及 Web APIs 阶段</h3><p><font color="red"><strong>JS 基础阶段</strong></font></p>
+<ul>
+<li><p>  学习的是 ECMAScript 标准规定的基本语法</p>
+</li>
+<li><p>  要求掌握JS基础语法</p>
+</li>
+<li><p>  只学习基本语法，做不常用的网页交互效果</p>
+</li>
+<li><p>  目的是为了 JS 后面的内容打基础、做铺垫</p>
+</li>
+</ul>
+<p><font color="red"><strong>Web APIs阶段</strong></font></p>
+<ul>
+<li>  Web APIs 是 W3C 组织的标准</li>
+<li>  Web APIs 主要学习 DOM 和 BOM</li>
+<li>  Web APIs 是 JS 所独有的部分</li>
+<li>  主要学习页面交互功能</li>
+<li>  需要使用 JS 基础的课程内容做基础</li>
+</ul>
+<p>JS 基础学习 ECMAScript 基础语法为后面作铺垫，Web APIs是 JS 的应用，大量使用 Js 基础语法做交互效果。</p>
+<h2 id="二、API-和-Web-API"><a href="#二、API-和-Web-API" class="headerlink" title="二、API 和 Web API"></a><font color="#A22015">二、API 和 Web API</font></h2><h3 id="2-1-API"><a href="#2-1-API" class="headerlink" title="2.1 API"></a>2.1 API</h3><p><font color="red">API ( Application Programming Interface，应用程序编程接口）</font>是一些预先定义的函数,目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而又无需访问源码，或理解内部工作机制的细节。</p>
+<p>简单理解：<font color="red">API 是给程序员提供的一种工具，以便能更轻松的实现想要完成的功能。</font></p>
+<p>比如手机充电的接口:</p>
+<center><img src="https://tva1.sinaimg.cn/large/008eGmZEly1go8zkbc5tej30i00d4n7o.jpg" alt="接口举例"></center>
+
+<p>我们要实现充电这个功能：<br>●我们不关心手机内部变压器,内部怎么存储电等<br>●我们不关心这个充电线怎么制作的<br>●我们只知道,我们拿着充电线插进充电接口就可以充电<br>●这个充电接口就是一个API</p>
+<h3 id="2-2-Web-API"><a href="#2-2-Web-API" class="headerlink" title="2.2 Web API"></a>2.2 Web API</h3><p><font color="red">Web API 是浏览器</font>提供的一套操作<font color="red">浏览器功能</font>和<font color="red">页面元素</font>的 <font color="red">API </font>( BOM和DOM)。现阶段我们主要针对于浏览器讲解常用的API，主要针对浏览器做交互效果。比如我们想要浏览器弹出一个警示框，直接使用<font color="red">alert( ‘弹出’ )</font> 。 MDN详细API: <a href="https://developer.mozilla.org/zh-CN/docs/Web/API">https://developer.mozilla.org/zh-CN/docs/Web/API</a>  ，因为Web API很多,所以我们将这个阶段称为Web APIs</p>
+<h3 id="2-3-API-和-Web-API-总结"><a href="#2-3-API-和-Web-API-总结" class="headerlink" title="2.3 API 和 Web API  总结"></a>2.3 API 和 Web API  总结</h3><ol>
+<li><font color="red">API 是为程序员提供的一个接口，帮助其实现某种功能，一般会使用就可以了，不必纠结内部如何实现。</font></li>
+<li>Web API 主要是针对于浏览器提供的接口，主要针对于浏览器做交互效果。</li>
+<li>Web API 一般都有输入和输出（函数的传参和返回值）， Web API很多都是方法（函数）。</li>
+<li>学习 Web API 可以结合前面学习内置对象方法的思路学习，学会查询文档。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>前端开发</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>JS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>力扣331-验证二叉树的前序序列化</title>
+    <url>/2021/03/12/li-kou-331-yan-zheng-er-cha-shu-de-qian-xu-xu-lie-hua/</url>
+    <content><![CDATA[<h1 id="力扣331-验证二叉树的前序序列化"><a href="#力扣331-验证二叉树的前序序列化" class="headerlink" title="力扣331-验证二叉树的前序序列化"></a><center>力扣331-验证二叉树的前序序列化</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="#A22015">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  序列化二叉树的一种方法是使用前序遍历。当我们遇到一个非空节点时，我们可以记录下这个节点的值。如果它是一个空节点，我们可以使用一个标记值记录，例如 <code>#</code>。</p>
+<pre class="line-numbers language-basic" data-language="basic"><code class="language-basic">      _9_
+     <span class="token operator">/</span>   \
+    <span class="token number">3</span>     <span class="token number">2</span>
+   <span class="token operator">/</span> \   <span class="token operator">/</span> \
+  <span class="token number">4</span>   <span class="token number">1</span>  #  <span class="token number">6</span>
+ <span class="token operator">/</span> \ <span class="token operator">/</span> \   <span class="token operator">/</span> \
+#  # # #  #  #<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>例如，上面的二叉树可以被序列化为字符串 <code>“9，3，4，#，#，1，#，#，2，#，6，#，#”</code> 其中 <code>#</code> 代表一个空节点。给定一串以逗号分隔的序列，验证它是否是正确的二叉树的前序序列化。编写一个在不重构树的条件下的可行算法。每个以逗号分隔的字符或为一个整数或为一个表示 null 指针的 <code>#</code> 。你可以认为输入格式总是有效的，例如它永远不会包含两个连续的逗号，比如 <code>"1,,3"</code> 。</p>
+<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
+<li><p><strong>示例1：</strong></p>
+<p>  <strong>输入：</strong> <code>"9,3,4,#,#,1,#,#,2,#,6,#,#"</code><br><strong>输出：</strong> <code>true</code></p>
+</li>
+<li><p><strong>示例2：</strong></p>
+<p>  <strong>输入：</strong> <code>"1,#"</code><br><strong>输出：</strong> <code>false</code></p>
+</li>
+<li><p><strong>示例3：</strong></p>
+<p>  <strong>输入：</strong> <code>false</code><br><strong>输出：</strong> false</p>
+</li>
+</ul>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/verify-preorder-serialization-of-a-binary-tree">https://leetcode-cn.com/problems/verify-preorder-serialization-of-a-binary-tree</a></p>
+<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="#A22015">二、解题思路</font></h2><h3 id="2-1-利用【递归思想】解题"><a href="#2-1-利用【递归思想】解题" class="headerlink" title="2.1 利用【递归思想】解题"></a>2.1 利用【递归思想】解题</h3><ul>
+<li>  <strong>解题思路</strong></li>
+</ul>
+<p>  要判断这个字符串是否是一个二叉树的前序序列，如果是，那么根节点的左右子树的序列也必定是一个符合要求的二叉树前序序列。如示例一，当 <code>"9,3,4,#,#,1,#,#,2,#,6,#,#"</code> ，左孩子是节点 3 ，右孩子是节点 2 ，则左子树序列 <code>3，4，#，#，1，#，#</code> 和右子树序列 <code>2，#，6，#，#</code> 都将是一个符合要求的二叉树前序序列。再往下分析就可以得到最简单的二叉树前序序列必定是 <code>#</code> ，或者 <code>n，#，#</code> 。所以当碰到 <code>n，#，#</code> 时，说明节点为 n 的元素作为根节点则下面的都是符合要求的。所以只要是碰到了<code>n，#，#</code> 就将其改成 <code>#</code> 表示它后面的都是符合二叉树的前序序列要求的。</p>
+<p>模拟示例一过程：”9,3,4,#,#,1,#,#,2,#,6,#,#”</p>
+<p>9,3,4,#,# =&gt; 9,3,#，继续<br>9,3,#,1,#,# =&gt; 9,3,#,# =&gt; 9,# ，继续<br>9,#2,#,6,#,# =&gt; 9,#,2,#,# =&gt; 9,#,# =&gt; #，结束</p>
+<center><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gohcqqyzosj31n00qgn1a.jpg" alt="示例一图解" width="100%/"></center>
+
+<p>  可以遍历字符串里的每个元素，用 <code>split()</code> 函数将其以 <code>,</code> 分割为多个字符串数组，用一个容器去装每个元素，如果碰到 <code>n,#,#</code> 则将其该为 <code>#</code>  ，遍历到结束，如果容器中最后只剩下一个 <code>#</code> 则表示该字符串时一个二叉树的前序序列，返回 <code>true</code>，否则返回 <code>false</code> 。 </p>
+<ul>
+<li>  <strong>详细代码（Java）</strong></li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">isValidSerialization</span><span class="token punctuation">(</span><span class="token class-name">String</span> preorder<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// list 作为容器</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">String</span> s <span class="token operator">:</span> preorder<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>     			<span class="token comment">// 用 ，分割字符串并遍历</span>
+    list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>                                  <span class="token comment">// 每个元素加入 list 容器</span>
+    <span class="token keyword">int</span> size <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                       <span class="token comment">// 获取容器中元素个数</span>
+    <span class="token comment">// 判断是否大于三个并且是以 n,#,# 结尾，是则只留下一个 # </span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>size<span class="token operator">&gt;=</span><span class="token number">3</span><span class="token operator">&amp;&amp;</span>list<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>size<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">"#"</span><span class="token punctuation">)</span><span class="token operator">&amp;&amp;</span>list<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>size<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">"#"</span><span class="token punctuation">)</span><span class="token operator">&amp;&amp;</span><span class="token operator">!</span>list<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>size<span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">"#"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      list<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>size<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      list<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>size<span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      size <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> list<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">==</span><span class="token number">1</span><span class="token operator">&amp;&amp;</span>list<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">"#"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>  <strong>代码执行结果</strong></li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gohd5l8ze8j30s40ekdh8.jpg" alt="代码执行结果" width="100%/"></center>
+
+<p>  效率不是很好，我用了其他容器好像也提升不了多少。</p>
+<h3 id="2-2-利用【出入度关系】解题"><a href="#2-2-利用【出入度关系】解题" class="headerlink" title="2.2 利用【出入度关系】解题"></a>2.2 利用【出入度关系】解题</h3><ul>
+<li>  <strong>解题思路</strong></li>
+</ul>
+<p>  二叉树的也属于图，节点（包括空节点 #）都是由边链接的，从上到下的关系就会有出度和入度的概念。</p>
+<p>根节点：2个出度，0个入度</p>
+<p>普通节点：2个出度，1个入度</p>
+<p>空节点：0个出度，1个入度</p>
+<p>最终出度和入度的和相同，都等于边的数目，并且在结束前<font color="red">出度一定大于入度</font>（最终都会以两个空节点结束）</p>
+<ul>
+<li>  <strong>详细代码（Java）</strong></li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">isValidSerialization</span><span class="token punctuation">(</span><span class="token class-name">String</span> preorder<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>preorder<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">"#"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>   <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>preorder<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token operator">==</span><span class="token string">'#'</span><span class="token operator">&amp;&amp;</span>preorder<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">!=</span><span class="token number">1</span><span class="token punctuation">)</span>  <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> d <span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>						<span class="token comment">// 出度减入度之差，根节点提前加上</span>
+    <span class="token keyword">boolean</span> b <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>		<span class="token comment">// 判断是否是根节点 根节点 d+2</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">String</span> s <span class="token operator">:</span> preorder<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>d<span class="token operator">&lt;=</span><span class="token number">0</span><span class="token punctuation">)</span>    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>		<span class="token comment">// 没遍历完的情况下如果入度大于或等于了出度，则一定不是</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">{</span>						<span class="token comment">// 是根节点</span>
+        b<span class="token operator">=</span><span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token keyword">continue</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">"#"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  d<span class="token operator">--</span><span class="token punctuation">;</span>		<span class="token comment">// 是空节点 度-2</span>
+      <span class="token keyword">else</span> d<span class="token operator">++</span><span class="token punctuation">;</span>										<span class="token comment">// 是普通节点 度+1</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> d <span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">;</span>					<span class="token comment">// 遍历完如果度为0 则是</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>  <strong>代码执行结果</strong></li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gohds0nja6j30rw0ecjss.jpg" alt="出入度方法执行结果" width="100%/"></center>
+
+
+
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>中等</tag>
+        <tag>力扣</tag>
+        <tag>二叉树</tag>
+      </tags>
+  </entry>
 </search>
