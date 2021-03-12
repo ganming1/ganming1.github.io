@@ -4267,4 +4267,106 @@ XXX YYY ZZZ <span aria-hidden="true" class="line-numbers-rows"><span></span><spa
         <tag>二叉树</tag>
       </tags>
   </entry>
+  <entry>
+    <title>力扣705-设计哈希集合</title>
+    <url>/2021/03/13/li-kou-705-she-ji-ha-xi-ji-he/</url>
+    <content><![CDATA[<h1 id="力扣705-设计哈希集合"><a href="#力扣705-设计哈希集合" class="headerlink" title="力扣705-设计哈希集合"></a><center>力扣705-设计哈希集合</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="#A22015">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  不使用任何内建的哈希表库设计一个哈希集合（HashSet）。</p>
+<p>实现 MyHashSet 类：</p>
+<ul>
+<li>  void add(key) 向哈希集合中插入值 key 。</li>
+<li>  bool contains(key) 返回哈希集合中是否存在这个值 key 。</li>
+<li>  void remove(key) 将给定值 key 从哈希集合中删除。如果哈希集合中没有这个值，什么也不做。</li>
+</ul>
+<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><pre class="line-numbers language-basic" data-language="basic"><code class="language-basic">输入：
+[<span class="token string">"MyHashSet"</span><span class="token punctuation">,</span> <span class="token string">"add"</span><span class="token punctuation">,</span> <span class="token string">"add"</span><span class="token punctuation">,</span> <span class="token string">"contains"</span><span class="token punctuation">,</span> <span class="token string">"contains"</span><span class="token punctuation">,</span> <span class="token string">"add"</span><span class="token punctuation">,</span> <span class="token string">"contains"</span><span class="token punctuation">,</span> <span class="token string">"remove"</span><span class="token punctuation">,</span> <span class="token string">"contains"</span>]
+[[]<span class="token punctuation">,</span> [<span class="token number">1</span>]<span class="token punctuation">,</span> [<span class="token number">2</span>]<span class="token punctuation">,</span> [<span class="token number">1</span>]<span class="token punctuation">,</span> [<span class="token number">3</span>]<span class="token punctuation">,</span> [<span class="token number">2</span>]<span class="token punctuation">,</span> [<span class="token number">2</span>]<span class="token punctuation">,</span> [<span class="token number">2</span>]<span class="token punctuation">,</span> [<span class="token number">2</span>]]
+输出：
+[null<span class="token punctuation">,</span> null<span class="token punctuation">,</span> null<span class="token punctuation">,</span> true<span class="token punctuation">,</span> false<span class="token punctuation">,</span> null<span class="token punctuation">,</span> true<span class="token punctuation">,</span> null<span class="token punctuation">,</span> false]
+解释：
+MyHashSet myHashSet <span class="token operator">=</span> new MyHashSet<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+myHashSet.add<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token operator">/</span><span class="token operator">/</span> <span class="token function">set</span> <span class="token operator">=</span> [<span class="token number">1</span>]
+myHashSet.add<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token operator">/</span><span class="token operator">/</span> <span class="token function">set</span> <span class="token operator">=</span> [<span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span>]
+myHashSet.contains<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token operator">/</span><span class="token operator">/</span> 返回 True
+myHashSet.contains<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token operator">/</span><span class="token operator">/</span> 返回 False ，（未找到）
+myHashSet.add<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token operator">/</span><span class="token operator">/</span> <span class="token function">set</span> <span class="token operator">=</span> [<span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span>]
+myHashSet.contains<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token operator">/</span><span class="token operator">/</span> 返回 True
+myHashSet.remove<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token operator">/</span><span class="token operator">/</span> <span class="token function">set</span> <span class="token operator">=</span> [<span class="token number">1</span>]
+myHashSet.contains<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token operator">/</span><span class="token operator">/</span> 返回 False ，（已移除）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>  <code>0 &lt;= key &lt;= 106</code></li>
+<li>  最多调用 <code>104</code> 次 <code>add</code>、<code>remove</code> 和 <code>contains</code> 。</li>
+</ul>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/design-hashset">https://leetcode-cn.com/problems/design-hashset</a></p>
+<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="#A22015">二、解题思路</font></h2><h3 id="2-1-利用【ArrayList】解题"><a href="#2-1-利用【ArrayList】解题" class="headerlink" title="2.1 利用【ArrayList】解题"></a>2.1 利用【ArrayList】解题</h3><ul>
+<li>  <strong>解题思路</strong></li>
+</ul>
+<p>  用一个 list 去实现，比较容易想到。</p>
+<ul>
+<li>  <strong>详细代码（Java）</strong></li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyHashSet</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> myHashSet<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token class-name">MyHashSet</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        myHashSet <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">int</span> key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>myHashSet<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">else</span> myHashSet<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">remove</span><span class="token punctuation">(</span><span class="token keyword">int</span> key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>myHashSet<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            myHashSet<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token class-name">Integer</span><span class="token punctuation">)</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">contains</span><span class="token punctuation">(</span><span class="token keyword">int</span> key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> myHashSet<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>  <strong>代码执行结果</strong></li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gohnddbgckj30s80ek3zx.jpg" alt="ArrayList执行结果" width="100%/"></center>
+
+<h3 id="2-2-利用【Boolen数组】解题"><a href="#2-2-利用【Boolen数组】解题" class="headerlink" title="2.2 利用【Boolen数组】解题"></a>2.2 利用【Boolen数组】解题</h3><ul>
+<li>  <strong>解题思路</strong></li>
+</ul>
+<p>  因为题目限定了 key 的数量会小于等于 10^6，所以可以用一个1000001的Boolen数组来存每一个 key ，key 对应数组的下标。</p>
+<ul>
+<li>  <strong>详细代码（Java）</strong></li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyHashSet</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token keyword">boolean</span><span class="token punctuation">[</span><span class="token punctuation">]</span> myHashSet<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token class-name">MyHashSet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        myHashSet <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">boolean</span><span class="token punctuation">[</span><span class="token number">1000000</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">int</span> key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        myHashSet<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">remove</span><span class="token punctuation">(</span><span class="token keyword">int</span> key<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        myHashSet<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">contains</span><span class="token punctuation">(</span><span class="token keyword">int</span> key<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> myHashSet<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>  <strong>代码执行结果</strong></li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gohnb6t0u0j30ry0egmyj.jpg" alt="Boolen数组方法结果" width="100%/"></center>
+
+
+
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>力扣</tag>
+        <tag>简单</tag>
+        <tag>哈希表</tag>
+      </tags>
+  </entry>
 </search>
