@@ -6,7 +6,7 @@
   <link href="http://ganming1.github.io/atom.xml" rel="self"/>
   
   <link href="http://ganming1.github.io/"/>
-  <updated>2021-03-12T17:49:16.527Z</updated>
+  <updated>2021-03-22T04:20:28.775Z</updated>
   <id>http://ganming1.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>力扣191-位1的个数</title>
+    <link href="http://ganming1.github.io/2021/03/22/li-kou-191-wei-1-de-ge-shu/"/>
+    <id>http://ganming1.github.io/2021/03/22/li-kou-191-wei-1-de-ge-shu/</id>
+    <published>2021-03-22T02:25:51.000Z</published>
+    <updated>2021-03-22T04:20:28.775Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;力扣191-位1的个数&quot;&gt;&lt;a href=&quot;#力扣191-位1的个数&quot; class=&quot;headerlink&quot; title=&quot;力扣191-位1的个数&quot;&gt;&lt;/a&gt;&lt;center&gt;力扣191-位1的个数&lt;/center&gt;&lt;/h1&gt;&lt;h2 id=&quot;一、原题题目&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
+    
+    <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
+    
+    <category term="位运算" scheme="http://ganming1.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    
+  </entry>
   
   <entry>
     <title>力扣705-设计哈希集合</title>
@@ -572,37 +601,6 @@
     <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
     
     <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣103-二叉树的锯齿形层序遍历</title>
-    <link href="http://ganming1.github.io/2020/12/22/li-kou-103-er-cha-shu-de-ju-chi-xing-ceng-xu-bian-li/"/>
-    <id>http://ganming1.github.io/2020/12/22/li-kou-103-er-cha-shu-de-ju-chi-xing-ceng-xu-bian-li/</id>
-    <published>2020-12-22T14:22:55.000Z</published>
-    <updated>2020-12-22T16:02:43.111Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;力扣103-二叉树的锯齿形层序遍历&quot;&gt;&lt;a href=&quot;#力扣103-二叉树的锯齿形层序遍历&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="中等" scheme="http://ganming1.github.io/tags/%E4%B8%AD%E7%AD%89/"/>
-    
-    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
-    
-    <category term="树" scheme="http://ganming1.github.io/tags/%E6%A0%91/"/>
-    
-    <category term="层序遍历" scheme="http://ganming1.github.io/tags/%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86/"/>
     
   </entry>
   

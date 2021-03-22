@@ -4369,4 +4369,104 @@ myHashSet.contains<span class="token punctuation">(</span><span class="token num
         <tag>哈希表</tag>
       </tags>
   </entry>
+  <entry>
+    <title>力扣191-位1的个数</title>
+    <url>/2021/03/22/li-kou-191-wei-1-de-ge-shu/</url>
+    <content><![CDATA[<h1 id="力扣191-位1的个数"><a href="#力扣191-位1的个数" class="headerlink" title="力扣191-位1的个数"></a><center>力扣191-位1的个数</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="#A22015">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  编写一个函数，输入是一个无符号整数（以二进制串的形式），返回其二进制表达式中数字位数为 ‘1’ 的个数（也被称为<a href="https://baike.baidu.com/item/%E6%B1%89%E6%98%8E%E9%87%8D%E9%87%8F">汉明重量</a>）。</p>
+<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
+<li><p><strong>示例1：</strong></p>
+<p>  <strong>输入：</strong> <code>00000000000000000000000000001011</code><br><strong>输出：</strong> <code>3</code><br><strong>解释：</strong> 输入的二进制串 <code>00000000000000000000000000001011</code>  中，共有3位为 <code>1</code>。</p>
+</li>
+<li><p><strong>示例2：</strong></p>
+<p>  <strong>输入：</strong> <code>00000000000000000000000010000000</code><br><strong>输出：</strong> <code>1</code><br><strong>解释：</strong> 输入的二进制串 <code>00000000000000000000000010000000</code>  中，共有1位为 <code>1</code>。</p>
+</li>
+<li><p><strong>示例3：</strong></p>
+<p>  <strong>输入：</strong> <code>11111111111111111111111111111101</code><br><strong>输出：</strong> 31<br><strong>解释：</strong> 输入的二进制串 <code>11111111111111111111111111111101</code>  中，共有31位为 <code>1</code>。</p>
+</li>
+</ul>
+<p><strong>提示：</strong></p>
+<ul>
+<li><p>  请注意，在某些语言（如 Java）中，没有无符号整数类型。在这种情况下，输入和输出都将被指定为有符号整数类型，并且不应影响您的实现，因为无论整数是有符号的还是无符号的，其内部的二进制表示形式都是相同的。</p>
+</li>
+<li><p>  在 Java 中，编译器使用<a href="https://baike.baidu.com/item/%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A1%A5%E7%A0%81/5295284">二进制补码</a>记法来表示有符号整数。因此，在上面的 <strong>示例 3</strong> 中，输入表示有符号整数 <code>-3</code>。</p>
+</li>
+<li><p>  输入必须是长度为 <code>32</code> 的 <strong>二进制串</strong> 。</p>
+</li>
+</ul>
+<p><strong>进阶：</strong> </p>
+<ul>
+<li>  如果多次调用这个函数，你将如何优化你的算法？</li>
+</ul>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/number-of-1-bits/">https://leetcode-cn.com/problems/number-of-1-bits/</a></p>
+<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="#A22015">二、解题思路</font></h2><h3 id="2-1-直接检查每一位解题"><a href="#2-1-直接检查每一位解题" class="headerlink" title="2.1 直接检查每一位解题"></a>2.1 直接检查每一位解题</h3><ul>
+<li>  <strong>解题思路</strong></li>
+</ul>
+<p>  用循环去检查每一位是否为1，在检查第 <code>i</code> 位时，我们可以用 <code>2</code><sup><code>i</code></sup> 与改数进行与运算，只有当第 <code>i</code> 位为 1 时，与运算的结果才不为0。例如对数字11进行分析如下：</p>
+<center><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gosi6k55ndj30yy08y40e.jpg" alt="每位检查过程" width="100%/"></center>
+
+<ul>
+<li>  <strong>详细代码（Java）</strong></li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">hammingWeight</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> res <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i <span class="token operator">&lt;</span><span class="token number">32</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>n <span class="token operator">&amp;</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">&lt;&lt;</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">!=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            res<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>上述中有两个 java 中基本的位运算符：<code>&amp;</code> 和 <code>&lt;&lt;</code> </p>
+<p>&amp;：按位与—-对应位上的数子进行与运算得到结果。</p>
+<p>&lt;&lt;：左位移运算符。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">5</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span> n<span class="token operator">&lt;&lt;</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 1 2 4 8 16</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>  <strong>代码执行结果</strong></li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gosi8p911fj30s20egabg.jpg" alt="每位检查执行结果" width="100%/"></center>
+
+<h3 id="2-2-利用【n-amp-n-1-】解题"><a href="#2-2-利用【n-amp-n-1-】解题" class="headerlink" title="2.2 利用【n &amp; (n-1)】解题"></a>2.2 利用【n &amp; (n-1)】解题</h3><ul>
+<li>  <strong>解题思路</strong></li>
+</ul>
+<p>  &nbsp;<font color="red">利用 n&amp;(n - 1)，可以把 n的二进制位中的最低位的 1 变为 0 。这也是消除二进制末尾1的常用操作。</font></p>
+<center><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gosk21b443j30xo066aa7.jpg" alt="消除二进制末尾1" width="100%/"></center>
+
+<ul>
+<li>  <strong>详细代码（Java）</strong></li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">hammingWeight</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>n<span class="token operator">!=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            count<span class="token operator">++</span><span class="token punctuation">;</span>
+            n <span class="token operator">&amp;=</span> <span class="token punctuation">(</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> count<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>  <strong>代码执行结果</strong></li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gosk6cmzoyj30s00ek3zw.jpg" alt="n &amp; (n-1)结果" width="100%/"></center>
+
+
+
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>力扣</tag>
+        <tag>简单</tag>
+        <tag>位运算</tag>
+      </tags>
+  </entry>
 </search>
