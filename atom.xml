@@ -6,7 +6,7 @@
   <link href="http://ganming1.github.io/atom.xml" rel="self"/>
   
   <link href="http://ganming1.github.io/"/>
-  <updated>2021-03-22T04:20:28.775Z</updated>
+  <updated>2021-03-29T10:47:06.734Z</updated>
   <id>http://ganming1.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BOM浏览器对象模型</title>
+    <link href="http://ganming1.github.io/2021/03/29/bom-liu-lan-qi-dui-xiang-mo-xing/"/>
+    <id>http://ganming1.github.io/2021/03/29/bom-liu-lan-qi-dui-xiang-mo-xing/</id>
+    <published>2021-03-29T10:45:21.000Z</published>
+    <updated>2021-03-29T10:47:06.734Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;BOM-浏览器对象模型&quot;&gt;&lt;a href=&quot;#BOM-浏览器对象模型&quot; class=&quot;headerlink&quot; title=&quot;BOM 浏览器对象模型&quot;&gt;&lt;/a&gt;&lt;center&gt;BOM</summary>
+        
+      
+    
+    
+    
+    <category term="前端开发" scheme="http://ganming1.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="前端" scheme="http://ganming1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="JS" scheme="http://ganming1.github.io/tags/JS/"/>
+    
+  </entry>
   
   <entry>
     <title>力扣191-位1的个数</title>
@@ -37,9 +64,9 @@
     <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
-    
     <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
+    
+    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
     
     <category term="位运算" scheme="http://ganming1.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
     
@@ -66,9 +93,9 @@
     <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
-    
     <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
+    
+    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
     
     <category term="哈希表" scheme="http://ganming1.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
     
@@ -108,7 +135,7 @@
     <link href="http://ganming1.github.io/2021/03/05/web-apis-jian-jie/"/>
     <id>http://ganming1.github.io/2021/03/05/web-apis-jian-jie/</id>
     <published>2021-03-05T06:11:04.000Z</published>
-    <updated>2021-03-05T06:12:49.734Z</updated>
+    <updated>2021-03-12T12:22:14.006Z</updated>
     
     
       
@@ -135,7 +162,7 @@
     <link href="http://ganming1.github.io/2021/03/04/jian-zhi-03-shu-zu-zhong-chong-fu-de-shu-zi/"/>
     <id>http://ganming1.github.io/2021/03/04/jian-zhi-03-shu-zu-zhong-chong-fu-de-shu-zi/</id>
     <published>2021-03-04T08:53:41.000Z</published>
-    <updated>2021-03-04T10:36:53.060Z</updated>
+    <updated>2021-03-12T11:33:52.939Z</updated>
     
     
       
@@ -153,9 +180,9 @@
     
     <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
     
-    <category term="数组" scheme="http://ganming1.github.io/tags/%E6%95%B0%E7%BB%84/"/>
-    
     <category term="剑指Offer" scheme="http://ganming1.github.io/tags/%E5%89%91%E6%8C%87Offer/"/>
+    
+    <category term="数组" scheme="http://ganming1.github.io/tags/%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
@@ -191,7 +218,7 @@
     <link href="http://ganming1.github.io/2020/12/31/li-kou-435-wu-chong-die-qu-jian/"/>
     <id>http://ganming1.github.io/2020/12/31/li-kou-435-wu-chong-die-qu-jian/</id>
     <published>2020-12-30T16:08:04.000Z</published>
-    <updated>2020-12-31T09:25:55.042Z</updated>
+    <updated>2021-02-11T03:58:14.055Z</updated>
     
     
       
@@ -265,13 +292,13 @@
     <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
-    
     <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
     
-    <category term="排序" scheme="http://ganming1.github.io/tags/%E6%8E%92%E5%BA%8F/"/>
-    
     <category term="数组" scheme="http://ganming1.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
+    
+    <category term="排序" scheme="http://ganming1.github.io/tags/%E6%8E%92%E5%BA%8F/"/>
     
   </entry>
   
@@ -280,7 +307,7 @@
     <link href="http://ganming1.github.io/2020/12/29/li-kou-205-tong-gou-zi-fu-chuan/"/>
     <id>http://ganming1.github.io/2020/12/29/li-kou-205-tong-gou-zi-fu-chuan/</id>
     <published>2020-12-29T12:50:14.000Z</published>
-    <updated>2020-12-29T18:08:37.438Z</updated>
+    <updated>2021-03-03T05:44:52.528Z</updated>
     
     
       
@@ -298,11 +325,11 @@
     
     <category term="字符串" scheme="http://ganming1.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
-    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
-    
     <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
     
     <category term="数组" scheme="http://ganming1.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
     
     <category term="哈希表" scheme="http://ganming1.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
     
@@ -420,9 +447,9 @@
     <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
-    
     <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
+    
+    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
     
     <category term="贪心" scheme="http://ganming1.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
     
@@ -449,9 +476,9 @@
     <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
-    
     <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
+    
+    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
     
     <category term="贪心" scheme="http://ganming1.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
     
@@ -509,9 +536,9 @@
     <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
-    
     <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
+    
+    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
     
     <category term="排序" scheme="http://ganming1.github.io/tags/%E6%8E%92%E5%BA%8F/"/>
     
@@ -572,35 +599,6 @@
     <category term="Java" scheme="http://ganming1.github.io/tags/Java/"/>
     
     <category term="字符串" scheme="http://ganming1.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣387-字符串中的第一个唯一字符</title>
-    <link href="http://ganming1.github.io/2020/12/23/li-kou-387-zi-fu-chuan-zhong-de-di-yi-ge-wei-yi-zi-fu/"/>
-    <id>http://ganming1.github.io/2020/12/23/li-kou-387-zi-fu-chuan-zhong-de-di-yi-ge-wei-yi-zi-fu/</id>
-    <published>2020-12-22T16:05:47.000Z</published>
-    <updated>2020-12-22T17:09:59.232Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;力扣387-字符串中的第一个唯一字符&quot;&gt;&lt;a href=&quot;#力扣387-字符串中的第一个唯一字符&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="字符串" scheme="http://ganming1.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    
-    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
-    
-    <category term="简单" scheme="http://ganming1.github.io/tags/%E7%AE%80%E5%8D%95/"/>
     
   </entry>
   
