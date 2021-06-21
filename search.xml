@@ -5083,4 +5083,293 @@ http://www.itcast.cn/index.html?name=andy&amp;and=18#link<span aria-hidden="true
         <tag>markdown</tag>
       </tags>
   </entry>
+  <entry>
+    <title>JavaScript中的9种控制流语句</title>
+    <url>/2021/06/21/javascript-zhong-de-9-chong-kong-zhi-liu-yu-ju/</url>
+    <content><![CDATA[<h1 id="JavaScript中的9种控制流语句"><a href="#JavaScript中的9种控制流语句" class="headerlink" title="JavaScript中的9种控制流语句"></a><center>JavaScript中的9种控制流语句</center></h1><p>  ECMA-262规定了一组<font color="red">语句</font>(也成为<font color="red">流控制语句</font>)。这些语句定义了 ECMAScript 中的重要语法，有 <font color="red">if 语句</font>、<font color="red">do-while 语句</font>、<font color="red">while 语句</font>、<font color="red">for 语句</font>、<font color="red">for-in 语句</font>、<font color="red">label 语句</font>、<font color="red">break 和 continue 语句</font>、<font color="red">with 语句</font>、<font color="red">switch 语句</font>共9种。</p>
+<h2 id="一、-if-语句"><a href="#一、-if-语句" class="headerlink" title="一、 if 语句"></a><font color="born">一、 if 语句</font></h2><p>  以下是 <font color="red">if 语句</font>的语法：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">if</span> <span class="token punctuation">(</span>condition<span class="token punctuation">)</span> statement1 <span class="token keyword">else</span> statement2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>  其中的 condition(条件) 是判断条件，可以是任意的表达式；不一定非得是布尔值，ECMAScript 会自动调用 <font color="red">Boolean() 转换函数</font>将这个表达式的结果转换为一个<font color="red">布尔值</font>。如果 condition 结果为 true，则执行 statement1 语句，否则执行 statement2 语句。业界推崇两个执行语句使用<font color="red">代码块</font>(以一对花括号括起来的多行代码)。</p>
+<p>  示例：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">if</span><span class="token punctuation">(</span>i<span class="token operator">&gt;</span><span class="token number">25</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"Greater than 25."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+	<span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"Less than or equal to 25."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>  还有多重 if 语句判断的语法：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">if</span> <span class="token punctuation">(</span>condition1<span class="token punctuation">)</span> statement1 <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>condition2<span class="token punctuation">)</span> statement2 <span class="token keyword">else</span> statement3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="二、-do-while-语句"><a href="#二、-do-while-语句" class="headerlink" title="二、 do-while 语句"></a><font color="born">二、 do-while 语句</font></h2><p>  <font color="red">do-while 语句</font>是一种<font color="red">后测试循环语句</font>，即在循环体中的代码执行之后再测试出口条件。循环体内的代码<font color="red">至少会被执行一次</font>。以下是 do-while 语句语法：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">do</span><span class="token punctuation">{</span>
+    statement<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">while</span><span class="token punctuation">(</span>expression<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>  示例：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">do</span><span class="token punctuation">{</span>
+    i <span class="token operator">+=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token keyword">while</span><span class="token punctuation">(</span>i<span class="token operator">&lt;</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">alert</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="三、-while-语句"><a href="#三、-while-语句" class="headerlink" title="三、 while 语句"></a><font color="born">三、 while 语句</font></h2><p>  <font color="red">while 语句</font>也属于<font color="red">前测试循环语句</font>，即循环体内的代码在执行前就会对出口条件进行求值判断。因此，循环体内的<font color="red">代码可能永远不会被执行</font>。以下是 while 语句语法：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">while</span><span class="token punctuation">(</span>expression<span class="token punctuation">)</span> statement<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>  示例：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">while</span><span class="token punctuation">(</span>i<span class="token operator">&lt;</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	i <span class="token operator">+=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="四、-for-语句"><a href="#四、-for-语句" class="headerlink" title="四、 for 语句"></a><font color="born">四、 for 语句</font></h2><p>  <font color="red">for 语句</font>是一种<font color="red">前测试循环语句</font>，但它具有在执行循环之前<font color="red">初始化变量</font>和<font color="red">定义循环后要执行的代码</font>的能力。以下是 for 语句语法：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">for</span><span class="token punctuation">(</span>initialization<span class="token punctuation">;</span> expression<span class="token punctuation">;</span> post<span class="token operator">-</span>loop<span class="token operator">-</span>expression<span class="token punctuation">)</span> statement<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>  示例：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> count <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> count<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>  <font color="red">注意：</font>在循环体内定义的变量等价于在循环体外定义一样，循环体中不存在块级作用域，因此在<font color="red">循环内部定义的变量在外部也可以访问到</font>。</p>
+<p>  例如：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> m <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>m<span class="token operator">&lt;</span><span class="token number">10</span><span class="token punctuation">;</span>m<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">var</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        j<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>j<span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">// 1</span>
+
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">5</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">// 5</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="五、-for-in-语句"><a href="#五、-for-in-语句" class="headerlink" title="五、 for-in 语句"></a><font color="born">五、 for-in 语句</font></h2><p>  <font color="red">for-in 语句</font>是一种精准的迭代语句，可以用来枚举对象的属性。以下是 for-in 语句的语法：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">for</span><span class="token punctuation">(</span>property <span class="token keyword">in</span> expression<span class="token punctuation">)</span> statement<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>  示例：打印出 window 对象的所有属性。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> propName <span class="token keyword">in</span> window<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>propName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">'&lt;br&gt;'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>  打印出的属性<font color="red">顺序是不可预测</font>的，因浏览器而已。</p>
+<h2 id="六、-label-语句"><a href="#六、-label-语句" class="headerlink" title="六、 label 语句"></a><font color="born">六、 label 语句</font></h2><p>  使用 <font color="red">label 语句</font>可以在代码中<font color="red">添加标签</font>，以便将来结合 break 和 continue 使用，加标签的语句一般都要与 for 等循环语句配合使用。语法如下：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">label<span class="token operator">:</span>statement<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>  示例：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token comment">// 无label语句，break语句只挑出当前循环层。</span>
+    <span class="token keyword">var</span> num <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span> <span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> j <span class="token operator">=</span> <span class="token number">0</span> <span class="token punctuation">;</span> j <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span> i <span class="token operator">==</span> <span class="token number">5</span> <span class="token operator">&amp;&amp;</span> j <span class="token operator">==</span> <span class="token number">5</span> <span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        num<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// 95</span>
+	<span class="token comment">// 有label语句，break语句后接标签后跳出到标签处继续循环。</span>
+    num <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    outPoint<span class="token operator">:</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span> <span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> j <span class="token operator">=</span> <span class="token number">0</span> <span class="token punctuation">;</span> j <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span> i <span class="token operator">==</span> <span class="token number">5</span> <span class="token operator">&amp;&amp;</span> j <span class="token operator">==</span> <span class="token number">5</span> <span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">break</span> outPoint<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        num<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token comment">// 55</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="七、-break-和-continue-语句"><a href="#七、-break-和-continue-语句" class="headerlink" title="七、 break 和 continue 语句"></a><font color="born">七、 break 和 continue 语句</font></h2><p>  break 语句和 continue 语句用于在循环中精确的控制代码的执行。其中<font color="red">break 语句</font>是会立即<font color="red">退出当层循环</font>，强制执行当层循环<font color="red">后</font>的语句。而 continue 也是立即<font color="red">退出当前层的循环</font>，但退出循环后从当前层循环的<font color="red">顶部继续执行</font>。</p>
+<h2 id="八、-with-语句"><a href="#八、-with-语句" class="headerlink" title="八、 with 语句"></a><font color="born">八、 with 语句</font></h2><p>  <font color="red">with 语句</font>的作用是将代码的作用域设置到一个特定的对象中。with 语句的语法如下：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">with</span><span class="token punctuation">(</span>expression<span class="token punctuation">)</span> statement<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>  定义 with 语句的目的主要是为了<font color="red">简化多次编写同一个对象的工作</font>，如下例子</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> qs <span class="token operator">=</span> location<span class="token punctuation">.</span>search<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> hostName <span class="token operator">=</span> location<span class="token punctuation">.</span>hostname<span class="token punctuation">;</span>
+<span class="token keyword">var</span> url <span class="token operator">=</span> location<span class="token punctuation">.</span>href<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>  上面的代码中都包含 location 对象，就可以使用 with 语句，改写成如下：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">with</span><span class="token punctuation">(</span>location<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> qs <span class="token operator">=</span> search<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> hostName <span class="token operator">=</span> hostname<span class="token punctuation">;</span>
+    <span class="token keyword">var</span> url <span class="token operator">=</span> href<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>  上述代码使用 with 语句关联了 location 对象。这意味着在 with 语句的代码块中，每个变量被认为是一个局部变量，如果在局部环境中找不到该变量的定义，就会查询 location 对象中是否有同名的属性。</p>
+<p>  <font color="red"><strong>注意：</strong></font>严格模式下不允许使用 with 语句。大型开发中不建议使用。</p>
+<h2 id="九、-switch-语句"><a href="#九、-switch-语句" class="headerlink" title="九、 switch 语句"></a><font color="born">九、 switch 语句</font></h2><p>  switch 语句是多重判断语句，与 if 语句最为密切。语法与 C 语言语法非常接近，如下所示：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">switch</span><span class="token punctuation">(</span>expression<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">case</span> value<span class="token operator">:</span>statement
+    	<span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> value<span class="token operator">:</span>statement
+    	<span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> value<span class="token operator">:</span>statement
+    	<span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">default</span><span class="token operator">:</span>statement
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>  switch 语句中的每一种情形(case)的含义是：如果表达式(expression)等于这个值(value)，则执行后面的语句(statement)。break 关键字会导致代码跳出 switch 语句。没有 break 关键字会一个接着一个执行后面的 case。如果表达式没有匹配到任何一种case，则会执行 default 后面的语句。</p>
+]]></content>
+      <categories>
+        <category>前端开发</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>JS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>力扣0518-零钱兑换II</title>
+    <url>/2021/06/10/li-kou-0518-ling-qian-dui-huan-ii/</url>
+    <content><![CDATA[<h1 id="力扣190-颠倒二进制位"><a href="#力扣190-颠倒二进制位" class="headerlink" title="力扣190-颠倒二进制位"></a><center>力扣190-颠倒二进制位</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="#A22015">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  给定不同面额的硬币和一个总金额。写出函数来计算可以凑成总金额的硬币组合数。假设每一种面额的硬币有无限个。</p>
+<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
+<li><p><strong>示例1：</strong></p>
+<p>  <strong>输入：</strong> <code>amount = 5, coins = [1, 2, 5]</code><br><strong>输出：</strong> <code>4</code><br><strong>解释：</strong> 有四种方式可以凑成总金额:<br>  5=5<br>  5=2+2+1<br>  5=2+1+1+1<br>  5=1+1+1+1+1</p>
+</li>
+<li><p><strong>示例2：</strong></p>
+<p>  <strong>输入：</strong> <code>amount = 3, coins = [2]</code><br><strong>输出：</strong> <code>0</code><br><strong>解释：</strong> 只用面额2的硬币不能凑成总金额3。</p>
+</li>
+<li><p><strong>示例3：</strong></p>
+<p>  <strong>输入：</strong> <code>amount = 10, coins = [10] </code><br><strong>输出：</strong> <code>1</code><br></p>
+</li>
+</ul>
+<p><strong>提示：</strong></p>
+<p>你可以假设：</p>
+<p>0 &lt;= amount (总金额) &lt;= 5000<br>1 &lt;= coin (硬币面额) &lt;= 5000<br>硬币种类不超过 500 种<br>结果符合 32 位符号整数</p>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/coin-change-2">https://leetcode-cn.com/problems/coin-change-2</a></p>
+<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="#A22015">二、解题思路</font></h2><h3 id="2-1-直接检查每一位解题"><a href="#2-1-直接检查每一位解题" class="headerlink" title="2.1 直接检查每一位解题"></a>2.1 直接检查每一位解题</h3><ul>
+<li>  <strong>解题思路</strong></li>
+</ul>
+<p>  用循环去检查每一位是否为1，在检查第 <code>i</code> 位时，我们可以用 <code>2</code><sup><code>i</code></sup> 与改数进行与运算，只有当第 <code>i</code> 位为 1 时，与运算的结果才不为0。例如对数字11进行分析如下：</p>
+<center><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gosi6k55ndj30yy08y40e.jpg" alt="每位检查过程" width="100%/"></center>
+
+<ul>
+<li>  <strong>详细代码（Java）</strong></li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">hammingWeight</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> res <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i <span class="token operator">&lt;</span><span class="token number">32</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>n <span class="token operator">&amp;</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">&lt;&lt;</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">!=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            res<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>上述中有两个 java 中基本的位运算符：<code>&amp;</code> 和 <code>&lt;&lt;</code> </p>
+<p>&amp;：按位与—-对应位上的数子进行与运算得到结果。</p>
+<p>&lt;&lt;：左位移运算符。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">5</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span> n<span class="token operator">&lt;&lt;</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 1 2 4 8 16</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>  <strong>代码执行结果</strong></li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gosi8p911fj30s20egabg.jpg" alt="每位检查执行结果" width="100%/"></center>
+
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
+  </entry>
+  <entry>
+    <title>力扣190-颠倒二进制位</title>
+    <url>/2021/03/29/li-kou-190-dian-dao-er-jin-zhi-wei/</url>
+    <content><![CDATA[<h1 id="力扣190-颠倒二进制位"><a href="#力扣190-颠倒二进制位" class="headerlink" title="力扣190-颠倒二进制位"></a><center>力扣190-颠倒二进制位</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="#A22015">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>  颠倒给定的 32 位无符号整数的二进制位。</p>
+<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
+<li><p><strong>示例1：</strong></p>
+<p>  <strong>输入：</strong> <code>00000010100101000001111010011100</code><br><strong>输出：</strong> <code>00111001011110000010100101000000</code><br><strong>解释：</strong> 输入的二进制串 <code>00000010100101000001111010011100</code> 表示无符号整数 <code>43261596</code>，因此返回 <code>964176192</code>，其二进制表示形式为 <code>00111001011110000010100101000000</code>。</p>
+</li>
+<li><p><strong>示例2：</strong></p>
+<p>  <strong>输入：</strong> <code>11111111111111111111111111111101</code><br><strong>输出：</strong> <code>10111111111111111111111111111111</code><br><strong>解释：</strong> 输入的二进制串 <code>11111111111111111111111111111101</code> 表示无符号整数 <code>4294967293</code>，因此返回 <code>3221225471</code> 其二进制表示形式为 <code>10111111111111111111111111111111</code> 。</p>
+</li>
+</ul>
+<p><strong>提示：</strong></p>
+<ul>
+<li><p>  请注意，在某些语言（如 Java）中，没有无符号整数类型。在这种情况下，输入和输出都将被指定为有符号整数类型，并且不应影响您的实现，因为无论整数是有符号的还是无符号的，其内部的二进制表示形式都是相同的。</p>
+</li>
+<li><p>  输入必须是长度为 <code>32</code> 的 <strong>二进制串</strong> 。</p>
+</li>
+</ul>
+<p><strong>进阶：</strong> </p>
+<ul>
+<li>  如果多次调用这个函数，你将如何优化你的算法？</li>
+</ul>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/reverse-bits/">https://leetcode-cn.com/problems/reverse-bits/</a></p>
+<h2 id="二、解题思路"><a href="#二、解题思路" class="headerlink" title="二、解题思路"></a><font color="#A22015">二、解题思路</font></h2><h3 id="2-1-直接检查每一位解题"><a href="#2-1-直接检查每一位解题" class="headerlink" title="2.1 直接检查每一位解题"></a>2.1 直接检查每一位解题</h3><ul>
+<li>  <strong>解题思路</strong></li>
+</ul>
+<p>  用循环去检查每一位是否为1，在检查第 <code>i</code> 位时，我们可以用 <code>2</code><sup><code>i</code></sup> 与改数进行与运算，只有当第 <code>i</code> 位为 1 时，与运算的结果才不为0。例如对数字11进行分析如下：</p>
+<center><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gosi6k55ndj30yy08y40e.jpg" alt="每位检查过程" width="100%/"></center>
+
+<ul>
+<li>  <strong>详细代码（Java）</strong></li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">hammingWeight</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> res <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i <span class="token operator">&lt;</span><span class="token number">32</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>n <span class="token operator">&amp;</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">&lt;&lt;</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">!=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            res<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>上述中有两个 java 中基本的位运算符：<code>&amp;</code> 和 <code>&lt;&lt;</code> </p>
+<p>&amp;：按位与—-对应位上的数子进行与运算得到结果。</p>
+<p>&lt;&lt;：左位移运算符。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">5</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span> n<span class="token operator">&lt;&lt;</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 1 2 4 8 16</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>  <strong>代码执行结果</strong></li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gosi8p911fj30s20egabg.jpg" alt="每位检查执行结果" width="100%/"></center>
+
+<h3 id="2-2-利用【n-amp-n-1-】解题"><a href="#2-2-利用【n-amp-n-1-】解题" class="headerlink" title="2.2 利用【n &amp; (n-1)】解题"></a>2.2 利用【n &amp; (n-1)】解题</h3><ul>
+<li>  <strong>解题思路</strong></li>
+</ul>
+<p>  &nbsp;<font color="red">利用 n&amp;(n - 1)，可以把 n的二进制位中的最低位的 1 变为 0 。这也是消除二进制末尾1的常用操作。</font></p>
+<center><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gosk21b443j30xo066aa7.jpg" alt="消除二进制末尾1" width="100%/"></center>
+
+<ul>
+<li>  <strong>详细代码（Java）</strong></li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">hammingWeight</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>n<span class="token operator">!=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            count<span class="token operator">++</span><span class="token punctuation">;</span>
+            n <span class="token operator">&amp;=</span> <span class="token punctuation">(</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> count<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>  <strong>代码执行结果</strong></li>
+</ul>
+<center><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gosk6cmzoyj30s00ek3zw.jpg" alt="n &amp; (n-1)结果" width="100%/"></center>
+
+
+
+]]></content>
+  </entry>
 </search>
