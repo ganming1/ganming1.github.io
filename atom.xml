@@ -6,7 +6,7 @@
   <link href="http://ganming1.github.io/atom.xml" rel="self"/>
   
   <link href="http://ganming1.github.io/"/>
-  <updated>2021-06-21T11:47:47.098Z</updated>
+  <updated>2021-06-22T10:31:12.148Z</updated>
   <id>http://ganming1.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>JS中基本类型和引用类型值的区别</title>
+    <link href="http://ganming1.github.io/2021/06/22/js-zhong-ji-ben-lei-xing-he-yin-yong-lei-xing-zhi-de-qu-bie/"/>
+    <id>http://ganming1.github.io/2021/06/22/js-zhong-ji-ben-lei-xing-he-yin-yong-lei-xing-zhi-de-qu-bie/</id>
+    <published>2021-06-22T10:21:07.000Z</published>
+    <updated>2021-06-22T10:31:12.148Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;JS中基本类型和引用类型值的区别&quot;&gt;&lt;a href=&quot;#JS中基本类型和引用类型值的区别&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="前端开发" scheme="http://ganming1.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+    
+    <category term="前端" scheme="http://ganming1.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="JS" scheme="http://ganming1.github.io/tags/JS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JavaScript中的9种控制流语句</title>
     <link href="http://ganming1.github.io/2021/06/21/javascript-zhong-de-9-chong-kong-zhi-liu-yu-ju/"/>
     <id>http://ganming1.github.io/2021/06/21/javascript-zhong-de-9-chong-kong-zhi-liu-yu-ju/</id>
     <published>2021-06-21T11:33:21.000Z</published>
-    <updated>2021-06-21T11:47:47.098Z</updated>
+    <updated>2021-06-22T10:23:04.558Z</updated>
     
     
       
@@ -48,7 +75,7 @@
     <link href="http://ganming1.github.io/2021/03/29/bom-liu-lan-qi-dui-xiang-mo-xing/"/>
     <id>http://ganming1.github.io/2021/03/29/bom-liu-lan-qi-dui-xiang-mo-xing/</id>
     <published>2021-03-29T10:45:21.000Z</published>
-    <updated>2021-03-29T10:47:06.734Z</updated>
+    <updated>2021-04-09T06:15:34.769Z</updated>
     
     
       
@@ -570,35 +597,6 @@
     <category term="排序" scheme="http://ganming1.github.io/tags/%E6%8E%92%E5%BA%8F/"/>
     
     <category term="哈希表" scheme="http://ganming1.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>力扣135-分发糖果</title>
-    <link href="http://ganming1.github.io/2020/12/24/li-kou-135-fen-fa-tang-guo/"/>
-    <id>http://ganming1.github.io/2020/12/24/li-kou-135-fen-fa-tang-guo/</id>
-    <published>2020-12-24T03:41:57.000Z</published>
-    <updated>2020-12-24T06:02:48.256Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;力扣135-分发糖果&quot;&gt;&lt;a href=&quot;#力扣135-分发糖果&quot; class=&quot;headerlink&quot; title=&quot;力扣135-分发糖果&quot;&gt;&lt;/a&gt;&lt;center&gt;力扣135-分发糖果&lt;/center&gt;&lt;/h1&gt;&lt;h2 id=&quot;一、原题题目&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="http://ganming1.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="力扣" scheme="http://ganming1.github.io/tags/%E5%8A%9B%E6%89%A3/"/>
-    
-    <category term="困难" scheme="http://ganming1.github.io/tags/%E5%9B%B0%E9%9A%BE/"/>
-    
-    <category term="贪心" scheme="http://ganming1.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
     
   </entry>
   

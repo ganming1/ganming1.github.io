@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="力扣 算法 动态规划">
+    <meta name="keywords" content="JS中基本类型和引用类型值的区别, 博客 技术">
     <meta name="description" content="努力做个it技术分享者">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>力扣714-买卖股票的最佳时机含手续费 | ItDaChuang</title>
+    <title>JS中基本类型和引用类型值的区别 | ItDaChuang</title>
     <link rel="icon" type="image/png" href="/medias/G.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">力扣714-买卖股票的最佳时机含手续费</h1>
+                    <h1 class="description center-align post-title">JS中基本类型和引用类型值的区别</h1>
                 </div>
             </div>
         </div>
@@ -434,16 +434,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E4%B8%AD%E7%AD%89/">
-                                <span class="chip bg-color">中等</span>
+                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                <span class="chip bg-color">前端</span>
                             </a>
                         
-                            <a href="/tags/%E5%8A%9B%E6%89%A3/">
-                                <span class="chip bg-color">力扣</span>
-                            </a>
-                        
-                            <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
-                                <span class="chip bg-color">动态规划</span>
+                            <a href="/tags/JS/">
+                                <span class="chip bg-color">JS</span>
                             </a>
                         
                     </div>
@@ -454,8 +450,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                算法
+                            <a href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" class="post-category">
+                                前端开发
                             </a>
                         
                     </div>
@@ -467,28 +463,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-12-17
+                    2021-06-22
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-12-21
+                    2021-06-22
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.6k
+                    1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    3 分
                 </div>
                 
 
@@ -511,70 +507,98 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="力扣714-买卖股票的最佳时机含手续费"><a href="#力扣714-买卖股票的最佳时机含手续费" class="headerlink" title="力扣714-买卖股票的最佳时机含手续费"></a><center>力扣714-买卖股票的最佳时机含手续费</center></h1><h2 id="一、原题题目"><a href="#一、原题题目" class="headerlink" title="一、原题题目"></a><font color="born">一、原题题目</font></h2><h3 id="1-1-题目"><a href="#1-1-题目" class="headerlink" title="1.1 题目"></a>1.1 题目</h3><p>​    给定一个整数数组 prices，其中第 i 个元素代表了第 i 天的股票价格 ；非负整数 fee 代表了交易股票的手续费用。你可以无限次地完成交易，但是你每笔交易都需要付手续费。如果你已经购买了一个股票，在卖出它之前你就不能再继续购买股票了。返回获得利润的最大值。</p>
-<p>​    注意：这里的一笔交易指买入持有并卖出股票的整个过程，每笔交易你只需要为支付一次手续费。</p>
-<h3 id="1-2-示例"><a href="#1-2-示例" class="headerlink" title="1.2 示例"></a>1.2 示例</h3><ul>
-<li><p><strong>示例一</strong></p>
-<p>  <strong>输入：</strong> prices = [1, 3, 2, 8, 4, 9], fee = 2</p>
-<p>  <strong>输出：</strong> 8</p>
-<p>  <strong>解释：</strong> 能够达到的最大利润:</p>
-<p>  在此处买入 prices[0] = 1<br>  在此处卖出 prices[3] = 8<br>  在此处买入 prices[4] = 4<br>  在此处卖出 prices[5] = 9<br>  总利润: ((8 - 1) - 2) + ((9 - 4) - 2) = 8.</p>
-</li>
-<li><p><strong>注意：</strong></p>
+                <h1 id="JS中基本类型和引用类型值的区别"><a href="#JS中基本类型和引用类型值的区别" class="headerlink" title="JS中基本类型和引用类型值的区别"></a><center>JS中基本类型和引用类型值的区别</center></h1><p>  ECMAScript 变量可能包含两种不同类型的值：<font color="red">基本类型值</font>和<font color="red">引用类型值</font>。</p>
 <ul>
-<li>  <code>0 &lt; prices.length &lt;= 50000</code>.</li>
-<li>  <code>0 &lt; prices[i] &lt; 50000</code>.</li>
-<li>  <code>0 &lt;= fee &lt; 50000</code>.</li>
+<li>  <strong>基本类型值</strong>：指的是简单的数据段，包括 <font color="red">Undefined</font>、<font color="red">Null</font>、<font color="red">Boolean</font>、<font color="red">Number</font> 和 <font color="red">String</font> 这<font color="red">五种基本数据类型</font>。</li>
+<li>  <strong>引用类型值</strong>：指的是保存在内存中的对象。</li>
 </ul>
-</li>
-</ul>
-<p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee">https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee</a></p>
-<h2 id="二、解题思路（动态规划）"><a href="#二、解题思路（动态规划）" class="headerlink" title="二、解题思路（动态规划）"></a><font color="born">二、解题思路（动态规划）</font></h2><h3 id="2-1-题目理解"><a href="#2-1-题目理解" class="headerlink" title="2.1 题目理解"></a>2.1 题目理解</h3><ul>
-<li>  <strong>题前感慨（时间紧不用看，跳至【言归正传】部分）</strong></li>
-</ul>
-<p> 给定每日股票价格的数组，每天可以选择是否买入/卖出，持有时不能再次买入，每笔交易有固定的手续费，求可获得的最大利润。给定每日股票价格的数组，每天可以选择是否买入/卖出，持有时不能再次买入，每笔交易有固定的手续费，求可获得的最大利润。</p>
-<p> 这是一道入门的动态规划题目……当说出这句话的时候表示说话者已经对动态规划有所掌握了，所以能很快的分析出它是一道动态规划题，并且很容易就能想到什么状态变量，转移方程的所以它是一道简单的动态规划题目。但对于很多算法新手来说，难的是识别它是个动态规划题。</p>
-<p> 本文主要解决该算法题，下面会结合本题简单说到动态规划，动态规划的详细讲解自己也会全面的整理一份资料供自己总结复习，同时也分享出来给需要的网友参考~。</p>
+<h2 id="一、-动态的属性"><a href="#一、-动态的属性" class="headerlink" title="一、 动态的属性"></a><font color="born">一、 动态的属性</font></h2><p>  对于引用类型的值，可以为其<font color="red">添加属性和方法</font>，也可以改变和删除其属性和方法。例如：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> person <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+person<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">"andy"</span><span class="token punctuation">;</span>
+<span class="token function">alert</span><span class="token punctuation">(</span>person<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// andy</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>  不能给基本类型的值添加属性，虽然不会导致任何错误，但是没有作用。例如:</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token string">"andy"</span><span class="token punctuation">;</span>
+a<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">27</span><span class="token punctuation">;</span>
+<span class="token function">alert</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">//undefined</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="二、-复制变量值"><a href="#二、-复制变量值" class="headerlink" title="二、 复制变量值"></a><font color="born">二、 复制变量值</font></h2><p>  从一个变量向另一个变量复制基本类型值和引用类型值时，方式也是不同的。</p>
 <ul>
-<li>  <strong>言归正传</strong></li>
+<li>  <strong>复制基本数据类型值</strong></li>
 </ul>
-<p> <strong>【1.识别动态规划】</strong>动态规划所处理的问题是一个多阶段决策问题，一般由初始状态开始，通过对中间阶段决策的选择，达到结束状态，此问题当中我们的初试状态就是第0天开始，结束状态就是第n天结束。中间的买入/卖出就是中间决策的选择。</p>
-<p> <strong>【2.确定状态定义状态变量】</strong>知道是动态规划题后就老老实实的确定状态和定义状态变量，如何正确合理的确定状态也至关重要，例如这里可以以每天交易结束后手里是否有股票为状态，两种状态：有股票，没有股票。我们的目的是求最后的最大利润的，所以定义状态变量可以这样定义：dp[i][0] 表示第 i 天交易结束后手里没有股票的最大利润。dp[i][1] 表示第 i 天交易结束后手里有股票的最大利润。</p>
-<p> <strong>【3.推导状态转移方程】</strong>先考虑 dp[i][0] 的转移方程，第 i 天结束，手里没有股票，那么一定是今天没有买入。可能的状态有前一天可能是也没有股票状态 dp[i-1][0]，或前一天结束时手里有股票 dp[i-1][1]被我今天卖了。因此转移方程为：<br>$$<br>dp[i][0] = max{dp[i-1][0],dp[i-1][1]+prices[i]-fee}<br>$$<br> 在考虑 dp[i][1] 的转移方程，第 i 天结束后，手里有股票，那么一定是今天没有卖出。可能的状态有前一天本来就是有股票状态 dp[i-1][1]，或者前一天结束时没有股票dp[i-1][0]，但我今天买入了。因此转移方程为：<br>$$<br>dp[i][1] = max{dp[i-1][1],dp[i-1][0]-prices[i]}<br>$$<br> <strong>【4.确定边界】</strong>其实就是确定初始状态，第0天交易结束时有 dp[0][0] = 0，dp[0][1] = -prices[0]。</p>
-<h3 id="2-2-详细代码（Java）"><a href="#2-2-详细代码（Java）" class="headerlink" title="2.2 详细代码（Java）"></a>2.2 详细代码（Java）</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">maxProfit</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> prices<span class="token punctuation">,</span> <span class="token keyword">int</span> fee<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>prices<span class="token punctuation">.</span>length <span class="token operator">&lt;=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> dp <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>prices<span class="token punctuation">.</span>length<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>     <span class="token comment">// 状态变量，存储每天有或没有股票的最大收益</span>
-        dp<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>           <span class="token comment">// 初始值，第0天没股票即没有买入，收益为0</span>
-        dp<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token operator">-</span>prices<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">// 初始值，第0天有股票即买入了，收益为-prices[0]</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>prices<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>        <span class="token comment">// 循环更新每天的状态</span>
-            dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> fee<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">-</span> prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>prices<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>prices<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 返回最后一天两种状态的最大值</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>  如果复制的是基本类型的值，会在变量对象上创建一个新值，然后把该值复制到新变量分配的位置上。例子：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> num1 <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> num2 <span class="token operator">=</span> num1<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<h3 id="2-3-算法执行结果"><a href="#2-3-算法执行结果" class="headerlink" title="2.3 算法执行结果"></a>2.3 算法执行结果</h3><center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glqwb0qsl4j30s40eijst.jpg" alt="算法执行结果" width="80%/"></center>
+<p>  如上，两个变量的值都是5，但<font color="red">互不干扰，相互独立</font>。过程如下图。</p>
+<center><img src="https://tva1.sinaimg.cn/large/008i3skNly1grqbldsjekj30x808kq3p.jpg" alt="复制基本数据类型值的过程" width="100%/"></center>
 
-<p> 算法性能不是很好，其他很多题友可能想出了更好的方法。这里重点总结该题对动态规划的运用，空间复杂度上可以稍微提升一下，因为在上述算法中定义了一个二维数组去求每一天的状态，是没有必要的，因为最后的输出只需要最后一天的。我们可以定义两个变量来存储就好了。</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">maxProfit</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> prices<span class="token punctuation">,</span> <span class="token keyword">int</span> fee<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>prices<span class="token punctuation">.</span>length <span class="token operator">&lt;=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">int</span> nothave <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>            <span class="token comment">// 初始值，第0天没股票即没有买入，收益为0</span>
-        <span class="token keyword">int</span> have <span class="token operator">=</span> <span class="token operator">-</span>prices<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>      <span class="token comment">// 初始值，第0天有股票即买入了，收益为-prices[0]</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>prices<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token comment">// 循环更新状态值</span>
-            <span class="token keyword">int</span> n <span class="token operator">=</span> nothave<span class="token punctuation">,</span>y <span class="token operator">=</span> have<span class="token punctuation">;</span>           <span class="token comment">// 下面的更新中都要用到之前的值，所以要临时存储一下</span>
-            nothave <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span>y <span class="token operator">+</span> prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> fee<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            have <span class="token operator">=</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>y<span class="token punctuation">,</span>n <span class="token operator">-</span> prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>nothave<span class="token punctuation">,</span>have<span class="token punctuation">)</span><span class="token punctuation">;</span>          <span class="token comment">// 返回两种状态的最大值</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>  <strong>复制引用数据类型值</strong></li>
+</ul>
+<p>  当从一个变量向另一个变量复制引用数据类型时，同样也会将存储在变量对象中的值复制一份放到新变量分配的空间中。不同的是这个值<font color="red">是一个指针</font>，指向存储在堆内存当中的一个对象。结果是两个变量都引用同一个对象。如下例子：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> obj1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> obj2 <span class="token operator">=</span> obj1<span class="token punctuation">;</span>
+obj1<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">"andy"</span><span class="token punctuation">;</span>
+<span class="token function">alert</span><span class="token punctuation">(</span>obj2<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// andy</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<center><img src="https://tva1.sinaimg.cn/large/0081Kckwly1glqwvrsntgj30ry0eeq4c.jpg" alt="改进算法执行结果" width="80%/"></center>
+<center><img src="https://tva1.sinaimg.cn/large/008i3skNly1grr3vr1kmyj30o80d4404.jpg" alt="复制引用数据类型值的过程" width="100%/"></center>
 
-<p> 出乎意的是性能得到了很大的提升…….</p>
+<h2 id="三、-传递参数"><a href="#三、-传递参数" class="headerlink" title="三、 传递参数"></a><font color="born">三、 传递参数</font></h2><p>  ECMAScript 中所有函数的参数<font color="red">都是按值传递</font>的。基本类型值的传递如同基本类型变量的复制一样，而引用类型值的传递，则如同引用类型变量的复制一样。</p>
+<ul>
+<li>  <strong>向参数传递基本类型值</strong></li>
+</ul>
+<p>  被传递的值会被复制给一个<font color="red">局部变量</font>(即命名参数，就是arguments 中的一个元素)。如下例子：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">addTen</span><span class="token punctuation">(</span><span class="token parameter">num</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    num <span class="token operator">+=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> num<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> count <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token function">addTen</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">alert</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// 20,没有变化</span>
+<span class="token function">alert</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// 30</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>  在上述函数中，参数 num 实际上是函数的局部变量，变量 count 作为参数被传递给函数，数值 20 被复制给参数 num 进行函数内部的计算，参数 num 和 count 是<font color="red">互不相识</font>的。<font color="red">不会影响彼此</font>。</p>
+<ul>
+<li>  <strong>向参数传递引用类型值</strong></li>
+</ul>
+<p>  在想参数传递引用类型的值时，会把这个值在内存中的地址复制给一个局部变量，因此这个局部变量的变化会反映在函数的外部。例子：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">setName</span><span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    obj<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">"andy"</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> person <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setName</span><span class="token punctuation">(</span>person<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">alert</span><span class="token punctuation">(</span>person<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// andy</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>  上述代码主要步骤执行如下图所示：</p>
+<center><img src="https://tva1.sinaimg.cn/large/008i3skNly1grr6y868fwj314s0pwtcz.jpg" alt="代码执行过程" width="100%/"></center>
+
+<h3 id="四、-检测类型"><a href="#四、-检测类型" class="headerlink" title="四、 检测类型"></a><font color="born">四、 检测类型</font></h3><p>  检测一个变量是不是基本数据类型可以用 typeof 操作符，它可以确定一个变量是字符串、数值、布尔值、还是 Undefined。如果变量的值是一个对象或 null，则 typeof 操作符会返回 Object。如下所示：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> s <span class="token operator">=</span> <span class="token string">"andy"</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> u<span class="token punctuation">;</span>
+<span class="token keyword">var</span> n <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> o <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> s<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// string</span>
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// boolean</span>
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// number</span>
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> u<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// undefined</span>
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// object</span>
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> o<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// object</span>
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> f<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// function</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>  typeof 在检测函数时会返回 function。typeof 在检测基本数据类型时非常得力，但在检测引用数据类型的值时，它只能告诉你这是一个 object 。不能告诉你它具体是什么类型的对象，为此，ECMAScript 提供了 instanceof 操作符，其语法如下所示：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">result<span class="token operator">=</span> variable <span class="token keyword">instanceof</span> <span class="token class-name">constructor</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>  如果变量是给定引用类型的实例(根据它的原型链来识别)。那么 instanceof 会返回 true。例子如下：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> person <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 变量 person 是 Object 吗？</span>
+<span class="token function">alert</span><span class="token punctuation">(</span>person <span class="token keyword">instanceof</span> <span class="token class-name">Object</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>  所有引用类型的值都是 Object 类型的实例。如果使用 instanceof 操作符检测基本数据类型的值，始终会返回 false ，因为基本类型不是对象。</p>
 
                 
             </div>
@@ -601,7 +625,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://ganming1.github.io/2020/12/17/li-kou-714-mai-mai-gu-piao-de-zui-jia-shi-ji-han-shou-xu-fei/">http://ganming1.github.io/2020/12/17/li-kou-714-mai-mai-gu-piao-de-zui-jia-shi-ji-han-shou-xu-fei/</a>
+                    <a href="http://ganming1.github.io/2021/06/22/js-zhong-ji-ben-lei-xing-he-yin-yong-lei-xing-zhi-de-qu-bie/">http://ganming1.github.io/2021/06/22/js-zhong-ji-ben-lei-xing-he-yin-yong-lei-xing-zhi-de-qu-bie/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -639,16 +663,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E4%B8%AD%E7%AD%89/">
-                                    <span class="chip bg-color">中等</span>
+                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                    <span class="chip bg-color">前端</span>
                                 </a>
                             
-                                <a href="/tags/%E5%8A%9B%E6%89%A3/">
-                                    <span class="chip bg-color">力扣</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
-                                    <span class="chip bg-color">动态规划</span>
+                                <a href="/tags/JS/">
+                                    <span class="chip bg-color">JS</span>
                                 </a>
                             
                         </div>
@@ -864,58 +884,52 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/12/18/li-kou-389-zhao-bu-tong/">
+                <a href="/2021/06/22/js-zhong-ji-ben-lei-xing-he-yin-yong-lei-xing-zhi-de-qu-bie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="力扣389-找不同">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="JS中基本类型和引用类型值的区别">
                         
-                        <span class="card-title">力扣389-找不同</span>
+                        <span class="card-title">JS中基本类型和引用类型值的区别</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            给定两个字符串 s 和 t，它们只包含小写字母。字符串 t 由字符串 s 随机重排，然后在随机位置添加一个字母。请找出在 t 中被添加的字母。
+                            总结JS中的5种基本数据类型和引用数据类型的各种区别
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-18
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                    算法
+                            <a href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" class="post-category">
+                                    前端开发
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
-                        <span class="chip bg-color">字符串</span>
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
                     </a>
                     
-                    <a href="/tags/%E7%AE%80%E5%8D%95/">
-                        <span class="chip bg-color">简单</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%8A%9B%E6%89%A3/">
-                        <span class="chip bg-color">力扣</span>
-                    </a>
-                    
-                    <a href="/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">
-                        <span class="chip bg-color">位运算</span>
+                    <a href="/tags/JS/">
+                        <span class="chip bg-color">JS</span>
                     </a>
                     
                 </div>
@@ -929,24 +943,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/12/16/css-ji-chu-zhi-shi-1/">
+                <a href="/2021/06/21/javascript-zhong-de-9-chong-kong-zhi-liu-yu-ju/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="CSS基础知识(1)">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="JavaScript中的9种控制流语句">
                         
-                        <span class="card-title">CSS基础知识(1)</span>
+                        <span class="card-title">JavaScript中的9种控制流语句</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            本系列博文将细致全面的总结整理CSS知识，这是第一部分，内容有CSS简介、CSS的基本选择器、CSS的字体属性、CSS的文本属性、以及CSS的三种引入方式。
+                            总结JS中的9种控制流语句知识点
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-21
                             </span>
                         <span class="publish-author">
                             
@@ -963,12 +977,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
-                    </a>
-                    
                     <a href="/tags/%E5%89%8D%E7%AB%AF/">
                         <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                    <a href="/tags/JS/">
+                        <span class="chip bg-color">JS</span>
                     </a>
                     
                 </div>
@@ -1097,13 +1111,6 @@
 
 </main>
 
-
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
 
 
 
